@@ -1,0 +1,11 @@
+CUsersSysmarkIP1DownloadsSonicHackingStuffs2disasmmastermappingsspriteobj91bin:
+	dc.w	CUsersSysmarkIP1DownloadsSonicHackingStuffs2disasmmastermappingsspriteobj91bin_0004-CUsersSysmarkIP1DownloadsSonicHackingStuffs2disasmmastermappingsspriteobj91bin
+	dc.w	CUsersSysmarkIP1DownloadsSonicHackingStuffs2disasmmastermappingsspriteobj91bin_000E-CUsersSysmarkIP1DownloadsSonicHackingStuffs2disasmmastermappingsspriteobj91bin
+
+CUsersSysmarkIP1DownloadsSonicHackingStuffs2disasmmastermappingsspriteobj91bin_0004:	dc.b 1
+	dc.b $F4, $E, 0, 0, $F0
+
+CUsersSysmarkIP1DownloadsSonicHackingStuffs2disasmmastermappingsspriteobj91bin_000E:	dc.b 1
+	dc.b $F4, $E, 0, $C, $F0
+
+	even
