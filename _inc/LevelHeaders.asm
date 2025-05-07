@@ -24,7 +24,7 @@ lhead:	macro plc1,lvlgfx,plc2,sixteen,twofivesix,music,pal
     lhead    plcid_LZ,    Kos_LZ,        plcid_LZ2,    Blk16_LZ,    Blk256_LZ,    bgm_SPZ1,        palid_LZ    ; Labyrinth Act 1
     lhead    plcid_LZ,    Kos_LZ,        plcid_LZ2,    Blk16_LZ,    Blk256_LZ,    bgm_SPZ1,        palid_LZ    ; Act 2
     lhead    plcid_LZ,    Kos_LZ,        plcid_LZ2,    Blk16_LZ,    Blk256_LZ,    bgm_SPZ1,        palid_LZ    ; Act 3
-    lhead    plcid_GHZ,   Kos_OgGHZ,     plcid_GHZ2,   Blk16_ogGHZ, Blk256_ogGHZ, bgm_SPZ1,        palid_SBZ3    ; Scrap Brain Act 3
+    lhead    plcid_LZ,    Kos_SBZ3,      plcid_LZ2,    Blk16_SBZ3,  Blk256_SBZ3,  bgm_SPZ1,        palid_SBZ3  ; Scrap Brain Act 3
     lhead    plcid_MZ,    Kos_MZ,        plcid_MZ2,    Blk16_MZ,    Blk256_MZ,    bgm_BTZ1,        palid_MZ    ; Marble Act 1
     lhead    plcid_MZ,    Kos_MZ,        plcid_MZ2,    Blk16_MZ,    Blk256_MZ,    bgm_BTZ1,        palid_MZ    ; Act 2
     lhead    plcid_MZ,    Kos_MZ,        plcid_MZ2,    Blk16_MZ,    Blk256_MZ,    bgm_BTZ1,        palid_MZ    ; Act 3

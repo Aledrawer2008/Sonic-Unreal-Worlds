@@ -37,7 +37,7 @@ SSRC_Main:	; Routine 0
 		move.l	#Map_SSRC,obMap(a1)
 		move.w	#$8541,obGfx(a1)
 		clr.b	obRender(a1)
-		move.b	#0,obPriority(a1)	; RetroKoH/Devon S3K+ Priority Manager
+		move.b	#0,obPriority(a1)
 		lea		$40(a1),a1			; next object
 		addq.b  #1,d2						; check for the next emerald
 		dbf		d1,.loop					; loop for d1 number of	emeralds

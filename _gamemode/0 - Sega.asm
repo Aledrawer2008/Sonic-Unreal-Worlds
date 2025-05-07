@@ -27,6 +27,14 @@ GM_Sega:
 		bne.s	.waitforDMA	; if yes, branch
 		move.l	(sp)+,d1
 
+		lea	(v_objspace).w,a1
+		moveq	#0,d0
+		move.w	#$7FF,d1
+
+.ClrObj1:
+		move.l	d0,(a1)+
+		dbf	d1,.ClrObj1	; fill object space ($D000-$EFFF) with 0
+
 		bsr.w	ClearScreen
 		ResetDMAQueue
         move.l  #$40000000,(vdp_control_port).l

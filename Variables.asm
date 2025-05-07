@@ -14,7 +14,6 @@ v_lvllayout	= ramaddr ( $FFFFA400 )	; level and background layouts ($400 bytes)
 v_bgscroll_buffer	= ramaddr( $FFFFA800 )	; background scroll buffer ($200 bytes)
 v_ngfx_buffer	= ramaddr ( $FFFFAA00 )	; Nemesis graphics decompression buffer ($200 bytes)
 v_spritequeue	= ramaddr ( $FFFFAC00 )	; sprite display queue, in order of priority ($400 bytes)
-v_16x16	= ramaddr ( $FFFFB000 )	; 16x16 tile mappings
 
 VDP_Command_Buffer    = ramaddr ( $FFFFC800 )
 VDP_Command_Buffer_Slot    equ    VDP_Command_Buffer+7*$12*2
@@ -67,14 +66,9 @@ v_sstarsobj		= v_objspace+object_size*20 ; object variable space for super stars
 
 ; - 2 Slots Unused
 
-v_endcard		= v_objspace+object_size*23	; ($D5C0) object variable space for the level results card ($1C0 bytes)
-v_endcardsonic	= v_endcard+object_size*0	; ($D5C0) object variable space for the level results card "SONIC HAS" text ($40 bytes)
-v_endcardpassed	= v_endcard+object_size*1	; ($D600) object variable space for the level results card "PASSED" text ($40 bytes)
-v_endcardact	= v_endcard+object_size*2	; ($D640) object variable space for the level results card act text ($40 bytes)
-v_endcardscore	= v_endcard+object_size*3	; ($D680) object variable space for the level results card score tally ($40 bytes)
-v_endcardtime	= v_endcard+object_size*4	; ($D6C0) object variable space for the level results card time bonus tally ($40 bytes)
-v_endcardring	= v_endcard+object_size*5	; ($D700) object variable space for the level results card ring bonus tally ($40 bytes)
-v_endcardoval	= v_endcard+object_size*6	; ($D740) object variable space for the level results card oval ($40 bytes)
+v_endcard		= v_objspace+object_size*23	; ($D5C0) object variable space for the level results card ($40 bytes)
+v_endcardtime	= v_endcard+object_size*1	; ($D600) object variable space for the level results card time bonus tally ($40 bytes)
+v_endcardring	= v_endcard+object_size*2	; ($D640) object variable space for the level results card ring bonus tally ($40 bytes)
 
 v_watersurface1	= v_objspace+object_size*30	; ($D780) object variable space for the water surface #1 ($40 bytes)
 v_watersurface2	= v_objspace+object_size*31	; ($D7C0) object variable space for the water surface #2 ($40 bytes)
@@ -388,8 +382,17 @@ v_spindashsfx1	= 	$FFFFFEA0
 v_spindashsfx2	= 	v_spindashsfx1+1
 v_spindashsfx3	= 	v_spindashsfx1+2
 SegaCD_Mode		=   $FFFFFFF0	; flag for the Sega CD
+VBlank_MusicOnly	=	$FFFFF5D9
 
 v_save			=	$FFFFFFFE
 ; reused from level select
 v_saveypos		=	$FFFFFF80
 f_delete_mode	=	$FFFFFF84
+_unkB000	    =   $FFFFB000
+_unkB004        =   $FFFFB004
+_unkB008        =   $FFFFB008
+_unkB00A        =   $FFFFB00A
+_unkB010        =   $FFFFB010
+DeleteQueue		=	$FFFFC700			;	Delete queue
+DeleteQueue_End	=	$FFFFC7FE
+DeleteQueue_Ptr	=	$FFFFC7FE			;	Delete objects queue pointer

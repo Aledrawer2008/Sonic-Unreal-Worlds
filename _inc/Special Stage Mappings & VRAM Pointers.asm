@@ -79,8 +79,8 @@
 	dc.w $570
 	dc.l Map_SS_R
 	dc.w $251
-    	dc.l Map_SS_Chaos2
-    	dc.w $6770
+    dc.l Map_SS_Chaos2
+    dc.w $6770
 	dc.l Map_SS_Up
 	dc.w $263
 	dc.l Map_SS_Down

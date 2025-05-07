@@ -1,25 +1,46 @@
 ; --------------------------------------------------------------------------------
-; Sprite mappings - output from SonMapEd - Sonic 1 format
+; Sprite mappings - output from ClownMapEd - MapMacros format
 ; --------------------------------------------------------------------------------
 
-SME_kbGvq:	
-		dc.w SME_kbGvq_10-SME_kbGvq, SME_kbGvq_16-SME_kbGvq	
-		dc.w SME_kbGvq_1C-SME_kbGvq, SME_kbGvq_22-SME_kbGvq	
-		dc.w SME_kbGvq_28-SME_kbGvq, SME_kbGvq_2E-SME_kbGvq	
-		dc.w SME_kbGvq_34-SME_kbGvq, SME_kbGvq_3A-SME_kbGvq	
-SME_kbGvq_10:	dc.b 1	
-		dc.b $F8, 5, $20, 4, $F8	
-SME_kbGvq_16:	dc.b 1	
-		dc.b $F8, 5, 0, 0, $F8	
-SME_kbGvq_1C:	dc.b 1	
-		dc.b $F8, 5, $40, 4, $F8	
-SME_kbGvq_22:	dc.b 1	
-		dc.b $F8, 5, $60, 4, $F8	
-SME_kbGvq_28:	dc.b 1	
-		dc.b $F8, 5, $20, 8, $F8	
-SME_kbGvq_2E:	dc.b 1	
-		dc.b $F8, 5, $20, $C, $F8	
-SME_kbGvq_34:	dc.b 1	
-		dc.b $F8, 5, 0, $C, $F8	
-SME_kbGvq_3A:	dc.b 0	
-		even
+.offsets:	mappingsTable
+	mappingsTableEntry.w	.frame0
+	mappingsTableEntry.w	.frame1
+	mappingsTableEntry.w	.frame2
+	mappingsTableEntry.w	.frame3
+	mappingsTableEntry.w	.frame4
+	mappingsTableEntry.w	.frame5
+	mappingsTableEntry.w	.frame6
+	mappingsTableEntry.w	.frame7
+
+.frame0:	spriteHeader
+	spritePiece -8, -8, 2, 2, 4, 0, 0, 1, 0
+.frame0_End
+
+.frame1:	spriteHeader
+	spritePiece -8, -8, 2, 2, 0, 0, 0, 0, 0
+.frame1_End
+
+.frame2:	spriteHeader
+	spritePiece -8, -8, 2, 2, 4, 0, 0, 2, 0
+.frame2_End
+
+.frame3:	spriteHeader
+	spritePiece -8, -8, 2, 2, 4, 0, 0, 3, 0
+.frame3_End
+
+.frame4:	spriteHeader
+	spritePiece -8, -8, 2, 2, 8, 0, 0, 1, 0
+.frame4_End
+
+.frame5:	spriteHeader
+	spritePiece -8, -8, 2, 2, 12, 0, 0, 1, 0
+.frame5_End
+
+.frame6:	spriteHeader
+	spritePiece -8, -8, 2, 2, 12, 0, 0, 0, 0
+.frame6_End
+
+.frame7:	spriteHeader
+.frame7_End
+
+	even

@@ -265,14 +265,16 @@ locret_6F64:
 ; ===========================================================================
 
 DLE_SBZ3:
-		move.w	#$300,(v_limitbtm1).w ; set lower y-boundary
-        move.w    #$300,(v_limitbtm2).w ; set lower y-boundary
-		cmpi.w	#$1780,(v_screenposx).w ; has the camera reached $1780 on x-axis?
-		bcs.s	.return	; if not, return
-		move.w	#$400,(v_limitbtm1).w ; set lower y-boundary
-        move.w    #$400,(v_limitbtm2).w ; set lower y-boundary
+		cmpi.w	#$D00,(v_screenposx).w
+		blo.s	locret_6F8C
+		cmpi.w	#$18,(v_player+obY).w ; has Sonic reached the top of the level?
+		bhs.s	locret_6F8C	; if not, branch
+		clr.b	(v_lastlamp).w
+		move.b	#1,(f_restart).w ; restart level
+		move.w	#(id_SBZ<<8)+2,(v_zone).w ; set level number to 0502 (FZ)
+		move.b	#1,(f_playerctrl).w ; lock controls
 
-.return:
+locret_6F8C:
 		rts	
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
@@ -717,11 +719,16 @@ DLE_FZ:
 		move.w	.subindex(pc,d0.w),d0
 		jmp	.subindex(pc,d0.w)
 ; ===========================================================================
-.subindex:	dc.w DLE_FZmain-.subindex, DLE_FZboss-.subindex
-		dc.w DLE_FZend-.subindex, locret_7322-.subindex
-		dc.w DLE_FZ_Epilogue-.subindex, DLE_FZ_Epilogue2-.subindex
-		dc.w DLE_FZ_NoEmerald-.subindex, DLE_FZ_SevenInHand-.subindex
-		dc.w DLE_FZ_SevenInHandSUPER-.subindex, DLE_FZ_SevenInHandSUPER2-.subindex
+.subindex:	dc.w DLE_FZmain-.subindex	; 0
+		dc.w DLE_FZboss-.subindex	; 2
+		dc.w DLE_FZend-.subindex	; 4
+		dc.w locret_7322-.subindex	; 6
+		dc.w DLE_FZ_Epilogue-.subindex	; 8
+		dc.w DLE_FZ_Epilogue2-.subindex	; $A
+		dc.w DLE_FZ_NoEmerald-.subindex	; $C
+		dc.w DLE_FZ_SevenInHand-.subindex	; $E
+		dc.w DLE_FZ_SevenInHandSUPER-.subindex	; $10
+		dc.w DLE_FZ_SevenInHandSUPER2-.subindex	; $12
 ; ===========================================================================
 
 DLE_FZmain:
@@ -771,7 +778,7 @@ DLE_FZ_Epilogue2:
 		tst.b	d0
 		beq.s	.dont_go_boom ; nvm there's no space
 		
-		move.b	#id_ExplosionBomb, (a1)
+		move.b	#id_ExplosionBomb,(a1)
 		move.b	#0,obRoutine(a1)
 		jsr	RandomNumber
 		andi.w	#$FF,d0

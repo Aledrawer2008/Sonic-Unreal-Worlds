@@ -139,6 +139,7 @@ TFB_HeadMain:
 
 TFB_Delete:
 		move.b	#2,(v_bossstatus).w
+TFB_Delete2:
 		jmp	(DeleteObject).l
 ; ===========================================================================
 
@@ -152,8 +153,17 @@ TFB_FlameMain:
 ; ===========================================================================
 
 TFB_MissileMain:
-		out_of_range.w	TFB_Delete
-		move.w	#$400,obVelX(a0)
+		tst.b	obRoutine(a0)
+		beq.s	.main
+		addq.b	#2,obRoutine(a0)
+		jsr	Obj_GetOrientationToPlayer
+		lsr.w	#1,d2
+		lsr.w	#1,d3
+
+.main:
+		out_of_range.w	TFB_Delete2
+		move.w	d2,obVelX(a0)
+		move.w	d3,obVelY(a0)
 		jsr	(SpeedToPos).l
 		lea	(Ani_EggPhantom).l,a1
 		jsr	(AnimateSprite).l

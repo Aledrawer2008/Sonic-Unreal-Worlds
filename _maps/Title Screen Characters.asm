@@ -1,616 +1,164 @@
 ; --------------------------------------------------------------------------------
-; Sprite mappings - output from ClownMapEd - Sonic 1/CD format
+; Sprite mappings - output from ClownMapEd - MapMacros format
 ; --------------------------------------------------------------------------------
 
-CME_591DA643:
-	dc.w	CME_591DA643_0-CME_591DA643
-	dc.w	CME_591DA643_1-CME_591DA643
-	dc.w	CME_591DA643_2-CME_591DA643
-	dc.w	CME_591DA643_3-CME_591DA643
-	dc.w	CME_591DA643_4-CME_591DA643
-	dc.w	CME_591DA643_5-CME_591DA643
-	dc.w	CME_591DA643_6-CME_591DA643
-	dc.w	CME_591DA643_7-CME_591DA643
-	dc.w	CME_591DA643_8-CME_591DA643
-	dc.w	CME_591DA643_9-CME_591DA643
-	dc.w	CME_591DA643_A-CME_591DA643
-
-CME_591DA643_0:
-	dc.b	9
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	4
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0010
-	dc.b	36
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0020
-	dc.b	36
-
-	dc.b	12
-	dc.b	$0C
-	dc.w	$0030
-	dc.b	28
-
-	dc.b	20
-	dc.b	$03
-	dc.w	$0034
-	dc.b	68
-
-	dc.b	12
-	dc.b	$00
-	dc.w	$0038
-	dc.b	60
-
-	dc.b	52
-	dc.b	$01
-	dc.w	$0039
-	dc.b	4
-
-	dc.b	52
-	dc.b	$0B
-	dc.w	$003B
-	dc.b	12
-
-	dc.b	52
-	dc.b	$01
-	dc.w	$0047
-	dc.b	68
-
-CME_591DA643_1:
-	dc.b	10
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	4
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0010
-	dc.b	36
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0020
-	dc.b	36
-
-	dc.b	12
-	dc.b	$0C
-	dc.w	$0030
-	dc.b	28
-
-	dc.b	20
-	dc.b	$03
-	dc.w	$0034
-	dc.b	68
-
-	dc.b	44
-	dc.b	$00
-	dc.w	$0038
-	dc.b	76
-
-	dc.b	52
-	dc.b	$02
-	dc.w	$0039
-	dc.b	68
-
-	dc.b	12
-	dc.b	$00
-	dc.w	$003C
-	dc.b	60
-
-	dc.b	52
-	dc.b	$01
-	dc.w	$003D
-	dc.b	4
-
-	dc.b	52
-	dc.b	$0B
-	dc.w	$003F
-	dc.b	12
-
-CME_591DA643_2:
-	dc.b	11
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	4
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0010
-	dc.b	36
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0020
-	dc.b	36
-
-	dc.b	12
-	dc.b	$0C
-	dc.w	$0030
-	dc.b	28
-
-	dc.b	28
-	dc.b	$03
-	dc.w	$0034
-	dc.b	68
-
-	dc.b	20
-	dc.b	$00
-	dc.w	$0038
-	dc.b	68
-
-	dc.b	44
-	dc.b	$00
-	dc.w	$0039
-	dc.b	76
-
-	dc.b	60
-	dc.b	$01
-	dc.w	$003A
-	dc.b	68
-
-	dc.b	52
-	dc.b	$01
-	dc.w	$003C
-	dc.b	4
-
-	dc.b	52
-	dc.b	$02
-	dc.w	$003E
-	dc.b	12
-
-	dc.b	52
-	dc.b	$07
-	dc.w	$0041
-	dc.b	20
-
-CME_591DA643_3:
-	dc.b	10
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	56
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0010
-	dc.b	56
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0020
-	dc.b	4
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0030
-	dc.b	4
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0040
-	dc.b	36
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0050
-	dc.b	36
-
-	dc.b	44
-	dc.b	$03
-	dc.w	$0060
-	dc.b	68
-
-	dc.b	12
-	dc.b	$03
-	dc.w	$0064
-	dc.b	68
-
-	dc.b	12
-	dc.b	$0C
-	dc.w	$0068
-	dc.b	36
-
-	dc.b	12
-	dc.b	$04
-	dc.w	$006C
-	dc.b	20
-
-CME_591DA643_4:
-	dc.b	12
-
-	dc.b	12
-	dc.b	$04
-	dc.w	$004E
-	dc.b	59
-
-	dc.b	20
-	dc.b	$0B
-	dc.w	$0050
-	dc.b	51
-
-	dc.b	52
-	dc.b	$0B
-	dc.w	$005C
-	dc.b	51
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	4
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0010
-	dc.b	4
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0020
-	dc.b	36
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0030
-	dc.b	36
-
-	dc.b	44
-	dc.b	$03
-	dc.w	$0040
-	dc.b	68
-
-	dc.b	12
-	dc.b	$03
-	dc.w	$0044
-	dc.b	68
-
-	dc.b	12
-	dc.b	$0C
-	dc.w	$0048
-	dc.b	36
-
-	dc.b	12
-	dc.b	$04
-	dc.w	$004C
-	dc.b	20
-
-	dc.b	43
-	dc.b	$01
-	dc.w	$0068
-	dc.b	75
-
-CME_591DA643_5:
-	dc.b	12
-
-	dc.b	44
-	dc.b	$03
-	dc.w	$004E
-	dc.b	65
-
-	dc.b	20
-	dc.b	$0B
-	dc.w	$0052
-	dc.b	41
-
-	dc.b	52
-	dc.b	$0B
-	dc.w	$005E
-	dc.b	41
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	4
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0010
-	dc.b	4
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0020
-	dc.b	36
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0030
-	dc.b	36
-
-	dc.b	44
-	dc.b	$03
-	dc.w	$0040
-	dc.b	68
-
-	dc.b	12
-	dc.b	$03
-	dc.w	$0044
-	dc.b	68
-
-	dc.b	12
-	dc.b	$0C
-	dc.w	$0048
-	dc.b	36
-
-	dc.b	12
-	dc.b	$04
-	dc.w	$004C
-	dc.b	20
-
-	dc.b	76
-	dc.b	$00
-	dc.w	$006A
-	dc.b	65
-
-CME_591DA643_6:
-	dc.b	7
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	4
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0010
-	dc.b	4
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0020
-	dc.b	36
-
-	dc.b	28
-	dc.b	$03
-	dc.w	$0030
-	dc.b	68
-
-	dc.b	52
-	dc.b	$07
-	dc.w	$0034
-	dc.b	36
-
-	dc.b	52
-	dc.b	$02
-	dc.w	$003C
-	dc.b	52
-
-	dc.b	52
-	dc.b	$01
-	dc.w	$003F
-	dc.b	60
-
-CME_591DA643_7:
-	dc.b	6
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	4
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0010
-	dc.b	4
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0020
-	dc.b	36
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0030
-	dc.b	36
-
-	dc.b	28
-	dc.b	$03
-	dc.w	$0040
-	dc.b	68
-
-	dc.b	12
-	dc.b	$0C
-	dc.w	$0044
-	dc.b	12
-
-CME_591DA643_8:
-	dc.b	8
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	4
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0010
-	dc.b	4
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0020
-	dc.b	36
-
-	dc.b	28
-	dc.b	$07
-	dc.w	$0030
-	dc.b	68
-
-	dc.b	12
-	dc.b	$0C
-	dc.w	$0038
-	dc.b	20
-
-	dc.b	12
-	dc.b	$04
-	dc.w	$003C
-	dc.b	4
-
-	dc.b	52
-	dc.b	$0B
-	dc.w	$003E
-	dc.b	36
-
-	dc.b	52
-	dc.b	$01
-	dc.w	$004A
-	dc.b	60
-
-CME_591DA643_9:
-	dc.b	14
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	9
-
-	dc.b	52
-	dc.b	$0E
-	dc.w	$0010
-	dc.b	8
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$001C
-	dc.b	12
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$002C
-	dc.b	44
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$003C
-	dc.b	12
-
-	dc.b	12
-	dc.b	$0C
-	dc.w	$004C
-	dc.b	12
-
-	dc.b	20
-	dc.b	$00
-	dc.w	$0050
-	dc.b	4
-
-	dc.b	36
-	dc.b	$00
-	dc.w	$0051
-	dc.b	4
-
-	dc.b	44
-	dc.b	$01
-	dc.w	$0052
-	dc.b	4
-
-	dc.b	68
-	dc.b	$00
-	dc.w	$0054
-	dc.b	4
-
-	dc.b	52
-	dc.b	$07
-	dc.w	$0055
-	dc.b	44
-
-	dc.b	52
-	dc.b	$01
-	dc.w	$005D
-	dc.b	60
-
-	dc.b	52
-	dc.b	$00
-	dc.w	$005F
-	dc.b	68
-
-	dc.b	68
-	dc.b	$05
-	dc.w	$0060
-	dc.b	60
-
-CME_591DA643_A:
-	dc.b	14
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0048
-	dc.b	0
-
-	dc.b	52
-	dc.b	$0E
-	dc.w	$0058
-	dc.b	0
-
-	dc.b	52
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	12
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0010
-	dc.b	44
-
-	dc.b	20
-	dc.b	$0F
-	dc.w	$0020
-	dc.b	12
-
-	dc.b	12
-	dc.b	$0C
-	dc.w	$0030
-	dc.b	12
-
-	dc.b	20
-	dc.b	$00
-	dc.w	$0034
-	dc.b	4
-
-	dc.b	36
-	dc.b	$00
-	dc.w	$0035
-	dc.b	4
-
-	dc.b	44
-	dc.b	$01
-	dc.w	$0036
-	dc.b	4
-
-	dc.b	68
-	dc.b	$00
-	dc.w	$0038
-	dc.b	4
-
-	dc.b	52
-	dc.b	$07
-	dc.w	$0039
-	dc.b	44
-
-	dc.b	52
-	dc.b	$01
-	dc.w	$0041
-	dc.b	60
-
-	dc.b	52
-	dc.b	$00
-	dc.w	$0043
-	dc.b	68
-
-	dc.b	68
-	dc.b	$05
-	dc.w	$0044
-	dc.b	60
+.offsets:	mappingsTable
+	mappingsTableEntry.w	.frame0
+	mappingsTableEntry.w	.frame1
+	mappingsTableEntry.w	.frame2
+	mappingsTableEntry.w	.frame3
+	mappingsTableEntry.w	.frame4
+	mappingsTableEntry.w	.frame5
+	mappingsTableEntry.w	.frame6
+	mappingsTableEntry.w	.frame7
+	mappingsTableEntry.w	.frame8
+	mappingsTableEntry.w	.frame9
+	mappingsTableEntry.w	.frame10
+
+.frame0:	spriteHeader
+	spritePiece 4, 20, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 36, 52, 4, 4, 16, 0, 0, 0, 0
+	spritePiece 36, 20, 4, 4, 32, 0, 0, 0, 0
+	spritePiece 28, 12, 4, 1, 48, 0, 0, 0, 0
+	spritePiece 68, 20, 1, 4, 52, 0, 0, 0, 0
+	spritePiece 60, 12, 1, 1, 56, 0, 0, 0, 0
+	spritePiece 4, 52, 1, 2, 57, 0, 0, 0, 0
+	spritePiece 12, 52, 3, 4, 59, 0, 0, 0, 0
+	spritePiece 68, 52, 1, 2, 71, 0, 0, 0, 0
+.frame0_End
+
+.frame1:	spriteHeader
+	spritePiece 4, 20, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 36, 20, 4, 4, 16, 0, 0, 0, 0
+	spritePiece 36, 52, 4, 4, 32, 0, 0, 0, 0
+	spritePiece 28, 12, 4, 1, 48, 0, 0, 0, 0
+	spritePiece 68, 20, 1, 4, 52, 0, 0, 0, 0
+	spritePiece 76, 44, 1, 1, 56, 0, 0, 0, 0
+	spritePiece 68, 52, 1, 3, 57, 0, 0, 0, 0
+	spritePiece 60, 12, 1, 1, 60, 0, 0, 0, 0
+	spritePiece 4, 52, 1, 2, 61, 0, 0, 0, 0
+	spritePiece 12, 52, 3, 4, 63, 0, 0, 0, 0
+.frame1_End
+
+.frame2:	spriteHeader
+	spritePiece 4, 20, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 36, 52, 4, 4, 16, 0, 0, 0, 0
+	spritePiece 36, 20, 4, 4, 32, 0, 0, 0, 0
+	spritePiece 28, 12, 4, 1, 48, 0, 0, 0, 0
+	spritePiece 68, 28, 1, 4, 52, 0, 0, 0, 0
+	spritePiece 68, 20, 1, 1, 56, 0, 0, 0, 0
+	spritePiece 76, 44, 1, 1, 57, 0, 0, 0, 0
+	spritePiece 68, 60, 1, 2, 58, 0, 0, 0, 0
+	spritePiece 4, 52, 1, 2, 60, 0, 0, 0, 0
+	spritePiece 12, 52, 1, 3, 62, 0, 0, 0, 0
+	spritePiece 20, 52, 2, 4, 65, 0, 0, 0, 0
+.frame2_End
+
+.frame3:	spriteHeader
+	spritePiece 56, 20, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 56, 52, 4, 4, 16, 0, 0, 0, 0
+	spritePiece 4, 20, 4, 4, 32, 0, 0, 0, 0
+	spritePiece 4, 52, 4, 4, 48, 0, 0, 0, 0
+	spritePiece 36, 20, 4, 4, 64, 0, 0, 0, 0
+	spritePiece 36, 52, 4, 4, 80, 0, 0, 0, 0
+	spritePiece 68, 44, 1, 4, 96, 0, 0, 0, 0
+	spritePiece 68, 12, 1, 4, 100, 0, 0, 0, 0
+	spritePiece 36, 12, 4, 1, 104, 0, 0, 0, 0
+	spritePiece 20, 12, 2, 1, 108, 0, 0, 0, 0
+.frame3_End
+
+.frame4:	spriteHeader
+	spritePiece 59, 12, 2, 1, 78, 0, 0, 0, 0
+	spritePiece 51, 20, 3, 4, 80, 0, 0, 0, 0
+	spritePiece 51, 52, 3, 4, 92, 0, 0, 0, 0
+	spritePiece 4, 20, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 4, 52, 4, 4, 16, 0, 0, 0, 0
+	spritePiece 36, 20, 4, 4, 32, 0, 0, 0, 0
+	spritePiece 36, 52, 4, 4, 48, 0, 0, 0, 0
+	spritePiece 68, 44, 1, 4, 64, 0, 0, 0, 0
+	spritePiece 68, 12, 1, 4, 68, 0, 0, 0, 0
+	spritePiece 36, 12, 4, 1, 72, 0, 0, 0, 0
+	spritePiece 20, 12, 2, 1, 76, 0, 0, 0, 0
+	spritePiece 75, 43, 1, 2, 104, 0, 0, 0, 0
+.frame4_End
+
+.frame5:	spriteHeader
+	spritePiece 65, 44, 1, 4, 78, 0, 0, 0, 0
+	spritePiece 41, 20, 3, 4, 82, 0, 0, 0, 0
+	spritePiece 41, 52, 3, 4, 94, 0, 0, 0, 0
+	spritePiece 4, 20, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 4, 52, 4, 4, 16, 0, 0, 0, 0
+	spritePiece 36, 20, 4, 4, 32, 0, 0, 0, 0
+	spritePiece 36, 52, 4, 4, 48, 0, 0, 0, 0
+	spritePiece 68, 44, 1, 4, 64, 0, 0, 0, 0
+	spritePiece 68, 12, 1, 4, 68, 0, 0, 0, 0
+	spritePiece 36, 12, 4, 1, 72, 0, 0, 0, 0
+	spritePiece 20, 12, 2, 1, 76, 0, 0, 0, 0
+	spritePiece 65, 76, 1, 1, 106, 0, 0, 0, 0
+.frame5_End
+
+.frame6:	spriteHeader
+	spritePiece 4, 52, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 4, 20, 4, 4, 16, 0, 0, 0, 0
+	spritePiece 36, 20, 4, 4, 32, 0, 0, 0, 0
+	spritePiece 68, 28, 1, 4, 48, 0, 0, 0, 0
+	spritePiece 36, 52, 2, 4, 52, 0, 0, 0, 0
+	spritePiece 52, 52, 1, 3, 60, 0, 0, 0, 0
+	spritePiece 60, 52, 1, 2, 63, 0, 0, 0, 0
+.frame6_End
+
+.frame7:	spriteHeader
+	spritePiece 4, 20, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 4, 52, 4, 4, 16, 0, 0, 0, 0
+	spritePiece 36, 20, 4, 4, 32, 0, 0, 0, 0
+	spritePiece 36, 52, 4, 4, 48, 0, 0, 0, 0
+	spritePiece 68, 28, 1, 4, 64, 0, 0, 0, 0
+	spritePiece 12, 12, 4, 1, 68, 0, 0, 0, 0
+.frame7_End
+
+.frame8:	spriteHeader
+	spritePiece 4, 20, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 4, 52, 4, 4, 16, 0, 0, 0, 0
+	spritePiece 36, 20, 4, 4, 32, 0, 0, 0, 0
+	spritePiece 68, 28, 2, 4, 48, 0, 0, 0, 0
+	spritePiece 20, 12, 4, 1, 56, 0, 0, 0, 0
+	spritePiece 4, 12, 2, 1, 60, 0, 0, 0, 0
+	spritePiece 36, 52, 3, 4, 62, 0, 0, 0, 0
+	spritePiece 60, 52, 1, 2, 74, 0, 0, 0, 0
+.frame8_End
+
+.frame9:	spriteHeader
+	spritePiece 9, 20, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 8, 52, 4, 3, 16, 0, 0, 0, 0
+	spritePiece 12, 52, 4, 4, 28, 0, 0, 0, 0
+	spritePiece 44, 20, 4, 4, 44, 0, 0, 0, 0
+	spritePiece 12, 20, 4, 4, 60, 0, 0, 0, 0
+	spritePiece 12, 12, 4, 1, 76, 0, 0, 0, 0
+	spritePiece 4, 20, 1, 1, 80, 0, 0, 0, 0
+	spritePiece 4, 36, 1, 1, 81, 0, 0, 0, 0
+	spritePiece 4, 44, 1, 2, 82, 0, 0, 0, 0
+	spritePiece 4, 68, 1, 1, 84, 0, 0, 0, 0
+	spritePiece 44, 52, 2, 4, 85, 0, 0, 0, 0
+	spritePiece 60, 52, 1, 2, 93, 0, 0, 0, 0
+	spritePiece 68, 52, 1, 1, 95, 0, 0, 0, 0
+	spritePiece 60, 68, 2, 2, 96, 0, 0, 0, 0
+.frame9_End
+
+.frame10:	spriteHeader
+	spritePiece 0, 20, 4, 4, 72, 0, 0, 0, 0
+	spritePiece 0, 52, 4, 3, 88, 0, 0, 0, 0
+	spritePiece 12, 52, 4, 4, 0, 0, 0, 0, 0
+	spritePiece 44, 20, 4, 4, 16, 0, 0, 0, 0
+	spritePiece 12, 20, 4, 4, 32, 0, 0, 0, 0
+	spritePiece 12, 12, 4, 1, 48, 0, 0, 0, 0
+	spritePiece 4, 20, 1, 1, 52, 0, 0, 0, 0
+	spritePiece 4, 36, 1, 1, 53, 0, 0, 0, 0
+	spritePiece 4, 44, 1, 2, 54, 0, 0, 0, 0
+	spritePiece 4, 68, 1, 1, 56, 0, 0, 0, 0
+	spritePiece 44, 52, 2, 4, 57, 0, 0, 0, 0
+	spritePiece 60, 52, 1, 2, 65, 0, 0, 0, 0
+	spritePiece 68, 52, 1, 1, 67, 0, 0, 0, 0
+	spritePiece 60, 68, 2, 2, 68, 0, 0, 0, 0
+.frame10_End
 
 	even

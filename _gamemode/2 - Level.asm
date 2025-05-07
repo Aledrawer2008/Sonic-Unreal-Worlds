@@ -284,8 +284,6 @@ LoadWaterLevel:
 ; Initially check which zones work with this
 		cmpi.b    #id_LZ,(v_zone).w   ; Check Labyrinth Zone
 		bne.s   .NotWater		; If LZ, continue
-		cmpi.b	#3,(v_act).w
-		beq.s	.NotWater
 
 		move.b  #1,(f_water).w  ; Enable water in the checked level
 		moveq    #0,d0

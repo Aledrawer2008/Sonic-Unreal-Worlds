@@ -1,5 +1,5 @@
 ; ---------------------------------------------------------------------------
-; Object 01 - Sonic
+; Object 01 - Sonic/Amy
 ; ---------------------------------------------------------------------------
 
 SonicPlayer:
@@ -27,7 +27,7 @@ Sonic_Main:	; Routine 0
 		move.b	#$13,obHeight(a0)
 		move.b	#9,obWidth(a0)
 		clr.b	(f_supersonic).w
-		jsr		Character_Mappings		; Load the character map
+		jsr		Character_Mappings		; Load the player's mappings
 		move.w	#$780,obGfx(a0)
 		move.b	#2,obPriority(a0)
 		move.b	#$18,obActWid(a0)

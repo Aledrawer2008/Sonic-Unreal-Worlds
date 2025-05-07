@@ -5,7 +5,7 @@ ptr_SonicPlayer:	dc.l SonicPlayer	; $01
 ptr_Planet:			dc.l Planet
 ptr_TEncore:		dc.l TEncoreStuff
 ptr_Obj04:			dc.l NullObject
-ptr_SpinDust:		dc.l SpinDash_dust
+ptr_SpinDust:		dc.l SpinDust
 ptr_Obj06:			dc.l NullObject
 ptr_Obj07:			dc.l NullObject
 ptr_Splash:			dc.l Splash		; $08
@@ -14,8 +14,8 @@ ptr_DrownCount:		dc.l DrownCount
 ptr_Pole:			dc.l Pole
 ptr_FlapDoor:		dc.l FlapDoor
 ptr_Signpost:		dc.l Signpost
-ptr_TitleSonic:		dc.l TitleSonic
-ptr_PSBTM:			dc.l PSBTM
+ptr_TitleCharacters:		dc.l TitleCharacters
+ptr_TitleStuff:		dc.l TitleStuff
 ptr_Bosster:		dc.l Speed_Booster 	; $10
 ptr_Bridge:			dc.l Bridge
 ptr_SpinningLight:	dc.l SpinningLight
@@ -34,7 +34,7 @@ ptr_BallHog:		dc.l BallHog
 ptr_Crabmeat:		dc.l Crabmeat
 ptr_Cannonball:		dc.l Cannonball		; $20
 ptr_HUD:			dc.l HUD
-ptr_BuzzBomber:		dc.l Mosqui
+ptr_Mosqui:			dc.l Mosqui
 ptr_Missile:		dc.l Missile
 ptr_MissileDissolve:	dc.l MissileDissolve
 ptr_Rings:			dc.l Rings
@@ -44,7 +44,7 @@ ptr_Animals:		dc.l Animals		; $28
 ptr_SuperStars:		dc.l SuperStars
 ptr_AutoDoor:		dc.l AutoDoor
 ptr_Chopper:		dc.l Chopper
-ptr_Obj2C:			dc.l Obj2C
+ptr_ChopChop:		dc.l ChopChop
 ptr_Burrobot:		dc.l Burrobot
 ptr_PowerUp:		dc.l PowerUp
 ptr_LargeGrass:		dc.l LargeGrass
@@ -158,8 +158,8 @@ id_DrownCount:		equ ((ptr_DrownCount-Obj_Index)/4)+1
 id_Pole:			equ ((ptr_Pole-Obj_Index)/4)+1
 id_FlapDoor:		equ ((ptr_FlapDoor-Obj_Index)/4)+1
 id_Signpost:		equ ((ptr_Signpost-Obj_Index)/4)+1
-id_TitleSonic:		equ ((ptr_TitleSonic-Obj_Index)/4)+1
-id_PSBTM:			equ ((ptr_PSBTM-Obj_Index)/4)+1
+id_TitleCharacters:	equ ((ptr_TitleCharacters-Obj_Index)/4)+1
+id_TitleStuff:		equ ((ptr_TitleStuff-Obj_Index)/4)+1
 id_Bosster:			equ ((ptr_Bosster-Obj_Index)/4)+1			; $10
 id_Bridge:			equ ((ptr_Bridge-Obj_Index)/4)+1
 id_SpinningLight:	equ ((ptr_SpinningLight-Obj_Index)/4)+1
@@ -178,7 +178,7 @@ id_BallHog:			equ ((ptr_BallHog-Obj_Index)/4)+1
 id_Crabmeat:		equ ((ptr_Crabmeat-Obj_Index)/4)+1
 id_Cannonball:		equ ((ptr_Cannonball-Obj_Index)/4)+1		; $20
 id_HUD:				equ ((ptr_HUD-Obj_Index)/4)+1
-id_BuzzBomber:		equ ((ptr_BuzzBomber-Obj_Index)/4)+1
+id_BuzzBomber:		equ ((ptr_Mosqui-Obj_Index)/4)+1
 id_Missile:			equ ((ptr_Missile-Obj_Index)/4)+1
 id_MissileDissolve:	equ ((ptr_MissileDissolve-Obj_Index)/4)+1
 id_Rings:			equ ((ptr_Rings-Obj_Index)/4)+1
@@ -188,7 +188,7 @@ id_Animals:			equ ((ptr_Animals-Obj_Index)/4)+1		; $28
 id_SuperStars:		equ ((ptr_SuperStars-Obj_Index)/4)+1
 id_AutoDoor:		equ ((ptr_AutoDoor-Obj_Index)/4)+1
 id_Chopper:			equ ((ptr_Chopper-Obj_Index)/4)+1
-id_Obj2C:			equ ((ptr_Obj2C-Obj_Index)/4)+1
+id_ChopChop:		equ ((ptr_ChopChop-Obj_Index)/4)+1
 id_Burrobot:		equ ((ptr_Burrobot-Obj_Index)/4)+1
 id_PowerUp:			equ ((ptr_PowerUp-Obj_Index)/4)+1
 id_LargeGrass:		equ ((ptr_LargeGrass-Obj_Index)/4)+1

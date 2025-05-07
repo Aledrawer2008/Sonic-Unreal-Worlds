@@ -477,11 +477,10 @@ GameModeArray:
 		dc.l GM_SaveMenu
 		dc.l GM_Secret
 		dc.l GM_Encore
+	;	dc.l GM_SoundTest
 ; ===========================================================================
 
 Art_Text:	binclude	"artunc/menutext.bin" ; text used in level select and debug mode
-		even
-Art_TextAlt:	binclude	"artunc/menutext2.bin" ; text used in level select and debug mode
 		even
 
 ; ===========================================================================
@@ -776,6 +775,8 @@ sub_106E:
 		rts	
 ; End of function sub_106E
 
+	;	include	"_gamemode/SoundTestScreen/VBlank.asm"
+
 ; ---------------------------------------------------------------------------
 ; Horizontal interrupt
 ; ---------------------------------------------------------------------------
@@ -840,6 +841,8 @@ loc_119E:
 		movem.l	(sp)+,d0-a6
 		rte	
 ; End of function HBlank
+
+	;	include "_gamemode/SoundTestScreen/HBlank.asm"
 
 ; ---------------------------------------------------------------------------
 ; Subroutine to	initialise joypads
@@ -1158,6 +1161,7 @@ AddPLC:
 		rts	
 ; End of function AddPLC
 
+; ==============================================================
 
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 ; Queue pattern load requests, but clear the PLQ first
@@ -1324,7 +1328,7 @@ loc_16E2:
 		move.l	6(a0),(a0)+
 		dbf	d0,loc_16E2
 		rts	
-; End of function ProcessDPLC2
+; End of function ProcessDPLC2s
 
 ; ---------------------------------------------------------------------------
 ; Subroutine to	execute	the pattern load cue
@@ -1411,9 +1415,9 @@ PalFadeIn_Alt:				; start position and size are already set
 		bsr.w	WaitForVBla
 		bsr.s	FadeIn_FromBlack
 		bsr.w	RunPLC
-        tst.b	(f_water) ; the level has water?
-        bne.s	.NoWater
-        bsr.w	DynaWater_Update ; generate underwater palette
+;        tst.b	(f_water) ; the level has water?
+;        bne.s	.NoWater
+;        bsr.w	DynaWater_Update ; generate underwater palette
 .NoWater:  
 		dbf	d4,.mainloop
 		rts	
@@ -1436,8 +1440,8 @@ FadeIn_FromBlack:
 		bsr.s	FadeIn_AddColour ; increase colour
 		dbf	d0,.addcolour	; repeat for size of palette
 
-		cmpi.b	#id_LZ,(v_zone).w	; is level Labyrinth?
-		bne.s	.exit		; if not, branch
+		tst.b	(f_water).w	; is level Labyrinth?
+		beq.s	.exit		; if not, branch
 
 		moveq	#0,d0
 		lea	(v_pal_water).w,a0
@@ -1626,8 +1630,9 @@ WhiteIn_FromWhite:
 		bsr.s	WhiteIn_DecColour ; decrease colour
 		dbf	d0,.decolour	; repeat for size of palette
 
-		cmpi.b	#id_LZ,(v_zone).w	; is level Labyrinth?
-		bne.s	.exit		; if not, branch
+		tst.b	(f_water).w	; is level Labyrinth?
+		beq.s	.exit		; if not, branch
+
 		moveq	#0,d0
 		lea	(v_pal_water).w,a0
 		lea	(v_pal_water_dup).w,a1
@@ -1998,6 +2003,7 @@ MusicList:
 ; ===========================================================================
 
 		include	"_gamemode/7 - Save Select.asm"
+	;	include	"_gamemode/$A - Sound Test.asm"
 		include	"_gamemode/2 - Level.asm"
 		include	"_inc/Dynamic Water Palette.asm"
 		include	"_inc/LZWaterFeatures.asm"
@@ -2964,7 +2970,7 @@ LoadLevelArt:
         ; list of art patterns used in levels
 LLA_ArtList:
 		dc.l Kos_GHZ, Kos_GHZ, Kos_GHZ, Kos_BZ
-		dc.l Kos_LZ, Kos_LZ, Kos_LZ, Kos_OgGHZ
+		dc.l Kos_LZ, Kos_LZ, Kos_LZ, Kos_SBZ3
 		dc.l Kos_MZ, Kos_MZ, Kos_MZ, Kos_MZ
 		dc.l Kos_SLZ, Kos_SLZ, Kos_SLZ, Kos_TAZ
 		dc.l Kos_SYZ, Kos_SYZ, Kos_SYZ, Kos_SYZ
@@ -6041,7 +6047,7 @@ Nem_TitleFg:	binclude	"artnem/Title Screen Foreground.bin"
 		even
 Nem_TitleFgJP:	binclude	"artnem/Title Screen Foreground JP.bin"
 		even
-Nem_TitleSonic:	binclude	"artnem/Title Screen Sonic.bin"
+Nem_TitleChars:	binclude	"artnem/Title Screen Sonic.bin"
 		even
 Nem_Planet:		binclude	"artnem/Planet.bin"
 		even
@@ -6410,12 +6416,6 @@ Kos_LZ:		binclude	"artcom/8x8 - LZ.bin"	; LZ primary patterns
 		even
 Blk256_LZ:	binclude	"map256_u/LZ.bin"
 		even
-Blk16_ogGHZ:	binclude	"map16_u/SBZ3.bin"
-		even
-Kos_OgGHZ:	binclude	"artcom/8x8 - SBZ3.bin"	; SBZ3 primary patterns
-		even
-Blk256_ogGHZ:	binclude	"map256_u/SBZ3.bin"
-		even
 Blk16_MZ:	binclude	"map16_u/MZ.bin"
 		even
 Kos_MZ:		binclude	"artcom/8x8 - MZ.bin"	; MZ primary patterns
@@ -6439,6 +6439,12 @@ Blk16_SBZ:	binclude	"map16_u/SBZ.bin"
 Kos_SBZ:	binclude	"artcom/8x8 - SBZ.bin"	; SBZ primary patterns
 		even
 Blk256_SBZ:	binclude	"map256_u/SBZ (JP1).bin"
+		even
+Blk16_SBZ3:	binclude	"map16_u/SBZ3.bin"
+		even
+Kos_SBZ3:		binclude	"artcom/8x8 - SBZ3.bin"	; SBZ 3 primary patterns
+		even
+Blk256_SBZ3:	binclude	"map256_u/SBZ3.bin"
 		even
 Blk16_BZ:	binclude	"map16_u/Tutorial.bin"
 		even
@@ -6515,8 +6521,6 @@ CollArray2:	binclude	"collide/Collision Array (Rotated).bin"
 		even
 Col_GHZ:	binclude	"collide/GHZ.bin"	; GHZ index
 		even
-Col_SBZ3:	binclude	"collide/SBZ3.bin"	; SBZ3 index
-		even
 Col_LZ:		binclude	"collide/LZ.bin"	; LZ index
 		even
 Col_MZ:		binclude	"collide/MZ.bin"	; MZ index
@@ -6528,6 +6532,8 @@ Col_TAZ:	binclude	"collide/TAZ.bin"	; TAZ index
 Col_SYZ:	binclude	"collide/SYZ.bin"	; SYZ index
 		even
 Col_SBZ:	binclude	"collide/SBZ.bin"	; SBZ index
+		even
+Col_SBZ3:	binclude	"collide/SBZ3.bin"	; SBZ3 index
 		even
 Col_BS:		binclude	"collide/Tutorial.bin" ; Tutorial index
 		even
@@ -6584,7 +6590,7 @@ Level_Index:
 		dc.w Level_LZ1-Level_Index, Level_LZbg-Level_Index, Level_Null-Level_Index
 		dc.w Level_LZ2-Level_Index, Level_LZbg-Level_Index, Level_Null-Level_Index
 		dc.w Level_LZ3-Level_Index, Level_LZbg-Level_Index, Level_Null-Level_Index
-		dc.w Level_SBZ3-Level_Index, Level_LZbg-Level_Index, Level_Null-Level_Index
+		dc.w Level_SBZ3-Level_Index, Level_SBZ3bg-Level_Index, Level_Null-Level_Index
 		; MZ
 		dc.w Level_MZ1-Level_Index, Level_MZ1bg-Level_Index, Level_MZ1-Level_Index
 		dc.w Level_MZ2-Level_Index, Level_MZ2bg-Level_Index, Level_Null-Level_Index
@@ -6629,6 +6635,8 @@ Level_TutorialBG:	binclude	"levels/tutorialbg.bin"
 Level_LZ1:	binclude	"levels/lz1.bin"
 		even
 Level_LZbg:	binclude	"levels/lzbg.bin"
+		even
+Level_SBZ3bg:	binclude	"levels/sbz3bg.bin"
 		even
 Level_LZ2:	binclude	"levels/lz2.bin"
 		even

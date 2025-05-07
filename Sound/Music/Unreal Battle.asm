@@ -1,12711 +1,12791 @@
-UnrealBattle_Header:
+Extra_Final_Boss_Header:
 	smpsHeaderStartSong 1
-	smpsHeaderVoice     UnrealBattle_Voices
+	smpsHeaderVoice     Extra_Final_Boss_Voices
 	smpsHeaderChan      $06, $03
 	smpsHeaderTempo     $01, $00
 
-	smpsHeaderDAC       UnrealBattle_DAC
-	smpsHeaderFM        UnrealBattle_FM1,	$00, $00
-	smpsHeaderFM        UnrealBattle_FM2,	$00, $00
-	smpsHeaderFM        UnrealBattle_FM3,	$00, $00
-	smpsHeaderFM        UnrealBattle_FM4,	$00, $00
-	smpsHeaderFM        UnrealBattle_FM5,	$00, $00
-	smpsHeaderPSG       UnrealBattle_PSG1,	$00, $00, $00, $00
-	smpsHeaderPSG       UnrealBattle_PSG2,	$00, $00, $00, $00
-	smpsHeaderPSG       UnrealBattle_PSG3,	$00, $00, $00, $00
+	smpsHeaderDAC       Extra_Final_Boss_DAC
+	smpsHeaderFM        Extra_Final_Boss_FM1,	$00, $00
+	smpsHeaderFM        Extra_Final_Boss_FM2,	$00, $00
+	smpsHeaderFM        Extra_Final_Boss_FM3,	$00, $00
+	smpsHeaderFM        Extra_Final_Boss_FM4,	$00, $00
+	smpsHeaderFM        Extra_Final_Boss_FM5,	$00, $00
+	smpsHeaderPSG       Extra_Final_Boss_PSG1,	$00, $00, $00, $00
+	smpsHeaderPSG       Extra_Final_Boss_PSG2,	$00, $00, $00, $00
+	smpsHeaderPSG       Extra_Final_Boss_PSG3,	$00, $00, $00, $00
 
 ; PSG3 Data
-UnrealBattle_PSG3:
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop109:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop109
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop10A:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop10A
-	smpsAlterNote       $00
-	dc.b	nG2
-
-UB_Sn1_Sn3_Loop10D:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop10B:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop10B
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop10C:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop10C
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsLoop            $01, $02, UB_Sn1_Sn3_Loop10D
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop10E:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop10E
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop10F:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop10F
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FE
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nG2
-	smpsAlterNote       $02
-	dc.b	nG2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $03
-	dc.b	$04
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsAlterNote       $01
-	dc.b	nG2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2, $01
-	smpsAlterNote       $02
-	dc.b	nG2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nFs2, $04
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $01
-	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $02
-	dc.b	$02
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FE
-	dc.b	nFs2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	$03
-	smpsAlterNote       $04
-	dc.b	$01, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nAb2, $01, nRst, $04, nFs2
-
-UB_Sn1_Sn3_Loop110:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UB_Sn1_Sn3_Loop110
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nFs2
-	smpsAlterNote       $04
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $02
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $02
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $04
-	dc.b	nFs2
-	smpsAlterNote       $FF
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsPSGAlterVol     $FB
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop111:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop111
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop112:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop112
-	smpsAlterNote       $00
-	dc.b	nG2
-
-UB_Sn1_Sn3_Loop115:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop113:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop113
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop114:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop114
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsLoop            $01, $02, UB_Sn1_Sn3_Loop115
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop116:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop116
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop117:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop117
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FE
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nG2
-	smpsAlterNote       $02
-	dc.b	nG2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $03
-	dc.b	$04
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsAlterNote       $01
-	dc.b	nG2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2, $01
-	smpsAlterNote       $02
-	dc.b	nG2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nFs2, $04
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $01
-	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $02
-	dc.b	$02
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FE
-	dc.b	nFs2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	$03
-	smpsAlterNote       $04
-	dc.b	$01, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nAb2, $01, nRst, $04, nFs2
-
-UB_Sn1_Sn3_Loop118:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UB_Sn1_Sn3_Loop118
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nFs2
-	smpsAlterNote       $04
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $02
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $02
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $04
-	dc.b	nFs2
-	smpsAlterNote       $FF
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsPSGAlterVol     $FB
-	smpsAlterNote       $FE
-	dc.b	nA2
-
-UB_Sn1_Sn3_Jump07:
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop119:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop119
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop11A:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop11A
-	smpsAlterNote       $00
-	dc.b	nG2
-
-UB_Sn1_Sn3_Loop11D:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop11B:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop11B
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop11C:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop11C
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsLoop            $01, $02, UB_Sn1_Sn3_Loop11D
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop11E:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop11E
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop11F:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop11F
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FE
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nG2
-	smpsAlterNote       $02
-	dc.b	nG2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $03
-	dc.b	$04
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsAlterNote       $01
-	dc.b	nG2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2, $01
-	smpsAlterNote       $02
-	dc.b	nG2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nFs2, $04
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $01
-	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $02
-	dc.b	$02
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FE
-	dc.b	nFs2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	$03
-	smpsAlterNote       $04
-	dc.b	$01, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nAb2, $01, nRst, $04, nFs2
-
-UB_Sn1_Sn3_Loop120:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UB_Sn1_Sn3_Loop120
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nFs2
-	smpsAlterNote       $04
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $02
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $02
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $04
-	dc.b	nFs2
-	smpsAlterNote       $FF
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsPSGAlterVol     $FB
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop121:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop121
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop122:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop122
-	smpsAlterNote       $00
-	dc.b	nG2
-
-UB_Sn1_Sn3_Loop125:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop123:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop123
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop124:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop124
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsLoop            $01, $02, UB_Sn1_Sn3_Loop125
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nBb2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop126:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nAb2
-	smpsAlterNote       $FD
-	dc.b	nAb2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop126
-	smpsAlterNote       $00
-	dc.b	nAb2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2, nRst, $0A
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-
-UB_Sn1_Sn3_Loop127:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsLoop            $00, $02, UB_Sn1_Sn3_Loop127
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nG2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FE
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nG2
-	smpsAlterNote       $02
-	dc.b	nG2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $03
-	dc.b	$04
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $00
-	dc.b	nG2
-	smpsAlterNote       $01
-	dc.b	nG2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2, $01
-	smpsAlterNote       $02
-	dc.b	nG2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nFs2, $04
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $01
-	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $02
-	dc.b	$02
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FE
-	dc.b	nFs2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	$03
-	smpsAlterNote       $04
-	dc.b	$01, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nAb2, $01, nRst, $04, nFs2
-
-UB_Sn1_Sn3_Loop128:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UB_Sn1_Sn3_Loop128
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FF
-	dc.b	nFs2
-	smpsAlterNote       $04
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $02
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FD
-	dc.b	nFs2
-	smpsAlterNote       $02
-	dc.b	nFs2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $04
-	dc.b	nFs2
-	smpsAlterNote       $FF
-	dc.b	nFs2
-	smpsAlterNote       $03
-	dc.b	nG2
-	smpsAlterNote       $FC
-	dc.b	nFs2
-	smpsPSGAlterVol     $FB
-	smpsAlterNote       $FE
-	dc.b	nA2
-	smpsPSGAlterVol     $05
-	smpsJump            UB_Sn1_Sn3_Jump07
-
+Extra_Final_Boss_PSG3:
+	smpsStop
 
 ; FM1 Data
-UnrealBattle_FM1:
-	smpsSetvoice        $00
+Extra_Final_Boss_FM1:
+	smpsPan             panCenter, $00
+	dc.b	nRst, $3C
+	smpsSetvoice        $02
+	smpsAlterVol        $12
+	dc.b	nCs4, $04, nD4
+	smpsAlterNote       $2B
+	dc.b	nD4
+	smpsAlterNote       $FF
+	dc.b	nE4
+	smpsAlterNote       $00
+	dc.b	nF4, nFs4, nG4, nAb4, nA4
+	smpsAlterNote       $02
+	dc.b	nBb4
+	smpsAlterNote       $00
+	dc.b	nB4
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nCs5, nD5
+	smpsAlterNote       $2B
+	dc.b	nD5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $2B
+	dc.b	nD5
+	smpsAlterNote       $00
+	dc.b	nD5, nCs5
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nB4
+	smpsAlterNote       $02
+	dc.b	nBb4
+	smpsAlterNote       $00
+	dc.b	nA4, nAb4, nG4, nFs4, nF4
+	smpsAlterNote       $FF
+	dc.b	nE4
+	smpsAlterNote       $2B
+	dc.b	nD4
+	smpsAlterNote       $00
+	dc.b	nD4, nCs4
+	smpsAlterNote       $03
+	dc.b	nC4
+	smpsAlterNote       $00
+	dc.b	nB3, nRst, $48
+	smpsAlterNote       $03
+	dc.b	nC5, $04, nC5
+	smpsAlterNote       $00
+	dc.b	nB4
+	smpsAlterNote       $02
+	dc.b	nBb4
+	smpsAlterNote       $00
+	dc.b	nA4, nAb4, nG4, nFs4, nF4
+	smpsAlterNote       $FF
+	dc.b	nE4
+	smpsAlterNote       $2B
+	dc.b	nD4
+	smpsAlterNote       $00
+	dc.b	nD4, nCs4
+	smpsAlterNote       $03
+	dc.b	nC4
+	smpsAlterNote       $00
+	dc.b	nB3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsAlterNote       $00
+	dc.b	nA3, nAb3, nG3, nAb3, nA3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsAlterNote       $00
+	dc.b	nB3
+	smpsAlterNote       $03
+	dc.b	nC4
+	smpsAlterNote       $00
+	dc.b	nCs4, nD4
+	smpsAlterNote       $2B
+	dc.b	nD4
+	smpsAlterNote       $FF
+	dc.b	nE4
+	smpsAlterNote       $00
+	dc.b	nF4, nFs4
+	smpsAlterNote       $2B
+	dc.b	nD4, $0C
+	smpsAlterNote       $00
+	dc.b	nFs4, nA4, nD4, nF4, nAb4, nCs4
+	smpsAlterNote       $FF
+	dc.b	nE4
+	smpsAlterNote       $00
+	dc.b	nG4, nCs4
+	smpsAlterNote       $2B
+	dc.b	nD4
+	smpsAlterNote       $00
+	dc.b	nFs4, nB3, nD4, nF4, $18, nA4, $3C
+	smpsAlterNote       $02
+	dc.b	nBb4, $0C
+	smpsAlterNote       $00
+	dc.b	nA4, nG4, $6C
+
+Extra_Final_Boss_Jump04:
+	dc.b	nRst, $7F, $7F, $5E, nA3, $06, nB3, nCs4
+	smpsAlterNote       $FF
+	dc.b	nE4
+	smpsAlterNote       $00
+	dc.b	nF4, nG4
+
+Extra_Final_Boss_Loop8D:
+	dc.b	nA4
+	smpsAlterNote       $02
+	dc.b	nBb4
+	smpsAlterNote       $00
+	smpsLoop            $00, $0C, Extra_Final_Boss_Loop8D
+	dc.b	nA4, nAb4, nG4, nFs4, nF4
+	smpsAlterNote       $FF
+	dc.b	nE4
+	smpsAlterNote       $2B
+	dc.b	nD4
+	smpsAlterNote       $00
+	dc.b	nCs4, nRst, $7F, $7F, $7F, $7F, $20, nA3, $06, nB3, nCs4
+	smpsAlterNote       $FF
+	dc.b	nE4
+	smpsAlterNote       $00
+	dc.b	nF4, nG4
+
+Extra_Final_Boss_Loop8E:
+	dc.b	nA4
+	smpsAlterNote       $02
+	dc.b	nBb4
+	smpsAlterNote       $00
+	smpsLoop            $00, $0C, Extra_Final_Boss_Loop8E
+	dc.b	nA4, nAb4, nG4, nFs4, nF4
+	smpsAlterNote       $FF
+	dc.b	nE4
+	smpsAlterNote       $2B
+	dc.b	nD4
+	smpsAlterNote       $00
+	dc.b	nCs4, nRst, $7F, $41
+	smpsSetvoice        $05
+	smpsAlterVol        $FC
+
+Extra_Final_Boss_Loop8F:
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nB4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $02
+	dc.b	nBb4, $0D, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nB4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01
+	smpsAlterNote       $00
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop8F
+
+Extra_Final_Boss_Loop90:
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD5, $0C, nA4
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5, $06
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nD5, $0C
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nA4
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nG4, nA4, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD5, $0C, nA4
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5, $06
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nD5, $0C
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nD5, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop90
+	dc.b	$08
+
+Extra_Final_Boss_Loop91:
+	dc.b	nA4, $07, nG4, $09, nD5, $08
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop91
+	dc.b	nA4, $07, nG4, $09
+
+Extra_Final_Boss_Loop92:
+	dc.b	nCs5, $08, nA4, $07, nFs4, $09
+	smpsLoop            $00, $0A, Extra_Final_Boss_Loop92
+
+Extra_Final_Boss_Loop93:
+	dc.b	nB4, $08, nAb4, $07
+	smpsAlterNote       $FF
+	dc.b	nE4, $09
+	smpsAlterNote       $00
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop93
+	dc.b	nA4, $08, nFs4, $07, nCs4, $09, nAb4, $08, nA4, $07, nB4, $09
+	dc.b	nFs4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02
+	smpsAlterNote       $00
+	dc.b	nCs4, $07
+	smpsAlterNote       $FF
+	dc.b	nE4, $09
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop94:
+	dc.b	nFs4, $08, nCs4, $07, nA3, $09
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop94
+
+Extra_Final_Boss_Loop95:
+	dc.b	nAb4, $08
+	smpsAlterNote       $FF
+	dc.b	nE4, $07
+	smpsAlterNote       $00
+	dc.b	nB3, $09
+	smpsLoop            $00, $03, Extra_Final_Boss_Loop95
+	dc.b	nAb4, $08, nA4, $07, nB4, $09, nCs5, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+
+Extra_Final_Boss_Loop96:
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nCs5, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nFs4, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop96
+
+Extra_Final_Boss_Loop97:
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nB4, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop97
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nFs4, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nCs4, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nB4, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nFs4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02
+	smpsAlterNote       $00
+	dc.b	nCs4, $07
+	smpsAlterNote       $FF
+	dc.b	nE4, $09
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop98:
+	dc.b	nFs4, $08, nCs4, $07, nA3, $09
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop98
+
+Extra_Final_Boss_Loop99:
+	dc.b	nAb4, $08
+	smpsAlterNote       $FF
+	dc.b	nE4, $07
+	smpsAlterNote       $00
+	dc.b	nB3, $09
+	smpsLoop            $00, $03, Extra_Final_Boss_Loop99
+	dc.b	nAb4, $08, nA4, $07, nB4, $09, nCs5
+
+Extra_Final_Boss_Loop9A:
+	dc.b	$06
+	smpsAlterVol        $07
+	dc.b	smpsNoAttack, nCs5
 	smpsAlterVol        $05
+	dc.b	smpsNoAttack, nCs5
+	smpsAlterVol        $F4
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop9A
+	dc.b	nCs5
+	smpsAlterVol        $07
+	dc.b	smpsNoAttack, $06
+	smpsAlterVol        $F9
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, nRst, $0C
+	smpsAlterVol        $04
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop9F:
+	dc.b	nF4
+
+Extra_Final_Boss_Loop9B:
+	dc.b	$06
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $DA
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop9B
+	smpsAlterNote       $FF
+
+Extra_Final_Boss_Loop9C:
+	dc.b	nE4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $DA
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop9C
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop9D:
+	dc.b	nAb4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $DA
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop9D
+
+Extra_Final_Boss_Loop9E:
+	dc.b	nG4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $DA
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop9E
+	smpsLoop            $01, $02, Extra_Final_Boss_Loop9F
+
+Extra_Final_Boss_LoopA0:
+	dc.b	nF4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $DA
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopA0
+	smpsAlterNote       $FF
+
+Extra_Final_Boss_LoopA1:
+	dc.b	nE4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $DA
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopA1
+	smpsAlterNote       $00
+
+Extra_Final_Boss_LoopA2:
+	dc.b	nAb4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $DA
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopA2
+	dc.b	nG4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $DA
+	dc.b	nG4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, $06
+	smpsAlterVol        $F2
+
+Extra_Final_Boss_LoopA3:
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nB4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $02
+	dc.b	nBb4, $0D, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nB4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01
+	smpsAlterNote       $00
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopA3
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD5, $0C, nA4
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5, $06
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nD5, $0C
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nA4
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nG4, nA4, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD5, $0C, nA4
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5, $06
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nD5, $0C
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nD5, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD5, $0C, nA4
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5, $06
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nD5, $0C
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nA4
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nG4, nA4, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nA4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD5, $0C, nA4
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5, $06
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nD5, $0C
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nD5, $0D, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, nRst, $24
+
+Extra_Final_Boss_LoopA4:
+	smpsAlterNote       $00
+	dc.b	nD4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0A, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $09, nA4, nG4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nB4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD5, $09, nA4
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5, $04
+	smpsAlterNote       $FF
+	dc.b	nE5, $05
+	smpsAlterNote       $00
+	dc.b	nD5, $09
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nA4
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nG4, nA4, nF4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, nD4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $0A, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $09, nA4, nG4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nB4, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD5, $09, nA4
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $00
+	dc.b	nF5, $04
+	smpsAlterNote       $FF
+	dc.b	nE5, $05
+	smpsAlterNote       $00
+	dc.b	nD5, $09
+	smpsAlterNote       $03
+	dc.b	nC5
+	smpsAlterNote       $00
+	dc.b	nD5, $0A, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopA4
+	dc.b	smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01
+	smpsSetvoice        $02
+	smpsAlterVol        $04
 	smpsPan             panCenter, $00
-	dc.b	nC3, $1E, nEb3, $05, nF3
-	smpsAlterNote       $FF
-	dc.b	nG3, $0A
 	smpsAlterNote       $00
-	dc.b	nC3, nC3, nB2, nBb2, $1E, $05, nEb3, nF3, $0A, nBb2, nBb2, nA2
-	dc.b	nAb2, $1E, $05, nCs3, nEb3, $0A, nAb2, nAb2, nG2, nAb2, nEb3, $05
-	dc.b	nA2, nEb3, $0A, nG2, nBb2, nF3, $05, nEb3, nF3, $14
-	smpsAlterVol        $03
-	dc.b	nA2, $0A, nC3, nE3, $0F, nC3, $05, nA2, $0A, nC3, nE3, nA2
-	dc.b	nG2, nC3, nD3, $0F, $05, nG2, $0A, nC3, nD3, nEb3, nE3, nC3
-	dc.b	nA2, nF2, nE3, nC3, nA2, nE2, nG2, nC3, nCs3, nF3
-	smpsAlterNote       $FF
-	dc.b	nG3, $0F
-	smpsAlterNote       $00
-	dc.b	nE3, $05, nA3, $0F, $05
-
-UnrealBattle_LoopD4:
-	dc.b	nF3, nAb3, nBb3
-	smpsLoop            $00, $04, UnrealBattle_LoopD4
-	dc.b	nF3, nAb3, nBb3, $0A
-
-UnrealBattle_LoopD5:
-	dc.b	nF3, $05, nBb3, nC4
-	smpsLoop            $00, $04, UnrealBattle_LoopD5
-	dc.b	nF3, nBb3, nC4, $0A
-
-UnrealBattle_LoopD6:
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4
-	smpsLoop            $00, $04, UnrealBattle_LoopD6
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4, $0A
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nC4, nEb4
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nC4, nEb4, $0F
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4, $0F
-
-UnrealBattle_LoopD7:
-	dc.b	nF3, $05, nAb3, nBb3
-	smpsLoop            $00, $04, UnrealBattle_LoopD7
-	dc.b	nF3, nAb3, nBb3, $0A
-
-UnrealBattle_LoopD8:
-	dc.b	nF3, $05, nBb3, nC4
-	smpsLoop            $00, $04, UnrealBattle_LoopD8
-	dc.b	nF3, nBb3, nC4, $0A
-
-UnrealBattle_LoopD9:
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4
-	smpsLoop            $00, $04, UnrealBattle_LoopD9
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4, $0A
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nC4, nEb4
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nC4, nEb4, $0F
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4, $0F
-	smpsAlterNote       $FF
-	dc.b	nG3, $0A
-	smpsAlterNote       $00
-	dc.b	nA3, $05, nRst, nA3, $0A
-
-UnrealBattle_LoopDA:
-	dc.b	$05, nRst, nB3, $0A
-	smpsLoop            $00, $04, UnrealBattle_LoopDA
-
-UnrealBattle_LoopDB:
-	dc.b	$05, nRst
-	smpsAlterNote       $FF
-	dc.b	nG3, $0A
-	smpsAlterNote       $00
-	dc.b	nA3, $05, nRst, nA3, $0A
-	smpsLoop            $00, $02, UnrealBattle_LoopDB
-	smpsLoop            $01, $03, UnrealBattle_LoopDA
-
-UnrealBattle_LoopDC:
-	dc.b	$05, nRst, nB3, $0A
-	smpsLoop            $00, $04, UnrealBattle_LoopDC
-	dc.b	$05, nRst
-	smpsAlterNote       $FF
-	dc.b	nG3, $0A
-	smpsAlterNote       $00
-	dc.b	nA3, $05, nRst, nA3, $0A, $05, nRst
-	smpsAlterVol        $FD
-	dc.b	nC3, $01
-
-UnrealBattle_Jump05:
-	dc.b	smpsNoAttack, nC3, $1D, nEb3, $05, nF3
-	smpsAlterNote       $FF
-	dc.b	nG3, $0A
-	smpsAlterNote       $00
-	dc.b	nC3, nC3, nB2, nBb2, $1E, $05, nEb3, nF3, $0A, nBb2, nBb2, nA2
-	dc.b	nAb2, $1E, $05, nCs3, nEb3, $0A, nAb2, nAb2, nG2, nAb2, nEb3, $05
-	dc.b	nA2, nEb3, $0A, nG2, nBb2, nF3, $05, nEb3, nF3, $14
-	smpsAlterVol        $03
-	dc.b	nA2, $0A, nC3, nE3, $0F, nC3, $05, nA2, $0A, nC3, nE3, nA2
-	dc.b	nG2, nC3, nD3, $0F, $05, nG2, $0A, nC3, nD3, nEb3, nE3, nC3
-	dc.b	nA2, nF2, nE3, nC3, nA2, nE2, nG2, nC3, nCs3, nF3
-	smpsAlterNote       $FF
-	dc.b	nG3, $0F
-	smpsAlterNote       $00
-	dc.b	nE3, $05, nA3, $0F, $05
-
-UnrealBattle_LoopDD:
-	dc.b	nF3, nAb3, nBb3
-	smpsLoop            $00, $04, UnrealBattle_LoopDD
-	dc.b	nF3, nAb3, nBb3, $0A
-
-UnrealBattle_LoopDE:
-	dc.b	nF3, $05, nBb3, nC4
-	smpsLoop            $00, $04, UnrealBattle_LoopDE
-	dc.b	nF3, nBb3, nC4, $0A
-
-UnrealBattle_LoopDF:
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4
-	smpsLoop            $00, $04, UnrealBattle_LoopDF
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4, $0A
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nC4, nEb4
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nC4, nEb4, $0F
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4, $0F
-
-UnrealBattle_LoopE0:
-	dc.b	nF3, $05, nAb3, nBb3
-	smpsLoop            $00, $04, UnrealBattle_LoopE0
-	dc.b	nF3, nAb3, nBb3, $0A
-
-UnrealBattle_LoopE1:
-	dc.b	nF3, $05, nBb3, nC4
-	smpsLoop            $00, $04, UnrealBattle_LoopE1
-	dc.b	nF3, nBb3, nC4, $0A
-
-UnrealBattle_LoopE2:
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4
-	smpsLoop            $00, $04, UnrealBattle_LoopE2
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4, $0A
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nC4, nEb4
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nC4, nEb4, $0F
-	smpsAlterNote       $FF
-	dc.b	nG3, $05
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4
-	smpsAlterNote       $FF
-	dc.b	nG3
-	smpsAlterNote       $00
-	dc.b	nBb3, nCs4, $0F
-	smpsAlterNote       $FF
-	dc.b	nG3, $0A
-	smpsAlterNote       $00
-	dc.b	nA3, $05, nRst, nA3, $0A
-
-UnrealBattle_LoopE3:
-	dc.b	$05, nRst, nB3, $0A
-	smpsLoop            $00, $04, UnrealBattle_LoopE3
-
-UnrealBattle_LoopE4:
-	dc.b	$05, nRst
-	smpsAlterNote       $FF
-	dc.b	nG3, $0A
-	smpsAlterNote       $00
-	dc.b	nA3, $05, nRst, nA3, $0A
-	smpsLoop            $00, $02, UnrealBattle_LoopE4
-	smpsLoop            $01, $03, UnrealBattle_LoopE3
-
-UnrealBattle_LoopE5:
-	dc.b	$05, nRst, nB3, $0A
-	smpsLoop            $00, $04, UnrealBattle_LoopE5
-	dc.b	$05, nRst
-	smpsAlterNote       $FF
-	dc.b	nG3, $0A
-	smpsAlterNote       $00
-	dc.b	nA3, $05, nRst, nA3, $0A, $05, nRst
-	smpsAlterVol        $FD
-	dc.b	nC3, $01
-	smpsPan             panCenter, $00
-	smpsJump            UnrealBattle_Jump05
+	smpsJump            Extra_Final_Boss_Jump04
 
 ; FM2 Data
-UnrealBattle_FM2:
-	smpsSetvoice        $01
-	smpsAlterVol        $11
+Extra_Final_Boss_FM2:
+	smpsSetvoice        $00
+	smpsAlterVol        $10
 	smpsPan             panCenter, $00
-	dc.b	nRst, $1E
-	smpsSetvoice        $03
-	smpsAlterVol        $FE
+	smpsAlterNote       $03
+	dc.b	nC3, $18
+	smpsAlterNote       $00
+	dc.b	nB2, $24, $0C
+	smpsAlterNote       $02
+	dc.b	nBb2
+	smpsAlterNote       $00
+	dc.b	nA2, nAb2, nG2, nFs2, nG2, nAb2, nA2
+	smpsAlterNote       $02
+	dc.b	nBb2
+	smpsAlterNote       $00
+	dc.b	nB2
+	smpsAlterNote       $03
+	dc.b	nC3, $18
+	smpsAlterNote       $00
+	dc.b	nB2, $24
+	smpsAlterNote       $02
+	dc.b	nBb2, nRst, $0C, nBb2
+	smpsAlterNote       $00
+	dc.b	nA2, nAb2, nG2, nFs2, nF2
+	smpsAlterNote       $FF
+	dc.b	nE2
+	smpsAlterNote       $2B
+	dc.b	nD3, $24
+	smpsAlterNote       $00
+	dc.b	nD3, nCs3
+	smpsAlterNote       $03
+	dc.b	nC3
+	smpsAlterNote       $00
+	dc.b	nB2, $30
+	smpsAlterNote       $02
+	dc.b	nBb2, $54
+	smpsAlterNote       $00
+	dc.b	nA2, $6C
 
-UnrealBattle_Loop65:
-	smpsAlterNote       $0C
-	dc.b	nC5, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop65
+Extra_Final_Boss_Jump03:
+	dc.b	nD4, $06, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nF3
 
-UnrealBattle_Loop66:
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop6F:
+	dc.b	nD3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop6F
+	dc.b	nCs4, nCs3, nCs3, nCs3, nAb3, nCs3, nCs3, nCs3
+	smpsAlterNote       $FF
+	dc.b	nE3
 	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop66
-	dc.b	smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, nRst, $1E
 
-UnrealBattle_Loop67:
-	smpsAlterNote       $0F
-	dc.b	nD5, $01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop67
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5
+Extra_Final_Boss_Loop70:
+	dc.b	nCs3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop70
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nF3
 
-UnrealBattle_Loop68:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop71:
+	dc.b	nD3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop71
+	smpsAlterNote       $FF
+	dc.b	nE4, nE3, nE3, nE3
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
+	dc.b	nB3
+	smpsAlterNote       $FF
+	dc.b	nE3, nE3, nE3
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop68
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, nRst, $1E
+	dc.b	nG3
+	smpsAlterNote       $FF
 
-UnrealBattle_Loop69:
-	smpsAlterNote       $0F
-	dc.b	nD5, $01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop72:
+	dc.b	nE3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop72
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop69
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nF3
 
-UnrealBattle_Loop6A:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop73:
+	dc.b	nD3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop73
+	dc.b	nCs4, nCs3, nCs3, nCs3, nAb3, nCs3, nCs3, nCs3
+	smpsAlterNote       $FF
+	dc.b	nE3
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop6A
 
-UnrealBattle_Loop6B:
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop6B
+Extra_Final_Boss_Loop74:
+	dc.b	nCs3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop74
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nF3
 
-UnrealBattle_Loop6C:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
+Extra_Final_Boss_Loop75:
+	dc.b	nD3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop75
+	smpsAlterNote       $FF
+	dc.b	nE4, nE3, nE3, nE3
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
+	dc.b	nB3
+	smpsAlterNote       $FF
+	dc.b	nE3, nE3, nE3
 	smpsAlterNote       $00
-	dc.b	$01
-	smpsLoop            $00, $04, UnrealBattle_Loop6C
-	dc.b	smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterNote       $0C
-	dc.b	nC5
+	dc.b	nG3
+	smpsAlterNote       $FF
 
-UnrealBattle_Loop6D:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $04, UnrealBattle_Loop6D
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterVol        $FC
+Extra_Final_Boss_Loop76:
+	dc.b	nE3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop76
+	smpsAlterNote       $02
 
-UnrealBattle_Loop6E:
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop78:
+	dc.b	nBb3, nBb2, nBb2, nBb2
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
+	dc.b	nF3
+	smpsAlterNote       $02
+	dc.b	nBb2, nBb2, nBb2
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop6E
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
+	dc.b	nCs3
+	smpsAlterNote       $02
 
-UnrealBattle_Loop6F:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop77:
+	dc.b	nBb2
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop77
+	smpsLoop            $01, $03, Extra_Final_Boss_Loop78
+	smpsAlterNote       $03
+	dc.b	nC4, nC3, nC3, nC3
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop6F
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterNote       $0C
-	dc.b	nC5
+	dc.b	nG3
+	smpsAlterNote       $03
+	dc.b	nC3, nC3, nC3
+	smpsAlterNote       $FF
+	dc.b	nE3
+	smpsAlterNote       $03
 
-UnrealBattle_Loop70:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop79:
+	dc.b	nC3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop79
 	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $09, UnrealBattle_Loop70
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nF3
 
-UnrealBattle_Loop71:
-	smpsAlterNote       $0C
-	dc.b	nC5, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop7A:
+	dc.b	nD3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop7A
+	dc.b	nCs4, nCs3, nCs3, nCs3, nAb3, nCs3, nCs3, nCs3
+	smpsAlterNote       $FF
+	dc.b	nE3
 	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_Loop71
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02
 
-UnrealBattle_Loop72:
-	smpsAlterNote       $0D
-	dc.b	nCs5, $01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_Loop72
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
+Extra_Final_Boss_Loop7B:
+	dc.b	nCs3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop7B
 
-UnrealBattle_Loop73:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop7D:
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nF3
+
+Extra_Final_Boss_Loop7C:
+	dc.b	nD3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop7C
+	smpsLoop            $01, $02, Extra_Final_Boss_Loop7D
+
+Extra_Final_Boss_Loop7E:
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nCs4, nCs3, nCs3, nCs3
+	dc.b	nAb3, nCs3, nCs3, nCs3
+	smpsAlterNote       $FF
+	dc.b	nE4, nE3, nE3, nE3
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
+	dc.b	nB3
+	smpsAlterNote       $FF
+	dc.b	nE3, nE3, nE3
+	smpsAlterNote       $2B
+	dc.b	nD4, nD3, nD3, nD3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsAlterNote       $2B
+	dc.b	nD3, nD3, nD3
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop73
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
+	smpsLoop            $00, $03, Extra_Final_Boss_Loop7E
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nCs4, nCs3, nCs3, nCs3
+	dc.b	nAb3, nCs3, nCs3, nCs3
+	smpsAlterNote       $FF
+	dc.b	nE4, nE3, nE3, nE3
 	smpsAlterNote       $00
-	dc.b	$01
+	dc.b	nB3
+	smpsAlterNote       $FF
+	dc.b	nE3, nE3, nE3
+	smpsAlterNote       $2B
+	dc.b	nD4, nD3, nD3, nD3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsAlterNote       $2B
+	dc.b	nD3, nD3, nD3
+
+Extra_Final_Boss_Loop80:
+	smpsAlterNote       $02
+	dc.b	nBb3, nBb2, nBb2, nBb2
+	smpsAlterNote       $00
+	dc.b	nF3
+	smpsAlterNote       $02
+	dc.b	nBb2, nBb2, nBb2
+	smpsAlterNote       $03
+	dc.b	nC4, nC3, nC3, nC3
+	smpsAlterNote       $00
+	dc.b	nG3
+	smpsAlterNote       $03
+	dc.b	nC3, nC3, nC3
+	smpsAlterNote       $00
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nB3, nB2, nB2, nB2
+	dc.b	nFs3, nB2, nB2, nB2
+	smpsAlterNote       $02
+	dc.b	nBb3, nBb2, nBb2, nBb2
+	smpsAlterNote       $00
+	dc.b	nF3
+	smpsAlterNote       $02
+	dc.b	nBb2, nBb2, nBb2
+	smpsAlterNote       $03
+	dc.b	nC4, nC3, nC3, nC3
+	smpsAlterNote       $00
+	dc.b	nG3
+	smpsAlterNote       $03
+	dc.b	nC3, nC3, nC3
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop7F:
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop7F
+	smpsLoop            $01, $04, Extra_Final_Boss_Loop80
+
+Extra_Final_Boss_Loop82:
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nF3
+
+Extra_Final_Boss_Loop81:
+	dc.b	nD3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop81
+	smpsLoop            $01, $02, Extra_Final_Boss_Loop82
+
+Extra_Final_Boss_Loop84:
+	dc.b	nFs4, nFs3, nFs3, nFs3, nCs4, nFs3, nFs3, nFs3, nA3
+
+Extra_Final_Boss_Loop83:
+	dc.b	nFs3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop83
+	smpsLoop            $01, $02, Extra_Final_Boss_Loop84
+
+Extra_Final_Boss_Loop86:
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3
+	smpsAlterNote       $FF
+	dc.b	nE4, nE3, nE3, nE3
+	smpsAlterNote       $00
+	dc.b	nB3
+	smpsAlterNote       $FF
+	dc.b	nE3, nE3, nE3
+	smpsAlterNote       $00
+	dc.b	nFs4, nFs3, nFs3, nFs3, nCs4, nFs3, nFs3, nFs3, nA3
+
+Extra_Final_Boss_Loop85:
+	dc.b	nFs3
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop85
+	smpsLoop            $01, $03, Extra_Final_Boss_Loop86
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3
+	smpsAlterNote       $FF
+	dc.b	nE4, nE3, nE3, nE3
+	smpsAlterNote       $00
+	dc.b	nB3
+	smpsAlterNote       $FF
+	dc.b	nE3, nE3, nE3
+	smpsAlterNote       $00
+	dc.b	nF4, nF3, nF3, nF3, nCs4, nF3, nF3, nF3
+
+Extra_Final_Boss_Loop87:
+	dc.b	nF3
 	smpsAlterVol        $08
-
-UnrealBattle_Loop74:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop74
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $06
-
-UnrealBattle_Loop75:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop75
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FA
-
-UnrealBattle_Loop76:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop76
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop77:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop77
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_Loop78:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop78
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $06
-
-UnrealBattle_Loop79:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop79
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FA
-
-UnrealBattle_Loop7A:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop7A
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop7B:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop7B
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_Loop7C:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop7C
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $06
-
-UnrealBattle_Loop7D:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop7D
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FA
-
-UnrealBattle_Loop7E:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop7E
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop7F:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop7F
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_Loop80:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop80
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop81:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop81
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_Loop82:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop82
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $F8
-	smpsLoop            $01, $02, UnrealBattle_Loop73
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_Loop83:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop83
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_Loop84:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop84
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-
-UnrealBattle_Loop87:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop85:
-	smpsAlterNote       $0D
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop85
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_Loop86:
-	smpsAlterNote       $0D
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop86
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	smpsLoop            $01, $02, UnrealBattle_Loop87
-
-UnrealBattle_Loop8A:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_Loop88:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop88
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_Loop89:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop89
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	smpsLoop            $01, $02, UnrealBattle_Loop8A
-
-UnrealBattle_Loop8D:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop8B:
-	smpsAlterNote       $0D
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop8B
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_Loop8C:
-	smpsAlterNote       $0D
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop8C
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	smpsLoop            $01, $02, UnrealBattle_Loop8D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_Loop8E:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop8E
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_Loop8F:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop8F
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop90:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop90
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_Loop91:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop91
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-
-UnrealBattle_Loop94:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop92:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop92
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_Loop93:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop93
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	smpsLoop            $01, $02, UnrealBattle_Loop94
-
-UnrealBattle_Loop97:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop95:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop95
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_Loop96:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop96
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	smpsLoop            $01, $02, UnrealBattle_Loop97
-
-UnrealBattle_Loop9A:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop98:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop98
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_Loop99:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop99
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	smpsLoop            $01, $02, UnrealBattle_Loop9A
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop9B:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_Loop9B
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-	smpsLoop            $01, $02, UnrealBattle_Loop9B
-
-UnrealBattle_Loop9C:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01
-
-UnrealBattle_Jump04:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsLoop            $00, $03, UnrealBattle_Loop9C
-	dc.b	smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_Loop9D:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $03, UnrealBattle_Loop9D
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_Loop9E:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop9E
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, nRst, $1E
-
-UnrealBattle_Loop9F:
-	smpsAlterNote       $0F
-	dc.b	nD5, $01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop9F
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5
-
-UnrealBattle_LoopA0:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopA0
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, nRst, $1E
-
-UnrealBattle_LoopA1:
-	smpsAlterNote       $0F
-	dc.b	nD5, $01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_LoopA1
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5
-
-UnrealBattle_LoopA2:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopA2
-
-UnrealBattle_LoopA3:
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_LoopA3
-
-UnrealBattle_LoopA4:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsLoop            $00, $04, UnrealBattle_LoopA4
-	dc.b	smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_LoopA5:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $04, UnrealBattle_LoopA5
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopA6:
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_LoopA6
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-
-UnrealBattle_LoopA7:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_LoopA7
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_LoopA8:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $09, UnrealBattle_LoopA8
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02
-
-UnrealBattle_LoopA9:
-	smpsAlterNote       $0C
-	dc.b	nC5, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_LoopA9
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02
-
-UnrealBattle_LoopAA:
-	smpsAlterNote       $0D
-	dc.b	nCs5, $01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_LoopAA
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopAB:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopAB
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
+	dc.b	smpsNoAttack, $06
+	smpsAlterVol        $15
+	dc.b	smpsNoAttack, $06
+	smpsAlterVol        $E3
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop87
+	dc.b	nF3
 	smpsAlterVol        $08
-
-UnrealBattle_LoopAC:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopAC
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $06
-
-UnrealBattle_LoopAD:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopAD
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FA
-
-UnrealBattle_LoopAE:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopAE
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopAF:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopAF
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_LoopB0:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopB0
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $06
-
-UnrealBattle_LoopB1:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopB1
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FA
-
-UnrealBattle_LoopB2:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopB2
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopB3:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopB3
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_LoopB4:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopB4
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $06
-
-UnrealBattle_LoopB5:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopB5
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FA
-
-UnrealBattle_LoopB6:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopB6
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopB7:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopB7
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_LoopB8:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopB8
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopB9:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopB9
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_LoopBA:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopBA
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
+	dc.b	smpsNoAttack, $06
 	smpsAlterVol        $F8
-	smpsLoop            $01, $02, UnrealBattle_LoopAB
-	smpsAlterNote       $0C
-	dc.b	nC5
 
-UnrealBattle_LoopBB:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop88:
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nCs4, nCs3, nCs3, nCs3
+	dc.b	nAb3, nCs3, nCs3, nCs3
+	smpsAlterNote       $FF
+	dc.b	nE4, nE3, nE3, nE3
 	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
+	dc.b	nB3
+	smpsAlterNote       $FF
+	dc.b	nE3, nE3, nE3
+	smpsAlterNote       $2B
+	dc.b	nD4, nD3, nD3, nD3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsAlterNote       $2B
+	dc.b	nD3, nD3, nD3
 	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_LoopBB
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop88
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nCs4, nCs3, nCs3, nCs3
+	dc.b	nAb3, nCs3, nCs3, nCs3
+	smpsAlterNote       $FF
+	dc.b	nE4, nE3, nE3, nE3
 	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-	smpsAlterNote       $0C
-	dc.b	nC5
+	dc.b	nB3
+	smpsAlterNote       $FF
+	dc.b	nE3, nE3, nE3
+	smpsAlterNote       $2B
+	dc.b	nD4, nD3, nD3, nD3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsAlterNote       $2B
+	dc.b	nD3, nD3, nD3
 
-UnrealBattle_LoopBC:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop8A:
+	smpsAlterNote       $02
+	dc.b	nBb3, nBb2, nBb2, nBb2
 	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
+	dc.b	nF3
+	smpsAlterNote       $02
+	dc.b	nBb2, nBb2, nBb2
+	smpsAlterNote       $03
+	dc.b	nC4, nC3, nC3, nC3
 	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_LoopBC
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
+	dc.b	nG3
+	smpsAlterNote       $03
+	dc.b	nC3, nC3, nC3
+	smpsAlterNote       $00
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3, nB3, nB2, nB2, nB2
+	dc.b	nFs3, nB2, nB2, nB2
+	smpsAlterNote       $02
+	dc.b	nBb3, nBb2, nBb2, nBb2
+	smpsAlterNote       $00
+	dc.b	nF3
+	smpsAlterNote       $02
+	dc.b	nBb2, nBb2, nBb2
+	smpsAlterNote       $03
+	dc.b	nC4, nC3, nC3, nC3
+	smpsAlterNote       $00
+	dc.b	nG3
+	smpsAlterNote       $03
+	dc.b	nC3, nC3, nC3
+	smpsAlterNote       $00
 
-UnrealBattle_LoopBF:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
+Extra_Final_Boss_Loop89:
+	dc.b	nD4, nD3, nD3, nD3, nA3, nD3, nD3, nD3
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop89
+	smpsLoop            $01, $04, Extra_Final_Boss_Loop8A
+	dc.b	nRst, $24
 
-UnrealBattle_LoopBD:
-	smpsAlterNote       $0D
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop8C:
+	smpsAlterNote       $02
+	dc.b	nBb3, $04, nBb2, $05, $04, $05
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
+	dc.b	nF3, $04
+	smpsAlterNote       $02
+	dc.b	nBb2, $05, $04, $05
+	smpsAlterNote       $03
+	dc.b	nC4, $04, nC3, $05, $04, $05
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopBD
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
+	dc.b	nG3, $04
+	smpsAlterNote       $03
+	dc.b	nC3, $05, $04, $05
 	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
+	dc.b	nD4, $04, nD3, $05, $04, $05, nA3, $04, nD3, $05, $04, $05
+	dc.b	nB3, $04, nB2, $05, $04, $05, nFs3, $04, nB2, $05, $04, $05
+	smpsAlterNote       $02
+	dc.b	nBb3, $04, nBb2, $05, $04, $05
+	smpsAlterNote       $00
+	dc.b	nF3, $04
+	smpsAlterNote       $02
+	dc.b	nBb2, $05, $04, $05
+	smpsAlterNote       $03
+	dc.b	nC4, $04, nC3, $05, $04, $05
+	smpsAlterNote       $00
+	dc.b	nG3, $04
+	smpsAlterNote       $03
+	dc.b	nC3, $05, $04, $05
+	smpsAlterNote       $00
 
-UnrealBattle_LoopBE:
-	smpsAlterNote       $0D
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop8B:
+	dc.b	nD4, $04, nD3, $05, $04, $05, nA3, $04, nD3, $05, $04, $05
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop8B
+	smpsLoop            $01, $03, Extra_Final_Boss_Loop8C
+	smpsAlterNote       $02
+	dc.b	nBb3, $04, nBb2, $05, $04, $05
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
+	dc.b	nF3, $04
+	smpsAlterNote       $02
+	dc.b	nBb2, $05, $04, $05
+	smpsAlterNote       $03
+	dc.b	nC4, $04, nC3, $05, $04, $05
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopBE
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	smpsLoop            $01, $02, UnrealBattle_LoopBF
-
-UnrealBattle_LoopC2:
-	dc.b	$01, smpsNoAttack
+	dc.b	nG3, $04
+	smpsAlterNote       $03
+	dc.b	nC3, $05, $04, $05
 	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_LoopC0:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
+	dc.b	nD4, $04, nD3, $05, $04, $05, nA3, $04, nD3, $05, $04, $05
+	dc.b	nB3, $04, nB2, $05, $04, $05, nFs3, $04, nB2, $05, $04, $05
+	smpsAlterNote       $02
+	dc.b	nBb3, $04, nBb2, $05, $04, $05
 	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
+	dc.b	nF3, $04
+	smpsAlterNote       $02
+	dc.b	nBb2, $05, $04, $05
+	smpsAlterNote       $03
+	dc.b	nC4, $04, nC3, $05, $04, $05
 	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_LoopC0
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
+	dc.b	nG3, $04
+	smpsAlterNote       $03
+	dc.b	nC3, $05, $04, $05
 	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_LoopC1:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_LoopC1
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	smpsLoop            $01, $02, UnrealBattle_LoopC2
-
-UnrealBattle_LoopC5:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopC3:
-	smpsAlterNote       $0D
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopC3
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_LoopC4:
-	smpsAlterNote       $0D
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopC4
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	smpsLoop            $01, $02, UnrealBattle_LoopC5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_LoopC6:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_LoopC6
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-	smpsAlterNote       $0C
-	dc.b	nC5
-
-UnrealBattle_LoopC7:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_LoopC7
-	dc.b	smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopC8:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopC8
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_LoopC9:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopC9
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-
-UnrealBattle_LoopCC:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopCA:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopCA
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_LoopCB:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopCB
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	smpsLoop            $01, $02, UnrealBattle_LoopCC
-
-UnrealBattle_LoopCF:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopCD:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopCD
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_LoopCE:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopCE
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	smpsLoop            $01, $02, UnrealBattle_LoopCF
-
-UnrealBattle_LoopD2:
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopD0:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopD0
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-
-UnrealBattle_LoopD1:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopD1
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	smpsLoop            $01, $02, UnrealBattle_LoopD2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_LoopD3:
-	smpsAlterNote       $0F
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nCs5, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nD5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $02, UnrealBattle_LoopD3
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $04
-	smpsLoop            $01, $02, UnrealBattle_LoopD3
-	dc.b	smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01
+	dc.b	nD4, $04, nD3, $05, $04, $05, nA3, $04, nD3, $05, nD3, nD3
+	dc.b	$06, nD4, nD3, $07, nD3, nD3, $08, nA3, nD3, $09, nD3, nD3
 	smpsPan             panCenter, $00
-	smpsAlterNote       $F2
-	smpsJump            UnrealBattle_Jump04
+	smpsJump            Extra_Final_Boss_Jump03
 
 ; FM3 Data
-UnrealBattle_FM3:
+Extra_Final_Boss_FM3:
+	smpsPan             panRight, $00
+	dc.b	nRst, $0C
 	smpsSetvoice        $01
-	smpsAlterVol        $11
-	smpsPan             panCenter, $00
-	dc.b	nRst, $28
+	smpsAlterVol        $0C
+	smpsAlterNote       $2B
+	dc.b	nD5, $06, nRst
+	smpsAlterNote       $00
+	dc.b	nD5, $0D, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, nRst, $0C
+	smpsAlterNote       $2B
+	dc.b	nD5, $06, nRst
+	smpsAlterNote       $00
+	dc.b	nD5, $0D, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nCs5, $19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01
+	smpsAlterNote       $03
+	dc.b	nC5, $18, smpsNoAttack
+	smpsAlterNote       $48
+	dc.b	nB4, $01, smpsNoAttack
+	smpsAlterNote       $4D
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $50
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $4E
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $49
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $43
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $40
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $3E
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $40
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $45
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $4A
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	$19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, nBb4, $19, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $0A
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+
+Extra_Final_Boss_Loop3C:
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop3C
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	$19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+
+Extra_Final_Boss_Jump02:
 	smpsSetvoice        $03
 	smpsAlterVol        $FE
+	smpsAlterNote       $00
 
-UnrealBattle_Loop3A:
-	smpsAlterNote       $10
-	dc.b	nEb5, $01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop3A
-
-UnrealBattle_Loop3B:
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop3B
-	dc.b	smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, nRst, $28
-
-UnrealBattle_Loop3C:
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop3C
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5
-	smpsAlterNote       $11
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, nRst, $28
-
-UnrealBattle_Loop3D:
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop3D
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5
-
-UnrealBattle_Loop3E:
-	smpsAlterNote       $11
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop3E
-
-UnrealBattle_Loop3F:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01
-	smpsLoop            $00, $03, UnrealBattle_Loop3F
-	dc.b	smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-
-UnrealBattle_Loop40:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_Loop40
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $16
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01
-
-UnrealBattle_Loop41:
-	smpsAlterNote       $13
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop3D:
+	dc.b	nF4, $06, nD4
+	smpsAlterVol        $09
+	dc.b	smpsNoAttack, nD4
+	smpsAlterVol        $F7
+	smpsLoop            $00, $05, Extra_Final_Boss_Loop3D
+	dc.b	nD4
 	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop41
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01
+	dc.b	nE4, $24, nE4, nE4, $18
+	smpsAlterNote       $00
 
-UnrealBattle_Loop42:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop42
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-
-UnrealBattle_Loop43:
-	smpsAlterNote       $11
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop43
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$02
-
-UnrealBattle_Loop44:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01
-	smpsLoop            $00, $05, UnrealBattle_Loop44
-	dc.b	smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01
-
-UnrealBattle_Loop45:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_Loop45
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop47:
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $08
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $06
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $FA
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-
-UnrealBattle_Loop46:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
+Extra_Final_Boss_Loop3E:
+	dc.b	nF4, $06, nD4
+	smpsAlterVol        $09
+	dc.b	smpsNoAttack, nD4
+	smpsAlterVol        $F7
+	smpsLoop            $00, $05, Extra_Final_Boss_Loop3E
+	dc.b	nD4, nG4, $24, nG4, nG4, $18
+	smpsLoop            $01, $04, Extra_Final_Boss_Loop3D
 	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
+	dc.b	nD5, $30, nCs5
 	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsAlterVol        $06
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsAlterVol        $FA
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsLoop            $00, $02, UnrealBattle_Loop46
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $F8
-	smpsLoop            $01, $02, UnrealBattle_Loop47
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
 	dc.b	nE5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $2B
+	dc.b	nD5, nRst, $0C
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5
 
-UnrealBattle_Loop48:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
+Extra_Final_Boss_Loop43:
 	dc.b	nF5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsLoop            $00, $02, UnrealBattle_Loop48
 
-UnrealBattle_Loop49:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5
-	smpsLoop            $00, $02, UnrealBattle_Loop49
+Extra_Final_Boss_Loop3F:
+	dc.b	$06
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop3F
+	smpsAlterNote       $FF
 
-UnrealBattle_Loop4A:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsLoop            $00, $02, UnrealBattle_Loop4A
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
+Extra_Final_Boss_Loop40:
 	dc.b	nE5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop40
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
+
+Extra_Final_Boss_Loop41:
 	dc.b	nAb5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop41
+
+Extra_Final_Boss_Loop42:
+	dc.b	nG5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop42
+	smpsLoop            $01, $02, Extra_Final_Boss_Loop43
+
+Extra_Final_Boss_Loop44:
+	dc.b	nF5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop44
+	smpsAlterNote       $FF
+
+Extra_Final_Boss_Loop45:
+	dc.b	nE5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop45
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
 	dc.b	nAb5
-
-UnrealBattle_Loop4B:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $15
-	dc.b	nA5, $01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $15
-	dc.b	nA5, $01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5
-	smpsLoop            $00, $02, UnrealBattle_Loop4B
-
-UnrealBattle_Loop4C:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $D8
 	dc.b	nAb5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, $06
+	smpsAlterVol        $F6
 	dc.b	nG5, smpsNoAttack
 	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
+	smpsAlterNote       $0F
+	dc.b	nFs5, smpsNoAttack
+	smpsAlterNote       $FB
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
+	smpsAlterNote       $E7
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
+	smpsAlterNote       $06
+	dc.b	nF5, smpsNoAttack
+	smpsAlterNote       $F2
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
+	smpsAlterNote       $0D
+	dc.b	nE5, smpsNoAttack
+	smpsAlterNote       $F9
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
+	smpsAlterNote       $E5
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5
-	smpsLoop            $00, $02, UnrealBattle_Loop4C
-
-UnrealBattle_Loop4D:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $15
-	dc.b	nA5, $01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $15
-	dc.b	nA5, $01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5
-	smpsLoop            $00, $02, UnrealBattle_Loop4D
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop4E:
-	dc.b	nRst, $05
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5
-	smpsAlterVol        $04
-	smpsLoop            $00, $02, UnrealBattle_Loop4E
-
-UnrealBattle_Loop4F:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-
-UnrealBattle_Jump03:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5
-	smpsLoop            $00, $05, UnrealBattle_Loop4F
-
-UnrealBattle_Loop50:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
+	smpsAlterNote       $2A
+	dc.b	nD5, smpsNoAttack
 	smpsAlterNote       $16
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
+	smpsAlterNote       $02
+	dc.b	$01
+	smpsAlterVol        $01
+	dc.b	smpsNoAttack
+	smpsAlterNote       $EE
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
+	smpsAlterNote       $03
+	dc.b	nCs5, smpsNoAttack
+	smpsAlterNote       $EF
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
+	smpsAlterNote       $04
+	dc.b	nC5, $02, smpsNoAttack
+	smpsAlterNote       $34
+	dc.b	nB4, $01, smpsNoAttack
+	smpsAlterNote       $20
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
+	smpsAlterNote       $0C
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
+	smpsAlterNote       $F8
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop50
-
-UnrealBattle_Loop51:
-	smpsAlterNote       $10
+	smpsAlterNote       $E4
 	dc.b	$01, smpsNoAttack
 	smpsAlterNote       $16
+	dc.b	nBb4, smpsNoAttack
+	smpsAlterNote       $02
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
+	smpsAlterNote       $EE
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
+	smpsAlterNote       $18
+	dc.b	nA4, smpsNoAttack
+	smpsAlterNote       $04
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
+	smpsAlterNote       $F0
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
+	smpsAlterNote       $19
+	dc.b	nAb4, smpsNoAttack
+	smpsAlterNote       $05
 	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop51
+	smpsAlterVol        $01
 	dc.b	smpsNoAttack
 	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
 	dc.b	$01, smpsNoAttack
 	smpsAlterNote       $16
-	dc.b	$01, nRst, $28
-
-UnrealBattle_Loop52:
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
+	dc.b	nG4, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $EE
 	dc.b	$01, smpsNoAttack
 	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop52
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5
-	smpsAlterNote       $11
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, nRst, $28
-
-UnrealBattle_Loop53:
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop53
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5
-
-UnrealBattle_Loop54:
-	smpsAlterNote       $11
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
+	dc.b	nFs4, smpsNoAttack
+	smpsAlterNote       $FD
 	dc.b	$01
-	smpsLoop            $00, $02, UnrealBattle_Loop54
-
-UnrealBattle_Loop55:
+	smpsAlterVol        $01
 	dc.b	smpsNoAttack
-	smpsAlterNote       $11
+	smpsAlterNote       $E9
 	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	nF4, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $0F
+	dc.b	nE4, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, nRst
+	smpsSetvoice        $01
+	smpsAlterVol        $FD
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01
-	smpsLoop            $00, $03, UnrealBattle_Loop55
-	dc.b	smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
 
-UnrealBattle_Loop56:
-	smpsAlterNote       $10
-	dc.b	nEb5, smpsNoAttack
+Extra_Final_Boss_Loop46:
+	dc.b	nD5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop46
+	dc.b	nD5, $07, nRst, $05, nD5, $03, nRst
+	smpsAlterNote       $FF
+	dc.b	nE5, $08, nRst, $04, nE5, $03, nRst, nE5, nRst, nE5, nRst, nE5
+	dc.b	$07, nRst, $05, nE5, $07, nRst, $05
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop47:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop47
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
+	dc.b	nRst, $05
+
+Extra_Final_Boss_Loop48:
+	dc.b	nD5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop48
+	dc.b	nD5, $07, nRst, $05, nD5, $03, nRst
+	smpsAlterNote       $FF
+	dc.b	nE5, $08, nRst, $04, nE5, $03, nRst, nE5, nRst, nE5, nRst, nE5
+	dc.b	$07, nRst, $05, nE5, $07, nRst, $05
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop49:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop49
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nA5, $08, nRst, $04, nA5
+	dc.b	$03, nRst, nA5, nRst, nA5, nRst, nA5, $07, nRst, $05, nA5, $07
+	dc.b	nRst, $05
+	smpsLoop            $01, $04, Extra_Final_Boss_Loop46
+	smpsSetvoice        $03
+	dc.b	nD4, $60, nD4, nFs4, nFs4, nD3, $0C, nA3, nD3, nA3
+
+Extra_Final_Boss_Loop4A:
+	smpsAlterNote       $FF
+	dc.b	nE3
+	smpsAlterNote       $00
+	dc.b	nB3
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop4A
+	dc.b	nFs3, nCs4, nFs3, nCs4, nFs3, nCs4
+	smpsAlterNote       $FF
+	dc.b	nE3
+	smpsAlterNote       $00
+	dc.b	nB3, nD3, nA3, nD3, nA3
+
+Extra_Final_Boss_Loop4B:
+	smpsAlterNote       $FF
+	dc.b	nE3
+	smpsAlterNote       $00
+	dc.b	nB3
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop4B
+	dc.b	nFs3, nCs4
+	smpsAlterNote       $FF
+	dc.b	nE3
+	smpsAlterNote       $00
+	dc.b	nB3, nD3, nA3, nD3, nA3
+
+Extra_Final_Boss_Loop4C:
+	smpsAlterNote       $FF
+	dc.b	nE3
+	smpsAlterNote       $00
+	dc.b	nB3
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop4C
+	dc.b	nFs3, nCs4, nFs3, nCs4, nFs3, nCs4
+	smpsAlterNote       $FF
+	dc.b	nE3
+	smpsAlterNote       $00
+	dc.b	nB3, nD3, nA3, nD3, nA3
+
+Extra_Final_Boss_Loop4D:
+	smpsAlterNote       $FF
+	dc.b	nE3
+	smpsAlterNote       $00
+	dc.b	nB3
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop4D
+	smpsAlterVol        $FC
+	dc.b	nF3
+
+Extra_Final_Boss_Loop4E:
+	dc.b	$06
+	smpsAlterVol        $09
+	dc.b	smpsNoAttack, nF3
+	smpsAlterVol        $16
+	dc.b	smpsNoAttack, nF3
+	smpsAlterVol        $E1
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop4E
+	dc.b	nF3
+	smpsAlterVol        $09
+	dc.b	smpsNoAttack, $06
+	smpsAlterVol        $FB
+	dc.b	nD5, $30, nCs5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $2B
+	dc.b	nD5, nRst, $0C
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop53:
+	dc.b	nF5
+
+Extra_Final_Boss_Loop4F:
+	dc.b	$06
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop4F
+	smpsAlterNote       $FF
+
+Extra_Final_Boss_Loop50:
+	dc.b	nE5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop50
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop51:
+	dc.b	nAb5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop51
+
+Extra_Final_Boss_Loop52:
+	dc.b	nG5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop52
+	smpsLoop            $01, $02, Extra_Final_Boss_Loop53
+
+Extra_Final_Boss_Loop54:
+	dc.b	nF5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop54
+	smpsAlterNote       $FF
+
+Extra_Final_Boss_Loop55:
+	dc.b	nE5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop55
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop56:
+	dc.b	nAb5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop56
+	dc.b	nG5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $D8
+	dc.b	nG5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, $06
+	smpsAlterVol        $F6
+	dc.b	nD5, $30, nCs5
+	smpsAlterNote       $FF
+	dc.b	nE5
+	smpsAlterNote       $2B
+	dc.b	nD5, nRst, $0C
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop5B:
+	dc.b	nF5
+
+Extra_Final_Boss_Loop57:
+	dc.b	$06
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop57
+	smpsAlterNote       $FF
+
+Extra_Final_Boss_Loop58:
+	dc.b	nE5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop58
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop59:
+	dc.b	nAb5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop59
+
+Extra_Final_Boss_Loop5A:
+	dc.b	nG5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nG5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop5A
+	smpsLoop            $01, $02, Extra_Final_Boss_Loop5B
+
+Extra_Final_Boss_Loop5C:
+	dc.b	nF5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop5C
+	smpsAlterNote       $FF
+
+Extra_Final_Boss_Loop5D:
+	dc.b	nE5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE5
+	smpsAlterVol        $D8
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop5D
+	smpsAlterNote       $00
+	dc.b	nAb5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb5
+	smpsAlterVol        $D8
+	dc.b	nAb5
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, $06
+	smpsAlterVol        $F6
+	dc.b	nG5, smpsNoAttack
+	smpsAlterNote       $EC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $0F
+	dc.b	nFs5, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $E7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	nF5, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $0D
+	dc.b	nE5, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $E5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $2A
+	dc.b	nD5, smpsNoAttack
 	smpsAlterNote       $16
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
+	smpsAlterNote       $02
+	dc.b	$01
+	smpsAlterVol        $01
+	dc.b	smpsNoAttack
+	smpsAlterNote       $EE
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
+	smpsAlterNote       $03
+	dc.b	nCs5, smpsNoAttack
+	smpsAlterNote       $EF
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
+	smpsAlterNote       $04
+	dc.b	nC5, $02, smpsNoAttack
+	smpsAlterNote       $34
+	dc.b	nB4, $01, smpsNoAttack
+	smpsAlterNote       $20
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
+	smpsAlterNote       $0C
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
+	smpsAlterNote       $F8
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_Loop56
-	smpsAlterNote       $10
+	smpsAlterNote       $E4
 	dc.b	$01, smpsNoAttack
 	smpsAlterNote       $16
+	dc.b	nBb4, smpsNoAttack
+	smpsAlterNote       $02
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
+	smpsAlterNote       $EE
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
+	smpsAlterNote       $18
+	dc.b	nA4, smpsNoAttack
+	smpsAlterNote       $04
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
+	smpsAlterNote       $F0
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EB
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
+	smpsAlterNote       $19
+	dc.b	nAb4, smpsNoAttack
+	smpsAlterNote       $05
 	dc.b	$01
-	smpsAlterVol        $FC
+	smpsAlterVol        $01
 	dc.b	smpsNoAttack
-	smpsAlterNote       $10
+	smpsAlterNote       $F1
 	dc.b	$01, smpsNoAttack
 	smpsAlterNote       $16
+	dc.b	nG4, smpsNoAttack
+	smpsAlterNote       $02
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
+	smpsAlterNote       $EE
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F1
+	smpsAlterNote       $11
+	dc.b	nFs4, smpsNoAttack
+	smpsAlterNote       $FD
 	dc.b	$01
-
-UnrealBattle_Loop57:
-	smpsAlterNote       $13
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop57
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01
-
-UnrealBattle_Loop58:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop58
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-
-UnrealBattle_Loop59:
-	smpsAlterNote       $11
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop59
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$02
-
-UnrealBattle_Loop5A:
+	smpsAlterVol        $01
 	dc.b	smpsNoAttack
-	smpsAlterNote       $19
+	smpsAlterNote       $E9
 	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
+	smpsAlterNote       $08
+	dc.b	nF4, smpsNoAttack
+	smpsAlterNote       $F4
 	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $0F
+	dc.b	nE4, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, nRst
+	smpsSetvoice        $01
+	smpsAlterVol        $FD
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01
-	smpsLoop            $00, $05, UnrealBattle_Loop5A
-	dc.b	smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01
 
-UnrealBattle_Loop5B:
-	smpsAlterNote       $10
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop5E:
+	dc.b	nD5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop5E
+	dc.b	nD5, $07, nRst, $05, nD5, $03, nRst
+	smpsAlterNote       $FF
+	dc.b	nE5, $08, nRst, $04, nE5, $03, nRst, nE5, nRst, nE5, nRst, nE5
+	dc.b	$07, nRst, $05, nE5, $07, nRst, $05
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_Loop5B
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01
-	smpsAlterVol        $FC
 
-UnrealBattle_Loop5D:
+Extra_Final_Boss_Loop5F:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop5F
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
 	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $08
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $06
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $FA
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
 
-UnrealBattle_Loop5C:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop60:
+	dc.b	nD5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop60
+	dc.b	nD5, $07, nRst, $05, nD5, $03, nRst
 	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsAlterVol        $06
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsAlterVol        $FA
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsLoop            $00, $02, UnrealBattle_Loop5C
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
+	dc.b	nE5, $08, nRst, $04, nE5, $03, nRst, nE5, nRst, nE5, nRst, nE5
+	dc.b	$07, nRst, $05, nE5, $07, nRst, $05
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $F8
-	smpsLoop            $01, $02, UnrealBattle_Loop5D
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5
 
-UnrealBattle_Loop5E:
-	smpsAlterVol        $FC
+Extra_Final_Boss_Loop61:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop61
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nA5, $08, nRst, $04, nA5
+	dc.b	$03, nRst, nA5, nRst, nA5, nRst, nA5, $07, nRst, $05, nA5, $07
 	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsLoop            $00, $02, UnrealBattle_Loop5E
+	smpsLoop            $01, $03, Extra_Final_Boss_Loop5E
 
-UnrealBattle_Loop5F:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop62:
+	dc.b	nD5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop62
+	dc.b	nD5, $07, nRst, $05, nD5, $03, nRst
+	smpsAlterNote       $FF
+	dc.b	nE5, $08, nRst, $04, nE5, $03, nRst, nE5, nRst, nE5, nRst, nE5
+	dc.b	$07, nRst, $05, nE5, $07, nRst, $05
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5
-	smpsLoop            $00, $02, UnrealBattle_Loop5F
 
-UnrealBattle_Loop60:
-	smpsAlterVol        $FC
+Extra_Final_Boss_Loop63:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop63
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
 	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $11
-	dc.b	nF5, $01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $19
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $11
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $18
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $EF
-	dc.b	nF5
-	smpsLoop            $00, $02, UnrealBattle_Loop60
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $10
-	dc.b	nE5, $01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $10
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	nEb5, smpsNoAttack
-	smpsAlterNote       $F0
-	dc.b	nE5
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5
 
-UnrealBattle_Loop61:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $15
-	dc.b	nA5, $01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop64:
+	dc.b	nD5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop64
+	dc.b	nD5, $07, nRst, $05, nD5, $03, nRst
+	smpsAlterNote       $FF
+	dc.b	nE5, $08, nRst, $04, nE5, $03, nRst, nE5, nRst, nE5, nRst, nE5
+	dc.b	$07, nRst, $05, nE5, $07, nRst, $05
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $15
-	dc.b	nA5, $01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5
-	smpsLoop            $00, $02, UnrealBattle_Loop61
 
-UnrealBattle_Loop62:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5
-	smpsLoop            $00, $02, UnrealBattle_Loop62
+Extra_Final_Boss_Loop65:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop65
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nA5, $08, nRst, $04, nA5
+	dc.b	$03, nRst, nA5, nRst, nA5, nRst, nA5, $07, nRst, $05, nA5, $07
+	dc.b	nRst, $29
 
-UnrealBattle_Loop63:
-	smpsAlterVol        $FC
-	dc.b	nRst, $05
-	smpsAlterNote       $15
-	dc.b	nA5, $01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop66:
+	dc.b	nD5, $03, nRst, $01, nD5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop66
+	dc.b	nD5, $05, nRst, $04, nD5, $03, nRst, $01
+	smpsAlterNote       $FF
+	dc.b	nE5, $07, nRst, $02, nE5, $03, nRst, $02, nE5, $03, nRst, $01
+	dc.b	nE5, $03, nRst, $02, nE5, $05, nRst, $04, nE5, $05, nRst, $04
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5
-	smpsAlterVol        $04
-	dc.b	nRst, $05
-	smpsAlterNote       $15
-	dc.b	nA5, $01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1F
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $15
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1E
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nA5
-	smpsLoop            $00, $02, UnrealBattle_Loop63
-	smpsAlterVol        $FC
 
-UnrealBattle_Loop64:
-	dc.b	nRst, $05
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop67:
+	dc.b	nF5, $03, nRst, $01, nF5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop67
+	dc.b	nF5, $05, nRst, $04, nF5, $03, nRst, $01, nG5, $07, nRst, $02
+	dc.b	nG5, $03, nRst, $02, nG5, $03, nRst, $01, nG5, $03, nRst, $02
+	dc.b	nG5, $05, nRst, $04, nG5, $05, nRst, $04
+
+Extra_Final_Boss_Loop68:
+	dc.b	nD5, $03, nRst, $01, nD5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop68
+	dc.b	nD5, $05, nRst, $04, nD5, $03, nRst, $01
+	smpsAlterNote       $FF
+	dc.b	nE5, $07, nRst, $02, nE5, $03, nRst, $02, nE5, $03, nRst, $01
+	dc.b	nE5, $03, nRst, $02, nE5, $05, nRst, $04, nE5, $05, nRst, $04
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
+
+Extra_Final_Boss_Loop69:
+	dc.b	nF5, $03, nRst, $01, nF5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop69
+	dc.b	nF5, $05, nRst, $04, nF5, $03, nRst, $01, nA5, $07, nRst, $02
+	dc.b	nA5, $03, nRst, $02, nA5, $03, nRst, $01, nA5, $03, nRst, $02
+	dc.b	nA5, $05, nRst, $04, nA5, $05, nRst, $04
+	smpsLoop            $01, $03, Extra_Final_Boss_Loop66
+
+Extra_Final_Boss_Loop6A:
+	dc.b	nD5, $03, nRst, $01, nD5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop6A
+	dc.b	nD5, $05, nRst, $04, nD5, $03, nRst, $01
+	smpsAlterNote       $FF
+	dc.b	nE5, $07, nRst, $02, nE5, $03, nRst, $02, nE5, $03, nRst, $01
+	dc.b	nE5, $03, nRst, $02, nE5, $05, nRst, $04, nE5, $05, nRst, $04
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
+
+Extra_Final_Boss_Loop6B:
+	dc.b	nF5, $03, nRst, $01, nF5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop6B
+	dc.b	nF5, $05, nRst, $04, nF5, $03, nRst, $01, nG5, $07, nRst, $02
+	dc.b	nG5, $03, nRst, $02, nG5, $03, nRst, $01, nG5, $03, nRst, $02
+	dc.b	nG5, $05, nRst, $04, nG5, $05, nRst, $04
+
+Extra_Final_Boss_Loop6C:
+	dc.b	nD5, $03, nRst, $01, nD5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop6C
+	dc.b	nD5, $05, nRst, $04, nD5, $03, nRst, $01
+	smpsAlterNote       $FF
+	dc.b	nE5, $07, nRst, $02, nE5, $03, nRst, $02, nE5, $03, nRst, $01
+	dc.b	nE5, $03, nRst, $02, nE5, $05, nRst, $04, nE5, $05, nRst, $04
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5
-	smpsAlterVol        $04
-	smpsLoop            $00, $02, UnrealBattle_Loop64
-	dc.b	smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPan             panCenter, $00
-	smpsAlterNote       $00
-	smpsJump            UnrealBattle_Jump03
+
+Extra_Final_Boss_Loop6D:
+	dc.b	nF5, $03, nRst, $01, nF5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop6D
+	dc.b	nF5, $05, nRst, $04, nF5, $03, nRst, $02, nA5, $08
+
+Extra_Final_Boss_Loop6E:
+	dc.b	nRst, $04, nA5, $03
+	smpsLoop            $00, $03, Extra_Final_Boss_Loop6E
+	dc.b	nRst, $05, nA5, $09, nRst, $08, nA5, $0A, nRst, $08
+	smpsAlterVol        $FE
+	smpsPan             panRight, $00
+	smpsAlterNote       $FB
+	smpsJump            Extra_Final_Boss_Jump02
 
 ; FM4 Data
-UnrealBattle_FM4:
+Extra_Final_Boss_FM4:
+	smpsPan             panLeft, $00
+	dc.b	nRst, $0C
 	smpsSetvoice        $01
-	smpsAlterVol        $11
-	smpsPan             panCenter, $00
-	dc.b	nRst, $32
+	smpsAlterVol        $0C
+	smpsAlterNote       $03
+	dc.b	nC5, $06, nRst
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, nRst, $0C
+	smpsAlterNote       $02
+	dc.b	nBb4, $06, nRst
+	smpsAlterNote       $00
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nA4, $19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nAb4, $19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nG4, $19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nFs4, $19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+
+Extra_Final_Boss_Loop1D:
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF4, $19, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop1D
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $09
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nE4, $19, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $07
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $08
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01
+
+Extra_Final_Boss_Jump01:
+	dc.b	nRst, $7F, $7F, $7F, $7F, $44
+	smpsSetvoice        $04
+	smpsAlterVol        $04
+	smpsAlterNote       $00
+	dc.b	nD6, $0C, nF6, nAb6, nCs6
+	smpsAlterNote       $FF
+	dc.b	nE6
+	smpsAlterNote       $00
+	dc.b	nG6
+	smpsAlterNote       $03
+	dc.b	nC6
+	smpsAlterNote       $2B
+	dc.b	nD6
+	smpsAlterNote       $00
+	dc.b	nFs6, nB5, nD6, nF6
+	smpsAlterNote       $02
+	dc.b	nBb5
+	smpsAlterNote       $00
+	dc.b	nCs6
+	smpsAlterNote       $FF
+	dc.b	nE6
+	smpsAlterNote       $00
+	dc.b	nA5, nRst, $7F, $7F, $7F, $7F, $44, nD6, $0C, nF6, nAb6, nCs6
+	smpsAlterNote       $FF
+	dc.b	nE6
+	smpsAlterNote       $00
+	dc.b	nG6
+	smpsAlterNote       $03
+	dc.b	nC6
+	smpsAlterNote       $2B
+	dc.b	nD6
+	smpsAlterNote       $00
+	dc.b	nFs6, nB5, nD6, nF6
+	smpsAlterNote       $02
+	dc.b	nBb5
+	smpsAlterNote       $00
+	dc.b	nCs6
+	smpsAlterNote       $FF
+	dc.b	nE6
+	smpsAlterNote       $00
+	dc.b	nA5, nRst, $7F, $41
 	smpsSetvoice        $03
 	smpsAlterVol        $FE
-
-UnrealBattle_Loop15:
-	smpsAlterNote       $13
-	dc.b	nG5, $01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
+	dc.b	nA3, $30, nAb3, nB3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsAlterNote       $00
+	dc.b	nA3, nAb3, nB3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsSetvoice        $04
+	smpsAlterVol        $02
+	smpsAlterNote       $00
+	dc.b	nD6, $0C, nF6, nAb6, nCs6
 	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
+	dc.b	nE6
+	smpsAlterNote       $00
+	dc.b	nG6
+	smpsAlterNote       $03
+	dc.b	nC6
+	smpsAlterNote       $2B
+	dc.b	nD6
+	smpsAlterNote       $00
+	dc.b	nFs6, nB5, nD6, nF6
+	smpsAlterNote       $02
+	dc.b	nBb5
+	smpsAlterNote       $00
+	dc.b	nCs6
 	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop15
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
+	dc.b	nE6
+	smpsAlterNote       $00
+	dc.b	nA5
+	smpsSetvoice        $01
+	smpsAlterVol        $FE
+
+Extra_Final_Boss_Loop1E:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop1E
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
+	dc.b	nRst, $05
+
+Extra_Final_Boss_Loop1F:
+	dc.b	nA5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop1F
+	dc.b	nA5, $07, nRst, $05, nA5, $03, nRst, nB5, $08, nRst, $04, nB5
+	dc.b	$03, nRst, nB5, nRst, nB5, nRst, nB5, $07, nRst, $05, nB5, $07
+	dc.b	nRst, $05
+
+Extra_Final_Boss_Loop20:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop20
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
+	dc.b	nRst, $05
+
+Extra_Final_Boss_Loop21:
+	dc.b	nA5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop21
+	dc.b	nA5, $07, nRst, $05, nA5, $03, nRst
+	smpsAlterNote       $03
+	dc.b	nC6, $08, nRst, $04, nC6, $03, nRst, nC6, nRst, nC6, nRst, nC6
+	dc.b	$07, nRst, $05, nC6, $07, nRst, $05
+	smpsAlterNote       $00
+	smpsLoop            $01, $03, Extra_Final_Boss_Loop1E
+
+Extra_Final_Boss_Loop22:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop22
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
+	dc.b	nRst, $05
+
+Extra_Final_Boss_Loop23:
+	dc.b	nA5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop23
+	dc.b	nA5, $07, nRst, $05, nA5, $03, nRst, nB5, $08, nRst, $04, nB5
+	dc.b	$03, nRst, nB5, nRst, nB5, nRst, nB5, $07, nRst, $05, nB5, $07
+	dc.b	nRst, $05
+
+Extra_Final_Boss_Loop24:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop24
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
+	dc.b	nRst, $05
+
+Extra_Final_Boss_Loop25:
+	dc.b	nA5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop25
+	dc.b	nA5, $07, nRst, $05, nA5, $03, nRst
+	smpsAlterNote       $03
+	dc.b	nC6, $08, nRst, $04, nC6, $03, nRst, nC6, nRst, nC6, nRst, nC6
+	dc.b	$07, nRst, $05, nC6, $07, nRst, $7F, $7F, $7F, $08
+	smpsAlterVol        $05
+	smpsAlterNote       $00
+
+Extra_Final_Boss_Loop26:
+	dc.b	nFs5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop26
+	dc.b	nFs5, $07, nRst, $05, nFs5, $03, nRst, nAb5, $08, nRst, $04, nAb5
+	dc.b	$03, nRst, nAb5, nRst, nAb5, nRst, nAb5, $07, nRst, $05, nAb5, $07
+	dc.b	nRst, $05
+
+Extra_Final_Boss_Loop27:
+	dc.b	nA5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop27
+	dc.b	nA5, $07, nRst, $05, nA5, $03, nRst, nCs6, $08, nRst, $04, nCs6
+	dc.b	$03, nRst, nCs6, nRst, nCs6, nRst, nCs6, $07, nRst, $05, nCs6, $07
+	dc.b	nRst, $05
+	smpsLoop            $01, $03, Extra_Final_Boss_Loop26
+
+Extra_Final_Boss_Loop28:
+	dc.b	nFs5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop28
+	dc.b	nFs5, $07, nRst, $05, nFs5, $03, nRst, nAb5, $08, nRst, $04, nAb5
+	dc.b	$03, nRst, nAb5, nRst, nAb5, nRst, nAb5, $07, nRst, $05, nAb5, $07
+	dc.b	nRst, $05
+
+Extra_Final_Boss_Loop29:
+	dc.b	nA5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop29
+	dc.b	nA5, $07, nRst, $05, nA5, $03, nRst, nCs6, $06, nRst, $7F, $71
+	smpsSetvoice        $03
+	smpsAlterVol        $FB
+	dc.b	nA3, $30, nAb3, nB3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsAlterNote       $00
+	dc.b	nA3, nAb3, nB3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsSetvoice        $04
+	smpsAlterVol        $02
+	smpsAlterNote       $00
+	dc.b	nD6, $0C, nF6, nAb6, nCs6
 	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5
-
-UnrealBattle_Loop17:
-	dc.b	nRst, $32
-
-UnrealBattle_Loop16:
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
+	dc.b	nE6
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
+	dc.b	nG6
+	smpsAlterNote       $03
+	dc.b	nC6
+	smpsAlterNote       $2B
+	dc.b	nD6
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop16
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
+	dc.b	nFs6, nB5, nD6, nF6
+	smpsAlterNote       $02
+	dc.b	nBb5
 	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5
-	smpsLoop            $01, $02, UnrealBattle_Loop17
-
-UnrealBattle_Loop18:
-	smpsAlterNote       $14
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_Loop18
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-
-UnrealBattle_Loop19:
-	smpsAlterNote       $13
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
+	dc.b	nCs6
 	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
+	dc.b	nE6
+	smpsAlterNote       $00
+	dc.b	nA5, nRst, $7F, $41
+	smpsSetvoice        $03
+	smpsAlterVol        $FE
+	dc.b	nA3, $30, nAb3, nB3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsAlterNote       $00
+	dc.b	nA3, nAb3, nB3
+	smpsAlterNote       $02
+	dc.b	nBb3
+	smpsSetvoice        $04
+	smpsAlterVol        $02
+	smpsAlterNote       $00
+	dc.b	nD6, $0C, nF6, nAb6, nCs6
 	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_Loop19
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
+	dc.b	nE6
+	smpsAlterNote       $00
+	dc.b	nG6
+	smpsAlterNote       $03
+	dc.b	nC6
+	smpsAlterNote       $2B
+	dc.b	nD6
+	smpsAlterNote       $00
+	dc.b	nFs6, nB5, nD6, nF6
+	smpsAlterNote       $02
+	dc.b	nBb5
+	smpsAlterNote       $00
+	dc.b	nCs6
 	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01
+	dc.b	nE6
+	smpsAlterNote       $00
+	dc.b	nA5
+	smpsSetvoice        $01
+	smpsAlterVol        $FE
 
-UnrealBattle_Loop1A:
-	smpsAlterNote       $17
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop1A
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
+Extra_Final_Boss_Loop2A:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop2A
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
+	dc.b	nRst, $05
 
-UnrealBattle_Loop1B:
-	smpsAlterNote       $14
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop1B
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
+Extra_Final_Boss_Loop2B:
+	dc.b	nA5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop2B
+	dc.b	nA5, $07, nRst, $05, nA5, $03, nRst, nB5, $08, nRst, $04, nB5
+	dc.b	$03, nRst, nB5, nRst, nB5, nRst, nB5, $07, nRst, $05, nB5, $07
+	dc.b	nRst, $05
 
-UnrealBattle_Loop1C:
-	smpsAlterNote       $13
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $08, UnrealBattle_Loop1C
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5
+Extra_Final_Boss_Loop2C:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop2C
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
+	dc.b	nRst, $05
 
-UnrealBattle_Loop1D:
-	smpsAlterNote       $13
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $06, UnrealBattle_Loop1D
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01
+Extra_Final_Boss_Loop2D:
+	dc.b	nA5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop2D
+	dc.b	nA5, $07, nRst, $05, nA5, $03, nRst
+	smpsAlterNote       $03
+	dc.b	nC6, $08, nRst, $04, nC6, $03, nRst, nC6, nRst, nC6, nRst, nC6
+	dc.b	$07, nRst, $05, nC6, $07, nRst, $05
+	smpsAlterNote       $00
+	smpsLoop            $01, $03, Extra_Final_Boss_Loop2A
 
-UnrealBattle_Loop1E:
-	smpsAlterNote       $13
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EE
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E7
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EE
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop1E
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EE
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E7
-	dc.b	$01
-	smpsAlterVol        $FC
+Extra_Final_Boss_Loop2E:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop2E
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
+	dc.b	nRst, $05
 
-UnrealBattle_Loop1F:
-	dc.b	nRst, $0A
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01
-	smpsAlterVol        $08
-	dc.b	nRst, $0A
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01
-	smpsAlterVol        $06
-	dc.b	nRst, $0A
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01
-	smpsAlterVol        $FA
-	dc.b	nRst, $0A
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $06
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $FA
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $06
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $FA
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $F8
-	smpsLoop            $00, $02, UnrealBattle_Loop1F
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
+Extra_Final_Boss_Loop2F:
+	dc.b	nA5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop2F
+	dc.b	nA5, $07, nRst, $05, nA5, $03, nRst, nB5, $08, nRst, $04, nB5
+	dc.b	$03, nRst, nB5, nRst, nB5, nRst, nB5, $07, nRst, $05, nB5, $07
+	dc.b	nRst, $05
 
-UnrealBattle_Loop20:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	smpsLoop            $00, $02, UnrealBattle_Loop20
+Extra_Final_Boss_Loop30:
+	dc.b	nF5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop30
+	dc.b	nF5, $07, nRst, $05, nF5, $03, nRst, nG5, $08, nRst, $04, nG5
+	dc.b	$03, nRst, nG5, nRst, nG5, nRst, nG5, $07, nRst, $05, nG5, $07
+	dc.b	nRst, $05
 
-UnrealBattle_Loop21:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	smpsLoop            $00, $02, UnrealBattle_Loop21
+Extra_Final_Boss_Loop31:
+	dc.b	nA5, $03, nRst
+	smpsLoop            $00, $04, Extra_Final_Boss_Loop31
+	dc.b	nA5, $07, nRst, $05, nA5, $03, nRst
+	smpsAlterNote       $03
+	dc.b	nC6, $08, nRst, $04, nC6, $03, nRst, nC6, nRst, nC6, nRst, nC6
+	dc.b	$07, nRst, $05, nC6, $07, nRst, $29
 
-UnrealBattle_Loop22:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop36:
 	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	smpsLoop            $00, $02, UnrealBattle_Loop22
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $0C
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $0C
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
 
-UnrealBattle_Loop23:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $0D
-	dc.b	nCs6, $01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs6, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $0D
-	dc.b	nCs6, $01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs6, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	smpsLoop            $00, $02, UnrealBattle_Loop23
+Extra_Final_Boss_Loop32:
+	dc.b	nF5, $03, nRst, $01, nF5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop32
+	dc.b	nF5, $05, nRst, $04, nF5, $03, nRst, $01, nG5, $07, nRst, $02
+	dc.b	nG5, $03, nRst, $02, nG5, $03, nRst, $01, nG5, $03, nRst, $02
+	dc.b	nG5, $05, nRst, $04, nG5, $05, nRst, $04
 
-UnrealBattle_Loop24:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $0C
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $0C
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	smpsLoop            $00, $02, UnrealBattle_Loop24
+Extra_Final_Boss_Loop33:
+	dc.b	nA5, $03, nRst, $01, nA5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop33
+	dc.b	nA5, $05, nRst, $04, nA5, $03, nRst, $01, nB5, $07, nRst, $02
+	dc.b	nB5, $03, nRst, $02, nB5, $03, nRst, $01, nB5, $03, nRst, $02
+	dc.b	nB5, $05, nRst, $04, nB5, $05, nRst, $04
 
-UnrealBattle_Loop25:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $0D
-	dc.b	nCs6, $01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs6, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $0D
-	dc.b	nCs6, $01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs6, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	smpsLoop            $00, $02, UnrealBattle_Loop25
-	dc.b	$01
-	smpsAlterVol        $FC
+Extra_Final_Boss_Loop34:
+	dc.b	nF5, $03, nRst, $01, nF5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop34
+	dc.b	nF5, $05, nRst, $04, nF5, $03, nRst, $01, nG5, $07, nRst, $02
+	dc.b	nG5, $03, nRst, $02, nG5, $03, nRst, $01, nG5, $03, nRst, $02
+	dc.b	nG5, $05, nRst, $04, nG5, $05, nRst, $04
 
-UnrealBattle_Loop26:
-	dc.b	nRst, $0A
-	smpsAlterNote       $0C
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
+Extra_Final_Boss_Loop35:
+	dc.b	nA5, $03, nRst, $01, nA5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop35
+	dc.b	nA5, $05, nRst, $04, nA5, $03, nRst, $01
+	smpsAlterNote       $03
+	dc.b	nC6, $07, nRst, $02, nC6, $03, nRst, $02, nC6, $03, nRst, $01
+	dc.b	nC6, $03, nRst, $02, nC6, $05, nRst, $04, nC6, $05, nRst, $04
+	smpsLoop            $01, $03, Extra_Final_Boss_Loop36
 	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01
-	smpsAlterVol        $04
-	smpsLoop            $00, $02, UnrealBattle_Loop26
 
-UnrealBattle_Loop27:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
+Extra_Final_Boss_Loop37:
+	dc.b	nF5, $03, nRst, $01, nF5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop37
+	dc.b	nF5, $05, nRst, $04, nF5, $03, nRst, $01, nG5, $07, nRst, $02
+	dc.b	nG5, $03, nRst, $02, nG5, $03, nRst, $01, nG5, $03, nRst, $02
+	dc.b	nG5, $05, nRst, $04, nG5, $05, nRst, $04
 
-UnrealBattle_Jump02:
-	dc.b	smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nC6, $02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01
-	smpsLoop            $00, $06, UnrealBattle_Loop27
-	dc.b	smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
+Extra_Final_Boss_Loop38:
+	dc.b	nA5, $03, nRst, $01, nA5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop38
+	dc.b	nA5, $05, nRst, $04, nA5, $03, nRst, $01, nB5, $07, nRst, $02
+	dc.b	nB5, $03, nRst, $02, nB5, $03, nRst, $01, nB5, $03, nRst, $02
+	dc.b	nB5, $05, nRst, $04, nB5, $05, nRst, $04
 
-UnrealBattle_Loop28:
-	smpsAlterNote       $13
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop28
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5
+Extra_Final_Boss_Loop39:
+	dc.b	nF5, $03, nRst, $01, nF5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop39
+	dc.b	nF5, $05, nRst, $04, nF5, $03, nRst, $01, nG5, $07, nRst, $02
+	dc.b	nG5, $03, nRst, $02, nG5, $03, nRst, $01, nG5, $03, nRst, $02
+	dc.b	nG5, $05, nRst, $04, nG5, $05, nRst, $04
 
-UnrealBattle_Loop2A:
-	dc.b	nRst, $32
+Extra_Final_Boss_Loop3A:
+	dc.b	nA5, $03, nRst, $01, nA5, $03, nRst, $02
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop3A
+	dc.b	nA5, $05, nRst, $04, nA5, $03, nRst, $02
+	smpsAlterNote       $03
+	dc.b	nC6, $08
 
-UnrealBattle_Loop29:
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop29
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5
-	smpsLoop            $01, $02, UnrealBattle_Loop2A
-
-UnrealBattle_Loop2B:
-	smpsAlterNote       $14
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_Loop2B
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-
-UnrealBattle_Loop2C:
-	smpsAlterNote       $13
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $04, UnrealBattle_Loop2C
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01
-
-UnrealBattle_Loop2D:
-	smpsAlterNote       $17
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop2D
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-
-UnrealBattle_Loop2E:
-	smpsAlterNote       $14
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $09, UnrealBattle_Loop2E
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01
-
-UnrealBattle_Loop2F:
-	smpsAlterNote       $13
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $08, UnrealBattle_Loop2F
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5
-
-UnrealBattle_Loop30:
-	smpsAlterNote       $13
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $FF
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $06, UnrealBattle_Loop30
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01
-
-UnrealBattle_Loop31:
-	smpsAlterNote       $13
-	dc.b	nFs5, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EE
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E7
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EE
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsLoop            $00, $03, UnrealBattle_Loop31
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1B
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EE
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E7
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop32:
-	dc.b	nRst, $0A
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01
-	smpsAlterVol        $08
-	dc.b	nRst, $0A
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01
-	smpsAlterVol        $06
-	dc.b	nRst, $0A
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01
-	smpsAlterVol        $FA
-	dc.b	nRst, $0A
-	smpsAlterNote       $14
-	dc.b	nAb5, $01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1C
-	dc.b	nG5, smpsNoAttack
-	smpsAlterNote       $EC
-	dc.b	nAb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $14
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $1D
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $06
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $FA
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $06
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $FA
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $F8
-	smpsLoop            $00, $02, UnrealBattle_Loop32
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-
-UnrealBattle_Loop33:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	smpsLoop            $00, $02, UnrealBattle_Loop33
-
-UnrealBattle_Loop34:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	smpsLoop            $00, $02, UnrealBattle_Loop34
-
-UnrealBattle_Loop35:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $EA
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $F4
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $22
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $E8
-	dc.b	nB5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $EA
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F4
-	smpsLoop            $00, $02, UnrealBattle_Loop35
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $17
-	dc.b	nBb5, $01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $20
-	dc.b	nA5, smpsNoAttack
-	smpsAlterNote       $E9
-	dc.b	nBb5, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $17
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $21
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $0C
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $0C
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-
-UnrealBattle_Loop36:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $0D
-	dc.b	nCs6, $01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs6, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $0D
-	dc.b	nCs6, $01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs6, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	smpsLoop            $00, $02, UnrealBattle_Loop36
-
-UnrealBattle_Loop37:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $0C
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $0C
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	smpsLoop            $00, $02, UnrealBattle_Loop37
-
-UnrealBattle_Loop38:
-	dc.b	$01
-	smpsAlterVol        $FC
-	dc.b	nRst, $0A
-	smpsAlterNote       $0D
-	dc.b	nCs6, $01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs6, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01
-	smpsAlterVol        $04
-	dc.b	nRst, $0A
-	smpsAlterNote       $0D
-	dc.b	nCs6, $01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	dc.b	nC6, smpsNoAttack
-	smpsAlterNote       $F2
-	dc.b	nCs6, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0D
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $13
-	smpsLoop            $00, $02, UnrealBattle_Loop38
-	dc.b	$01
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop39:
-	dc.b	nRst, $0A
-	smpsAlterNote       $0C
-	dc.b	nC6, $01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $F5
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $00
-	dc.b	$02, smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01, smpsNoAttack
-	smpsAlterNote       $12
-	dc.b	$01
-	smpsAlterVol        $04
-	smpsLoop            $00, $02, UnrealBattle_Loop39
-	dc.b	smpsNoAttack
-	smpsAlterNote       $0C
-	dc.b	$01
-	smpsPan             panCenter, $00
-	smpsAlterNote       $0C
-	smpsJump            UnrealBattle_Jump02
+Extra_Final_Boss_Loop3B:
+	dc.b	nRst, $04, nC6, $03
+	smpsLoop            $00, $03, Extra_Final_Boss_Loop3B
+	dc.b	nRst, $05, nC6, $09, nRst, $08, nC6, $0A, nRst, $08
+	smpsAlterVol        $FE
+	smpsPan             panLeft, $00
+	smpsAlterNote       $FA
+	smpsJump            Extra_Final_Boss_Jump01
 
 ; FM5 Data
-UnrealBattle_FM5:
+Extra_Final_Boss_FM5:
+	smpsPan             panCenter, $00
+	dc.b	nRst, $42
 	smpsSetvoice        $02
+	smpsAlterVol        $1B
+	smpsAlterNote       $FE
+	dc.b	nCs4, $04, nD4
+	smpsAlterNote       $28
+	dc.b	nD4
+	smpsAlterNote       $FD
+	dc.b	nE4
+	smpsAlterNote       $FE
+	dc.b	nF4, nFs4
+	smpsAlterNote       $FD
+	dc.b	nG4, nAb4, nA4
+	smpsAlterNote       $FF
+	dc.b	nBb4
+	smpsAlterNote       $FD
+	dc.b	nB4
+	smpsAlterNote       $01
+	dc.b	nC5
+	smpsAlterNote       $FE
+	dc.b	nCs5, nD5
+	smpsAlterNote       $28
+	dc.b	nD5
+	smpsAlterNote       $FD
+	dc.b	nE5
+	smpsAlterNote       $28
+	dc.b	nD5
+	smpsAlterNote       $FE
+	dc.b	nD5, nCs5
+	smpsAlterNote       $01
+	dc.b	nC5
+	smpsAlterNote       $FD
+	dc.b	nB4
+	smpsAlterNote       $FF
+	dc.b	nBb4
+	smpsAlterNote       $FD
+	dc.b	nA4, nAb4, nG4
+	smpsAlterNote       $FE
+	dc.b	nFs4, nF4
+	smpsAlterNote       $FD
+	dc.b	nE4
+	smpsAlterNote       $28
+	dc.b	nD4
+	smpsAlterNote       $FE
+	dc.b	nD4, nCs4
+	smpsAlterNote       $01
+	dc.b	nC4
+	smpsAlterNote       $FD
+	dc.b	nB3, nRst, $48
+	smpsAlterNote       $01
+	dc.b	nC5, $04, nC5
+	smpsAlterNote       $FD
+	dc.b	nB4
+	smpsAlterNote       $FF
+	dc.b	nBb4
+	smpsAlterNote       $FD
+	dc.b	nA4, nAb4, nG4
+	smpsAlterNote       $FE
+	dc.b	nFs4, nF4
+	smpsAlterNote       $FD
+	dc.b	nE4
+	smpsAlterNote       $28
+	dc.b	nD4
+	smpsAlterNote       $FE
+	dc.b	nD4, nCs4
+	smpsAlterNote       $01
+	dc.b	nC4
+	smpsAlterNote       $FD
+	dc.b	nB3
+	smpsAlterNote       $FF
+	dc.b	nBb3
+	smpsAlterNote       $FD
+	dc.b	nA3, nAb3, nG3, nAb3, nA3
+	smpsAlterNote       $FF
+	dc.b	nBb3
+	smpsAlterNote       $FD
+	dc.b	nB3
+	smpsAlterNote       $01
+	dc.b	nC4
+	smpsAlterNote       $FE
+	dc.b	nCs4, nD4
+	smpsAlterNote       $28
+	dc.b	nD4
+	smpsAlterNote       $FD
+	dc.b	nE4
+	smpsAlterNote       $FE
+	dc.b	nF4, $03, $04, nFs4, $07
+	smpsAlterNote       $28
+	dc.b	nD4, $0C
+	smpsAlterNote       $FE
+	dc.b	nFs4
+	smpsAlterNote       $FD
+	dc.b	nA4
+	smpsAlterNote       $FE
+	dc.b	nD4, nF4
+	smpsAlterNote       $FD
+	dc.b	nAb4
+	smpsAlterNote       $FE
+	dc.b	nCs4
+	smpsAlterNote       $FD
+	dc.b	nE4, nG4
+	smpsAlterNote       $FE
+	dc.b	nCs4
+	smpsAlterNote       $28
+	dc.b	nD4
+	smpsAlterNote       $FE
+	dc.b	nFs4
+	smpsAlterNote       $FD
+	dc.b	nB3
+	smpsAlterNote       $FE
+	dc.b	nD4, nF4, $18
+	smpsAlterNote       $FD
+	dc.b	nA4, $3C
+	smpsAlterNote       $FF
+	dc.b	nBb4, $0C
+	smpsAlterNote       $FD
+	dc.b	nA4, nG4, $60
+
+Extra_Final_Boss_Jump00:
+	dc.b	nRst, $7F, $7F, $6A, nA3, $06, nB3
+	smpsAlterNote       $FE
+	dc.b	nCs4
+	smpsAlterNote       $FD
+	dc.b	nE4
+	smpsAlterNote       $FE
+	dc.b	nF4
+	smpsAlterNote       $FD
+	dc.b	nG4
+
+Extra_Final_Boss_Loop07:
+	dc.b	nA4
+	smpsAlterNote       $FF
+	dc.b	nBb4
+	smpsAlterNote       $FD
+	smpsLoop            $00, $0C, Extra_Final_Boss_Loop07
+	dc.b	nA4, nAb4, nG4
+	smpsAlterNote       $FE
+	dc.b	nFs4, nF4
+	smpsAlterNote       $FD
+	dc.b	nE4
+	smpsAlterNote       $28
+	dc.b	nD4
+	smpsAlterNote       $FE
+	dc.b	nCs4, nRst, $7F, $7F, $7F, $7F, $20
+	smpsAlterNote       $FD
+	dc.b	nA3, $06, nB3
+	smpsAlterNote       $FE
+	dc.b	nCs4
+	smpsAlterNote       $FD
+	dc.b	nE4
+	smpsAlterNote       $FE
+	dc.b	nF4
+	smpsAlterNote       $FD
+	dc.b	nG4
+
+Extra_Final_Boss_Loop08:
+	dc.b	nA4
+	smpsAlterNote       $FF
+	dc.b	nBb4
+	smpsAlterNote       $FD
+	smpsLoop            $00, $0C, Extra_Final_Boss_Loop08
+	dc.b	nA4, nAb4, nG4
+	smpsAlterNote       $FE
+	dc.b	nFs4, nF4
+	smpsAlterNote       $FD
+	dc.b	nE4
+	smpsAlterNote       $28
+	dc.b	nD4
+	smpsAlterNote       $FE
+	dc.b	nCs4, nRst, $7F, $41
+	smpsSetvoice        $05
+	smpsAlterVol        $F7
+
+Extra_Final_Boss_Loop09:
+	smpsAlterNote       $FA
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nBb4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop09
+	smpsAlterNote       $FC
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nD5, $0C
+	smpsAlterNote       $FB
+	dc.b	nA4, nE5
+	smpsAlterNote       $FC
+	dc.b	nF5
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nF5, $06
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0C
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FB
+	dc.b	nA4
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FB
+	dc.b	nG4, nA4
+	smpsAlterNote       $FC
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nD5, $0C
+	smpsAlterNote       $FB
+	dc.b	nA4, nE5
+	smpsAlterNote       $FC
+	dc.b	nF5
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nF5, $06
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0C
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nD5, $0C
+	smpsAlterNote       $FB
+	dc.b	nA4, nE5
+	smpsAlterNote       $FC
+	dc.b	nF5
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nF5, $06
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0C
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FB
+	dc.b	nA4
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FB
+	dc.b	nG4, nA4
+	smpsAlterNote       $FC
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nD5, $0C
+	smpsAlterNote       $FB
+	dc.b	nA4, nE5
+	smpsAlterNote       $FC
+	dc.b	nF5
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nF5, $06
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0C
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, nRst, $0C
+	smpsAlterVol        $04
+
+Extra_Final_Boss_Loop0A:
+	smpsAlterNote       $FC
+	dc.b	nD5, $08
+	smpsAlterNote       $FA
+	dc.b	nA4, $07
+	smpsAlterNote       $FB
+	dc.b	nG4, $09
+	smpsLoop            $00, $08, Extra_Final_Boss_Loop0A
+
+Extra_Final_Boss_Loop0B:
+	smpsAlterNote       $FD
+	dc.b	nCs5, $08
+	smpsAlterNote       $FA
+	dc.b	nA4, $07
+	smpsAlterNote       $FC
+	dc.b	nFs4, $09
+	smpsLoop            $00, $0A, Extra_Final_Boss_Loop0B
+
+Extra_Final_Boss_Loop0C:
+	smpsAlterNote       $FA
+	dc.b	nB4, $08
+	smpsAlterNote       $FB
+	dc.b	nAb4, $07, nE4, $09
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop0C
+	smpsAlterNote       $FA
+	dc.b	nA4, $08
+	smpsAlterNote       $FC
+	dc.b	nFs4, $07
+	smpsAlterNote       $FD
+	dc.b	nCs4, $09
+	smpsAlterNote       $FB
+	dc.b	nAb4, $08
+	smpsAlterNote       $FA
+	dc.b	nA4, $07, nB4, $09
+	smpsAlterNote       $FC
+	dc.b	nFs4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01
+	smpsAlterNote       $FD
+	dc.b	nCs4, $07
+	smpsAlterNote       $FB
+	dc.b	nE4, $09
+
+Extra_Final_Boss_Loop0D:
+	smpsAlterNote       $FC
+	dc.b	nFs4, $08
+	smpsAlterNote       $FD
+	dc.b	nCs4, $07
+	smpsAlterNote       $FA
+	dc.b	nA3, $09
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop0D
+
+Extra_Final_Boss_Loop0E:
+	smpsAlterNote       $FB
+	dc.b	nAb4, $08, nE4, $07
+	smpsAlterNote       $FA
+	dc.b	nB3, $09
+	smpsLoop            $00, $03, Extra_Final_Boss_Loop0E
+	smpsAlterNote       $FB
+	dc.b	nAb4, $08
+	smpsAlterNote       $FA
+	dc.b	nA4, $07, nB4, $09
+	smpsAlterNote       $FD
+	dc.b	nCs5, $0D, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+
+Extra_Final_Boss_Loop0F:
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nFs4, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01
+	smpsAlterNote       $FD
+	dc.b	nCs5, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nA4, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop0F
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nFs4, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+
+Extra_Final_Boss_Loop10:
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nB4, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nAb4, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop10
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nA4, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nFs4, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01
+	smpsAlterNote       $FD
+	dc.b	nCs4, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $06
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nAb4, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nA4, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nB4, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F0
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nFs4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01
+	smpsAlterNote       $FD
+	dc.b	nCs4, $07
+	smpsAlterNote       $FB
+	dc.b	nE4, $09
+
+Extra_Final_Boss_Loop11:
+	smpsAlterNote       $FC
+	dc.b	nFs4, $08
+	smpsAlterNote       $FD
+	dc.b	nCs4, $07
+	smpsAlterNote       $FA
+	dc.b	nA3, $09
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop11
+
+Extra_Final_Boss_Loop12:
+	smpsAlterNote       $FB
+	dc.b	nAb4, $08, nE4, $07
+	smpsAlterNote       $FA
+	dc.b	nB3, $09
+	smpsLoop            $00, $03, Extra_Final_Boss_Loop12
+	smpsAlterNote       $FB
+	dc.b	nAb4, $08
+	smpsAlterNote       $FA
+	dc.b	nA4, $07, nB4, $09
+	smpsAlterNote       $FD
+	dc.b	nCs5, $06
+	smpsAlterVol        $08
+	dc.b	smpsNoAttack, nCs5
+	smpsAlterVol        $05
+	dc.b	smpsNoAttack, nCs5
+	smpsAlterVol        $F3
+	dc.b	nCs5
+	smpsAlterVol        $08
+	dc.b	smpsNoAttack, $06
+	smpsAlterVol        $05
+	dc.b	smpsNoAttack, $06, nRst, $0C
+	smpsAlterVol        $EF
+	smpsAlterNote       $FC
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, nRst, $18
+	smpsAlterVol        $04
+
+Extra_Final_Boss_Loop17:
+	smpsAlterNote       $FC
+	dc.b	nF4
+
+Extra_Final_Boss_Loop13:
+	dc.b	$06
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $D9
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop13
+	smpsAlterNote       $FB
+
+Extra_Final_Boss_Loop14:
+	dc.b	nE4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $D9
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop14
+
+Extra_Final_Boss_Loop15:
+	dc.b	nAb4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $D9
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop15
+
+Extra_Final_Boss_Loop16:
+	dc.b	nG4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $D9
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop16
+	smpsLoop            $01, $02, Extra_Final_Boss_Loop17
+	smpsAlterNote       $FC
+
+Extra_Final_Boss_Loop18:
+	dc.b	nF4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nF4
+	smpsAlterVol        $D9
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop18
+	smpsAlterNote       $FB
+
+Extra_Final_Boss_Loop19:
+	dc.b	nE4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nE4
+	smpsAlterVol        $D9
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop19
+
+Extra_Final_Boss_Loop1A:
+	dc.b	nAb4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nAb4
+	smpsAlterVol        $D9
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop1A
+	dc.b	nG4
+	smpsAlterVol        $0A
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $0E
+	dc.b	smpsNoAttack, nG4
+	smpsAlterVol        $0F
+	dc.b	smpsNoAttack, nG4, nRst, $0C
+	smpsAlterVol        $D5
+
+Extra_Final_Boss_Loop1B:
+	smpsAlterNote       $FA
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nBb4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FA
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, nAb4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F1
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop1B
+	smpsAlterNote       $FC
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nD5, $0C
+	smpsAlterNote       $FB
+	dc.b	nA4, nE5
+	smpsAlterNote       $FC
+	dc.b	nF5
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nF5, $06
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0C
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FB
+	dc.b	nA4
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FB
+	dc.b	nG4, nA4
+	smpsAlterNote       $FC
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nD5, $0C
+	smpsAlterNote       $FB
+	dc.b	nA4, nE5
+	smpsAlterNote       $FC
+	dc.b	nF5
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nF5, $06
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0C
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nD5, $0C
+	smpsAlterNote       $FB
+	dc.b	nA4, nE5
+	smpsAlterNote       $FC
+	dc.b	nF5
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nF5, $06
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0C
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FB
+	dc.b	nA4
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FB
+	dc.b	nG4, nA4
+	smpsAlterNote       $FC
+	dc.b	nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nD4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nF4, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $0C, nA4, nG4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nB4, $0D, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nD5, $0C
+	smpsAlterNote       $FB
+	dc.b	nA4, nE5
+	smpsAlterNote       $FC
+	dc.b	nF5
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nF5, $06
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0C
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0D, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, nRst, $2D
+
+Extra_Final_Boss_Loop1C:
+	smpsAlterNote       $FC
+	dc.b	nD4, $0A, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0A, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0A, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0A, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nF4, $0A, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $09, nA4, nG4, $0A, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nB4, $0A, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nD5, $09
+	smpsAlterNote       $FB
+	dc.b	nA4, nE5
+	smpsAlterNote       $FC
+	dc.b	nF5
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nF5, $04
+	smpsAlterNote       $FB
+	dc.b	nE5, $05
+	smpsAlterNote       $FC
+	dc.b	nD5, $09
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FB
+	dc.b	nA4
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FB
+	dc.b	nG4, nA4
+	smpsAlterNote       $FC
+	dc.b	nF4, $0A, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, nD4, $0A, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0A, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nE4, $0A, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nA4, $0A, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nF4, $0A, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nG4, $09, nA4, nG4, $0A, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FB
+	dc.b	nB4, $0A, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FB
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F8
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F6
+	dc.b	$01
+	smpsAlterNote       $FC
+	dc.b	nD5, $09
+	smpsAlterNote       $FB
+	dc.b	nA4, nE5
+	smpsAlterNote       $FC
+	dc.b	nF5
+	smpsAlterNote       $FB
+	dc.b	nE5
+	smpsAlterNote       $FC
+	dc.b	nF5, $04
+	smpsAlterNote       $FB
+	dc.b	nE5, $05
+	smpsAlterNote       $FC
+	dc.b	nD5, $09
+	smpsAlterNote       $00
+	dc.b	nC5
+	smpsAlterNote       $FC
+	dc.b	nD5, $0A, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $00
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $02
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FD
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01
+	smpsLoop            $00, $02, Extra_Final_Boss_Loop1C
+	dc.b	smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $04
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $01
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FC
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F7
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F3
+	dc.b	$02, smpsNoAttack
+	smpsAlterNote       $F5
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FA
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FF
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $05
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $03
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $FE
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F9
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F2
+	dc.b	$01, smpsNoAttack
+	smpsAlterNote       $F4
+	dc.b	$01
+	smpsSetvoice        $02
+	smpsAlterVol        $09
 	smpsPan             panCenter, $00
-	dc.b	nRst
-
-UnrealBattle_Loop0D:
-	dc.b	$7F
-	smpsLoop            $00, $0B, UnrealBattle_Loop0D
-	dc.b	$7B
-	smpsSetvoice        $00
-	smpsAlterVol        $3C
-
-UnrealBattle_Loop0E:
-	dc.b	nD3, $0A
-	smpsAlterVol        $F8
-	dc.b	$05, nRst
-	smpsAlterVol        $F8
-	smpsLoop            $00, $02, UnrealBattle_Loop0E
-	dc.b	nBb2, $0A
-	smpsAlterVol        $F8
-	dc.b	nC3, $05, nRst
-	smpsAlterVol        $F8
-	dc.b	nC3, $0A
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop10:
-	dc.b	$05, nRst, nBb2, $0A, nC3, $05, nRst, nC3, $0A
-
-UnrealBattle_Loop0F:
-	dc.b	$05, nRst, nD3, $0A
-	smpsLoop            $00, $04, UnrealBattle_Loop0F
-	dc.b	$05, nRst, nBb2, $0A, nC3, $05, nRst, nC3, $0A
-	smpsLoop            $01, $02, UnrealBattle_Loop10
-	dc.b	$05, nRst, $06
-
-UnrealBattle_Jump01:
-	dc.b	nRst
-
-UnrealBattle_Loop11:
-	dc.b	$7F
-	smpsLoop            $00, $0B, UnrealBattle_Loop11
-	dc.b	$7A
-	smpsAlterVol        $34
-
-UnrealBattle_Loop12:
-	dc.b	nD3, $0A
-	smpsAlterVol        $F8
-	dc.b	$05, nRst
-	smpsAlterVol        $F8
-	smpsLoop            $00, $02, UnrealBattle_Loop12
-	dc.b	nBb2, $0A
-	smpsAlterVol        $F8
-	dc.b	nC3, $05, nRst
-	smpsAlterVol        $F8
-	dc.b	nC3, $0A
-	smpsAlterVol        $FC
-
-UnrealBattle_Loop14:
-	dc.b	$05, nRst, nBb2, $0A, nC3, $05, nRst, nC3, $0A
-
-UnrealBattle_Loop13:
-	dc.b	$05, nRst, nD3, $0A
-	smpsLoop            $00, $04, UnrealBattle_Loop13
-	dc.b	$05, nRst, nBb2, $0A, nC3, $05, nRst, nC3, $0A
-	smpsLoop            $01, $02, UnrealBattle_Loop14
-	dc.b	$05, nRst, $06
-	smpsPan             panCenter, $00
-	smpsJump            UnrealBattle_Jump01
+	smpsAlterNote       $FD
+	smpsJump            Extra_Final_Boss_Jump00
 
 ; PSG1 Data
-UnrealBattle_PSG1:
-	smpsAlterNote       $FD
-	dc.b	nD2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $02, UnrealBattle_PSG1
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop109:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsLoop            $00, $02, UnrealBattle_Loop109
-	smpsAlterNote       $00
-	dc.b	nC2
+Extra_Final_Boss_PSG1:
+	dc.b	nRst, $7F, $7F, $7F, $03
 	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nD2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
+	dc.b	nD3, $06, nD4
 
-UnrealBattle_Loop10A:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsLoop            $00, $02, UnrealBattle_Loop10A
-	smpsAlterNote       $00
-	dc.b	nC2
+Extra_Final_Boss_LoopA9:
+	dc.b	nD3, $0C, nD4, $06
+	smpsLoop            $00, $0E, Extra_Final_Boss_LoopA9
+	dc.b	nD3, $0C
 
-UnrealBattle_Loop10B:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nE2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsLoop            $00, $03, UnrealBattle_Loop10B
-
-UnrealBattle_Loop10E:
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	nD2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nE2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop10C:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsLoop            $00, $02, UnrealBattle_Loop10C
-	smpsAlterNote       $00
-
-UnrealBattle_Loop10D:
-	dc.b	nD2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nE2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	smpsLoop            $00, $03, UnrealBattle_Loop10D
-	dc.b	nD2
-	smpsLoop            $01, $02, UnrealBattle_Loop10E
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	nD2
-
-UnrealBattle_Loop10F:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsLoop            $00, $03, UnrealBattle_Loop10F
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	nC2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $02
-	dc.b	$02
-	smpsAlterNote       $FE
-	dc.b	$01
-	smpsAlterNote       $FD
-	dc.b	nC2
+Extra_Final_Boss_LoopAA:
 	smpsAlterNote       $FF
-	dc.b	nC2
-	smpsAlterNote       $04
-	dc.b	nC2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $04
-	dc.b	$02
-	smpsAlterNote       $05
-	dc.b	nC2
+	dc.b	nCs4, $06
+	smpsAlterNote       $00
+	dc.b	nCs3, $0C
+	smpsLoop            $00, $06, Extra_Final_Boss_LoopAA
+
+Extra_Final_Boss_LoopAC:
 	smpsAlterNote       $01
-	dc.b	$01
+	dc.b	nBb1, $06
 	smpsAlterNote       $00
-	dc.b	nC2
-	smpsAlterNote       $02
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1, $02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	$02
-	smpsAlterNote       $04
-	dc.b	nC2, $01
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FE
-	dc.b	nB1, $02
-	smpsAlterNote       $FF
-	dc.b	nB1
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nB1
-	smpsAlterNote       $FA
-	dc.b	nB1
-	smpsAlterNote       $FC
-	dc.b	nB1
+	dc.b	nBb2
 	smpsAlterNote       $01
-	dc.b	nB1
-	smpsAlterNote       $02
-	dc.b	nB1
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $02
-	dc.b	nB1
-	smpsAlterNote       $03
-	dc.b	$02
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FD
-	dc.b	nB1
-	smpsPSGAlterVol     $02
+	dc.b	nBb1, $0C
 	smpsAlterNote       $00
-	dc.b	nB1
-	smpsAlterNote       $05
-	dc.b	$03
-	smpsAlterNote       $06
-	dc.b	$01, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nD2, $01, nRst, $04, nC2
-
-UnrealBattle_Loop110:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UnrealBattle_Loop110
-	smpsAlterNote       $FA
-	dc.b	$01
-	smpsAlterNote       $06
-	dc.b	nCs2
-	smpsAlterNote       $FE
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nCs2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FE
-	dc.b	nC2
-	smpsAlterNote       $06
-	dc.b	nCs2
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FB
-
-UnrealBattle_Loop111:
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $02, UnrealBattle_Loop111
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop112:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsLoop            $00, $02, UnrealBattle_Loop112
-	smpsAlterNote       $00
-	dc.b	nC2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nD2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop113:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsLoop            $00, $02, UnrealBattle_Loop113
-	smpsAlterNote       $00
-	dc.b	nC2
-
-UnrealBattle_Loop114:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nE2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsLoop            $00, $03, UnrealBattle_Loop114
-
-UnrealBattle_Loop117:
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	nD2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nE2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop115:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsLoop            $00, $02, UnrealBattle_Loop115
-	smpsAlterNote       $00
-
-UnrealBattle_Loop116:
-	dc.b	nD2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nE2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	smpsLoop            $00, $03, UnrealBattle_Loop116
-	dc.b	nD2
-	smpsLoop            $01, $02, UnrealBattle_Loop117
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	nD2
-
-UnrealBattle_Loop118:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsLoop            $00, $03, UnrealBattle_Loop118
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	nC2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FC
-	dc.b	nC2
+	dc.b	nBb2, $06
 	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $02
-	dc.b	$02
-	smpsAlterNote       $FE
-	dc.b	$01
-	smpsAlterNote       $FD
-	dc.b	nC2
-	smpsAlterNote       $FF
-	dc.b	nC2
-	smpsAlterNote       $04
-	dc.b	nC2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $04
-	dc.b	$02
-	smpsAlterNote       $05
-	dc.b	nC2
+	dc.b	nBb1, $0C
+	smpsAlterNote       $00
+	dc.b	nC2, $06, nRst, nC3, nC2, $0C, nC3, $06, nC2, $0C, nD2, $06
+	dc.b	nRst, nD3, nD2, $0C, nD3, $06, nD2, $0C
+
+Extra_Final_Boss_LoopAB:
 	smpsAlterNote       $01
-	dc.b	$01
+	dc.b	nB1, $06, nRst
 	smpsAlterNote       $00
-	dc.b	nC2
-	smpsAlterNote       $02
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1, $02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	$02
-	smpsAlterNote       $04
-	dc.b	nC2, $01
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FE
-	dc.b	nB1, $02
-	smpsAlterNote       $FF
-	dc.b	nB1
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nB1
-	smpsAlterNote       $FA
-	dc.b	nB1
-	smpsAlterNote       $FC
-	dc.b	nB1
+	dc.b	nB2
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopAB
 	smpsAlterNote       $01
-	dc.b	nB1
-	smpsAlterNote       $02
-	dc.b	nB1
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $02
-	dc.b	nB1
-	smpsAlterNote       $03
-	dc.b	$02
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FD
-	dc.b	nB1
-	smpsPSGAlterVol     $02
+	dc.b	nB1, $0C
 	smpsAlterNote       $00
-	dc.b	nB1
-	smpsAlterNote       $05
-	dc.b	$03
-	smpsAlterNote       $06
-	dc.b	$01, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nD2, $01, nRst, $04, nC2
-
-UnrealBattle_Loop119:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UnrealBattle_Loop119
-	smpsAlterNote       $FA
-	dc.b	$01
-	smpsAlterNote       $06
-	dc.b	nCs2
-	smpsAlterNote       $FE
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nCs2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FE
-	dc.b	nC2
-	smpsAlterNote       $06
-	dc.b	nCs2
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FB
-
-UnrealBattle_Loop11A:
-	smpsAlterNote       $FD
-	dc.b	nD2
-
-UnrealBattle_Jump07:
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $02, UnrealBattle_Loop11A
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop11B:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsLoop            $00, $02, UnrealBattle_Loop11B
-	smpsAlterNote       $00
-	dc.b	nC2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nD2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop11C:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsLoop            $00, $02, UnrealBattle_Loop11C
-	smpsAlterNote       $00
-	dc.b	nC2
-
-UnrealBattle_Loop11D:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nE2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsLoop            $00, $03, UnrealBattle_Loop11D
-
-UnrealBattle_Loop120:
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	nD2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nE2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop11E:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsLoop            $00, $02, UnrealBattle_Loop11E
-	smpsAlterNote       $00
-
-UnrealBattle_Loop11F:
-	dc.b	nD2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nE2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	smpsLoop            $00, $03, UnrealBattle_Loop11F
-	dc.b	nD2
-	smpsLoop            $01, $02, UnrealBattle_Loop120
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	nD2
-
-UnrealBattle_Loop121:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsLoop            $00, $03, UnrealBattle_Loop121
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	nC2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FC
-	dc.b	nC2
+	dc.b	nBb2, $12
 	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $02
-	dc.b	$02
-	smpsAlterNote       $FE
-	dc.b	$01
-	smpsAlterNote       $FD
-	dc.b	nC2
-	smpsAlterNote       $FF
-	dc.b	nC2
-	smpsAlterNote       $04
-	dc.b	nC2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $04
-	dc.b	$02
-	smpsAlterNote       $05
-	dc.b	nC2
+	dc.b	nBb1, $0C
+	smpsAlterNote       $00
+	dc.b	nBb2, $06
 	smpsAlterNote       $01
-	dc.b	$01
+	dc.b	nBb1, $0C
 	smpsAlterNote       $00
-	dc.b	nC2
-	smpsAlterNote       $02
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1, $02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	$02
-	smpsAlterNote       $04
-	dc.b	nC2, $01
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FE
-	dc.b	nB1, $02
-	smpsAlterNote       $FF
-	dc.b	nB1
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nB1
-	smpsAlterNote       $FA
-	dc.b	nB1
-	smpsAlterNote       $FC
-	dc.b	nB1
+	dc.b	nC2, $06, nRst, nC3, nC2, $0C, nC3, $06, nC2, $0C, nD2, $06
+	dc.b	nRst, nD3, nD2, $0C, nD3, $06, nD2, nRst, nD2, nRst, nD3, nD2
+	dc.b	nRst, nD3, nD2, $0C, nD3, $06
+	smpsLoop            $01, $09, Extra_Final_Boss_LoopAC
 	smpsAlterNote       $01
-	dc.b	nB1
-	smpsAlterNote       $02
-	dc.b	nB1
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $02
-	dc.b	nB1
-	smpsAlterNote       $03
-	dc.b	$02
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FD
-	dc.b	nB1
-	smpsPSGAlterVol     $02
+	dc.b	nBb1
 	smpsAlterNote       $00
-	dc.b	nB1
-	smpsAlterNote       $05
-	dc.b	$03
-	smpsAlterNote       $06
-	dc.b	$01, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nD2, $01, nRst, $04, nC2
-
-UnrealBattle_Loop122:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UnrealBattle_Loop122
-	smpsAlterNote       $FA
-	dc.b	$01
-	smpsAlterNote       $06
-	dc.b	nCs2
-	smpsAlterNote       $FE
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nCs2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FE
-	dc.b	nC2
-	smpsAlterNote       $06
-	dc.b	nCs2
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FB
-
-UnrealBattle_Loop123:
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $02, UnrealBattle_Loop123
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop124:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsLoop            $00, $02, UnrealBattle_Loop124
-	smpsAlterNote       $00
-	dc.b	nC2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nD2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop125:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsLoop            $00, $02, UnrealBattle_Loop125
-	smpsAlterNote       $00
-	dc.b	nC2
-
-UnrealBattle_Loop126:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nE2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsLoop            $00, $03, UnrealBattle_Loop126
-
-UnrealBattle_Loop129:
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	nD2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nE2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop127:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsLoop            $00, $02, UnrealBattle_Loop127
-	smpsAlterNote       $00
-
-UnrealBattle_Loop128:
-	dc.b	nD2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nE2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	smpsLoop            $00, $03, UnrealBattle_Loop128
-	dc.b	nD2
-	smpsLoop            $01, $02, UnrealBattle_Loop129
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $00
-	dc.b	nD2
-
-UnrealBattle_Loop12A:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsLoop            $00, $03, UnrealBattle_Loop12A
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $00
-	dc.b	nC2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FC
-	dc.b	nC2
+	dc.b	nBb2
 	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $02
-	dc.b	$02
-	smpsAlterNote       $FE
-	dc.b	$01
-	smpsAlterNote       $FD
-	dc.b	nC2
-	smpsAlterNote       $FF
-	dc.b	nC2
-	smpsAlterNote       $04
-	dc.b	nC2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $04
-	dc.b	$02
-	smpsAlterNote       $05
-	dc.b	nC2
+	dc.b	nBb1, $0C
+	smpsAlterNote       $00
+	dc.b	nBb2, $06
 	smpsAlterNote       $01
-	dc.b	$01
+	dc.b	nBb1, $0C
 	smpsAlterNote       $00
-	dc.b	nC2
-	smpsAlterNote       $02
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1, $02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	$02
-	smpsAlterNote       $04
-	dc.b	nC2, $01
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FE
-	dc.b	nB1, $02
-	smpsAlterNote       $FF
-	dc.b	nB1
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nB1
-	smpsAlterNote       $FA
-	dc.b	nB1
-	smpsAlterNote       $FC
-	dc.b	nB1
-	smpsAlterNote       $01
-	dc.b	nB1
-	smpsAlterNote       $02
-	dc.b	nB1
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $02
-	dc.b	nB1
-	smpsAlterNote       $03
-	dc.b	$02
-	smpsAlterNote       $FF
-	dc.b	$01
-	smpsAlterNote       $FD
-	dc.b	nB1
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	nB1
-	smpsAlterNote       $05
-	dc.b	$03
-	smpsAlterNote       $06
-	dc.b	$01, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nD2, $01, nRst, $04, nC2
+	dc.b	nC2, $06, nRst, nC3, nC2, $0C, nC3, $06, nC2, $0C, nD2, $06
+	dc.b	nRst, nD3, nD2, $0C, nD3, $06, nD2, $0C
 
-UnrealBattle_Loop12B:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UnrealBattle_Loop12B
-	smpsAlterNote       $FA
-	dc.b	$01
-	smpsAlterNote       $06
-	dc.b	nCs2
-	smpsAlterNote       $FE
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $05
-	dc.b	nCs2
-	smpsAlterNote       $FC
-	dc.b	nC2
-	smpsAlterNote       $03
-	dc.b	nC2
-	smpsAlterNote       $FB
-	dc.b	nB1
-	smpsAlterNote       $05
-	dc.b	nC2
-	smpsAlterNote       $FE
-	dc.b	nC2
-	smpsAlterNote       $06
-	dc.b	nCs2
-	smpsAlterNote       $FA
-	dc.b	nC2
-	smpsPSGAlterVol     $FB
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsPSGAlterVol     $05
-	smpsJump            UnrealBattle_Jump07
+Extra_Final_Boss_LoopAD:
+	smpsAlterNote       $01
+	dc.b	nB1, $06, nRst
+	smpsAlterNote       $00
+	dc.b	nB2
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopAD
+	smpsAlterNote       $01
+	dc.b	nB1, $0C
+	smpsAlterNote       $00
+	dc.b	nBb2, $12
+	smpsAlterNote       $01
+	dc.b	nBb1, $0C
+	smpsAlterNote       $00
+	dc.b	nBb2, $06
+	smpsAlterNote       $01
+	dc.b	nBb1, $0C
+	smpsAlterNote       $00
+	dc.b	nC2, $06, nRst, nC3, nC2, $0C, nC3, $06, nC2, $0C, nD2, $06
+	dc.b	nRst, nD3, nD2, $0C, nD3, $06, nD2, nRst, nD2, nRst, nD3, nD2
+	dc.b	nRst, nD3, nD2, $0C, nD3
+
+Extra_Final_Boss_LoopAE:
+	dc.b	$7F
+	smpsLoop            $00, $09, Extra_Final_Boss_LoopAE
+	dc.b	$0F
+
+Extra_Final_Boss_LoopB0:
+	smpsAlterNote       $01
+	dc.b	nBb1, $06
+	smpsAlterNote       $00
+	dc.b	nBb2
+	smpsAlterNote       $01
+	dc.b	nBb1, $0C
+	smpsAlterNote       $00
+	dc.b	nBb2, $06
+	smpsAlterNote       $01
+	dc.b	nBb1, $0C
+	smpsAlterNote       $00
+	dc.b	nC2, $06, nRst, nC3, nC2, $0C, nC3, $06, nC2, $0C, nD2, $06
+	dc.b	nRst, nD3, nD2, $0C, nD3, $06, nD2, $0C
+
+Extra_Final_Boss_LoopAF:
+	smpsAlterNote       $01
+	dc.b	nB1, $06, nRst
+	smpsAlterNote       $00
+	dc.b	nB2
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopAF
+	smpsAlterNote       $01
+	dc.b	nB1, $0C
+	smpsAlterNote       $00
+	dc.b	nBb2, $12
+	smpsAlterNote       $01
+	dc.b	nBb1, $0C
+	smpsAlterNote       $00
+	dc.b	nBb2, $06
+	smpsAlterNote       $01
+	dc.b	nBb1, $0C
+	smpsAlterNote       $00
+	dc.b	nC2, $06, nRst, nC3, nC2, $0C, nC3, $06, nC2, $0C, nD2, $06
+	dc.b	nRst, nD3, nD2, $0C, nD3, $06, nD2, nRst, nD2, nRst, nD3, nD2
+	dc.b	nRst, nD3, nD2, $0C, nD3, $06
+	smpsLoop            $01, $08, Extra_Final_Boss_LoopB0
+	dc.b	nRst, $24
+
+Extra_Final_Boss_LoopB1:
+	smpsAlterNote       $01
+	dc.b	nBb1, $04
+	smpsAlterNote       $00
+	dc.b	nBb2, $05
+	smpsAlterNote       $01
+	dc.b	nBb1, $09
+	smpsAlterNote       $00
+	dc.b	nBb2, $04
+	smpsAlterNote       $01
+	dc.b	nBb1, $09
+	smpsAlterNote       $00
+	dc.b	nC2, $05, nRst, $04, nC3, $05, nC2, $09, nC3, $04, nC2, $09
+	dc.b	nD2, $05, nRst, $04, nD3, $05, nD2, $09, nD3, $04, nD2, $09
+	smpsAlterNote       $01
+	dc.b	nB1, $05, nRst, $04
+	smpsAlterNote       $00
+	dc.b	nB2, $05
+	smpsAlterNote       $01
+	dc.b	nB1, $04, nRst, $05
+	smpsAlterNote       $00
+	dc.b	nB2, $04
+	smpsAlterNote       $01
+	dc.b	nB1, $09
+	smpsAlterNote       $00
+	dc.b	nBb2, $0E
+	smpsAlterNote       $01
+	dc.b	nBb1, $09
+	smpsAlterNote       $00
+	dc.b	nBb2, $04
+	smpsAlterNote       $01
+	dc.b	nBb1, $09
+	smpsAlterNote       $00
+	dc.b	nC2, $05, nRst, $04, nC3, $05, nC2, $09, nC3, $04, nC2, $09
+	dc.b	nD2, $05, nRst, $04, nD3, $05, nD2, $09, nD3, $04, nD2, $05
+	dc.b	nRst, $04, nD2, $05, nRst, $04, nD3, $05, nD2, $04, nRst, $05
+	dc.b	nD3, $04, nD2, $09, nD3, $05
+	smpsLoop            $00, $03, Extra_Final_Boss_LoopB1
+	smpsAlterNote       $01
+	dc.b	nBb1, $04
+	smpsAlterNote       $00
+	dc.b	nBb2, $05
+	smpsAlterNote       $01
+	dc.b	nBb1, $09
+	smpsAlterNote       $00
+	dc.b	nBb2, $04
+	smpsAlterNote       $01
+	dc.b	nBb1, $09
+	smpsAlterNote       $00
+	dc.b	nC2, $05, nRst, $04, nC3, $05, nC2, $09, nC3, $04, nC2, $09
+	dc.b	nD2, $05, nRst, $04, nD3, $05, nD2, $09, nD3, $04, nD2, $09
+	smpsAlterNote       $01
+	dc.b	nB1, $05, nRst, $04
+	smpsAlterNote       $00
+	dc.b	nB2, $05
+	smpsAlterNote       $01
+	dc.b	nB1, $04, nRst, $05
+	smpsAlterNote       $00
+	dc.b	nB2, $04
+	smpsAlterNote       $01
+	dc.b	nB1, $09
+	smpsAlterNote       $00
+	dc.b	nBb2, $0E
+	smpsAlterNote       $01
+	dc.b	nBb1, $09
+	smpsAlterNote       $00
+	dc.b	nBb2, $04
+	smpsAlterNote       $01
+	dc.b	nBb1, $09
+	smpsAlterNote       $00
+	dc.b	nC2, $05, nRst, $04, nC3, $05, nC2, $09, nC3, $04, nC2, $09
+	dc.b	nD2, $05, nRst, $04, nD3, $05, nD2, $09, nD3, $04, nD2, $05
+	dc.b	nRst, nD2, $06, nRst, nD3, $07, nD2, nRst, $08, nD3, nD2, $12
+	dc.b	nD3, $09
+	smpsJump            Extra_Final_Boss_LoopAC
 
 ; PSG2 Data
-UnrealBattle_PSG2:
-	smpsAlterNote       $FD
-	dc.b	nF2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $02, UnrealBattle_PSG2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_LoopE6:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsLoop            $00, $02, UnrealBattle_LoopE6
-	smpsAlterNote       $00
-	dc.b	nEb2
+Extra_Final_Boss_PSG2:
+	dc.b	nRst, $0C
 	smpsPSGAlterVol     $05
+	dc.b	nG1, $06, nRst, nF1, $07
+	smpsAlterNote       $FF
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nF1
 	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $03
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $06
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+	smpsAlterNote       $02
+	dc.b	nF1
+	smpsAlterNote       $FF
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$03
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	$02
+	smpsAlterNote       $03
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $FE
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $03
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $06
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+
+Extra_Final_Boss_LoopA5:
+	smpsAlterNote       $02
+	dc.b	nF1
+	smpsAlterNote       $FF
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$03
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $02
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	$02
+	smpsAlterNote       $03
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $FE
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $03
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	$02
+	smpsAlterNote       $04
+	dc.b	$01
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopA5
+	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $FF
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$03
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $02
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+	smpsAlterNote       $06
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $03
+	dc.b	nF1
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $FE
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $03
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	$02
+	smpsAlterNote       $04
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $FF
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$03
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $02
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+	smpsAlterNote       $06
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $03
+	dc.b	nF1
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $FE
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $03
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	$02
+	smpsAlterNote       $04
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $FF
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nF1
+	smpsAlterNote       $02
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $06
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $02
+	dc.b	nF1
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $FE
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	$02
+	smpsAlterNote       $04
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $FF
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $02
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $06
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $02
+	dc.b	nF1
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $FE
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	$02
+	smpsAlterNote       $04
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $FE
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01, nRst, $0C
+	smpsAlterNote       $00
+	dc.b	nG1, $06, nRst, nF1, $07
+	smpsAlterNote       $FF
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $FF
+	dc.b	nF1
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $03
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $06
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+	smpsAlterNote       $02
+	dc.b	nF1
+	smpsAlterNote       $FF
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$03
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	$02
+	smpsAlterNote       $03
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $FE
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nF1
+	smpsAlterNote       $03
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $06
+	dc.b	nF1
+	smpsAlterNote       $00
+	dc.b	nE1, $0D
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $FE
+	dc.b	$02
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nE1
+	smpsAlterNote       $03
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $02
+	dc.b	nE1
+	smpsAlterNote       $FF
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FC
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FF
+	dc.b	nE1
+	smpsAlterNote       $01
+	dc.b	nE1
+	smpsAlterNote       $04
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $03
+	dc.b	nE1
+	smpsAlterNote       $00
+	dc.b	nE1
+	smpsAlterNote       $FE
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FC
+	dc.b	nE1
+	smpsAlterNote       $FE
+	dc.b	nE1
+	smpsAlterNote       $00
+	dc.b	nE1
+	smpsAlterNote       $03
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $02
+	dc.b	nE1
+	smpsAlterNote       $FF
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FC
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FF
+	dc.b	nE1
+	smpsAlterNote       $02
+	dc.b	nE1
+	smpsAlterNote       $04
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $03
+	dc.b	nE1
+	smpsAlterNote       $00
+	dc.b	nE1
+	smpsAlterNote       $FE
+	dc.b	nE1
+	smpsAlterNote       $FC
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nE1
+	smpsAlterNote       $03
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	nE1
+	smpsAlterNote       $04
+	dc.b	nE1
+	smpsAlterNote       $02
+	dc.b	nE1
+	smpsAlterNote       $FF
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FC
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FF
+	dc.b	nE1
+	smpsAlterNote       $02
+	dc.b	nE1
+	smpsAlterNote       $04
+
+Extra_Final_Boss_LoopA6:
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $03
+	dc.b	nE1
+	smpsAlterNote       $00
+	dc.b	nE1
+	smpsAlterNote       $FE
+	dc.b	nE1
+	smpsAlterNote       $FC
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FE
+	dc.b	nE1
+	smpsAlterNote       $00
+	dc.b	nE1
+	smpsAlterNote       $03
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	nE1
+	smpsAlterNote       $04
+	dc.b	nE1
+	smpsAlterNote       $01
+	dc.b	nE1
+	smpsAlterNote       $FF
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FC
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FF
+	dc.b	nE1
+	smpsAlterNote       $02
+	dc.b	nE1
+	smpsAlterNote       $05
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopA6
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $03
+	dc.b	nE1
+	smpsAlterNote       $00
+	dc.b	nE1
+	smpsAlterNote       $FE
+	dc.b	nE1
+	smpsAlterNote       $FC
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FE
+	dc.b	nE1
+	smpsAlterNote       $01
+	dc.b	nE1
+	smpsAlterNote       $04
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	$02
+	smpsAlterNote       $04
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nE1
+	smpsAlterNote       $FF
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FC
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $00
+	dc.b	nFs1, $0D
+	smpsAlterNote       $FF
 	dc.b	$04
-	smpsAlterNote       $FC
+	smpsAlterNote       $00
 	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nF2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_LoopE7:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsLoop            $00, $02, UnrealBattle_LoopE7
-	smpsAlterNote       $00
-	dc.b	nEb2
-
-UnrealBattle_LoopE8:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsLoop            $00, $03, UnrealBattle_LoopE8
-
-UnrealBattle_LoopEB:
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	nF2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nG2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_LoopE9:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsLoop            $00, $02, UnrealBattle_LoopE9
-	smpsAlterNote       $00
-
-UnrealBattle_LoopEA:
-	dc.b	nF2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	smpsLoop            $00, $03, UnrealBattle_LoopEA
-	dc.b	nF2
-	smpsLoop            $01, $02, UnrealBattle_LoopEB
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	nF2
-
-UnrealBattle_LoopEC:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsLoop            $00, $03, UnrealBattle_LoopEC
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FD
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $02
-	dc.b	$01
-	smpsAlterNote       $FE
-	dc.b	nEb2
-	smpsAlterNote       $FD
-	dc.b	nEb2
-	smpsAlterNote       $FF
-	dc.b	nEb2
 	smpsAlterNote       $03
-	dc.b	nEb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $03
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	$03
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2, $03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
+	dc.b	nFs1
+	smpsAlterNote       $05
 	dc.b	$02
 	smpsAlterNote       $04
-	dc.b	nEb2, $01
+	dc.b	$01
 	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FE
-	dc.b	nD2
+	dc.b	nFs1
 	smpsAlterNote       $FF
-	dc.b	$03
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $FB
-	dc.b	nD2
+	dc.b	nFs1
+	smpsAlterNote       $FE
+	dc.b	nFs1
 	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $01
 	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $02
-	dc.b	nD2
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nFs1
+	smpsAlterNote       $04
+	dc.b	nFs1
+	smpsAlterNote       $05
+	dc.b	$02
 	smpsAlterNote       $03
 	dc.b	$01
-	smpsAlterNote       $FF
-	dc.b	nD2
+	smpsAlterNote       $00
+	dc.b	nFs1
 	smpsAlterNote       $FE
-	dc.b	nD2
-	smpsPSGAlterVol     $02
+	dc.b	nFs1
+	smpsAlterNote       $FD
+	dc.b	nFs1
 	smpsAlterNote       $00
-	dc.b	nD2
-	smpsAlterNote       $04
-	dc.b	$02
-	smpsAlterNote       $05
-	dc.b	nD2, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nF2, $01, nRst, $04, nEb2
-
-UnrealBattle_LoopED:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UnrealBattle_LoopED
-	smpsAlterNote       $FB
-	dc.b	$01
-	smpsAlterNote       $05
-	dc.b	nE2
+	dc.b	nF1, $0D
 	smpsAlterNote       $FF
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nE2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FF
-	dc.b	nEb2
-	smpsAlterNote       $05
-	dc.b	nE2
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FB
-
-UnrealBattle_LoopEE:
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $02, UnrealBattle_LoopEE
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_LoopEF:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsLoop            $00, $02, UnrealBattle_LoopEF
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
 	dc.b	$02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nF2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_LoopF0:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsLoop            $00, $02, UnrealBattle_LoopF0
-	smpsAlterNote       $00
-	dc.b	nEb2
-
-UnrealBattle_LoopF1:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsLoop            $00, $03, UnrealBattle_LoopF1
-
-UnrealBattle_LoopF4:
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	nF2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nG2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_LoopF2:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsLoop            $00, $02, UnrealBattle_LoopF2
-	smpsAlterNote       $00
-
-UnrealBattle_LoopF3:
-	dc.b	nF2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	smpsLoop            $00, $03, UnrealBattle_LoopF3
-	dc.b	nF2
-	smpsLoop            $01, $02, UnrealBattle_LoopF4
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	nF2
-
-UnrealBattle_LoopF5:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsLoop            $00, $03, UnrealBattle_LoopF5
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FD
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $02
-	dc.b	$01
 	smpsAlterNote       $FE
-	dc.b	nEb2
-	smpsAlterNote       $FD
-	dc.b	nEb2
+	dc.b	$01
 	smpsAlterNote       $FF
-	dc.b	nEb2
+	dc.b	nF1
+	smpsAlterNote       $00
+	dc.b	nF1
 	smpsAlterNote       $03
-	dc.b	nEb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $03
-	dc.b	nEb2
+	dc.b	nF1
+	smpsAlterNote       $05
+	dc.b	nF1
+	smpsAlterNote       $06
+	dc.b	nF1
 	smpsAlterNote       $04
-	dc.b	$03
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $00
-	dc.b	nEb2
+	dc.b	nF1
 	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2, $03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	$02
-	smpsAlterNote       $04
-	dc.b	nEb2, $01
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FE
-	dc.b	nD2
+	dc.b	nF1
 	smpsAlterNote       $FF
-	dc.b	$03
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $FB
-	dc.b	nD2
+	dc.b	nF1
 	smpsAlterNote       $FD
-	dc.b	nD2
+	dc.b	$03
+	smpsAlterNote       $FF
+	dc.b	$01
 	smpsAlterNote       $01
+	dc.b	nF1
+	smpsAlterNote       $04
+	dc.b	nF1
+	smpsAlterNote       $05
 	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $02
-	dc.b	nD2
 	smpsAlterNote       $03
 	dc.b	$01
-	smpsAlterNote       $FF
-	dc.b	nD2
+	smpsAlterNote       $00
+	dc.b	nF1
 	smpsAlterNote       $FE
-	dc.b	nD2
-	smpsPSGAlterVol     $02
+	dc.b	nF1
+	smpsAlterNote       $FD
+	dc.b	nF1
 	smpsAlterNote       $00
-	dc.b	nD2
-	smpsAlterNote       $04
-	dc.b	$02
-	smpsAlterNote       $05
-	dc.b	nD2, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nF2, $01, nRst, $04, nEb2
-
-UnrealBattle_LoopF6:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UnrealBattle_LoopF6
-	smpsAlterNote       $FB
-	dc.b	$01
-	smpsAlterNote       $05
-	dc.b	nE2
+	dc.b	nE1, $0D
 	smpsAlterNote       $FF
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nE2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FF
-	dc.b	nEb2
-	smpsAlterNote       $05
-	dc.b	nE2
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FB
-
-UnrealBattle_LoopF7:
-	smpsAlterNote       $FD
-	dc.b	nF2
-
-UnrealBattle_Jump06:
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $02, UnrealBattle_LoopF7
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_LoopF8:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsLoop            $00, $02, UnrealBattle_LoopF8
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nF2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_LoopF9:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsLoop            $00, $02, UnrealBattle_LoopF9
-	smpsAlterNote       $00
-	dc.b	nEb2
-
-UnrealBattle_LoopFA:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsLoop            $00, $03, UnrealBattle_LoopFA
-
-UnrealBattle_LoopFD:
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	nF2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nG2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_LoopFB:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsLoop            $00, $02, UnrealBattle_LoopFB
-	smpsAlterNote       $00
-
-UnrealBattle_LoopFC:
-	dc.b	nF2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	smpsLoop            $00, $03, UnrealBattle_LoopFC
-	dc.b	nF2
-	smpsLoop            $01, $02, UnrealBattle_LoopFD
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	nF2
-
-UnrealBattle_LoopFE:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsLoop            $00, $03, UnrealBattle_LoopFE
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FD
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $02
 	dc.b	$01
 	smpsAlterNote       $FE
-	dc.b	nEb2
-	smpsAlterNote       $FD
-	dc.b	nEb2
+	dc.b	$02
 	smpsAlterNote       $FF
-	dc.b	nEb2
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nE1
 	smpsAlterNote       $03
-	dc.b	nEb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $03
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	$03
-	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $00
-	dc.b	nEb2
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
 	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2, $03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	$02
-	smpsAlterNote       $04
-	dc.b	nEb2, $01
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FE
-	dc.b	nD2
+	dc.b	nE1
 	smpsAlterNote       $FF
-	dc.b	$03
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FC
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $FF
+	dc.b	nE1
+	smpsAlterNote       $01
+	dc.b	nE1
+	smpsAlterNote       $04
+	dc.b	nE1
+	smpsAlterNote       $06
+	dc.b	nE1
+	smpsAlterNote       $05
+	dc.b	nE1
+	smpsAlterNote       $03
+	dc.b	nE1
+	smpsAlterNote       $00
+	dc.b	nE1
+	smpsAlterNote       $FE
+	dc.b	nE1
+	smpsAlterNote       $FD
+	dc.b	nE1
+	smpsAlterNote       $01
+	dc.b	nEb1, $0D
 	smpsAlterNote       $00
 	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $01
+	smpsAlterNote       $FF
 	dc.b	$02
-	smpsPSGAlterVol     $02
+	smpsAlterNote       $00
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nEb1
+	smpsAlterNote       $04
+	dc.b	nEb1
+	smpsAlterNote       $06
+	dc.b	nEb1
+	smpsAlterNote       $07
+	dc.b	nEb1
+	smpsAlterNote       $06
+	dc.b	nEb1
+	smpsAlterNote       $03
+	dc.b	nEb1
+	smpsAlterNote       $00
+	dc.b	nEb1
+	smpsAlterNote       $FE
+	dc.b	nEb1
+	smpsAlterNote       $FD
+	dc.b	nEb1
+	smpsAlterNote       $FE
+	dc.b	nEb1
+	smpsAlterNote       $00
+	dc.b	nEb1
 	smpsAlterNote       $02
-	dc.b	nD2
+	dc.b	nEb1
+	smpsAlterNote       $05
+	dc.b	nEb1
+	smpsAlterNote       $07
+	dc.b	$02
+	smpsAlterNote       $04
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nEb1
+	smpsAlterNote       $FF
+	dc.b	nEb1
+	smpsAlterNote       $FD
+	dc.b	nEb1
+
+Extra_Final_Boss_LoopA7:
+	smpsAlterNote       $00
+	dc.b	nD1, $0D
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $FE
+	dc.b	$02
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD1
+	smpsAlterNote       $03
+	dc.b	nD1
+	smpsAlterNote       $06
+	dc.b	$02
+	smpsAlterNote       $05
+	dc.b	$01
+	smpsAlterNote       $02
+	dc.b	nD1
+	smpsAlterNote       $FF
+	dc.b	nD1
+	smpsAlterNote       $FD
+	dc.b	nD1
+	smpsAlterNote       $FC
+	dc.b	$02
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $02
+	dc.b	nD1
+	smpsAlterNote       $05
+	dc.b	nD1
+	smpsAlterNote       $06
+	dc.b	$02
+	smpsAlterNote       $04
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD1
+	smpsAlterNote       $FE
+	dc.b	nD1
+	smpsAlterNote       $FC
+	dc.b	$02
+	smpsAlterNote       $FD
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD1
+	smpsAlterNote       $03
+	dc.b	nD1
+	smpsAlterNote       $06
+	dc.b	$02
+	smpsAlterNote       $05
+	dc.b	$01
+	smpsAlterNote       $02
+	dc.b	nD1
+	smpsAlterNote       $FF
+	dc.b	nD1
+	smpsAlterNote       $FD
+	dc.b	nD1
+	smpsAlterNote       $FC
+	dc.b	nD1
+	smpsAlterNote       $FD
+	dc.b	nD1
+	smpsLoop            $00, $02, Extra_Final_Boss_LoopA7
+	smpsAlterNote       $FF
+	dc.b	nD1
+	smpsAlterNote       $02
+	dc.b	nD1
+	smpsAlterNote       $05
+	dc.b	nD1
+	smpsAlterNote       $06
+	dc.b	$02
+	smpsAlterNote       $04
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD1
+	smpsAlterNote       $FE
+	dc.b	nD1
+	smpsAlterNote       $FC
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $00
+	dc.b	nD1
+	smpsAlterNote       $03
+	dc.b	nD1
+	smpsAlterNote       $06
+	dc.b	$02
+	smpsAlterNote       $05
+	dc.b	$01
+	smpsAlterNote       $02
+	dc.b	nD1
+	smpsAlterNote       $FF
+	dc.b	nD1
+	smpsAlterNote       $FD
+	dc.b	nD1
+	smpsAlterNote       $FC
+	dc.b	nD1
+	smpsAlterNote       $FD
+	dc.b	nD1
+	smpsAlterNote       $FF
+	dc.b	nD1
+	smpsAlterNote       $02
+	dc.b	nD1
+	smpsAlterNote       $05
+	dc.b	nD1
+	smpsAlterNote       $06
+	dc.b	$02
 	smpsAlterNote       $03
 	dc.b	$01
-	smpsAlterNote       $FF
-	dc.b	nD2
+	smpsAlterNote       $00
+	dc.b	nD1
+	smpsAlterNote       $FD
+	dc.b	nD1
+	smpsAlterNote       $FC
+	dc.b	$02
 	smpsAlterNote       $FE
-	dc.b	nD2
-	smpsPSGAlterVol     $02
+	dc.b	$01
 	smpsAlterNote       $00
-	dc.b	nD2
+	dc.b	nD1
 	smpsAlterNote       $04
+	dc.b	nD1
+	smpsAlterNote       $06
 	dc.b	$02
-	smpsAlterNote       $05
-	dc.b	nD2, nRst, $7F, $7F, $7F, $7F, $25
-	smpsAlterNote       $00
-	dc.b	nF2, $01, nRst, $04, nEb2
-
-UnrealBattle_LoopFF:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UnrealBattle_LoopFF
-	smpsAlterNote       $FB
-	dc.b	$01
-	smpsAlterNote       $05
-	dc.b	nE2
-	smpsAlterNote       $FF
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nE2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FF
-	dc.b	nEb2
-	smpsAlterNote       $05
-	dc.b	nE2
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FB
-
-UnrealBattle_Loop100:
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $02, UnrealBattle_Loop100
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop101:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsLoop            $00, $02, UnrealBattle_Loop101
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nF2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop102:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsLoop            $00, $02, UnrealBattle_Loop102
-	smpsAlterNote       $00
-	dc.b	nEb2
-
-UnrealBattle_Loop103:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsLoop            $00, $03, UnrealBattle_Loop103
-
-UnrealBattle_Loop106:
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	nF2
-	smpsPSGAlterVol     $05
-	smpsAlterNote       $00
-	dc.b	$04
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$02
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsPSGAlterVol     $F3
-	smpsAlterNote       $FD
-	dc.b	nG2, $01
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-
-UnrealBattle_Loop104:
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsLoop            $00, $02, UnrealBattle_Loop104
-	smpsAlterNote       $00
-
-UnrealBattle_Loop105:
-	dc.b	nF2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nG2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	smpsLoop            $00, $03, UnrealBattle_Loop105
-	dc.b	nF2
-	smpsLoop            $01, $02, UnrealBattle_Loop106
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FD
-	dc.b	$01
-	smpsAlterNote       $FC
-	dc.b	nF2
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsAlterNote       $00
-	dc.b	nF2
-
-UnrealBattle_Loop107:
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsLoop            $00, $03, UnrealBattle_Loop107
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsPSGAlterVol     $FE
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $04
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsPSGAlterVol     $FF
-	smpsAlterNote       $00
-	dc.b	$05
-	smpsAlterNote       $FC
-	dc.b	$01
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $01
-	smpsAlterNote       $FD
-	dc.b	nEb2
-	smpsAlterNote       $00
-	dc.b	nEb2
 	smpsAlterNote       $01
-	dc.b	$03
-	smpsAlterNote       $02
+	dc.b	nCs1, $0D
+	smpsAlterNote       $00
 	dc.b	$01
-	smpsAlterNote       $FE
-	dc.b	nEb2
-	smpsAlterNote       $FD
-	dc.b	nEb2
 	smpsAlterNote       $FF
-	dc.b	nEb2
-	smpsAlterNote       $03
-	dc.b	nEb2
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $03
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	$03
+	dc.b	$02
+	smpsAlterNote       $00
+	dc.b	$01
 	smpsAlterNote       $01
-	dc.b	$01
-	smpsAlterNote       $00
-	dc.b	nEb2
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2, $03
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FD
-	dc.b	$02
+	dc.b	nCs1
 	smpsAlterNote       $04
-	dc.b	nEb2, $01
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FE
-	dc.b	nD2
-	smpsAlterNote       $FF
-	dc.b	$03
-	smpsAlterNote       $00
-	dc.b	$01
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $FB
-	dc.b	nD2
-	smpsAlterNote       $FD
-	dc.b	nD2
-	smpsAlterNote       $01
-	dc.b	$02
-	smpsPSGAlterVol     $02
-	smpsAlterNote       $02
-	dc.b	nD2
+	dc.b	nCs1
+	smpsAlterNote       $07
+	dc.b	nCs1
+	smpsAlterNote       $08
+	dc.b	nCs1
+	smpsAlterNote       $06
+	dc.b	nCs1
 	smpsAlterNote       $03
-	dc.b	$01
-	smpsAlterNote       $FF
-	dc.b	nD2
-	smpsAlterNote       $FE
-	dc.b	nD2
-	smpsPSGAlterVol     $02
+	dc.b	nCs1
 	smpsAlterNote       $00
-	dc.b	nD2
-	smpsAlterNote       $04
-	dc.b	$02
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	nCs1
+	smpsAlterNote       $FC
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	nCs1
+	smpsAlterNote       $FF
+	dc.b	nCs1
+	smpsAlterNote       $03
+	dc.b	nCs1
+	smpsAlterNote       $06
+	dc.b	nCs1
+	smpsAlterNote       $08
+	dc.b	nCs1
+	smpsAlterNote       $07
+	dc.b	nCs1
 	smpsAlterNote       $05
-	dc.b	nD2, nRst, $7F, $7F, $7F, $7F, $25
+	dc.b	nCs1
+	smpsAlterNote       $01
+	dc.b	nCs1
+	smpsAlterNote       $FF
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nCs1
+	smpsAlterNote       $04
+	dc.b	nCs1
+	smpsAlterNote       $07
+	dc.b	nCs1
+	smpsAlterNote       $08
+	dc.b	nCs1
+	smpsAlterNote       $06
+	dc.b	nCs1
+	smpsAlterNote       $03
+	dc.b	nCs1
 	smpsAlterNote       $00
-	dc.b	nF2, $01, nRst, $04, nEb2
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	nCs1
+	smpsAlterNote       $FC
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	nCs1
+	smpsAlterNote       $00
+	dc.b	nCs1
+	smpsAlterNote       $03
+	dc.b	nCs1
+	smpsAlterNote       $06
+	dc.b	nCs1
+	smpsAlterNote       $08
+	dc.b	nCs1
+	smpsAlterNote       $07
+	dc.b	nCs1
+	smpsAlterNote       $05
+	dc.b	nCs1
+	smpsAlterNote       $01
+	dc.b	nCs1
+	smpsAlterNote       $FE
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nCs1
+	smpsAlterNote       $05
+	dc.b	nCs1
+	smpsAlterNote       $07
+	dc.b	nCs1
+	smpsAlterNote       $08
+	dc.b	nCs1
+	smpsAlterNote       $06
+	dc.b	nCs1
+	smpsAlterNote       $03
+	dc.b	nCs1
+	smpsAlterNote       $00
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	nCs1
+	smpsAlterNote       $FC
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	nCs1
+	smpsAlterNote       $00
+	dc.b	nCs1
+	smpsAlterNote       $03
+	dc.b	nCs1
+	smpsAlterNote       $06
+	dc.b	nCs1
+	smpsAlterNote       $08
+	dc.b	nCs1
+	smpsAlterNote       $07
+	dc.b	nCs1
+	smpsAlterNote       $04
+	dc.b	nCs1
+	smpsAlterNote       $01
+	dc.b	nCs1
+	smpsAlterNote       $FE
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FE
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nCs1
+	smpsAlterNote       $05
+	dc.b	nCs1
+	smpsAlterNote       $07
+	dc.b	nCs1
+	smpsAlterNote       $08
+	dc.b	nCs1
+	smpsAlterNote       $06
+	dc.b	nCs1
+	smpsAlterNote       $03
+	dc.b	nCs1
+	smpsAlterNote       $FF
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	nCs1
+	smpsAlterNote       $FC
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	nCs1
+	smpsAlterNote       $00
+	dc.b	nCs1
+	smpsAlterNote       $03
+	dc.b	nCs1
+	smpsAlterNote       $06
+	dc.b	nCs1
+	smpsAlterNote       $08
+	dc.b	nCs1
+	smpsAlterNote       $07
+	dc.b	nCs1
+	smpsAlterNote       $04
+	dc.b	nCs1
+	smpsAlterNote       $01
+	dc.b	nCs1
+	smpsAlterNote       $FE
+	dc.b	nCs1
+	smpsAlterNote       $FD
+	dc.b	$02
+	smpsAlterNote       $FF
+	dc.b	$01
+	smpsAlterNote       $01
+	dc.b	nCs1
+	smpsAlterNote       $05
+	dc.b	nCs1
+	smpsAlterNote       $07
+	dc.b	nCs1
+	smpsAlterNote       $08
+	dc.b	nCs1
+	smpsAlterNote       $06
+	dc.b	nCs1
+	smpsAlterNote       $02
+	dc.b	nCs1
+	smpsAlterNote       $FF
+	dc.b	nCs1
 
-UnrealBattle_Loop108:
-	dc.b	$05
-	smpsPSGAlterVol     $FE
-	smpsLoop            $00, $04, UnrealBattle_Loop108
-	smpsAlterNote       $FB
-	dc.b	$01
-	smpsAlterNote       $05
-	dc.b	nE2
-	smpsAlterNote       $FF
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $04
-	dc.b	nE2
-	smpsAlterNote       $FC
-	dc.b	nEb2
-	smpsAlterNote       $02
-	dc.b	nEb2
-	smpsAlterNote       $FC
-	dc.b	nD2
-	smpsAlterNote       $04
-	dc.b	nEb2
-	smpsAlterNote       $FF
-	dc.b	nEb2
-	smpsAlterNote       $05
-	dc.b	nE2
-	smpsAlterNote       $FB
-	dc.b	nEb2
-	smpsPSGAlterVol     $FB
-	smpsAlterNote       $FD
-	dc.b	nF2
-	smpsPSGAlterVol     $05
-	smpsJump            UnrealBattle_Jump06
+Extra_Final_Boss_Jump05:
+	dc.b	nRst
+
+Extra_Final_Boss_LoopA8:
+	dc.b	$7F
+	smpsLoop            $00, $49, Extra_Final_Boss_LoopA8
+	dc.b	$0A
+	smpsJump            Extra_Final_Boss_Jump05
 
 ; DAC Data
-UnrealBattle_DAC:
-	dc.b 	$5
-	smpsLoop            $00, $03, UnrealBattle_DAC
-	dc.b 	dCrashCymbal, $A, dCrashCymbal, $5, dCrashCymbal, $19, dKickS3, $5, dMuffledSnare, $A, dCrashCymbal, dRideCymbal
-	dc.b 	dLowMetalHit, dLowMetalHit, $5, dLowMetalHit, dMetalHit, $A, dCrashCymbal, dLowMetalHit, dLowMetalHit, $5, dLowMetalHit, dMetalHit
-	dc.b 	dQuickLooseSnare, dHiHitDrum, dLowMetalHit, dLowMetalHit, $5, dLowMetalHit, dMetalHit, $A, dCrashCymbal, dLowMetalHit, dLowMetalHit, $5
-	dc.b 	dLowMetalHit, dComeOn, dComeOn, dComeOn, $A, dLowMetalHit, dLowMetalHit, $5, dLowMetalHit, dMetalHit, $A, dCrashCymbal
-	dc.b 	dLowMetalHit, dLowMetalHit, $5, dLowMetalHit, dMetalHit, $A, dHiHitDrum
+Extra_Final_Boss_DAC:
+	dc.b	dKick, $18, dSnare, $24, dKick, $0C, dSnare, $24, dKick, $0C, dSnare, $18
+	dc.b	dKick, $0C, dKick, dSnare, $18, dKick, dSnare, $24, dKick, $0C, dSnare, $24
+	dc.b	dKick, $0C, dSnare, $18, dKick, $0C, dKick, dSnare, $06, dKick, $12, $18
+	dc.b	dSnare, $0C, dKick, $18, $0C, dSnare, dKick, $06, dKick, dSnare, $0C, dKick
+	dc.b	dSnare, $06, dKick, $0C, $06, $0C, dKick, dSnare, dKick, dKick, dKick, dSnare
+	dc.b	dKick, $18, $0C, dSnare, dKick, $18, $0C, dSnare, dKick, dKick, $06
 
-UnrealBattle_Loop00:
-	dc.b 	dTightSnare, $5, dMidpitchSnare, dLooseSnare, dLooserSnare, dCrashCymbal, $A
-	smpsLoop            $00, $02, UnrealBattle_Loop00
-	dc.b 	dFloorTomS3, $5, dFloorTomS3, dFloorTomS3, $A
+Extra_Final_Boss_Loop00:
+	dc.b	dSnare
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop00
 
-UnrealBattle_Loop01:
-	dc.b 	dMetalHit
+Extra_Final_Boss_Loop01:
+	dc.b	dKick, $0C, dSnare, dKick, dSnare, dKick, dSnare, $06, dKick, $0C, $06, dSnare
+	dc.b	$0C
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop01
+	dc.b	dKick, dSnare, dKick, dSnare, dKick, $06, dSnare, dSnare, dKick, dSnare, dKick, dSnare
+	dc.b	dSnare
+	smpsLoop            $01, $06, Extra_Final_Boss_Loop01
 
-UnrealBattle_Loop02:
-	dc.b 	dKickS3, $5, dCrashCymbal, dMetalHit, $A, dRideCymbal
-	smpsLoop            $00, $02, UnrealBattle_Loop01
-	dc.b 	dMetalHit, dKickS3, $5, dCrashCymbal, dMetalHit, $F, dRideCymbal, $5, dMetalHit, $A
-	smpsLoop            $01, $02, UnrealBattle_Loop02
-	dc.b 	dCrashCymbal, $5, dCrashCymbal, dCrashCymbal, $A, dLowMetalHit, $5, dLowMetalHit, dLowMetalHit, $A, dCrashCymbal, $5
-	dc.b 	dCrashCymbal, dCrashCymbal, $A, dLowMetalHit, $5, dLowMetalHit
+Extra_Final_Boss_Loop02:
+	dc.b	dKick, $0C, dSnare, dKick, dSnare, dKick, dSnare, $06, dKick, $0C, $06, dSnare
+	dc.b	$0C
+	smpsLoop            $00, $03, Extra_Final_Boss_Loop02
 
-UnrealBattle_Loop03:
-	dc.b 	dMetalHit, $A, dKickS3, $5, dCrashCymbal, dMetalHit, $A, dRideCymbal
-	smpsLoop            $00, $02, UnrealBattle_Loop03
-	dc.b 	dMetalHit, dKickS3, $5, dCrashCymbal, dMetalHit, $F, dRideCymbal, $5
-	smpsLoop            $01, $02, UnrealBattle_Loop03
-	dc.b 	dMetalHit
+Extra_Final_Boss_Loop04:
+	dc.b	dKick, dSnare, dKick, dSnare, dKick, $06, dSnare, dSnare, dKick, dSnare, dKick, dSnare
+	dc.b	dSnare
 
-UnrealBattle_Loop04:
-	dc.b 	dQuickLooseSnare, dCrashCymbal, $5, dCrashCymbal, dCrashCymbal, $A, dLowMetalHit, $5, dLowMetalHit
-	smpsLoop            $00, $02, UnrealBattle_Loop04
+Extra_Final_Boss_Loop03:
+	dc.b	dKick, $0C, dSnare, dKick, dSnare, dKick, dSnare, $06, dKick, $0C, $06, dSnare
+	dc.b	$0C
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop03
+	smpsLoop            $01, $04, Extra_Final_Boss_Loop04
+	dc.b	dKick, dSnare, dKick, dSnare, dKick, $06, dSnare, dSnare, dKick, dSnare, dKick, dSnare
+	dc.b	dSnare, $18, $04, $05, $09
 
-UnrealBattle_Loop05:
-	dc.b 	dLowMetalHit, $A, dClapS3, $5, dMidMetalHit, dMetalHit, $A, dClapS3, $5, dMidMetalHit, dLowMetalHit, $A
-	dc.b 	dClapS3, $5, dMidMetalHit, dHiHitDrum, $A, dDanceSnare, dLowMetalHit, dClapS3, $5, dMidMetalHit, dMetalHit, $A
-	dc.b 	dClapS3, $5, dMidMetalHit, dLowMetalHit, $A, dClapS3, $5, dMidMetalHit, dHiHitDrum, dHiHitDrum, dHiHitDrum, $A
-	smpsLoop            $00, $04, UnrealBattle_Loop05
-	dc.b 	dCrashCymbal, $1
+Extra_Final_Boss_Loop05:
+	dc.b	dKick, dSnare, dKick, dSnare, dKick, dSnare, $04, dKick, $09, $05, dSnare, $09
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop05
+	dc.b	dKick, dSnare, dKick, dSnare, dKick, $04, dSnare, $05, $04, dKick, $05, dSnare
+	dc.b	$04, dKick, $05, dSnare, $04, $05
 
-UnrealBattle_Jump00:
-	dc.b 	nRst, $9, dCrashCymbal
+Extra_Final_Boss_Loop06:
+	dc.b	dKick, $09, dSnare, dKick, dSnare, dKick, dSnare, $04, dKick, $09, $05, dSnare
+	dc.b	$09
+	smpsLoop            $00, $07, Extra_Final_Boss_Loop06
+	dc.b	dKick, dSnare, dKick, dSnare, $0B, dKick, $06, dSnare, $07, dSnare, dKick, $08
+	dc.b	dSnare, dKick, $09, dSnare, dSnare
+	smpsJump            Extra_Final_Boss_Loop01
 
-UnrealBattle_Loop06:
-	dc.b 	$14, dHigherMetalHit, $A, dHigherMetalHit, dLowMetalHit, $5, dLowMetalHit, dMetalHit, $F, dHigherMetalHit, $5, dCrashCymbal
-	dc.b 	$A9
-	smpsLoop            $00, $03, UnrealBattle_Loop06
-	dc.b 	$59, dCrashCymbal, dCrashCymbal, $19, dKickS3, $5, dMuffledSnare, $A, dCrashCymbal, dRideCymbal, dLowMetalHit, dLowMetalHit
-	dc.b 	$5B, dLowMetalHit, dMetalHit, $A, dCrashCymbal, dLowMetalHit, dLowMetalHit, $5, dLowMetalHit, dMetalHit, $A, dHiHitDrum
-	dc.b 	dLowMetalHit, dLowMetalHit, $5, dLowMetalHit, dMetalHit, $A, dCrashCymbal, dLowMetalHit, dLowMetalHit, $5, dLowMetalHit, dComeOn
-	dc.b 	dComeOn, dComeOn, $A, dLowMetalHit, dLowMetalHit, $5, dLowMetalHit, dMetalHit, $A, dCrashCymbal, dLowMetalHit, dLowMetalHit
-	dc.b 	$5B, dLowMetalHit, dMetalHit, $A, dHiHitDrum
-
-UnrealBattle_Loop07:
-	dc.b 	dTightSnare, $5, dMidpitchSnare, dLooseSnare, dLooserSnare, dCrashCymbal, $A
-	smpsLoop            $00, $02, UnrealBattle_Loop07
-	dc.b 	dFloorTomS3, $5, dFloorTomS3, dFloorTomS3, $A
-
-UnrealBattle_Loop08:
-	dc.b 	dMetalHit
-
-UnrealBattle_Loop09:
-	dc.b 	dKickS3, $5, dCrashCymbal, dMetalHit, $A, dRideCymbal
-	smpsLoop            $00, $02, UnrealBattle_Loop08
-	dc.b 	dMetalHit, dKickS3, $5, dCrashCymbal, dMetalHit, $F, dRideCymbal, $5, dMetalHit, $A
-	smpsLoop            $01, $02, UnrealBattle_Loop09
-	dc.b 	dCrashCymbal, $5, dCrashCymbal, dCrashCymbal, $A, dLowMetalHit, $5, dLowMetalHit, dLowMetalHit, $A, dCrashCymbal, $5
-	dc.b 	dCrashCymbal, dCrashCymbal, $A, dLowMetalHit, $5, dLowMetalHit
-
-UnrealBattle_Loop0A:
-	dc.b 	dMetalHit, $A, dKickS3, $5, dCrashCymbal, dMetalHit, $A, dRideCymbal
-	smpsLoop            $00, $02, UnrealBattle_Loop0A
-	dc.b 	dMetalHit, dKickS3, $5, dCrashCymbal, dMetalHit, $F, dRideCymbal, $5
-	smpsLoop            $01, $02, UnrealBattle_Loop0A
-	dc.b 	dMetalHit
-
-UnrealBattle_Loop0B:
-	dc.b 	dQuickLooseSnare, dCrashCymbal, $5, dCrashCymbal, dCrashCymbal, $A, dLowMetalHit, $5, dLowMetalHit
-	smpsLoop            $00, $02, UnrealBattle_Loop0B
-
-UnrealBattle_Loop0C:
-	dc.b 	dLowMetalHit, $A, dClapS3, $5, dMidMetalHit, dMetalHit, $A, dClapS3, $5, dMidMetalHit, dLowMetalHit, $A
-	dc.b 	dClapS3, $5, dMidMetalHit, dHiHitDrum, $A, dDanceSnare, dLowMetalHit, dClapS3, $5, dMidMetalHit, dMetalHit, $A
-	dc.b 	dClapS3, $5, dMidMetalHit, dLowMetalHit, $A, dClapS3, $5, dMidMetalHit, dHiHitDrum, dHiHitDrum, dHiHitDrum, $A
-	smpsLoop            $00, $04, UnrealBattle_Loop0C
-	dc.b 	dCrashCymbal, $1
-	smpsJump            UnrealBattle_Jump00
-
-UnrealBattle_Voices:
-;	$09
-;	$08, $78, $30, $00, 	$1F, $1F, $5F, $5F, 	$12, $0E, $0A, $0A
-;	$00, $04, $04, $03, 	$2F, $2F, $2F, $2F, 	$28, $2D, $15, $00
-	smpsVcAlgorithm     $01
-	smpsVcFeedback      $01
+Extra_Final_Boss_Voices:
+;	Voice $00
+;	$2D
+;	$71, $24, $00, $71, 	$1F, $1F, $1F, $1F, 	$12, $0E, $0A, $0A
+;	$00, $04, $04, $03, 	$2F, $2F, $2F, $2F, 	$0E, $05, $00, $00
+	smpsVcAlgorithm     $05
+	smpsVcFeedback      $05
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $03, $07, $00
-	smpsVcCoarseFreq    $00, $00, $08, $08
-	smpsVcRateScale     $01, $01, $00, $00
+	smpsVcDetune        $07, $00, $02, $07
+	smpsVcCoarseFreq    $01, $00, $04, $01
+	smpsVcRateScale     $00, $00, $00, $00
 	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
 	smpsVcDecayRate1    $0A, $0A, $0E, $12
 	smpsVcDecayRate2    $03, $04, $04, $00
 	smpsVcDecayLevel    $02, $02, $02, $02
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $00, $15, $2D, $28
+	smpsVcTotalLevel    $00, $00, $05, $0E
 
 ;	Voice $01
-;	$00
-;	$00, $00, $00, $00, 	$00, $00, $00, $00, 	$00, $00, $00, $00
-;	$00, $00, $00, $00, 	$FF, $FF, $FF, $FF, 	$2A, $12, $30, $00
-	smpsVcAlgorithm     $00
-	smpsVcFeedback      $00
+;	$3D
+;	$11, $60, $32, $31, 	$12, $17, $56, $17, 	$04, $06, $06, $03
+;	$00, $0F, $00, $00, 	$1F, $3F, $5F, $1F, 	$1A, $00, $03, $03
+	smpsVcAlgorithm     $05
+	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $00, $00, $00, $00
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $00, $00, $00, $00
+	smpsVcDetune        $03, $03, $06, $01
+	smpsVcCoarseFreq    $01, $02, $00, $01
+	smpsVcRateScale     $00, $01, $00, $00
+	smpsVcAttackRate    $17, $16, $17, $12
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $00, $00, $00, $00
-	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $0F, $0F, $0F, $0F
+	smpsVcDecayRate1    $03, $06, $06, $04
+	smpsVcDecayRate2    $00, $00, $0F, $00
+	smpsVcDecayLevel    $01, $05, $03, $01
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $00, $30, $12, $2A
+	smpsVcTotalLevel    $03, $03, $00, $1A
 
 ;	Voice $02
-;	$00
-;	$00, $00, $00, $00, 	$00, $00, $00, $00, 	$00, $00, $00, $00
-;	$00, $00, $00, $00, 	$FF, $FF, $FF, $FF, 	$00, $00, $00, $00
-	smpsVcAlgorithm     $00
-	smpsVcFeedback      $00
+;	$3A
+;	$18, $26, $24, $11, 	$0F, $14, $53, $14, 	$04, $06, $06, $03
+;	$00, $0F, $00, $00, 	$1F, $3F, $5F, $1F, 	$22, $13, $26, $00
+	smpsVcAlgorithm     $02
+	smpsVcFeedback      $07
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $00, $00, $00, $00
+	smpsVcDetune        $01, $02, $02, $01
+	smpsVcCoarseFreq    $01, $04, $06, $08
+	smpsVcRateScale     $00, $01, $00, $00
+	smpsVcAttackRate    $14, $13, $14, $0F
+	smpsVcAmpMod        $00, $00, $00, $00
+	smpsVcDecayRate1    $03, $06, $06, $04
+	smpsVcDecayRate2    $00, $00, $0F, $00
+	smpsVcDecayLevel    $01, $05, $03, $01
+	smpsVcReleaseRate   $0F, $0F, $0F, $0F
+	smpsVcTotalLevel    $00, $26, $13, $22
+
+;	Voice $03
+;	$12
+;	$52, $00, $20, $31, 	$0E, $12, $11, $1A, 	$00, $00, $00, $00
+;	$00, $00, $00, $00, 	$FF, $FF, $FF, $FF, 	$1A, $17, $17, $00
+	smpsVcAlgorithm     $02
+	smpsVcFeedback      $02
+	smpsVcUnusedBits    $00
+	smpsVcDetune        $03, $02, $00, $05
+	smpsVcCoarseFreq    $01, $00, $00, $02
 	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $00, $00, $00, $00
+	smpsVcAttackRate    $1A, $11, $12, $0E
 	smpsVcAmpMod        $00, $00, $00, $00
 	smpsVcDecayRate1    $00, $00, $00, $00
 	smpsVcDecayRate2    $00, $00, $00, $00
 	smpsVcDecayLevel    $0F, $0F, $0F, $0F
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
-	smpsVcTotalLevel    $00, $00, $00, $00
+	smpsVcTotalLevel    $00, $17, $17, $1A
 
-;	Voice $03
-;	$24
-;	$01, $02, $03, $00, 	$1F, $11, $1F, $1F, 	$00, $0F, $06, $08
-;	$00, $00, $00, $00, 	$F3, $F8, $71, $F9, 	$0C, $00, $21, $05
+;	Voice $04
+;	$04
+;	$67, $73, $76, $34, 	$5F, $5F, $5F, $5F, 	$00, $08, $00, $00
+;	$00, $00, $00, $0A, 	$0F, $FF, $0F, $0F, 	$1C, $01, $23, $00
 	smpsVcAlgorithm     $04
-	smpsVcFeedback      $04
+	smpsVcFeedback      $00
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $00, $00, $00
-	smpsVcCoarseFreq    $00, $03, $02, $01
-	smpsVcRateScale     $00, $00, $00, $00
-	smpsVcAttackRate    $1F, $1F, $11, $1F
+	smpsVcDetune        $03, $07, $07, $06
+	smpsVcCoarseFreq    $04, $06, $03, $07
+	smpsVcRateScale     $01, $01, $01, $01
+	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $08, $06, $0F, $00
-	smpsVcDecayRate2    $00, $00, $00, $00
-	smpsVcDecayLevel    $0F, $07, $0F, $0F
-	smpsVcReleaseRate   $09, $01, $08, $03
-	smpsVcTotalLevel    $05, $21, $00, $0C
+	smpsVcDecayRate1    $00, $00, $08, $00
+	smpsVcDecayRate2    $0A, $00, $00, $00
+	smpsVcDecayLevel    $00, $00, $0F, $00
+	smpsVcReleaseRate   $0F, $0F, $0F, $0F
+	smpsVcTotalLevel    $00, $23, $01, $1C
 
+;	Voice $05
+;	$05
+;	$31, $11, $10, $32, 	$12, $17, $16, $1A, 	$00, $00, $00, $00
+;	$0C, $13, $0C, $0B, 	$FF, $FF, $FF, $FF, 	$10, $13, $0F, $00
+	smpsVcAlgorithm     $05
+	smpsVcFeedback      $00
+	smpsVcUnusedBits    $00
+	smpsVcDetune        $03, $01, $01, $03
+	smpsVcCoarseFreq    $02, $00, $01, $01
+	smpsVcRateScale     $00, $00, $00, $00
+	smpsVcAttackRate    $1A, $16, $17, $12
+	smpsVcAmpMod        $00, $00, $00, $00
+	smpsVcDecayRate1    $00, $00, $00, $00
+	smpsVcDecayRate2    $0B, $0C, $13, $0C
+	smpsVcDecayLevel    $0F, $0F, $0F, $0F
+	smpsVcReleaseRate   $0F, $0F, $0F, $0F
+	smpsVcTotalLevel    $00, $0F, $13, $10

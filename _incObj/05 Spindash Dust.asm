@@ -2,7 +2,7 @@
 ; Object 05 - the dust of the spindash
 ; ---------------------------------------------------------------------------
 
-SpinDash_dust:
+SpinDust:
 		moveq	#0,d0
 		move.b	$24(a0),d0
 		move	off_1DD2E(pc,d0.w),d1

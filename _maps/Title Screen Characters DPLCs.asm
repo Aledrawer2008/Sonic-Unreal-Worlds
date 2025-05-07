@@ -1,116 +1,116 @@
 ; --------------------------------------------------------------------------------
-; Dynamic Pattern Loading Cues - output from ClownMapEd - Sonic 1 format
+; Dynamic Pattern Loading Cues - output from ClownMapEd - MapMacros format
 ; --------------------------------------------------------------------------------
 
-CME_BC425627:
-	dc.w	CME_BC425627_0-CME_BC425627
-	dc.w	CME_BC425627_1-CME_BC425627
-	dc.w	CME_BC425627_2-CME_BC425627
-	dc.w	CME_BC425627_3-CME_BC425627
-	dc.w	CME_BC425627_4-CME_BC425627
-	dc.w	CME_BC425627_5-CME_BC425627
-	dc.w	CME_BC425627_6-CME_BC425627
-	dc.w	CME_BC425627_7-CME_BC425627
-	dc.w	CME_BC425627_8-CME_BC425627
-	dc.w	CME_BC425627_9-CME_BC425627
-	dc.w	CME_BC425627_A-CME_BC425627
+.offsets:	mappingsTable
+	mappingsTableEntry.w	.frame0
+	mappingsTableEntry.w	.frame1
+	mappingsTableEntry.w	.frame2
+	mappingsTableEntry.w	.frame3
+	mappingsTableEntry.w	.frame4
+	mappingsTableEntry.w	.frame5
+	mappingsTableEntry.w	.frame6
+	mappingsTableEntry.w	.frame7
+	mappingsTableEntry.w	.frame8
+	mappingsTableEntry.w	.frame9
+	mappingsTableEntry.w	.frame10
 
-CME_BC425627_0:
-	dc.b	5
-	dc.w	$F000
-	dc.w	$F010
-	dc.w	$F020
-	dc.w	$F030
-	dc.w	$8040
+.frame0:	dplcHeader
+	dplcEntry	16, 0
+	dplcEntry	16, 16
+	dplcEntry	16, 32
+	dplcEntry	16, 48
+	dplcEntry	9, 64
+.frame0_End
 
-CME_BC425627_1:
-	dc.b	5
-	dc.w	$F049
-	dc.w	$F059
-	dc.w	$F069
-	dc.w	$F079
-	dc.w	$A089
+.frame1:	dplcHeader
+	dplcEntry	16, 73
+	dplcEntry	16, 89
+	dplcEntry	16, 105
+	dplcEntry	16, 121
+	dplcEntry	11, 137
+.frame1_End
 
-CME_BC425627_2:
-	dc.b	5
-	dc.w	$F094
-	dc.w	$F0A4
-	dc.w	$F0B4
-	dc.w	$F0C4
-	dc.w	$80D4
+.frame2:	dplcHeader
+	dplcEntry	16, 148
+	dplcEntry	16, 164
+	dplcEntry	16, 180
+	dplcEntry	16, 196
+	dplcEntry	9, 212
+.frame2_End
 
-CME_BC425627_3:
-	dc.b	7
-	dc.w	$F0DD
-	dc.w	$F0ED
-	dc.w	$F0FD
-	dc.w	$F10D
-	dc.w	$F11D
-	dc.w	$F12D
-	dc.w	$D13D
+.frame3:	dplcHeader
+	dplcEntry	16, 221
+	dplcEntry	16, 237
+	dplcEntry	16, 253
+	dplcEntry	16, 269
+	dplcEntry	16, 285
+	dplcEntry	16, 301
+	dplcEntry	14, 317
+.frame3_End
 
-CME_BC425627_4:
-	dc.b	7
-	dc.w	$F0FD
-	dc.w	$F10D
-	dc.w	$F11D
-	dc.w	$F12D
-	dc.w	$F13D
-	dc.w	$F14D
-	dc.w	$915D
+.frame4:	dplcHeader
+	dplcEntry	16, 253
+	dplcEntry	16, 269
+	dplcEntry	16, 285
+	dplcEntry	16, 301
+	dplcEntry	16, 317
+	dplcEntry	16, 333
+	dplcEntry	10, 349
+.frame4_End
 
-CME_BC425627_5:
-	dc.b	7
-	dc.w	$F0FD
-	dc.w	$F10D
-	dc.w	$F11D
-	dc.w	$F12D
-	dc.w	$D13D
-	dc.w	$F167
-	dc.w	$C177
+.frame5:	dplcHeader
+	dplcEntry	16, 253
+	dplcEntry	16, 269
+	dplcEntry	16, 285
+	dplcEntry	16, 301
+	dplcEntry	14, 317
+	dplcEntry	16, 359
+	dplcEntry	13, 375
+.frame5_End
 
-CME_BC425627_6:
-	dc.b	5
-	dc.w	$F184
-	dc.w	$F194
-	dc.w	$F1A4
-	dc.w	$F1B4
-	dc.w	$01C4
+.frame6:	dplcHeader
+	dplcEntry	16, 388
+	dplcEntry	16, 404
+	dplcEntry	16, 420
+	dplcEntry	16, 436
+	dplcEntry	1, 452
+.frame6_End
 
-CME_BC425627_7:
-	dc.b	5
-	dc.w	$F1C5
-	dc.w	$F1D5
-	dc.w	$F1E5
-	dc.w	$F1F5
-	dc.w	$7205
+.frame7:	dplcHeader
+	dplcEntry	16, 453
+	dplcEntry	16, 469
+	dplcEntry	16, 485
+	dplcEntry	16, 501
+	dplcEntry	8, 517
+.frame7_End
 
-CME_BC425627_8:
-	dc.b	5
-	dc.w	$F20D
-	dc.w	$F21D
-	dc.w	$F22D
-	dc.w	$F23D
-	dc.w	$B24D
+.frame8:	dplcHeader
+	dplcEntry	16, 525
+	dplcEntry	16, 541
+	dplcEntry	16, 557
+	dplcEntry	16, 573
+	dplcEntry	12, 589
+.frame8_End
 
-CME_BC425627_9:
-	dc.b	7
-	dc.w	$F259
-	dc.w	$F269
-	dc.w	$F279
-	dc.w	$F289
-	dc.w	$F299
-	dc.w	$F2A9
-	dc.w	$32B9
+.frame9:	dplcHeader
+	dplcEntry	16, 601
+	dplcEntry	16, 617
+	dplcEntry	16, 633
+	dplcEntry	16, 649
+	dplcEntry	16, 665
+	dplcEntry	16, 681
+	dplcEntry	4, 697
+.frame9_End
 
-CME_BC425627_A:
-	dc.b	7
-	dc.w	$F275
-	dc.w	$F285
-	dc.w	$F295
-	dc.w	$F2A5
-	dc.w	$F2B5
-	dc.w	$F2C5
-	dc.w	$32D5
+.frame10:	dplcHeader
+	dplcEntry	16, 629
+	dplcEntry	16, 645
+	dplcEntry	16, 661
+	dplcEntry	16, 677
+	dplcEntry	16, 693
+	dplcEntry	16, 709
+	dplcEntry	4, 725
+.frame10_End
 
 	even

@@ -46,7 +46,7 @@ dbug:	macro map,object,subtype,frame,vram
 	dbug	Map_Ring,	id_Rings,	0,	0,	$27B2
 	dbug	Map_Monitor,	id_Monitor,	0,	0,	$680
 	dbug	Map_Spring,	id_Springs,	0,	0,	$523
-	dbug	Map_Jaws,	id_Obj2C,	8,	0,	$2486
+	dbug	Map_Jaws,	id_ChopChop,	8,	0,	$2486
 	dbug	Map_Burro,	id_Burrobot,	0,	2,	$84A6
 	dbug	Map_Harp,	id_Harpoon,	0,	0,	$3CC
 	dbug	Map_Harp,	id_Harpoon,	2,	3,	$3CC

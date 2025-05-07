@@ -113,6 +113,31 @@ copyTilemap:	macro source,loc,width,height
 		endm
 
 ; ---------------------------------------------------------------------------
+; Resets pool allocator
+; ---------------------------------------------------------------------------
+; ARGUMENTS:
+;	poolPtrOp - operand representing buffer pool pointer
+; ---------------------------------------------------------------------------
+
+Screen_PoolReset:	macro ptrOp, poolStart, poolEnd
+	__ScreenPoolEnd: = \poolEnd
+	move.w	#\poolStart, \ptrOp
+	endm
+
+SoundTest_FinalizeWriteRequests:	macro	scratchAReg
+	movea.w	SoundTest_VisualizerWriteRequestsPos, \scratchAReg
+	move.w	#-2, (\scratchAReg)
+	endm
+
+; ---------------------------------------------------------------
+; Initialize delete objects queue
+; ---------------------------------------------------------------
+
+DeleteQueue_Init: macro
+	move.w	#DeleteQueue, DeleteQueue_Ptr
+	endm
+
+; ---------------------------------------------------------------------------
 ; disable interrupts
 ; ---------------------------------------------------------------------------
 
@@ -274,6 +299,32 @@ zonewarning:	macro loc,elementsize
 		warning "Size of loc (\{(._end-loc)/elementsize}) does not match ZoneCount (\{ZoneCount})."
 		endif
 		endm
+
+; ---------------------------------------------------------------------------
+; Creates a dynamic object in A1
+; ---------------------------------------------------------------------------
+; ARGUMENTS:
+;	objPointerOp - operand to load object code pointer from
+; ---------------------------------------------------------------------------
+; EXAMPLES:
+;	Screen_CreateObject #MySampleObject
+;
+;	lea	MySampleObject, a3
+;	Screen_CreateObject a3
+; ---------------------------------------------------------------------------
+
+Screen_CreateObject: macro objPointerOp
+	jsr	SingleObjLoad
+	move.b	#$8D, (a1)
+	move.l	\objPointerOp, obCodePtr(a1)
+	endm
+
+; ---------------------------------------------------------------------------
+Screen_CreateChildObject: macro objPointerOp
+	jsr	SingleObjLoad2
+	move.b	#$8D, (a1)
+	move.l	\objPointerOp, obCodePtr(a1)
+	endm
 
 ; ---------------------------------------------------------------------------
 ; sprite mappings and DPLCs macros

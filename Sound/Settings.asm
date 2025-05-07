@@ -52,14 +52,14 @@ SMPS_S2DACSamples		= 1
 SMPS_S3DACSamples		= 1
 SMPS_SKDACSamples		= 1
 SMPS_S3DDACSamples	= 0
-SMPS_SCDACSamples		= 0
+SMPS_SCDACSamples		= 1
 
 SMPS_S1PSGEnvelopes	= 1
 SMPS_S2PSGEnvelopes	= 1
 SMPS_S3PSGEnvelopes	= 1
 SMPS_SKPSGEnvelopes	= 1
 SMPS_S3DPSGEnvelopes	= 0
-SMPS_KCPSGEnvelopes	= 0
+SMPS_KCPSGEnvelopes	= 1
 
 ; ---DISASM-DEPENDANT VARIABLES AND FUNCTIONS---
 SoundDriverLoad		= SMPS_LoadDACDriver

@@ -2,7 +2,7 @@
 ; Object 0E - Sonic on the title screen
 ; ---------------------------------------------------------------------------
 
-TitleSonic:
+TitleCharacters:
 		moveq	#0,d0
 		move.b	obRoutine(a0),d0
 		move.w	TSon_Index(pc,d0.w),d1
@@ -64,7 +64,7 @@ TSon_SpawnAmy:	; Routine 6
 		addq.b	#2,obRoutine(a0)
 		tst.b	obSubtype(a0)
 		bne.s	TSon_Animate
-		move.b	#id_TitleSonic,(v_titleamy)
+		move.b	#id_TitleCharacters,(v_titleamy)
 		move.b	#1,(v_titleamy+obSubtype)
 		bset	#7,(titleMode).w			; Mark Sonic as turned around
 ; ===========================================================================

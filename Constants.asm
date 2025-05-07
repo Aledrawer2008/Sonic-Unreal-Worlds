@@ -28,7 +28,7 @@ sram_port:			equ $A130F1
 
 security_addr:		equ $A14000
 
-;SRAM
+; SRAM
 sr_suw	= $01 				; text to indicate sonic unreal worlds save
 sr_ver	= $09 				; version number
 sr_header_end = $0C

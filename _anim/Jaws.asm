@@ -1,6 +1,8 @@
 ; ---------------------------------------------------------------------------
 ; Animation script - Jaws enemy
 ; ---------------------------------------------------------------------------
-Ani_obj2C:	dc.w .swim-Ani_obj2C
-.swim:		dc.b 4, 0, 1, afEnd
+Ani_ChopChop:
+	dc.w .swim-Ani_ChopChop
+.swim:
+	dc.b 4, 0, 1, afEnd
 		even

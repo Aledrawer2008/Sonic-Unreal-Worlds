@@ -8,15 +8,15 @@ GotThroughCard:
 		move.w	Got_Index(pc,d0.w),d1
 		jmp	Got_Index(pc,d1.w)
 ; ===========================================================================
-Got_Index:	dc.w Got_ChkPLC-Got_Index
-		dc.w Got_Move-Got_Index
-		dc.w Got_Wait-Got_Index
-		dc.w Got_TimeBonus-Got_Index
-		dc.w Got_Wait-Got_Index
-		dc.w Got_NextLevel-Got_Index
-		dc.w Got_Wait-Got_Index
-		dc.w Got_Move2-Got_Index
-		dc.w loc_C766-Got_Index
+Got_Index:	dc.w Got_ChkPLC-Got_Index	; 0
+		dc.w Got_Move-Got_Index	; 2
+		dc.w Got_Wait-Got_Index	; 4
+		dc.w Got_TimeBonus-Got_Index	; 6
+		dc.w Got_Wait-Got_Index	; 8
+		dc.w Got_NextLevel-Got_Index	; $A
+		dc.w Got_Wait-Got_Index	; $C
+		dc.w Got_Move2-Got_Index	; $E
+		dc.w Got_LastLogic-Got_Index	; $10
 
 got_mainX = $30		; position for card to display on
 got_finalX = $32		; position for card to finish on
@@ -47,11 +47,6 @@ Got_Loop:
 		move.w	(a2)+,obScreenY(a1) ; load y-position
 		move.b	(a2)+,obRoutine(a1)
 		move.b	(a2)+,d0
-		cmpi.b	#6,d0
-		bne.s	loc_C5CA
-		add.b	(v_act).w,d0	; add act number to frame number
-
-loc_C5CA:
 		move.b	d0,obFrame(a1)
 		move.l	#Map_Got,obMap(a1)
 		move.w	#$8580,obGfx(a1)
@@ -87,7 +82,7 @@ loc_C610:
 ; ===========================================================================
 
 loc_C61A:
-		cmpi.b	#$E,($FFFFD724).w
+		cmpi.b	#$E,(v_endcardring+obRoutine).w
 		beq.s	loc_C610
 		cmpi.b	#2,obFrame(a0)
 		bne.s	loc_C5FE
@@ -134,8 +129,6 @@ locret_C692:
 ; ===========================================================================
 
 Got_NextLevel:	; Routine $A
-		cmpi.w	#$502,(v_zone)
-		beq.s	Got_Ending
 		move.b	(v_zone).w,d0
 		andi.w	#7,d0
 		lsl.w	#3,d0
@@ -148,11 +141,6 @@ Got_NextLevel:	; Routine $A
 		clr.b	(v_lastlamp).w	; clear	lamppost counter
 		move.b	#1,(f_restart).w ; restart level
 		bra.w	DisplaySprite
-; ===========================================================================
-
-Got_Ending:
-		move.b	#id_Ending,(v_gamemode).w
-		rts
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
 ; Level	order array
@@ -219,7 +207,7 @@ locret_C748:
 ; ===========================================================================
 
 Got_SBZ2:
-		cmpi.b	#4,obFrame(a0)
+		cmpi.b	#2,obFrame(a0)
 		bne.w	DeleteObject
 		addq.b	#2,obRoutine(a0)
 		clr.b	(f_lockctrl).w	; unlock controls
@@ -230,7 +218,7 @@ Got_SBZ2:
 		jmp	(PlaySound).l	; play cutscene music
 ; ===========================================================================
 
-loc_C766:	; Routine $10
+Got_LastLogic:	; Routine $10
 		cmpi.w	#$502,(v_zone).w
 		beq.s	.UBZ
 		cmpi.w	#$2100,(v_limitright2).w

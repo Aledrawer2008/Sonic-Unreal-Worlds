@@ -51,7 +51,7 @@ Tit_ClrPal:
 
 		moveq	#palid_Sonic,d0	; load Sonic's palette
 		bsr.w	PalLoad1
-		move.b	#id_SonicTeam,(v_sonicteam).w	 ; load "SONIC TEAM PRESENTS" object
+		move.b	#id_SonicTeam,(v_sonicteam).w	 ; load text object
 		jsr	(ExecuteObjects).l
 		jsr	(BuildSprites).l
 		bsr.w	PaletteFadeIn
@@ -65,7 +65,7 @@ Tit_ClrPal:
 .skip:
 		bsr.w	NemDec
 		locVRAM $6000
-		lea	(Nem_TitleSonic).l,a0 ; load Sonic & Amy's patterns
+		lea	(Nem_TitleChars).l,a0 ; load Sonic & Amy's patterns
 		bsr.w	NemDec
 		lea	(vdp_data_port).l,a6
 		locVRAM	$D000,4(a6)
@@ -136,13 +136,13 @@ Tit_LoadText:
 
 		clearRAM v_titlesonic,v_ttlsonichide+object_size
 
-		move.b	#id_PSBTM,(v_ttlsonichide).w ; load object which hides part of Sonic
+		move.b	#id_TitleStuff,(v_ttlsonichide).w ; load object which hides part of Sonic
 		move.b	#4,(v_ttlsonichide+obRoutine).w
-		move.b	#id_TitleSonic,(v_titlesonic).w ; load big Sonic object
+		move.b	#id_TitleCharacters,(v_titlesonic).w ; load big Sonic object
 
 		include	"Sonic CD Fade.asm"
 
-		move.b	#id_PSBTM,(v_titlemenu).w ; load Title Menu object
+		move.b	#id_TitleStuff,(v_titlemenu).w ; load Title Menu object
 		move.b	#id_Planet,(v_titleplanet).w ; load Planet object
 		jsr	(ExecuteObjects).l
 		bsr.w	DeformLayers
