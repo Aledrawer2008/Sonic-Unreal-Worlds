@@ -203,7 +203,7 @@ SS_ToSegaScreen:
 
 SS_BGLoad:
 		lea	($FF0000).l,a1
-		lea	(Eni_SSBg2).l,a0 ; load	mappings for the clouds
+		lea	(Eni_SSBg).l,a0 ; load	mappings for the clouds
 		move.w	#$4000,d0
 		bsr.w	EniDec
 		lea	($FF0000).l,a1

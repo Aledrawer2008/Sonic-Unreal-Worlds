@@ -231,9 +231,9 @@ LevSelect_Code:
 ; ---------------------------------------------------------------------------
 
 GotoTutorial:
+		jsr	(PlayLevel).l
 		move.w	#3,(v_zone).w
 		clr.b	(v_save)
-		move.b	#id_Level,(v_gamemode).w
 		rts
 GoToSaveMenu:
 		move.b	#id_SaveMenu,(v_gamemode).w

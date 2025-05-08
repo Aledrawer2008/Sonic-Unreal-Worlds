@@ -281,96 +281,6 @@ zStartupCodeEndLoc:
 
 		dc.b $9F, $BF, $DF, $FF	; values for PSG channel volumes
 		
-SaveTxt_Late:	dc.b "NEWER VERSION SAVE WILL BE ERASED",0
-	even
-SaveTxt_None:	dc.b "NO SAVE FOUND CREATING NEW ONE",0
-	even
-SaveTxt_Old:	dc.b "UPDATING SAVE TO CURRENT VERSION",0
-	even
-SaveTxt_Warning:	dc.b "WARNING",0
-	even
-SaveTxt_Press:	dc.b "PRESS ANYTHING TO CONTINUE",0
-	even
-SaveTxt_LOL:	dc.b "EXCEPT FOR THE RESET AND POWER BUTTON",0
-	even
-SaveWarning:
-		gotoROM
-		; Configure Palette
-		move.w	#$0C00,(v_pal_dry_dup+2).w 		; color 1	palette 1
-		move.l	#$0EEE0CAA,(v_pal_dry_dup+$C).w ; color 5/6	palette 1
-		
-		move.w	#$0046,(v_pal_dry_dup+$22).w 		; color 1	palette 2
-		move.l	#$00EE008A,(v_pal_dry_dup+$2C).w 	; color 5/6 palette 2
-	
-		move.w	#$0200,(v_pal_dry_dup+$42).w 		; color 1	palette 3
-		move.l	#$04000200,(v_pal_dry_dup+$4C).w 	; color 5/6 palette 3
-		
-		lea	(Art_Text).l,a5	; load level select font
-		lea	(vdp_data_port).l,a6
-		move.w	#$8170,4(a6)
-		
-		move.w	#(40*$8)-1,d1
-		locVRAM	$D000,4(a6)
-.font:
-		move.l	(a5)+,(a6)
-		dbf	d1,.font	; load level select font
-		
-		lea SaveTxt_Warning(pc),a5
-		
-		locVRAM	($C000+($80*1)+(2*1)),4(a6) ; y x
-		moveq	#0,d0
-		add.w	#$2600,d0
-		bsr.s	TextGenerate
-		
-		movea.l	d6,a5
-		
-		locVRAM	($C000+($80*3)+(2*2)),4(a6) ; y x
-		move.w	#$600,d0
-		bsr.s	TextGenerate
-		
-		lea SaveTxt_Press(pc),a5
-		
-		locVRAM	($C000+($80*26)+(2*7)),4(a6) ; y x
-		move.w	#$600,d0
-		bsr.s	TextGenerate
-		
-		lea SaveTxt_LOL(pc),a5
-		
-		locVRAM	($C000+($80*27)+(2*2)),4(a6) ; y x
-		move.w	#$C600,d0
-		bsr.s	TextGenerate
-		
-		bsr.w	PaletteFadeIn
-.loop:
-		move.b	#2,(v_vbla_routine).w
-		bsr.w	WaitForVBla
-		tst.b	(v_jpadpress1)
-		beq.s	.loop
-		
-		gotoSRAM
-		lea ($200000).l,a0		; Load SRAM memory into a0
-		rts
-TextGenerate:
-		move.b (a5)+,d0
-		cmpi.b    #$30,d0    ; Check for $40 
-        blt.s    .skip    ; If not a valid ASCII character, branch
-		
-		cmpi.b    #$40,d0    ; Check for $40 
-        blt.s    .check    ; If not an ASCII text character, branch
-		subq.w    #$3,d0        ; Subtract an extra 3
-	.check:
-		
-		add.w	#$80-$30,d0
-		move.w	d0,(a6)
-		tst.b	(a5)
-		bne.s	TextGenerate
-		rts
-	.skip:
-		move.w	#0,(a6)
-		tst.b	(a5)
-		bne.s	TextGenerate
-		rts
-		
 ; ===========================================================================
 
 GameProgram:
@@ -403,48 +313,6 @@ GameInit:
 		bsr.w	SoundDriverLoad
 		jsr	JoypadInit
 		move.b	#id_Sega,(v_gamemode).w ; set Game Mode to Sega Screen
-		
-InitSRAM:
-        gotoSRAM
-        lea ($200000).l,a0		; Load SRAM memory into a0
-        movep.l sr_suw(a0),d0	; Get the existing string at the start of SRAM
-        move.l  #"SUWV",d1		; Write the string "SUWV" to d1
-        cmp.l   d0,d1			; Was it already in SRAM?
-        beq.s   .checkver		; If so, skip
-        movep.l d1,sr_suw(a0)	; Write string "SUWV"
-
-		move.l	#SaveTxt_None,d6
-		bsr.w	SaveWarning
-.redo_save:
-        ; SRAM Initialize
-		move.w	#SaveVersion,d1
-		movep.w d1,sr_ver(a0)	; Write version
-		
-		move.w	#8-1,d0 ; there are 8 saves
-		addi.w	#sr_header_end,a0
-	.clr_saves:
-		move.b	#0,(a0)		; clear save flag
-		addi.w	#sr_size,a0
-		dbf.w	d0,.clr_saves
-		bra.s	.save_is_ok
-.checkver:
-		movep.w	sr_ver(a0),d0
-		move.w	#SaveVersion,d1
-		cmp.w   d1,d0
-		beq.s	.save_is_ok
-		bgt.s	.uncompatible
-		
-		move.l	#SaveTxt_Old,d6
-		bsr.w	SaveWarning
-		; there are no past version to convert so we kill the save for now
-		bra.s	.redo_save
-.uncompatible:
-		move.l	#SaveTxt_Late,d6
-		bsr.w	SaveWarning
-		bra.s	.redo_save
-.save_is_ok:
-        gotoROM
-; ===============================================================================
 
 MainGameLoop:
 		moveq #0,d0
@@ -465,6 +333,7 @@ id_Credits	equ $6
 id_SaveMenu	equ $7
 id_Secret	equ $8
 id_Encore	equ	$9
+id_SRAMInit	equ	$A
 
 GameModeArray:
 		dc.l GM_Sega
@@ -477,7 +346,7 @@ GameModeArray:
 		dc.l GM_SaveMenu
 		dc.l GM_Secret
 		dc.l GM_Encore
-	;	dc.l GM_SoundTest
+		dc.l GM_InitSRAM
 ; ===========================================================================
 
 Art_Text:	binclude	"artunc/menutext.bin" ; text used in level select and debug mode
@@ -1947,6 +1816,7 @@ WaitForVBla:
 		include	"_incObj/sub CalcSine.asm"
 		include	"_incObj/sub CalcAngle.asm"
 
+		include	"_gamemode/$A - SRAM Init.asm"
 		include	"_gamemode/0 - Sega.asm"
 		include	"_gamemode/9 - Team Encore.asm"
 		include	"_gamemode/1 - Title.asm"
@@ -2003,7 +1873,6 @@ MusicList:
 ; ===========================================================================
 
 		include	"_gamemode/7 - Save Select.asm"
-	;	include	"_gamemode/$A - Sound Test.asm"
 		include	"_gamemode/2 - Level.asm"
 		include	"_inc/Dynamic Water Palette.asm"
 		include	"_inc/LZWaterFeatures.asm"
@@ -6108,11 +5977,7 @@ Map_SSWalls:
 ; ---------------------------------------------------------------------------
 ; Compressed graphics - special stage
 ; ---------------------------------------------------------------------------
-Eni_SSBg1:	binclude	"tilemaps/SS Background 1.bin" ; special stage background (mappings)
-		even
-Nem_SSBgFish:	binclude	"artnem/Special Birds & Fish.bin" ; special stage birds and fish background
-		even
-Eni_SSBg2:	binclude	"tilemaps/SS Background 2.bin" ; special stage background (mappings)
+Eni_SSBg:	binclude	"tilemaps/SS Background 2.bin" ; special stage background (mappings)
 		even
 Nem_SSBgCloud:	binclude	"artnem/Special Clouds.bin" ; special stage clouds background
 		even
