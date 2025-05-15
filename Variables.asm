@@ -381,18 +381,10 @@ f_jumpdash      = 	$FFFFF7DA
 v_spindashsfx1	= 	$FFFFFEA0
 v_spindashsfx2	= 	v_spindashsfx1+1
 v_spindashsfx3	= 	v_spindashsfx1+2
-SegaCD_Mode		=   $FFFFFFF0	; flag for the Sega CD
+True_Ending_Flag =  $FFFFFFF0	; flag for the True ending
 VBlank_MusicOnly	=	$FFFFF5D9
 
 v_save			=	$FFFFFFFE
 ; reused from level select
 v_saveypos		=	$FFFFFF80
 f_delete_mode	=	$FFFFFF84
-_unkB000	    =   $FFFFB000
-_unkB004        =   $FFFFB004
-_unkB008        =   $FFFFB008
-_unkB00A        =   $FFFFB00A
-_unkB010        =   $FFFFB010
-DeleteQueue		=	$FFFFC700			;	Delete queue
-DeleteQueue_End	=	$FFFFC7FE
-DeleteQueue_Ptr	=	$FFFFC7FE			;	Delete objects queue pointer

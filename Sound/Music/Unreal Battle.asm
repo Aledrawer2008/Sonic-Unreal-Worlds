@@ -12631,54 +12631,54 @@ Extra_Final_Boss_LoopA8:
 
 ; DAC Data
 Extra_Final_Boss_DAC:
-	dc.b	dKick, $18, dSnare, $24, dKick, $0C, dSnare, $24, dKick, $0C, dSnare, $18
-	dc.b	dKick, $0C, dKick, dSnare, $18, dKick, dSnare, $24, dKick, $0C, dSnare, $24
-	dc.b	dKick, $0C, dSnare, $18, dKick, $0C, dKick, dSnare, $06, dKick, $12, $18
-	dc.b	dSnare, $0C, dKick, $18, $0C, dSnare, dKick, $06, dKick, dSnare, $0C, dKick
-	dc.b	dSnare, $06, dKick, $0C, $06, $0C, dKick, dSnare, dKick, dKick, dKick, dSnare
-	dc.b	dKick, $18, $0C, dSnare, dKick, $18, $0C, dSnare, dKick, dKick, $06
+	dc.b	dKickAlt, $18, dSnareAlt, $24, dKickAlt, $0C, dSnareAlt, $24, dKickAlt, $0C, dSnareAlt, $18
+	dc.b	dKickAlt, $0C, dKickAlt, dSnareAlt, $18, dKickAlt, dSnareAlt, $24, dKickAlt, $0C, dSnareAlt, $24
+	dc.b	dKickAlt, $0C, dSnareAlt, $18, dKickAlt, $0C, dKickAlt, dSnareAlt, $06, dKickAlt, $12, $18
+	dc.b	dSnareAlt, $0C, dKickAlt, $18, $0C, dSnareAlt, dKickAlt, $06, dKickAlt, dSnareAlt, $0C, dKickAlt
+	dc.b	dSnareAlt, $06, dKickAlt, $0C, $06, $0C, dKickAlt, dSnareAlt, dKickAlt, dKickAlt, dKickAlt, dSnareAlt
+	dc.b	dKickAlt, $18, $0C, dSnareAlt, dKickAlt, $18, $0C, dSnareAlt, dKickAlt, dKickAlt, $06
 
 Extra_Final_Boss_Loop00:
-	dc.b	dSnare
+	dc.b	dSnareAlt
 	smpsLoop            $00, $07, Extra_Final_Boss_Loop00
 
 Extra_Final_Boss_Loop01:
-	dc.b	dKick, $0C, dSnare, dKick, dSnare, dKick, dSnare, $06, dKick, $0C, $06, dSnare
+	dc.b	dKickAlt, $0C, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, $06, dKickAlt, $0C, $06, dSnareAlt
 	dc.b	$0C
 	smpsLoop            $00, $07, Extra_Final_Boss_Loop01
-	dc.b	dKick, dSnare, dKick, dSnare, dKick, $06, dSnare, dSnare, dKick, dSnare, dKick, dSnare
-	dc.b	dSnare
+	dc.b	dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, $06, dSnareAlt, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, dSnareAlt
+	dc.b	dSnareAlt
 	smpsLoop            $01, $06, Extra_Final_Boss_Loop01
 
 Extra_Final_Boss_Loop02:
-	dc.b	dKick, $0C, dSnare, dKick, dSnare, dKick, dSnare, $06, dKick, $0C, $06, dSnare
+	dc.b	dKickAlt, $0C, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, $06, dKickAlt, $0C, $06, dSnareAlt
 	dc.b	$0C
 	smpsLoop            $00, $03, Extra_Final_Boss_Loop02
 
 Extra_Final_Boss_Loop04:
-	dc.b	dKick, dSnare, dKick, dSnare, dKick, $06, dSnare, dSnare, dKick, dSnare, dKick, dSnare
-	dc.b	dSnare
+	dc.b	dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, $06, dSnareAlt, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, dSnareAlt
+	dc.b	dSnareAlt
 
 Extra_Final_Boss_Loop03:
-	dc.b	dKick, $0C, dSnare, dKick, dSnare, dKick, dSnare, $06, dKick, $0C, $06, dSnare
+	dc.b	dKickAlt, $0C, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, $06, dKickAlt, $0C, $06, dSnareAlt
 	dc.b	$0C
 	smpsLoop            $00, $07, Extra_Final_Boss_Loop03
 	smpsLoop            $01, $04, Extra_Final_Boss_Loop04
-	dc.b	dKick, dSnare, dKick, dSnare, dKick, $06, dSnare, dSnare, dKick, dSnare, dKick, dSnare
-	dc.b	dSnare, $18, $04, $05, $09
+	dc.b	dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, $06, dSnareAlt, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, dSnareAlt
+	dc.b	dSnareAlt, $18, $04, $05, $09
 
 Extra_Final_Boss_Loop05:
-	dc.b	dKick, dSnare, dKick, dSnare, dKick, dSnare, $04, dKick, $09, $05, dSnare, $09
+	dc.b	dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, $04, dKickAlt, $09, $05, dSnareAlt, $09
 	smpsLoop            $00, $07, Extra_Final_Boss_Loop05
-	dc.b	dKick, dSnare, dKick, dSnare, dKick, $04, dSnare, $05, $04, dKick, $05, dSnare
-	dc.b	$04, dKick, $05, dSnare, $04, $05
+	dc.b	dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, $04, dSnareAlt, $05, $04, dKickAlt, $05, dSnareAlt
+	dc.b	$04, dKickAlt, $05, dSnareAlt, $04, $05
 
 Extra_Final_Boss_Loop06:
-	dc.b	dKick, $09, dSnare, dKick, dSnare, dKick, dSnare, $04, dKick, $09, $05, dSnare
+	dc.b	dKickAlt, $09, dSnareAlt, dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, $04, dKickAlt, $09, $05, dSnareAlt
 	dc.b	$09
 	smpsLoop            $00, $07, Extra_Final_Boss_Loop06
-	dc.b	dKick, dSnare, dKick, dSnare, $0B, dKick, $06, dSnare, $07, dSnare, dKick, $08
-	dc.b	dSnare, dKick, $09, dSnare, dSnare
+	dc.b	dKickAlt, dSnareAlt, dKickAlt, dSnareAlt, $0B, dKickAlt, $06, dSnareAlt, $07, dSnareAlt, dKickAlt, $08
+	dc.b	dSnareAlt, dKickAlt, $09, dSnareAlt, dSnareAlt
 	smpsJump            Extra_Final_Boss_Loop01
 
 Extra_Final_Boss_Voices:

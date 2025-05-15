@@ -46,21 +46,8 @@ GM_Encore:
         move.b  #4,(v_flame+obRoutine)
 		jsr	(ExecuteObjects).l
         jsr (BuildSprites).l
-    if MSUMode
-        tst.b   (SegaCD_Mode).w
-        bne.s   .sega_cd
 		move.b	#bgm_Encore,d0; play Encore screen music
 		jsr	(PlaySound_Special).l
-        bra.s   .not_segacd
-
-.sega_cd:
-        MCD_Command_MCD_PlayTrack   1
-
-.not_segacd:
-    else
-		move.b	#bgm_Encore,d0; play Encore screen music
-		jsr	(PlaySound_Special).l
-    endif
         jsr PaletteFadeIn
 
 .mainloop:

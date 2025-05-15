@@ -117,21 +117,8 @@ Tit_LoadText:
 		locVRAM $2A00
 		lea	(Nem_Planet).l,a0 ; load planet patterns
 		bsr.w	NemDec
-	if MSUMode
-		tst.b	(SegaCD_Mode).w
-		bne.s	.sega_cd
 		move.b	#bgm_Title,d0
 		bsr.w	PlaySound_Special	; play title screen music
-		bra.s	.not_segacd
-
-.sega_cd
-		MCD_Command_MCD_PlayTrack	2
-
-.not_segacd:
-	else
-		move.b	#bgm_Title,d0
-		bsr.w	PlaySound_Special	; play title screen music
-	endif
 		move.b	#0,(f_debugmode).w ; disable debug mode
 
 		clearRAM v_titlesonic,v_ttlsonichide+object_size
@@ -323,7 +310,8 @@ LevelSelect:
 		bra.s	LevelSelect
 ; ===========================================================================
 LevSel_FreeEmeralds:
-		move.b	#7,(v_emeralds)
+		move.b	#7,(v_emeralds).w
+		move.b	#1,(True_Ending_Flag).w
 		move.b	#sfx_Bonus,d0
 		bsr.w	PlaySound_Special ; play credits music
 		bra.s	LevelSelect
@@ -337,6 +325,7 @@ LevSel_Ending:
 LevSel_Credits:
 		move.b	#id_Credits,(v_gamemode).w ; set screen mode to Credits
 		move.b	#bgm_Credits,d0
+		add.b	(True_Ending_Flag).w,d0
 		bsr.w	PlaySound_Special ; play credits music
 		move.w	#0,(v_creditsnum).w
 		rts

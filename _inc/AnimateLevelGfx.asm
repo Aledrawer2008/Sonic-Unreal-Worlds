@@ -145,8 +145,7 @@ AniArt_MZ_Magma:
 		adda.w	d0,a4		; jump to appropriate tile
 		locVRAM	$5A40
 		moveq	#0,d3
-		move.b	(v_lani1_frame).w,d3
-		addq.b	#1,(v_lani1_frame).w ; increment frame counter (unused)
+
 		move.b	(v_oscillate+$A).w,d3 ; get oscillating value
 		move.w	#3,d2
 

@@ -15,7 +15,7 @@ SStars_Main:	; Routine 0
 		move.b	#4,obRender(a0)
 		move.b	#1,obPriority(a0)
 		move.b	#$18,obActWid(a0)
-		move.w	#$541,obGfx(a0)
+		move.w	#$6CA,obGfx(a0)
 
 SStars_Next:	; Routine 2
 		tst.b	(f_supersonic)							; is Sonic Super?
@@ -39,8 +39,9 @@ loc_1E170:
 		bne.s	SStars_Display
 
 loc_1E176:
-		move.w	(v_player+obX).w,obX(a0)
-		move.w	(v_player+obY).w,obY(a0)
+		lea	(v_player).w,a1
+		move.w	obX(a1),obX(a0)
+		move.w	obY(a1),obY(a0)
 
 SStars_Display
 		jsr		SStars_LoadGfx
@@ -50,7 +51,7 @@ SStars_Display
 loc_1E188:
 		tst.b	(f_playerctrl).w		; is control lock on? (ie when first turning Super)
 		bne.s	loc_1E1AA					; if yes, branch
-		move.w	(v_player+obInertia).w,d0	; get Sonic's speed
+		move.w	obInertia(a1),d0	; get Sonic's speed
 		bpl.s	.notnegative
 		neg.w	d0							; get absolute value
 
@@ -75,35 +76,18 @@ SStars_Delete:
 ; ---------------------------------------------------------------------------
  
 SStars_LoadGfx:
-        	moveq   #0,d0
-        	move.b  obFrame(a0),d0    ; load frame number
-        	move.l  #Art_SuperStars,d6
-            lea 	(DPLC_SStars).l,a2
-        	add.w   d0,d0
-        	adda.w  (a2,d0.w),a2
-        	moveq   #0,d5
-        	move.b  (a2)+,d5          ; read "number of entries" value
-        	subq.w  #1,d5
-        	bmi.s   .Return ; if zero, branch
-        	move.w  #$A820,d4
- 
-.ReadEntry:
-        	moveq   #0,d1
-        	move.b  (a2)+,d1
-        	lsl.w   #8,d1
-        	move.b  (a2)+,d1
-        	move.w  d1,d3
-        	lsr.w   #8,d3
-        	andi.w  #$F0,d3
-        	addi.w  #$10,d3
-        	andi.w  #$FFF,d1
-        	lsl.l   #5,d1
-        	add.l   d6,d1
-        	move.w  d4,d2
-        	add.w   d3,d4
-        	add.w   d3,d4
-        	jsr 	(QueueDMATransfer).l
-        	dbf 	d5,.ReadEntry  ; repeat for number of entries
- 
+        moveq   #0,d0
+        move.b  obFrame(a0),d0    ; load frame number
+       	move.l  #Art_SuperStars,d6
+	   	lea (DPLC_SStars).l,a2
+       	add.w   d0,d0
+      	adda.w  (a2,d0.w),a2
+       	moveq   #0,d5
+    	move.b  (a2)+,d5          ; read "number of entries" value
+    	subq.w  #1,d5
+        bmi.s   .Return ; if zero, branch
+		move.w  #$D940,d4
+		jmp	Generic_LoadGfx
+
 .Return:
-        	rts
+		rts

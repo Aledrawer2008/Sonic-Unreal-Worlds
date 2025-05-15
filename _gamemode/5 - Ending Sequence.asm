@@ -83,6 +83,7 @@ End_LoadData:
 .continue:
 		bsr.w	PalLoad1	; load Sonic's palette
 		move.w	#bgm_Credits,d0
+		add.b	(True_Ending_Flag).w,d0
 		bsr.w	PlaySound	; play ending sequence music
 		btst	#bitA,(v_jpadhold1).w ; is button A pressed?
 		beq.s	End_LoadSonic	; if not, branch

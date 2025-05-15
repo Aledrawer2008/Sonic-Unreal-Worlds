@@ -36,16 +36,17 @@ ptr_mus1E:	SMPS_MUSIC_METADATA	TitleScreen, s1TempotoS3($05), 0	; Title Screen
 ptr_mus1F:	SMPS_MUSIC_METADATA	TutorialZone, s1TempotoS3($0F), 0	; Tutorial Zone
 ptr_mus20:	SMPS_MUSIC_METADATA	SuperTheme, s1TempotoS3($05), 0	; Super Theme
 ptr_mus21:	SMPS_MUSIC_METADATA	CreditsTheme, s1TempotoS3($0A), 0	; Credits
-ptr_mus22:	SMPS_MUSIC_METADATA	GameOverTheme, s1TempotoS3($13), 0	; Game Over
-ptr_mus23:	SMPS_MUSIC_METADATA	ChaosEmerald, s1TempotoS3($10), 0	; Emerald
-ptr_mus24:	SMPS_MUSIC_METADATA	Drowning, s1TempotoS3($02), SMPS_MUSIC_METADATA_FORCE_PAL_SPEED	; Drowning
-ptr_mus25:	SMPS_MUSIC_METADATA	ContinueScreen, s1TempotoS3($07), SMPS_MUSIC_METADATA_FORCE_PAL_SPEED	; Continue
-ptr_mus26:	SMPS_MUSIC_METADATA	SEGASound, s1TempotoS3($13), 0	; SEGA
-ptr_mus27:	SMPS_MUSIC_METADATA	MFZ2Cutscene, s1TempotoS3($0F), 0	; Cutscene
-ptr_mus28:	SMPS_MUSIC_METADATA	UnrealBattle, s1TempotoS3($05), 0 	; Unreal Battle Zone
-ptr_mus29:	SMPS_MUSIC_METADATA	TrainAssault, s1TempotoS3($05), 0 	; Train Assault Zone
-ptr_mus2A:	SMPS_MUSIC_METADATA	TeamEncore, s1TempotoS3($05), 0 	; Team Encore Screen
-ptr_mus2B:	SMPS_MUSIC_METADATA	SpecialStageClear, s1TempotoS3($05), 0 	; Special Stage Clear
+ptr_mus22:	SMPS_MUSIC_METADATA	TrueEnding, s1TempotoS3($0A), 0	; Credits (True Ending)
+ptr_mus23:	SMPS_MUSIC_METADATA	GameOverTheme, s1TempotoS3($13), 0	; Game Over
+ptr_mus24:	SMPS_MUSIC_METADATA	ChaosEmerald, s1TempotoS3($10), 0	; Emerald
+ptr_mus25:	SMPS_MUSIC_METADATA	Drowning, s1TempotoS3($02), SMPS_MUSIC_METADATA_FORCE_PAL_SPEED	; Drowning
+ptr_mus26:	SMPS_MUSIC_METADATA	ContinueScreen, s1TempotoS3($07), SMPS_MUSIC_METADATA_FORCE_PAL_SPEED	; Continue
+ptr_mus27:	SMPS_MUSIC_METADATA	SEGASound, s1TempotoS3($13), 0	; SEGA
+ptr_mus28:	SMPS_MUSIC_METADATA	MFZ2Cutscene, s1TempotoS3($0F), 0	; Cutscene
+ptr_mus29:	SMPS_MUSIC_METADATA	UnrealBattle, s1TempotoS3($05), 0 	; Unreal Battle Zone
+ptr_mus2A:	SMPS_MUSIC_METADATA	TrainAssault, s1TempotoS3($05), 0 	; Train Assault Zone
+ptr_mus2B:	SMPS_MUSIC_METADATA	TeamEncore, s1TempotoS3($05), 0 	; Team Encore Screen
+ptr_mus2C:	SMPS_MUSIC_METADATA	SpecialStageClear, s1TempotoS3($05), 0 	; Special Stage Clear
 ptr_musend
 
 ; ---------------------------------------------------------------------------
@@ -116,6 +117,8 @@ TutorialZone:	include		"Sound/Music/Tutorial Zone.asm"
 SuperTheme:	include		"Sound/Music/Super Theme.asm"
 		even
 CreditsTheme:	include		"Sound/Music/Credits Theme.asm"
+		even
+TrueEnding:	include		"Sound/Music/True Ending.asm"
 		even
 GameOverTheme:	include		"Sound/Music/Game Over.asm"
 		even
