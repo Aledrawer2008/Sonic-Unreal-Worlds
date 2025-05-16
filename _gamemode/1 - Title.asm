@@ -179,7 +179,7 @@ Tit_MainLoop:
 		move.b	#1,(a0,d1.w)	; activate cheat
 		move.b	#sfx_Ring,d0	; play ring sound when code is entered
 		bsr.w	PlaySound_Special
-		bra.s	Tit_CountC
+		bra.w	Tit_CountC
 ; ===========================================================================
 
 Tit_ResetCheat:
@@ -305,36 +305,42 @@ LevelSelect:
 		beq.s	LevSelStartPress	; if true, branch
 		cmpi.b	#btnC,(v_jpadpress1).w ; is C pressed?
 		beq.s	LevSelBCPress	; if not, branch
-		bra.s	LevelSelect
+		bra.w	LevelSelect
 ; ===========================================================================
 LevSelLevCheckStart:
 		andi.b	#$80,(v_jpadpress1).w ; is Start pressed?
 		beq.s	LevelSelect	; if not, branch
-		bra.s	LevSel_Level_SS
+		bra.w	LevSel_Level_SS
 
 LevSelBCPress:
 		move.w	(v_levselsound).w,d0
 		bsr.w	PlaySound_Special
-		bra.s	LevelSelect
+		bra.w	LevelSelect
 		
 LevSelStartPress:
 		move.b	#id_Sega,(v_gamemode).w
 		rts
 ; ===========================================================================
 LevSel_FreeEmeralds:
+		cmpi.b	#btnStart,(v_jpadpress1).w ; is	Start pressed?
+		bne.w	LevelSelect	; if true, branch
 		move.b	#7,(v_emeralds).w
 		move.b	#1,(True_Ending_Flag).w
 		move.b	#sfx_Bonus,d0
 		bsr.w	PlaySound_Special ; play credits music
-		bra.s	LevelSelect
+		bra.w	LevelSelect
 
 LevSel_Ending:
+		cmpi.b	#btnStart,(v_jpadpress1).w ; is	Start pressed?
+		bne.w	LevelSelect	; if true, branch
 		move.b	#id_Ending,(v_gamemode).w ; set screen mode to Ending
 		move.w	#(id_EndZ<<8),(v_zone).w ; set level to 0600 (Ending)
 		rts	
 ; ===========================================================================
 
 LevSel_Credits:
+		cmpi.b	#btnStart,(v_jpadpress1).w ; is	Start pressed?
+		bne.w	LevelSelect	; if true, branch
 		move.b	#id_Credits,(v_gamemode).w ; set screen mode to Credits
 		move.b	#bgm_Credits,d0
 		add.b	(True_Ending_Flag).w,d0
