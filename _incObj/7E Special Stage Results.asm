@@ -58,6 +58,7 @@ SSR_Loop:
 		moveq	#0,d0
 		cmpi.b	#7,d1		; do you have all chaos	emeralds?
 		bne.s	loc_C842	; if not, branch
+		move.b	#1,(True_Ending_Flag).w
 		moveq	#8,d0		; load "Sonic got them all" text
 		move.w	#$18,obX(a0)
 		move.w	#$118,ssr_mainX(a0) ; change position of text

@@ -291,10 +291,7 @@ LevelSelect:
 		
 		tst.l	(v_plc_buffer).w
 		bne.s	LevelSelect
-		
-		andi.b	#btnABC+btnStart,(v_jpadpress1).w ; is A, B, C, or Start pressed?
-		beq.s	LevelSelect	; if not, branch
-		
+
 		move.w	(v_levselitem).w,d0
 		cmpi.w	#6,d0
 		beq.s	LevSel_Ending
@@ -303,11 +300,26 @@ LevelSelect:
 		cmpi.w	#9,d0		; have you selected item $9 (Free Emeralds)?
 		beq.s	LevSel_FreeEmeralds	; if yes, give the player all emeralds
 		cmpi.w	#$14,d0		; have you selected item $14 (sound test)?
-		bne.s	LevSel_Level_SS	; if not, go to	Level/SS subroutine
-		
+		bne.s	LevSelLevCheckStart; if not, go to	Level/SS subroutine
+		cmpi.b	#btnStart,(v_jpadpress1).w ; is	Start pressed?
+		beq.s	LevSelStartPress	; if true, branch
+		cmpi.b	#btnC,(v_jpadpress1).w ; is C pressed?
+		beq.s	LevSelBCPress	; if not, branch
+		bra.s	LevelSelect
+; ===========================================================================
+LevSelLevCheckStart:
+		andi.b	#$80,(v_jpadpress1).w ; is Start pressed?
+		beq.s	LevelSelect	; if not, branch
+		bra.s	LevSel_Level_SS
+
+LevSelBCPress:
 		move.w	(v_levselsound).w,d0
 		bsr.w	PlaySound_Special
 		bra.s	LevelSelect
+		
+LevSelStartPress:
+		move.b	#id_Sega,(v_gamemode).w
+		rts
 ; ===========================================================================
 LevSel_FreeEmeralds:
 		move.b	#7,(v_emeralds).w
@@ -431,26 +443,37 @@ LevSel_Refresh:
 		move.w	d0,(v_levselitem).w ; set new selection
 		bsr.w	LevSelTextLoad	; refresh text
 		rts
-
-
-	
 ; ===========================================================================
 
 LevSel_SndTest:
 		move.b	(v_jpadpress1).w,d1
-		andi.b	#btnR+btnL,d1	; is left/right	pressed?
+		andi.b	#btnA+btnB+btnR+btnL,d1	; is left/right	pressed?
 		beq.s	LevSel_NoMove	; if not, branch
 		cmpi.w	#$14,(v_levselitem).w ; is item $14 selected?
 		bne.s	LevSel_ActMove	; if not, branch
 		move.w	(v_levselsound).w,d0
+		btst	#bitA,d1		; is A pressed?
+		bne.s	LevSel_A	; if so, branch
+		btst	#bitB,d1		; is B pressed?
+		bne.s	LevSel_B	; if so, branch
 		btst	#bitL,d1	; is left pressed?
 		beq.s	LevSel_Right	; if not, branch
 		subq.w	#1,d0		; subtract 1 from sound	test
 
+LevSel_A:
+		btst	#bitA,d1		; is A button pressed?
+		beq.s	LevSel_Right	; if not, branch
+		addi.w	#16,d0		; add $10 to sound test
+
 LevSel_Right:
 		btst	#bitR,d1	; is right pressed?
-		beq.s	LevSel_Refresh2	; if not, branch
+		beq.s	LevSel_B	; if not, branch
 		addq.w	#1,d0		; add 1	to sound test
+
+LevSel_B:
+		btst	#bitB,d1		; is A button pressed?
+		beq.s	LevSel_Refresh2	; if not, branch
+		subi.w	#16,d0		; substract $10 to sound test
 
 LevSel_Refresh2:
 		move.w	d0,(v_levselsound).w ; set sound test number
