@@ -57,6 +57,7 @@ GM_InitSRAM:
 		bra.s	.redo_save
 .save_is_ok:
         gotoROM
+		move.b	#id_Sega,(v_gamemode).w
 		rts
 ; ===============================================================================
 SaveTxt_Late:	dc.b "NEWER VERSION SAVE WILL BE ERASED",0
@@ -74,16 +75,6 @@ SaveTxt_LOL:	dc.b "EXCEPT FOR THE RESET AND POWER BUTTON",0
 ; ===============================================================================
 SaveWarning:
 		gotoROM
-		; Configure Palette
-		move.w	#$0C00,(v_pal_dry_dup+2).w 		; color 1 palette 1
-		move.l	#$0EEE0CAA,(v_pal_dry_dup+$C).w ; color 5/6	palette 1
-		
-		move.w	#$0046,(v_pal_dry_dup+$22).w 		; color 1 palette 2
-		move.l	#$00EE008A,(v_pal_dry_dup+$2C).w 	; color 5/6 palette 2
-	
-		move.w	#$0200,(v_pal_dry_dup+$42).w 		; color 1 palette 3
-		move.l	#$04000200,(v_pal_dry_dup+$4C).w 	; color 5/6 palette 3
-		
 		lea	(Art_Text).l,a5	; load level select font
 		lea	(vdp_data_port).l,a6
 		move.w	#$8170,4(a6)
@@ -99,35 +90,39 @@ SaveWarning:
 		locVRAM	($C000+($80*1)+(2*1)),4(a6) ; y x
 		moveq	#0,d0
 		add.w	#$2600,d0
-		bsr.s	TextGenerate
+		bsr.w	TextGenerate
 		
 		movea.l	d6,a5
 		
 		locVRAM	($C000+($80*3)+(2*2)),4(a6) ; y x
 		move.w	#$600,d0
-		bsr.s	TextGenerate
+		bsr.w	TextGenerate
 		
 		lea SaveTxt_Press(pc),a5
 		
 		locVRAM	($C000+($80*26)+(2*7)),4(a6) ; y x
 		move.w	#$600,d0
-		bsr.s	TextGenerate
+		bsr.w	TextGenerate
 		
 		lea SaveTxt_LOL(pc),a5
 		
 		locVRAM	($C000+($80*27)+(2*2)),4(a6) ; y x
 		move.w	#$C600,d0
-		bsr.s	TextGenerate
-		
+		bsr.w	TextGenerate
+
+		move.b	#palid_Warning,d0
+		jsr	(PalLoad1).l
+
 		bsr.w	PaletteFadeIn
+		disable_ints
 .loop:
 		move.b	#2,(v_vbla_routine).w
 		bsr.w	WaitForVBla
-		tst.b	(v_jpadpress1)
+		tst.b	(v_jpadpress1).w
 		beq.s	.loop
 		
 		gotoSRAM
-		lea ($200000).l,a0		; Load SRAM memory into a0
+		lea ($200001).l,a0		; Load SRAM memory into a0
 		rts
 
 TextGenerate:

@@ -397,19 +397,7 @@ LevSel_Level_SS:
 
 LevSel_Level:
 		move.b	d0,(v_zone).w	; set level number
-		move.b	#id_Level,(v_gamemode).w ; set screen mode to level
-
-		; Reset level variables
-		moveq	#0,d0
-		move.b	#3,(v_lives).w			; set lives to 3
-		move.w	d0,(v_rings).w			; clear rings
-		move.l	d0,(v_time).w			; clear time
-		move.l	d0,(v_score).w			; clear score
-		move.b	d0,(v_continues).w		; clear continues
-		move.l	#5000,(v_scorelife).w	; extra life is awarded at 50000 points
-		
-		move.b	#bgm_Fade,d0
-		bra.w	PlaySound_Special		; fade out music
+		jmp	(PlayLevel).l
 
 ; ---------------------------------------------------------------------------
 ; Subroutine to	change what you're selecting in the level select

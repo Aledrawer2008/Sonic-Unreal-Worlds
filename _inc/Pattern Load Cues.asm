@@ -23,7 +23,6 @@ ptr_PLC_SBZ2:		dc.w PLC_SBZ2-ArtLoadCues
 			zonewarning PLC_Levels,4
 ptr_PLC_TeamEncore:	dc.w PLC_TeamEncore-ArtLoadCues
 ptr_PLC_Boss:		dc.w PLC_Boss-ArtLoadCues
-ptr_PLC_Signpost:	dc.w PLC_Signpost-ArtLoadCues
 ptr_PLC_Boss2:		dc.w PLC_Boss2-ArtLoadCues
 ptr_PLC_SpecialStage:	dc.w PLC_SpecialStage-ArtLoadCues
 PLC_Animals:
@@ -251,12 +250,6 @@ PLC_Boss:	dc.w ((PLC_Bossend-PLC_Boss-2)/6)-1
 		plcm	Nem_Exhaust, $A540	; exhaust flame
 PLC_Bossend:
 ; ---------------------------------------------------------------------------
-; Pattern load cues - act 1/2 signpost (Unused)
-; ---------------------------------------------------------------------------
-PLC_Signpost:	dc.w ((PLC_Signpostend-PLC_Signpost-2)/6)-1
-		plcm	Nem_Bonus, $96C0	; hidden bonus points
-PLC_Signpostend:
-; ---------------------------------------------------------------------------
 ; Pattern load cues - act 3 boss (Alternative)
 ; ---------------------------------------------------------------------------
 PLC_Boss2:	dc.w ((PLC_Boss2end-PLC_Boss2-2)/6)-1
@@ -420,20 +413,19 @@ plcid_SBZ:		equ (ptr_PLC_SBZ-ArtLoadCues)/2		; $E
 plcid_SBZ2:		equ (ptr_PLC_SBZ2-ArtLoadCues)/2	; $F
 plcid_TeamEncore:	equ (ptr_PLC_TeamEncore-ArtLoadCues)/2	; $10
 plcid_Boss:		equ (ptr_PLC_Boss-ArtLoadCues)/2	; $11
-plcid_Signpost:		equ (ptr_PLC_Signpost-ArtLoadCues)/2	; $12
-plcid_BossAlt:		equ (ptr_PLC_Boss2-ArtLoadCues)/2	; $13
-plcid_SpecialStage:	equ (ptr_PLC_SpecialStage-ArtLoadCues)/2 ; $14
-plcid_GHZAnimals:	equ (ptr_PLC_GHZAnimals-ArtLoadCues)/2	; $15
-plcid_LZAnimals:	equ (ptr_PLC_LZAnimals-ArtLoadCues)/2	; $16
-plcid_MZAnimals:	equ (ptr_PLC_MZAnimals-ArtLoadCues)/2	; $17
-plcid_SLZAnimals:	equ (ptr_PLC_SLZAnimals-ArtLoadCues)/2	; $18
-plcid_SYZAnimals:	equ (ptr_PLC_SYZAnimals-ArtLoadCues)/2	; $19
-plcid_SBZAnimals:	equ (ptr_PLC_SBZAnimals-ArtLoadCues)/2	; $1A
-plcid_SSResult:		equ (ptr_PLC_SSResult-ArtLoadCues)/2	; $1B
-plcid_Ending:		equ (ptr_PLC_Ending-ArtLoadCues)/2	; $1C
-plcid_TryAgain:		equ (ptr_PLC_TryAgain-ArtLoadCues)/2	; $1D
-plcid_EggmanSBZ2:	equ (ptr_PLC_EggmanSBZ2-ArtLoadCues)/2	; $1E
-plcid_FZBoss:		equ (ptr_PLC_FZBoss-ArtLoadCues)/2	; $1F
-plcid_UBZ:		equ (ptr_PLC_UBZ-ArtLoadCues)/2		; $20
-plcid_EggBg:		equ (ptr_PLC_EggBg-ArtLoadCues)/2	; $21
-plcid_Train:		equ (ptr_PLC_Train-ArtLoadCues)/2	; $22
+plcid_BossAlt:		equ (ptr_PLC_Boss2-ArtLoadCues)/2	; $12
+plcid_SpecialStage:	equ (ptr_PLC_SpecialStage-ArtLoadCues)/2 ; $13
+plcid_GHZAnimals:	equ (ptr_PLC_GHZAnimals-ArtLoadCues)/2	; $14
+plcid_LZAnimals:	equ (ptr_PLC_LZAnimals-ArtLoadCues)/2	; $15
+plcid_MZAnimals:	equ (ptr_PLC_MZAnimals-ArtLoadCues)/2	; $16
+plcid_SLZAnimals:	equ (ptr_PLC_SLZAnimals-ArtLoadCues)/2	; $17
+plcid_SYZAnimals:	equ (ptr_PLC_SYZAnimals-ArtLoadCues)/2	; $18
+plcid_SBZAnimals:	equ (ptr_PLC_SBZAnimals-ArtLoadCues)/2	; $19
+plcid_SSResult:		equ (ptr_PLC_SSResult-ArtLoadCues)/2	; $1A
+plcid_Ending:		equ (ptr_PLC_Ending-ArtLoadCues)/2	; $1B
+plcid_TryAgain:		equ (ptr_PLC_TryAgain-ArtLoadCues)/2	; $1C
+plcid_EggmanSBZ2:	equ (ptr_PLC_EggmanSBZ2-ArtLoadCues)/2	; $1D
+plcid_FZBoss:		equ (ptr_PLC_FZBoss-ArtLoadCues)/2	; $1E
+plcid_UBZ:		equ (ptr_PLC_UBZ-ArtLoadCues)/2		; $1F
+plcid_EggBg:		equ (ptr_PLC_EggBg-ArtLoadCues)/2	; $20
+plcid_Train:		equ (ptr_PLC_Train-ArtLoadCues)/2	; $21

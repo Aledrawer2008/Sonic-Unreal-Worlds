@@ -307,7 +307,7 @@ GameInit:
 		bsr.w	VDPSetupGame
 		bsr.w	SoundDriverLoad
 		jsr	JoypadInit
-		move.b	#id_Sega,(v_gamemode).w ; set Game Mode to Sega Screen
+		move.b	#id_SRAMInit,(v_gamemode).w ; set Game Mode to SRAM Init
 
 MainGameLoop:
 		moveq #0,d0
@@ -942,9 +942,7 @@ Generic_LoadGfx:
 LoadAnimalPLC:
 		moveq	#0,d0
 		move.b	(v_zone).w,d0
-		cmpi.w	#7,d0
-		bhs.s	LoadAnimalPLC_New
-		addi.w	#$15,d0
+		addi.w	#$14,d0
 		bra.s	AddPLC
 ; ---------------------------------------------------------------------------
 
@@ -1279,10 +1277,6 @@ PalFadeIn_Alt:				; start position and size are already set
 		bsr.w	WaitForVBla
 		bsr.s	FadeIn_FromBlack
 		bsr.w	RunPLC
-;        tst.b	(f_water) ; the level has water?
-;        bne.s	.NoWater
-;        bsr.w	DynaWater_Update ; generate underwater palette
-.NoWater:  
 		dbf	d4,.mainloop
 		rts	
 ; End of function PaletteFadeIn
@@ -1653,7 +1647,7 @@ PalCycle_SEGA:
         move.w  (v_pcyc_num).w,d0
         bmi.s   locret_1A68
         subq.w  #2,(v_pcyc_num).w
-        lea     (word_1A6A).l,a0
+        lea     (PalCycle_Sega_Lookup).l,a0
         lea     ($FFFFFB04).w,a1
         adda.w  d0,a0
         move.l  (a0)+,(a1)+
@@ -1667,10 +1661,11 @@ locret_1A68:
 		rts
 ; End of function PalCycle_SEGA	
 
-word_1A6A:     	dc.w $EC0, $EA0, $E80, $E60, $E40, $E20, $E00, $C00, $A00
-                dc.w $800, $600, $800, $A00, $C00, $E00, $E20, $E40, $E60
-                dc.w $E80, $EA0, $EC0, $EA0, $E80, $E60, $E40, $E20, $E00
-                dc.w $C00, $A00, $800, $600
+PalCycle_Sega_Lookup:
+     	dc.w $EC0, $EA0, $E80, $E60, $E40, $E20, $E00, $C00, $A00
+        dc.w $800, $600, $800, $A00, $C00, $E00, $E20, $E40, $E60
+        dc.w $E80, $EA0, $EC0, $EA0, $E80, $E60, $E40, $E20, $E00
+        dc.w $C00, $A00, $800, $600
 					 
 ; ===========================================================================
 
@@ -1749,6 +1744,7 @@ Pal_Ending:	binclude	"palette/Ending.bin"
 Pal_BZ:		binclude	"palette/Tutorial Zone.bin"
 Pal_UBZ:	binclude	"palette/Unreal Battle Zone.bin"
 Pal_TAZ:	binclude	"palette/Train Assault Zone.bin"
+Pal_Warning:	binclude	"palette/Save Warning.bin"
 
 ; ---------------------------------------------------------------------------
 ; Subroutine to	wait for VBlank routines to complete

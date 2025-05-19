@@ -36,6 +36,7 @@ ptr_Pal_UBZ:		palp	Pal_UBZ,v_pal_dry+$20,$30	; $13 (19) - UBZ
 ptr_Pal_TAZ:		palp	Pal_TAZ,v_pal_dry+$20,$30	; $14 (20) - TAZ
 ptr_Pal_SBZ3:		palp	Pal_SBZ3,v_pal_dry+$20,$30	; $15 (21) - SBZ3
 ptr_Pal_SBZ2:		palp	Pal_SBZ2,v_pal_dry+$20,$30	; $16 (22) - SBZ2
+ptr_Pal_Warning:	palp	Pal_Warning,v_pal_dry,$20	; $17 (23) - Save Warning
 			even
 
 
@@ -43,22 +44,23 @@ palid_SegaBG:		equ (ptr_Pal_SegaBG-PalPointers)/8
 palid_TEncore:		equ (ptr_Pal_TEncore-PalPointers)/8
 palid_LevelSel:		equ (ptr_Pal_LevelSel-PalPointers)/8
 palid_Sonic:		equ (ptr_Pal_Sonic-PalPointers)/8
-palid_GHZ:		equ (ptr_Pal_GHZ-PalPointers)/8
-palid_LZ:		equ (ptr_Pal_LZ-PalPointers)/8
-palid_MZ:		equ (ptr_Pal_MZ-PalPointers)/8
-palid_SLZ:		equ (ptr_Pal_SLZ-PalPointers)/8
-palid_SYZ:		equ (ptr_Pal_SYZ-PalPointers)/8
-palid_SBZ1:		equ (ptr_Pal_SBZ1-PalPointers)/8
+palid_GHZ:			equ (ptr_Pal_GHZ-PalPointers)/8
+palid_LZ:			equ (ptr_Pal_LZ-PalPointers)/8
+palid_MZ:			equ (ptr_Pal_MZ-PalPointers)/8
+palid_SLZ:			equ (ptr_Pal_SLZ-PalPointers)/8
+palid_SYZ:			equ (ptr_Pal_SYZ-PalPointers)/8
+palid_SBZ1:			equ (ptr_Pal_SBZ1-PalPointers)/8
 palid_Special:		equ (ptr_Pal_Special-PalPointers)/8
 palid_SSResult:		equ (ptr_Pal_SSResult-PalPointers)/8
 palid_Continue:		equ (ptr_Pal_Continue-PalPointers)/8
 palid_Ending:		equ (ptr_Pal_Ending-PalPointers)/8
-palid_Amy:		equ (ptr_Pal_Amy-PalPointers)/8
-palid_BZ:		equ (ptr_Pal_BZ-PalPointers)/8
-palid_SpecialAmy:		equ (ptr_Pal_SpecialAmy-PalPointers)/8
-palid_ContinueAlt:		equ (ptr_Pal_ContinueAlt-PalPointers)/8
+palid_Amy:			equ (ptr_Pal_Amy-PalPointers)/8
+palid_BZ:			equ (ptr_Pal_BZ-PalPointers)/8
+palid_SpecialAmy:	equ (ptr_Pal_SpecialAmy-PalPointers)/8
+palid_ContinueAlt:	equ (ptr_Pal_ContinueAlt-PalPointers)/8
 palid_SonAmy:		equ (ptr_Pal_SonAmy-PalPointers)/8
-palid_UBZ:		equ (ptr_Pal_UBZ-PalPointers)/8
-palid_TAZ:		equ (ptr_Pal_TAZ-PalPointers)/8
-palid_SBZ3:		equ (ptr_Pal_SBZ3-PalPointers)/8
-palid_SBZ2:		equ (ptr_Pal_SBZ2-PalPointers)/8
+palid_UBZ:			equ (ptr_Pal_UBZ-PalPointers)/8
+palid_TAZ:			equ (ptr_Pal_TAZ-PalPointers)/8
+palid_SBZ3:			equ (ptr_Pal_SBZ3-PalPointers)/8
+palid_SBZ2:			equ (ptr_Pal_SBZ2-PalPointers)/8
+palid_Warning:		equ (ptr_Pal_Warning-PalPointers)/8

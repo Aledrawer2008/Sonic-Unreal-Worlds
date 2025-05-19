@@ -22,9 +22,10 @@ loc_134AE:
 		move.w	d1,obVelY(a0)
 
 locret_134C2:
- 		tst.b	obVelY(a0)		; is Sonic exactly at the height of his jump?
-		beq.s	Sonic_CheckGoSuper	; if yes, test for turning into Super Sonic
-		rts	
+        move.b  (v_jpadpress1).w,d0
+        andi.b  #btnABC,d0 ; is a jump button pressed?
+        bne.s   Sonic_CheckGoSuper      ; if yes, test for turning into Super Sonic
+        rts
 
 ; ===========================================================================
 
@@ -52,8 +53,8 @@ locret_134D2:
 
 ; loc_1AB38: test_set_SS:
 Sonic_CheckGoSuper:
-		tst.b	(f_supersonic).w
-		bne.w	return_1ABA4
+		tst.b	(f_supersonic).w	; is Sonic already Super?
+		bne.w	Sonic_RevertToNormal	; if yes, branch (This allows for reverting manually)
 		tst.b	(f_timecount).w
 		beq.w	return_1ABA4
 	if DefaultSuperForm = 0
@@ -131,6 +132,7 @@ Sonic_Super:
 		bne.s	return_1AC3C
 ; loc_1ABF2:
 Sonic_RevertToNormal:
+		move.b	#0,obControl(a0)	; restore Sonic's movement
 		move.b	#2,(pal_superform).w	; Remove rotating palette
 		move.w	#$28,(Palette_timer).w
 		move.b	#0,(f_supersonic).w
