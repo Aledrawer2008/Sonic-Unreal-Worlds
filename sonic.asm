@@ -639,8 +639,6 @@ sub_106E:
 		rts	
 ; End of function sub_106E
 
-	;	include	"_gamemode/SoundTestScreen/VBlank.asm"
-
 ; ---------------------------------------------------------------------------
 ; Horizontal interrupt
 ; ---------------------------------------------------------------------------
@@ -705,8 +703,6 @@ loc_119E:
 		movem.l	(sp)+,d0-a6
 		rte	
 ; End of function HBlank
-
-	;	include "_gamemode/SoundTestScreen/HBlank.asm"
 
 ; ---------------------------------------------------------------------------
 ; Subroutine to	initialise joypads
@@ -5892,38 +5888,41 @@ AmyDynPLC:	include	"_maps/Amy - Dynamic Gfx Script.asm"
 SprAmyDynPLC:	include	"_maps/Super Amy - Dynamic Gfx Script.asm"
 
 ; ---------------------------------------------------------------------------
-; Uncompressed graphics	- Sonic, Amy and the Spindash Dust
+; Uncompressed graphics	- characters
 ; ---------------------------------------------------------------------------
 		align $20000
 Art_Sonic:	binclude	"artunc/Sonic.bin"	; Sonic
-		even
+		align $20000
 Art_SuperSonic:	binclude	"artunc/Super Sonic.bin"; Super Sonic
-		even
+		align $20000
 Art_Amy:	binclude	"artunc/Amy.bin"	; Amy
-		even
+		align $20000
 Art_SuperAmy:	binclude	"artunc/Super Amy.bin"	; Super Amy
-		even
-Art_Dust:	binclude	"artunc/spindust.bin"   ; Spindash dust
 		even
 ; ---------------------------------------------------------------------------
 ; Uncompressed graphics - various
 ; ---------------------------------------------------------------------------
+		align $20000
+Art_Dust:
+		binclude	"artunc/spindust.bin" ; Spindash dust
+		even
 Art_Shield:
-		binclude	"artunc/Shield.bin"
+		binclude	"artunc/Shield.bin" ; Shield
 		even
 Art_Stars:
-		binclude	"artunc/Invincibility Stars.bin"
+		binclude	"artunc/Invincibility Stars.bin" ; Invincibility
 		even
 Art_Ring:
-		binclude    "artunc/Ring Frames.bin"
+		binclude    "artunc/Ring Frames.bin" ; Small rings
         even
 Art_SuperStars:
-		binclude	"artunc/Super Sonic Stars.bin"
+		binclude	"artunc/Super Sonic Stars.bin" ; Stars of Super forms
 		even
-Art_SSWalls:	binclude	"artunc/Special Walls (Dynamic).bin" ; dynamic special stage walls
+Art_SSWalls:
+		binclude	"artunc/Special Walls (Dynamic).bin" ; dynamic special stage walls
 		even
 Map_SSWalls:
-		include	"_maps/SS Walls.asm"
+		include	"_maps/SS Walls.asm" ; dynamic special stage walls (mappings)
 ; ---------------------------------------------------------------------------
 ; Compressed graphics - special stage
 ; ---------------------------------------------------------------------------
@@ -6138,7 +6137,7 @@ Nem_Orbinaut:	binclude	"artnem/Enemy Orbinaut.bin"
 Nem_Cater:	binclude	"artnem/Enemy Caterkiller.bin"
 		even
 ; ---------------------------------------------------------------------------
-; Compressed graphics - various
+; Un/Compressed graphics - various
 ; ---------------------------------------------------------------------------
 Nem_TitleCard:
 		binclude	"artunc/Title Cards.bin"

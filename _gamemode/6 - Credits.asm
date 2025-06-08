@@ -83,12 +83,26 @@ TryAg_ClrObjRam:
 		moveq	#plcid_TryAgain,d0
 		bsr.w	QuickPLC	; load "TRY AGAIN" or "END" patterns
 
+		locVRAM	$B400
+		lea	Nem_TitleCardOld,a0 ; load title card patterns
+		move.l	#((Nem_TitleCardOld_End-Nem_TitleCardOld)/32)-1,d0
+		jsr	LoadUncArt
+
 		lea	(v_pal_dry_dup).w,a1
 		moveq	#0,d0
 		move.w	#$1F,d1
 TryAg_ClrPal:
 		move.l	d0,(a1)+
 		dbf	d1,TryAg_ClrPal ; fill palette with black
+
+        move.l  #$40000000,(vdp_control_port).l
+        lea     (Nem_CreditsBG).l,a0
+        bsr.w   NemDec
+		lea	($FF0000).l,a1		; load destination
+        lea     (Eni_CreditsBG).l,a0
+        move.w  #0,d0
+        bsr.w   EniDec
+		copyTilemap	$FF0000,vram_fg,$27,$1B
 
 		moveq	#palid_Ending,d0
 		bsr.w	PalLoad1	; load ending palette
@@ -117,4 +131,13 @@ TryAg_MainLoop:
 
 TryAg_Exit:
 		move.b	#id_Sega,(v_gamemode).w ; goto Sega screen
-		rts	
+		rts
+
+Nem_CreditsBG:     
+        binclude   "artnem/Credits BG.bin"
+		even
+
+Eni_CreditsBG:
+        binclude   "tilemaps/Credits BG.bin"
+		even		
+; ===========================================================================

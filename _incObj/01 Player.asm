@@ -134,7 +134,7 @@ Sonic_MdJump:
 		tst.b	(v_character)
 		bne.s	.dropdashing
         cmpi.b	#id_Warp,obAnim(a0)
-        bra.s	.dropdashing
+        beq.s	.dropdashing
         clr.b	f_spindash(a0)
 
 .dropdashing:
@@ -170,7 +170,7 @@ Sonic_MdJump2:
 		tst.b	(v_character)
 		bne.s	.dropdashing
         cmpi.b	#id_Warp,obAnim(a0)
-        bra.s	.dropdashing
+        beq.s	.dropdashing
         clr.b	f_spindash(a0)
 .dropdashing:
 		bsr.w	Amy_Midair_Stop

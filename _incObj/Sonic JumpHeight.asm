@@ -6,7 +6,7 @@
 
 
 Sonic_JumpHeight:
-		tst.b	$3C(a0)
+		tst.b	obJumping(a0)
 		beq.s	loc_134C4
 		move.w	#-$400,d1
 		btst	#6,obStatus(a0)
@@ -23,7 +23,7 @@ loc_134AE:
 
 locret_134C2:
         move.b  (v_jpadpress1).w,d0
-        andi.b  #btnABC,d0 ; is a jump button pressed?
+        andi.b  #btnA,d0 ; is a jump button pressed?
         bne.s   Sonic_CheckGoSuper      ; if yes, test for turning into Super Sonic
         rts
 
@@ -32,9 +32,13 @@ locret_134C2:
 loc_134C4:
 		tst.w   obVelY(a0)
 		bne.s   locret_134D2 
-		cmpi.b   #id_Spring,obAnim(a0)
+		cmpi.b	#id_Spring,obAnim(a0)
 		beq.s   locret_134D2
-		btst    #2,obStatus(a0)
+		cmpi.b	#id_Roll,obAnim(a0)
+		beq.s   locret_134D2
+		cmpi.b	#id_Shrink,obAnim(a0)
+		beq.s   locret_134D2
+		cmpi.b	#id_Warp,obAnim(a0)
 		bne.s   locret_134D2
 		move.b  #id_Surf,obAnim(a0)
 		cmpi.w	#-$FC0,obVelY(a0)
@@ -145,6 +149,8 @@ Sonic_RevertToNormal:
 		move.l	#Map_Amy,obMap(a0)
 		lea	(AmyDynPLC).l,a2	; Load the Amy DPLC.
 .common:
+		move.b	Saved_music,d0
+		jmp	(PlaySound).l	; load the super theme
 		move.b	#1,obNextAni(a0)	; Change ObAnimation back to normal
 		bclr	#1,(v_invinc).w	; remove invincibility
 		move.w	#$600,(v_sonspeedmax).w

@@ -130,11 +130,13 @@ ptr_dacDF:	dcSample	TYPE_PCM, Hey, 13610					; $DF	- "Hey!"
 ptr_dacE0:	dcSample	TYPE_PCM, SegaPCM, 16000				; $E0	- SEGA!
 ptr_dacE1:	dcSample	TYPE_PCM, OuttaHere, 0, FLAGS_SFX				; $E1	- Sonic Voice
 ptr_dacE2:	dcSample	TYPE_PCM, OuttaHereAmy, 0, FLAGS_SFX			; $E2	- Amy Voice
-ptr_dacE3:	dcSample	TYPE_PCM, ThankYou, 0, FLAGS_SFX				; $E2	- Thanks for playing
-ptr_dacE4:	dcSample	TYPE_PCM, KickAlt			; $E3	- New Kick
-ptr_dacE5:	dcSample	TYPE_PCM, SnareAlt				; $E4	- New Snare
-ptr_dacE6:	dcSample	TYPE_PCM, ClapAlt				; $E5	- New Clap
-ptr_dacE7:	dcSample	TYPE_PCM, MeAndoM, 0, FLAGS_SFX				; $E6	- me ando masturbando en la calle es mas excitante, mirando
+ptr_dacE3:	dcSample	TYPE_PCM, ThankYou, 0, FLAGS_SFX				; $E3	- Thanks for playing
+ptr_dacE4:	dcSample	TYPE_PCM, KickAlt			; $E4	- New Kick
+ptr_dacE5:	dcSample	TYPE_PCM, SnareAlt				; $E5	- New Snare
+ptr_dacE6:	dcSample	TYPE_PCM, ClapAlt				; $E6	- New Clap
+ptr_dacE7:	dcSample	TYPE_PCM, MeAndoM, 0, FLAGS_SFX				; $E7	- me ando masturbando en la calle es mas excitante, mirando
 ; las p*rn* que un dia me dedicastes, aunque yo tenga diarrea eso no me lo impide, le pido a dios que no me vigile por que me ando masturban-
-ptr_dacE8:	dcSample	TYPE_PCM, BumperSfx, 0, FLAGS_SFX
+ptr_dacE8:	dcSample	TYPE_PCM, BumperSfx, 0, FLAGS_SFX	; $E8	Bumper Sfx
+ptr_dacE9:	dcSample	TYPE_PCM, PowerKickAlt			; $E9	- New Kick
+ptr_dacEA:	dcSample	TYPE_PCM, PowerSnareAlt				; $EA	- New Snare
 			dc.w -1												; end marker

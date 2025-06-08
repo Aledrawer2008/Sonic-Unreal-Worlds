@@ -134,6 +134,7 @@ dLetsGo =					SMPS_id(ptr_dacDE)
 dHey =						SMPS_id(ptr_dacDF)
 	endif
 
+; Custom samples go here
 dSega =						SMPS_id(ptr_dacE0)
 dOuttaHere =				SMPS_id(ptr_dacE1)
 dOuttaHereAmy =				SMPS_id(ptr_dacE2)
@@ -143,5 +144,7 @@ dSnareAlt =					SMPS_id(ptr_dacE5)
 dClapAlt =					SMPS_id(ptr_dacE6)
 dMeAndoM =					SMPS_id(ptr_dacE7)
 dBumper =					SMPS_id(ptr_dacE8)
+dPKickAlt =					SMPS_id(ptr_dacE4)
+dPSnareAlt =				SMPS_id(ptr_dacE5)
 
-dac__Last =	dBumper
+dac__Last =	dPSnareAlt

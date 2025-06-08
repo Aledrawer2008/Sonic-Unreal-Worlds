@@ -12,6 +12,8 @@
 		incdac	SnareAlt,	"Sound/DAC/Snare.wav"
 		incdac	ClapAlt,	"Sound/DAC/Clap.wav"
 		incdac	BumperSfx,	"Sound/DAC/Bumper.wav"
+		incdac	PowerKickAlt,	"Sound/DAC/Power Kick.wav"
+		incdac	PowerSnareAlt,	"Sound/DAC/Power Snare.wav"
 
     if SMPS_S1DACSamples||SMPS_S2DACSamples
 		incdac	Kick, "Sound/DAC/Sonic 1 & 2/Kick.pcm"

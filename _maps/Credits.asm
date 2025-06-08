@@ -252,14 +252,25 @@
 .frame8_End
 
 .frame9:	spriteHeader
-	spritePiece -64, 48, 2, 2, 62, 0, 0, 0, 0
-	spritePiece -48, 48, 2, 2, 34, 0, 0, 0, 0
-	spritePiece -32, 48, 2, 2, 42, 0, 0, 0, 0
-	spritePiece -8, 48, 2, 2, 4, 0, 0, 0, 0
-	spritePiece 8, 48, 2, 2, 0, 0, 0, 0, 0
-	spritePiece 24, 48, 2, 2, 4, 0, 0, 0, 0
-	spritePiece 40, 48, 1, 2, 70, 0, 0, 0, 0
-	spritePiece 48, 48, 2, 2, 26, 0, 0, 0, 0
+	spritePiece -56, -56, 2, 2, 62, 0, 0, 0, 0
+	spritePiece -40, -56, 2, 2, 16, 0, 0, 0, 0
+	spritePiece -24, -56, 2, 2, 16, 0, 0, 0, 0
+	spritePiece 0, -56, 2, 2, 74, 0, 0, 0, 0
+	spritePiece 16, -56, 2, 2, 50, 0, 0, 0, 0
+	spritePiece 32, -56, 2, 2, 70, 0, 0, 0, 0
+	spritePiece -40, 48, 2, 2, 0, 0, 0, 0, 0
+	spritePiece -24, 48, 2, 2, 24, 0, 0, 0, 0
+	spritePiece -8, 48, 2, 2, 0, 0, 0, 0, 0
+	spritePiece 8, 48, 1, 2, 32, 0, 0, 0, 0
+	spritePiece 16, 48, 2, 2, 46, 0, 0, 0, 0
+	spritePiece -64, 64, 2, 2, 28, 0, 0, 0, 0
+	spritePiece -48, 64, 2, 2, 16, 0, 0, 0, 0
+	spritePiece -32, 64, 2, 2, 12, 0, 0, 0, 0
+	spritePiece -16, 64, 2, 2, 24, 0, 0, 0, 0
+	spritePiece 0, 64, 2, 2, 16, 0, 0, 0, 0
+	spritePiece 16, 64, 2, 2, 28, 0, 0, 0, 0
+	spritePiece 32, 64, 2, 2, 50, 0, 0, 0, 0
+	spritePiece 48, 64, 2, 2, 24, 0, 0, 0, 0
 .frame9_End
 
 .frame10:	spriteHeader

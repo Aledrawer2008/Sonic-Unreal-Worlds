@@ -1,27 +1,32 @@
 ; ---------------------------------------------------------------------------
-; Subroutine allowing Sonic roll in mid-air
+; Subroutine allowing Sonic to curl up in the air
 ; ---------------------------------------------------------------------------
 
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 
-
 Sonic_AirRoll:
-		tst.b	(v_character).w
-		beq.s	AirRoll_Valid
-		rts
-AirRoll_Valid
-		move.b	(v_jpadpress2).w,d0 ; Move v_jpadpress2 to d0
-		andi.b	#$70,d0 ; Has A/B/C been pressed?
-		bne.w	AirRoll_Checks ; If so, branch.
-		rts	; Return.
- 
-AirRoll_Checks:
-        	cmpi.b	#2,$1C(a0) ; Is animation 2 active?
-        	bne.s	AirRoll_Set ; If not, branch.
-        	btst	#1,$22(a0) ; Is bit 1 in the status bitfield enabled?
-        	bne.s	AirRoll_Set ; If so, branch.
-        	rts                  ; Return.
-AirRoll_Set:
-        	move.b	#2,$1C(a0) ; Set Sonic's animation to rolling animation.
-		move.b	#sfx_SpikesMove,d0
-		jsr	(PlaySound_Special).l
+		tst.b	f_spindash(a0)		; is Sonic charging his spin dash?
+		bne.w	.end					; if yes, branch
+		move.b	(v_jpadpress2).w,d0
+		andi.b	#btnB,d0				; is buttons B being pressed?
+		beq.s	.noAirRoll				; if not, branch
+		
+; Air Roll
+		bset	#staSpin,obStatus(a0)	; set spin status
+		move.b	#$E,obHeight(a0)
+		move.b	#7,obWidth(a0)
+		move.b	#id_Roll,obAnim(a0)	; enter rolling animation
+		bset	#7,obStatus(a0)	; disable shield abilities and/or enable Drop Dash transition
+		move.b	#1,obJumping(a0)		; enable this for potential drop dash transition
+		move.w	#sfx_Roll,d0
+		jsr	(PlaySound_Special).l	; play rolling sound
+
+.noAirRoll:
+		cmpi.w	#-$FC0,obVelY(a0)
+		bge.s	.end
+		move.w	#-$FC0,obVelY(a0)
+
+.end:
+		rts	
+; End of function Sonic_ChkAirRoll
+; ===========================================================================
