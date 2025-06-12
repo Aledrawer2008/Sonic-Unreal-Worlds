@@ -7,8 +7,8 @@ SuperTheme_Header:
 	smpsHeaderDAC       SuperTheme_DAC
 	smpsHeaderFM        SuperTheme_FM4,	$00, $10
 	smpsHeaderFM        SuperTheme_FM2,	$0C, $09
-	smpsHeaderFM        SuperTheme_FM3,	$0C, $0B
 	smpsHeaderFM        SuperTheme_FM1,	$0C, $0B
+	smpsHeaderFM        SuperTheme_FM3,	$0C, $0B
 	smpsHeaderFM        SuperTheme_FM5,	$00, $10
 	smpsHeaderPSG       SuperTheme_PSG1,	$E8, $03, $00, $00
 	smpsHeaderPSG       SuperTheme_PSG2,	$E8, $03, $00, $00

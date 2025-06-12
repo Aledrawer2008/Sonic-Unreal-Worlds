@@ -96,8 +96,8 @@ Vectors:	dc.l v_systemstack&$FFFFFF	; Initial stack pointer value
 		dc.b "SEGA MEGA DRIVE " ; Hardware system ID (Console name)
 Date:
 		dc.b '(C)SEGA 2025.FEB' ; Release date
-		dc.b 'SONIC X AMY: TWISTED JOURNEY 2.0                ' ; Domestic name
-		dc.b 'SONIC: UNREAL WORLDS VERSION 2.0                ' ; International name
+		dc.b 'SONIC X AMY: TWISTED JOURNEY 2.2                ' ; Domestic name
+		dc.b 'SONIC: UNREAL WORLDS VERSION 2.2                ' ; International name
 		dc.b "GM 00004049-01" ; Serial/version number (Rev non-0)
 Checksum:
 		dc.w $AFC7
@@ -302,12 +302,12 @@ GameInit:
 .clearRAM:
 		move.l	d7,(a6)+
 		dbf	d6,.clearRAM	; clear RAM ($0000-$FDFF)
-		clr.b	(True_Ending_Flag).w
     	jsr (InitDMAQueue).l
 		bsr.w	VDPSetupGame
 		bsr.w	SoundDriverLoad
 		jsr	JoypadInit
-		move.b	#id_SRAMInit,(v_gamemode).w ; set Game Mode to SRAM Init
+		clr.b	(True_Ending_Flag).w
+		move.b	#id_SRAMInit,(v_gamemode).w ; preparing to init SRAM
 
 MainGameLoop:
 		moveq #0,d0

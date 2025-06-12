@@ -372,7 +372,7 @@ pal_watersub    =   $FFFFF60A
 Saved_music     = 	$FFFFF613   ; Variable for the new music system
 f_victorypose   = 	$FFFFF622 	; flag for the victory pose for the characters
 f_dropdash      = 	$FFFFF623 	; flag for the dropdash
-Ring_1Up_Limit  = 	$FFFFF642
+PreLevel_Flag   = 	$FFFFF642
 f_echallenge    = 	$FFFFF662   ; flag for the emerald challenge (00= disable; 01=enable)
 v_ssangleprev	= 	$FFFFF664   ; For the dynamic SS Walls
 v_camera_pan    = 	$FFFFF7A0   ; Extended Camera (2 bytes)

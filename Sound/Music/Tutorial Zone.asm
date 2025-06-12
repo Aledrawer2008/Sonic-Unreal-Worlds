@@ -1,7 +1,7 @@
 Cutscene_Header:
 	smpsHeaderStartSong 1
 	smpsHeaderVoice     Cutscene_Voices
-	smpsHeaderChan      $04, $01
+	smpsHeaderChan      $04, $03
 	smpsHeaderTempo     $01, $09
 
 	smpsHeaderDAC       Cutscene_DAC
@@ -9,6 +9,8 @@ Cutscene_Header:
 	smpsHeaderFM        Cutscene_FM2,	$0C, $10
 	smpsHeaderFM        Cutscene_FM3,	$0C, $10
 	smpsHeaderPSG       Cutscene_PSG1,	$23, $00, $00, $00
+	smpsHeaderPSG       Cutscene_PSG2,	$23, $00, $00, $00
+	smpsHeaderPSG       Cutscene_PSG3,	$23, $00, $00, $00
 
 ; FM1 Data
 Cutscene_FM1:
@@ -45,6 +47,12 @@ Cutscene_Jump00:
 
 ; PSG1 Data
 Cutscene_PSG1:
+; PSG2 Data
+Cutscene_PSG2:
+	smpsStop
+
+; PSG3 Data
+Cutscene_PSG3:
 	smpsPSGform         $E7
 	smpsPSGvoice        fTone_02
 

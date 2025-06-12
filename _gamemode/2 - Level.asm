@@ -3,8 +3,8 @@
 ; ---------------------------------------------------------------------------
 
 GM_Level:
-		bset	#7,(v_gamemode).w			; add $80 to screen mode (for pre level sequence)
-		cmpi.b	#$80+id_Level,(v_gamemode).w			; is game mode = 3 (standard level)?
+		bset	#7,(PreLevel_Flag).w			; add $80 to screen mode (for pre level sequence)
+		tst.b	(PreLevel_Flag).w			; is game mode = 3 (standard level)?
 		bne.s	.noSRAM						; if not, branch
 		; the game doesn't go back here at any moment unless the level resets
 		
@@ -23,15 +23,15 @@ GM_Level:
 		move.b	#1,sr_save(a1)
 		move.w	(v_zone).w,d0			; move zone and act number to d0 (we can't do it directly)
 		movep.w	d0,sr_zone(a1)			; save zone and act to SRAM	
-		move.b	(v_character).w,d0
+		move.b	(v_character).w,d0		; so with the character...
 		move.b	d0,sr_char(a1)
-		move.b	(v_lives).w,d0
+		move.b	(v_lives).w,d0			; ...the lives...
 		move.b	d0,sr_life(a1)
-		move.b	(v_continues).w,d0
+		move.b	(v_continues).w,d0		; ...the continues...
 		move.b	d0,sr_cont(a1)
-		move.w	(v_emeralds).w,d0
+		move.w	(v_emeralds).w,d0		; ...the emeralds...
 		movep.w	d0,sr_emer(a1)
-		move.b	(v_lastspecial).w,d0
+		move.b	(v_lastspecial).w,d0	; ...and the last special stage ID.
 		move.b	d0,sr_lspe(a1)
 		gotoROM
 
@@ -114,18 +114,18 @@ Level_ClrVars3:
 		ResetDMAQueue
 ; ---------------------------------------------------------------------------
 ; Water reading routine
-		move.w    #$1E,(v_air).w     ; set Sonic air left
-		jsr     (LoadWaterLevel).l     ; init water
-		tst.b    (f_water).w		 ; in water level?
-		beq.s    Level_LoadPal		  ; if not, branch
-		move.w    #$8014,(a6)		    ; load water internal features
-		lea    ($FFFFFAA0).w,a1       ; fix palette
-		moveq    #0,d0
-		move.w    #$17,d1
+		move.w	#$1E,(v_air).w     ; set Sonic air left
+		jsr	(LoadWaterLevel).l     ; init water
+		tst.b	(f_water).w		 ; in water level?
+		beq.s	Level_LoadPal		  ; if not, branch
+		move.w	#$8014,(a6)		    ; load water internal features
+		lea	(v_pal_water+$20).w,a1       ; fix palette
+		moveq	#0,d0
+		move.w	#$17,d1
 
 .loop
-		move.l    d0,(a1)+
-		dbf    d1,.loop
+		move.l	d0,(a1)+
+		dbf	d1,.loop
 ; ---------------------------------------------------------------------------
 
 Level_LoadPal:
@@ -155,13 +155,12 @@ Level_TtlCardLoop:
 		jsr	(BuildSprites).l
 		bsr.w	RunPLC
 		move.w	(v_ttlcardact+obX).w,d0
-		cmp.w	(v_ttlcardact+$30).w,d0 ; has title card sequence finished?
+		cmp.w	(v_ttlcardact+card_mainX).w,d0 ; has title card sequence finished?
 		bne.s	Level_TtlCardLoop ; if not, branch
 		tst.l	(v_plc_buffer).w ; are there any items in the pattern load cue?
 		bne.s	Level_TtlCardLoop ; if yes, branch
-		jsr	(Hud_Base).l	; load basic HUD gfx
 
-Level_SkipTtlCard:
+		jsr	(Hud_Base).l	; load basic HUD gfx
 		jsr	LoadRingFrame
 		moveq	#palid_Sonic,d0
 		tst.b	(v_character).w
@@ -245,7 +244,7 @@ Level_DelayLoop:
 		addq.b	#4,(v_ttlcardzone+obRoutine).w
 		addq.b	#4,(v_ttlcardact+obRoutine).w
 		addq.b	#4,(v_ttlcardoval+obRoutine).w
-		bclr	#7,(v_gamemode).w ; subtract $80 from mode to end pre-level stuff
+		bclr	#7,(PreLevel_Flag).w
 
 ; ---------------------------------------------------------------------------
 ; Main level loop (when	all title card and loading sequences are finished)

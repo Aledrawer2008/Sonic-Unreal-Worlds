@@ -60,9 +60,9 @@ loc_1DDCC:
 		move	$C(a2),$C(a0)
 		move.b	$22(a2),$22(a0)
 		and.b	#1,$22(a0)
-		tst.b	$34(a0)
-		beq.s	loc_1DE06
-		sub	#4,$C(a0)
+	;	tst.b	$34(a0)
+	;	beq.s	loc_1DE06
+	;	sub	#4,$C(a0)
 
 loc_1DE06:
 		tst.b	$1D(a0)

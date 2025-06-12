@@ -54,7 +54,7 @@ ptr_musend
 ; ---------------------------------------------------------------------------
 EmeraldIsland1:	include		"Sound/Music/Emerald Island Act 1.asm"
 		even
-EmeraldIsland2		include		"Sound/Music/Emerald Island Act 2.asm"
+EmeraldIsland2:	include		"Sound/Music/Emerald Island Act 2.asm"
 		even
 EmeraldIsland3:	include		"Sound/Music/Emerald Island Act 3.asm"
 		even

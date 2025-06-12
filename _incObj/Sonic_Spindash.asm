@@ -64,7 +64,7 @@ loc2_1AC8E:
 
 loc2_1ACF4:
 		bset	#2,$22(a0)		; set unused (in s1) flag
-		move.b	#0,($FFFFD1DC).w	; clear $D1DC (smoke)
+		move.b	#0,(v_playerdust+obAnim).w	; clear $D1DC (smoke)
 		move.w	#sfx_Teleport,d0	; spin release sound
 		jsr	(PlaySound_Special).l	; play it!
 		bra.s	loc2_1AD78
