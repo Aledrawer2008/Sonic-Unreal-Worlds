@@ -56,7 +56,7 @@ jmp_KillSonic
 ; ---------------------------------------------------------------------------
 
 Sonic_Death:	; Routine 6
-		jsr		Sonic_RevertToNormal
+		jsr	Sonic_RevertToNormal
 		jsr	GameOver
 		jsr	(ObjectFall).l
 		jsr	Sonic_RecordPosition

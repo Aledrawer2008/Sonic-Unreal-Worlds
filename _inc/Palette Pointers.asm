@@ -36,7 +36,7 @@ ptr_Pal_UBZ:		palp	Pal_UBZ,v_pal_dry+$20,$30	; $13 (19) - UBZ
 ptr_Pal_TAZ:		palp	Pal_TAZ,v_pal_dry+$20,$30	; $14 (20) - TAZ
 ptr_Pal_SBZ3:		palp	Pal_SBZ3,v_pal_dry+$20,$30	; $15 (21) - SBZ3
 ptr_Pal_SBZ2:		palp	Pal_SBZ2,v_pal_dry+$20,$30	; $16 (22) - SBZ2
-ptr_Pal_Warning:	palp	Pal_Warning,v_pal_dry,$20	; $17 (23) - Save Warning
+ptr_Pal_Warning:	palp	Pal_Warning,v_pal_dry,$40	; $17 (23) - Save Warning
 			even
 
 

@@ -149,9 +149,7 @@ Sonic_RevertToNormal:
 		move.l	#Map_Amy,obMap(a0)
 		lea	(AmyDynPLC).l,a2	; Load the Amy DPLC.
 .common:
-		move.b	Saved_music,d0
-		jmp	(PlaySound).l	; load the super theme
-		move.b	#1,obNextAni(a0)	; Change ObAnimation back to normal
+		move.b	#1,obNextAni(a0)	; Change ObAnim back to normal
 		bclr	#1,(v_invinc).w	; remove invincibility
 		move.w	#$600,(v_sonspeedmax).w
 		move.w	#$C,(v_sonspeedacc).w

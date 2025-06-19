@@ -265,7 +265,7 @@ loc_130BA:
 		move.b	#id_Stop,obAnim(a0) ; use "stopping" animation
 		bclr	#0,obStatus(a0)
 		move.w	#sfx_Skid,d0
-		jsr	(PlaySound_Special).l	; play stopping sound
+		jmp	(PlaySound_Special).l	; play stopping sound
 
 locret_130E8:
 		rts	
@@ -314,7 +314,7 @@ loc_13120:
 		move.b	#id_Stop,obAnim(a0) ; use "stopping" animation
 		bset	#0,obStatus(a0)
 		move.w	#sfx_Skid,d0
-		jsr	(PlaySound_Special).l	; play stopping sound
+		jmp	(PlaySound_Special).l	; play stopping sound
 
 locret_1314E:
 		rts	

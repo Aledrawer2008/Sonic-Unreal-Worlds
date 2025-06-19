@@ -18,10 +18,6 @@
 	include	"Macros.asm"
 	include "Sound/Definitions.asm"	; include sound driver macros and functions
 
-EnableSRAM	  = 1	; change to 1 to enable SRAM
-BackupSRAM	  = 1
-AddressSRAM	  = 3	; 0 = odd+even; 2 = even only; 3 = odd only
-
 ZoneCount	  = 6	; discrete zones are: GHZ, MZ, SYZ, LZ, SLZ, and SBZ
 
 SaveVersion	  = 1	; change this if the sram format is changed after a update
@@ -106,11 +102,7 @@ Checksum:
 RomEndLoc:	dc.l EndOfRom-1		; End address of ROM
 		dc.l $FF0000		; Start address of RAM
 		dc.l $FFFFFF		; End address of RAM
-		if EnableSRAM=1
-		dc.b $52, $41, $A0+(BackupSRAM<<6)+(AddressSRAM<<3), $20 ; SRAM support
-		else
-		dc.l $20202020
-		endif
+		dc.b $52, $41, $A0+(1<<6)+(3<<3), $20 ; SRAM support
 		dc.l $200001		; SRAM start ($200001)
 		dc.l $200090		; SRAM end ($20xxxx)
 		dc.b "                                                    " ; Notes (unused, anything can be put in this space, but it has to be 52 bytes.)

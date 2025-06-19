@@ -56,13 +56,13 @@ ExItem_Animal:	; Routine 0
 		addq.b	#2,obRoutine(a0)
 		bsr.w	FindFreeObj
 		bne.s	ExItem_Main
-		_move.b	#id_RingLoss,0(a1) ; load animal object
+		_move.b	#id_RingLoss,0(a1) ; load bouncing ring object
 		move.b	#2,obRoutine(a1)
 		move.b	#$FF,$3F(a0)
 		move.w	obX(a0),obX(a1)
 		move.w	obY(a0),obY(a1)
 		move.w	#-$400,obVelY(a1)
-		move.w	$3E(a0),$3E(a1)
+		move.b	$3F(a0),$3F(a1)
 
 ExItem_Main:	; Routine 2
 		addq.b	#2,obRoutine(a0)

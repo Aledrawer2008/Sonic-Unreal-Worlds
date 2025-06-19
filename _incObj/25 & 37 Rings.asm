@@ -228,7 +228,7 @@ RLoss_Bounce:	; Routine 2
 		tst.b	$3F(a0)
 		beq.w	.skip
 		move.b	#8,obHeight(a0)
-		move.b	#8,obWidth(a1)
+		move.b	#8,obWidth(a0)
 		move.l	#Map_Ring,obMap(a0)
 		move.w	#$27B6,obGfx(a0)
 		move.b	#4,obRender(a0)

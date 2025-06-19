@@ -127,7 +127,7 @@ SaveWarning:
 
 TextGenerate:
 		move.b (a5)+,d0
-		cmpi.b    #$30,d0    ; Check for $40 
+		cmpi.b    #$30,d0    ; Check for $30 
         blt.s    .skip    ; If not a valid ASCII character, branch
 		
 		cmpi.b    #$40,d0    ; Check for $40 
