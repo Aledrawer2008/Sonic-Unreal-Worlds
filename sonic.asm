@@ -91,7 +91,7 @@ Vectors:	dc.l v_systemstack&$FFFFFF	; Initial stack pointer value
 
 		dc.b "SEGA MEGA DRIVE " ; Hardware system ID (Console name)
 Date:
-		dc.b '(C)SEGA 2025.FEB' ; Release date
+		dc.b '(C)SEGA 2025.JUN' ; Release date
 		dc.b 'SONIC X AMY: TWISTED JOURNEY 2.2                ' ; Domestic name
 		dc.b 'SONIC: UNREAL WORLDS VERSION 2.2                ' ; International name
 		dc.b "GM 00004049-01" ; Serial/version number (Rev non-0)
@@ -227,7 +227,7 @@ SetupValues:	dc.w $8000		; VDP register start number
 		dc.b $80		; VDP $97 - DMA fill VRAM
 		dc.l $40000080		; VRAM address 0
 
-	; Z80 instructions (not the sound driver; that gets loaded later)
+	; Z80 instructions
     if (*)+$26 < $10000
     save
     CPU Z80 ; start assembling Z80 code
@@ -299,7 +299,51 @@ GameInit:
 		bsr.w	SoundDriverLoad
 		jsr	JoypadInit
 		clr.b	(True_Ending_Flag).w
-		move.b	#id_SRAMInit,(v_gamemode).w ; preparing to init SRAM
+		move.b	#id_Sega,(v_gamemode).w ; set gamemode to SEGA Screen
+
+InitSRAM:
+		clr.b	(v_sram_errorcode).w		; Clear the SRAM error code
+		gotoSRAM							; Enable SRAM writing
+
+		lea 	($200001).l,a0				; Load SRAM memory into a0
+
+		; Check for SRAM signature
+		movep.l sr_suw(a0),d0				; Get the existing string at the start of SRAM
+		move.l  #"SUWV",d1					; Load "SUWV" signature
+		cmp.l   d0,d1						; Compare with existing data
+		beq.s   .skip						; If it matches, skip initialization
+
+		; Write and verify "SUWV" signature
+		movep.l	d1,sr_suw(a0)				; Write string "SUWV"
+		movep.l	sr_suw(a0),d0				; Read back for verification
+		cmp.l	d0,d1						; Compare written value
+		bne.w	.errorHandler				; Branch if verification failed
+
+	.skip:
+		; Here is where you initialize values like lives or level.
+		; If you're using word or long values, you can only use every other byte.
+		; Example - 8(a0) => $A(a0)
+		lea		sr_header_end(a0),a0		; Base of usable SRAM
+
+		moveq	#8-1,d1
+
+.clearsram:
+		moveq	#0,d0						; Clear default values
+		move.b	d0,sr_save(a0)				; Mark SRAM initialized
+		movep.w	d0,sr_zone(a0)
+		move.b	d0,sr_char(a0)
+		movep.w	d0,sr_emer(a0)
+		move.b	d0,sr_cont(a0)
+		move.b	#3,sr_life(a0)
+		move.b	d0,sr_lspe(a0)
+		lea		sr_size(a0),a0
+		dbf.w	d1,.clearsram
+
+        gotoROM								; Disable SRAM writing
+		bra.s	MainGameLoop				; Continue to main loop
+
+	.errorHandler:
+		move.b	#1,(v_sram_errorcode).w		; Set error code
 
 MainGameLoop:
 		moveq #0,d0
@@ -320,7 +364,7 @@ id_Credits	equ $6
 id_SaveMenu	equ $7
 id_Secret	equ $8
 id_Encore	equ	$9
-id_SRAMInit	equ	$A
+id_Warning	equ	$A
 
 GameModeArray:
 		dc.l GM_Sega
@@ -333,11 +377,11 @@ GameModeArray:
 		dc.l GM_SaveMenu
 		dc.l GM_Secret
 		dc.l GM_Encore
-		dc.l GM_InitSRAM
+		dc.l GM_SRAMError
 ; ===========================================================================
 
-Art_Text:	binclude	"artunc/menutext.bin" ; text used in level select and debug mode
-		even
+Art_Text:		binclude	"artunc/menutext.bin" ; text used in level select and debug mode
+Art_Text_End:	even
 
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
@@ -1759,6 +1803,8 @@ WaitForVBla:
 		include	"_gamemode/9 - Team Encore.asm"
 		include	"_gamemode/1 - Title.asm"
 
+		include "_inc/ASCII Render Text.asm"
+
 PlayLevel:
 		move.b	#id_Level,(v_gamemode).w ; set screen mode to level
 
@@ -2851,7 +2897,7 @@ LevelDataLoad:
 		move.w	(a2)+,d0
 		move.w	(a2),d0
 		andi.w	#$FF,d0
-		bsr.w	PalLoad1	; load palette (based on d0)
+		jsr	PalLoad1	; load palette (based on d0)
 		movea.l	(sp)+,a2
 		addq.w	#4,a2		; read number for 2nd PLC
 		moveq	#0,d0
