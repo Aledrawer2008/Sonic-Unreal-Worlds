@@ -381,8 +381,8 @@ f_jumpdash      = 	$FFFFF7DA
 v_spindashsfx1	= 	$FFFFFEA0
 v_spindashsfx2	= 	v_spindashsfx1+1
 v_spindashsfx3	= 	v_spindashsfx1+2
-True_Ending_Flag    =   $FFFFFFF0	; flag for the True ending
-v_sram_errorcode	=	$FFFFF5D9
+True_Ending_Flag =  $FFFFFFF0	; flag for the True ending
+VBlank_MusicOnly	=	$FFFFF5D9
 
 v_save			=	$FFFFFFFE
 ; reused from level select

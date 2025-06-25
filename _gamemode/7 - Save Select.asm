@@ -1,27 +1,4 @@
 ; ---------------------------------------------------------------------------
-; Text Generation
-; ---------------------------------------------------------------------------
-TextGenerate:
-		move.b (a5)+,d0
-		cmpi.b    #$30,d0    ; Check for $40 
-        blt.s    .skip    ; If not a valid ASCII character, branch
-		
-		cmpi.b    #$40,d0    ; Check for $40 
-        blt.s    .check    ; If not an ASCII text character, branch
-		subq.w    #$3,d0        ; Subtract an extra 3
-	.check:
-		
-		add.w	#$80-$30,d0
-		move.w	d0,(a6)
-		tst.b	(a5)
-		bne.s	TextGenerate
-		rts
-	.skip:
-		move.w	#0,(a6)
-		tst.b	(a5)
-		bne.s	TextGenerate
-		rts
-; ---------------------------------------------------------------------------
 ; Save Select
 ; ---------------------------------------------------------------------------
 
@@ -287,7 +264,6 @@ SaveMenu_RenderSingle:
 		move.w	d3,d0
 		lea SaveMenu_TxtNoSave(pc),a5
 		jmp	(TextGenerate).l ; generate delete save
-
 SaveMenu_TxtSave: dc.b 'SAVE ',0
 		even
 SaveMenu_TxtAvailable: dc.b '< EMPTY',0

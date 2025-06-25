@@ -1,99 +1,147 @@
 ; ---------------------------------------------------------------------------
-; SRAM Error screen
-; Based on the SRAM Error Screen from Super Challenges
+; SRAM Init
 ; ---------------------------------------------------------------------------
 
-GM_SRAMError:
+GM_InitSRAM:
 		move.b	#bgm_Stop,d0
 		bsr.w	PlaySound_Special ; stop music
 		bsr.w	ClearPLC
-		bsr.w	PaletteFadeOut
-		lea		(vdp_control_port).l,a6
-		move.w	#$8004,(a6)	; use 8-colour mode
-		move.w	#$8200+(vram_fg>>10),(a6) ; set foreground nametable address
-		move.w	#$8400+(vram_bg>>13),(a6) ; set background nametable address
-		move.w	#$8700,(a6)	; set background colour (palette entry 0)
-		move.w	#$8B00,(a6)	; full-screen vertical scrolling
-		clr.b	(f_wtr_state).w
-		bsr.w	ClearScreen
+        bsr.w   PaletteFadeOut
+        lea     (vdp_control_port).l,a6
+        move.w  #$8004,(a6)
+		move.w	#$8134,(a6)
+        move.w  #$8230,(a6)
+        move.w  #$8407,(a6)
+        move.w  #$8700,(a6)
+        move.w  #$8B00,(a6)
+        move.w  (v_vdp_buffer1).w,d0
+        andi.b  #$BF,d0
+        move.w  d0,(vdp_control_port).l
 
-; load ment text font
-		lea		(vdp_data_port).l,a6
+        gotoSRAM
+        lea ($200001).l,a0		; Load SRAM memory into a0
+        movep.l sr_suw(a0),d0	; Get the existing string at the start of SRAM
+        move.l  #"SUWV",d1		; Write the string "SUWV" to d1
+        cmp.l   d0,d1			; Was it already in SRAM?
+        beq.s   .checkver		; If so, skip
+        movep.l d1,sr_suw(a0)	; Write string "SUWV"
+
+		move.l	#SaveTxt_None,d6
+		bsr.w	SaveWarning
+.redo_save:
+        ; SRAM Initialize
+		move.w	#SaveVersion,d1
+		movep.w d1,sr_ver(a0)	; Write version
+		
+		move.w	#8-1,d0 ; there are 8 saves
+		addi.w	#sr_header_end,a0
+	.clr_saves:
+		move.b	#0,(a0)		; clear save flag
+		addi.w	#sr_size,a0
+		dbf.w	d0,.clr_saves
+		bra.s	.save_is_ok
+.checkver:
+		movep.w	sr_ver(a0),d0
+		move.w	#SaveVersion,d1
+		cmp.w   d1,d0
+		beq.s	.save_is_ok
+		bgt.s	.uncompatible
+		
+		move.l	#SaveTxt_Old,d6
+		bsr.w	SaveWarning
+		; there are no past version to convert so we kill the save for now
+		bra.s	.redo_save
+.uncompatible:
+		move.l	#SaveTxt_Late,d6
+		bsr.w	SaveWarning
+		bra.s	.redo_save
+.save_is_ok:
+        gotoROM
+		move.b	#id_Sega,(v_gamemode).w
+		rts
+; ===============================================================================
+SaveTxt_Late:	dc.b "NEWER VERSION SAVE WILL BE ERASED",0
+	even
+SaveTxt_None:	dc.b "NO SAVE FOUND CREATING NEW ONE",0
+	even
+SaveTxt_Old:	dc.b "UPDATING SAVE TO CURRENT VERSION",0
+	even
+SaveTxt_Warning:	dc.b "WARNING",0
+	even
+SaveTxt_Press:	dc.b "PRESS ANYTHING TO CONTINUE",0
+	even
+SaveTxt_LOL:	dc.b "EXCEPT FOR THE RESET AND POWER BUTTON",0
+	even
+; ===============================================================================
+SaveWarning:
+		gotoROM
+		lea	(Art_Text).l,a5	; load level select font
+		lea	(vdp_data_port).l,a6
+		move.w	#$8170,4(a6)
+		
+		move.w	#(40*$8)-1,d1
 		locVRAM	$D000,4(a6)
-		lea		(Art_Text).l,a5	; load level select font
-		move.w	#(Art_Text_End-Art_Text)/2-1,d1
+.font:
+		move.l	(a5)+,(a6)
+		dbf	d1,.font	; load level select font
+		
+		lea SaveTxt_Warning(pc),a5
+		
+		locVRAM	($C000+($80*1)+(2*1)),4(a6) ; y x
+		moveq	#0,d0
+		add.w	#$2600,d0
+		bsr.w	TextGenerate
+		
+		movea.l	d6,a5
+		
+		locVRAM	($C000+($80*3)+(2*2)),4(a6) ; y x
+		move.w	#$600,d0
+		bsr.w	TextGenerate
+		
+		lea SaveTxt_Press(pc),a5
+		
+		locVRAM	($C000+($80*26)+(2*7)),4(a6) ; y x
+		move.w	#$600,d0
+		bsr.w	TextGenerate
+		
+		lea SaveTxt_LOL(pc),a5
+		
+		locVRAM	($C000+($80*27)+(2*2)),4(a6) ; y x
+		move.w	#$C600,d0
+		bsr.w	TextGenerate
 
-.loadfont:
-		move.w	(a5)+,(a6)
-		dbf		d1,.loadfont	; load level select font
+		move.b	#palid_Warning,d0
+		jsr	(PalLoad1).l
 
-		moveq	#0,d1
-		lea		TextData_ErrorHeading(pc),a1 ; where to fetch the lines from
-		move.l	#$41060003,4(a6)	; starting screen position 
-		move.w	#$E680,d3	; which palette the font should use and where it is in VRAM
-
-		moveq	#33,d2		; number of characters to be rendered in a line -1
-		bsr.w	ASCText_RenderLine
-
-		moveq	#0,d1
-		lea		TextData_ErrorBody(pc),a1 ; where to fetch the lines from
-		move.l	#$43060003,d4	; starting screen position 
-
-		moveq	#18,d1		; number of lines of text to be displayed -1
-
-.nextline:
-		move.l	d4,4(a6)
-		moveq	#33,d2		; number of characters to be rendered in a line -1
-		bsr.w	ASCText_RenderLine
-		addi.l	#(1*$800000),d4  ; replace number to the left with desired distance between each line
-		dbf		d1,.nextline
-
-.loadpal:
-		moveq	#palid_LevelSel,d0
-		jsr	PalLoad1	; load level select palette
-
-		move.b	#$16,(v_vbla_routine).w
-		bsr.w	WaitForVBla
-		move.w	(v_vdp_buffer1).w,d0
-		ori.b	#$40,d0
-		move.w	d0,(vdp_control_port).l
 		bsr.w	PaletteFadeIn
-
-SRAMError_Main:
-		move.b	#$16,(v_vbla_routine).w
+		disable_ints
+.loop:
+		move.b	#2,(v_vbla_routine).w
 		bsr.w	WaitForVBla
-
-		move.b	(v_jpadpress1).w,d0 ; fetch commands
-		andi.b	#btnStart,d0
-		beq.s	SRAMError_Main
-
-        move.b	#id_Title,(v_gamemode).w ; => Title Screen		
+		tst.b	(v_jpadpress1).w
+		beq.s	.loop
+		
+		gotoSRAM
+		lea ($200001).l,a0		; Load SRAM memory into a0
 		rts
 
-		bra.s	SRAMError_Main	
-; ===========================================================================
-
-TextData_ErrorHeading:
-		dc.b	"   WARNING - NO SRAM DETECTED!!   "
+TextGenerate:
+		move.b (a5)+,d0
+		cmpi.b    #$30,d0    ; Check for $30 
+        blt.s    .skip    ; If not a valid ASCII character, branch
 		
-TextData_ErrorBody:
-		dc.b	"IT HAS BEEN DETECTED THAT SRAM    "
-		dc.b	"(BATTERY BACKUP TO SAVE YOUR DATA)"
-		dc.b	"ISN'T INITIALIZED.                "
-		dc.b	"                                  "
-		dc.b	"THIS ROM HACK RELIES ON IT TO SAVE"
-		dc.b	"YOUR CURRENT PROGRESS. GIVEN THAT "
-		dc.b	"IT'S NOT LOADED PROPERLY, PROGRESS"
-		dc.b	"AND DATA WILL NOT BE SAVED UPON   "
-		dc.b	"RESET.                            "
-		dc.b	"                                  "
-		dc.b	"PLEASE CHECK YOUR EMULATOR'S      "
-		dc.b	"SETTINGS TO SEE IF SRAM IS ENABLED"
-		dc.b	"AND WORKING, OR CHECK THE MANUAL  "
-		dc.b	"OF YOUR FLASHCART TO SEE IF IT    "
-		dc.b	"SUPPORTS SRAM.                    "
-		dc.b	"                                  "
-		dc.b	"           0123456789             "
-		dc.b	"                                  "
-		dc.b	"     PRESS START TO CONTINUE      "
-; ===========================================================================
+		cmpi.b    #$40,d0    ; Check for $40 
+        blt.s    .check    ; If not an ASCII text character, branch
+		subq.w    #$3,d0        ; Subtract an extra 3
+	.check:
+		
+		add.w	#$80-$30,d0
+		move.w	d0,(a6)
+		tst.b	(a5)
+		bne.s	TextGenerate
+		rts
+	.skip:
+		move.w	#0,(a6)
+		tst.b	(a5)
+		bne.s	TextGenerate
+		rts
