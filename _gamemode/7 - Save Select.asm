@@ -150,7 +150,7 @@ SaveMenuControls:
 		rts
 SaveMenu_DeleteSave:
 		gotoSRAM
-		lea 	($200001+sr_header_end).l,a0		; Load SRAM memory into a0
+		lea 	($200000+sr_header_end).l,a0		; Load SRAM memory into a0
 		subq.w	#1,d1
 		lsl.w	#4,d1
 		add.w	d1,a0
@@ -194,7 +194,7 @@ SaveMenu_DeleteSave:
 	
 SaveMenu_Render:
 		gotoSRAM
-		lea 	($200001+sr_header_end).l,a0		; Load SRAM memory into a0
+		lea 	($200000+sr_header_end).l,a0		; Load SRAM memory into a0
 		lea		(vdp_data_port).l,a6
 		locVRAM	$E090,d4	; text position on screen
 		move.w	#$E680,d3	; VRAM setting (4th palette, $680th tile)
@@ -256,7 +256,7 @@ SaveMenu_RenderSingle:
 		jmp	(TextGenerate).l ; generate delete save
 	.offsetA0:
 		subq.w	#1,d5
-		lea 	($200001+sr_header_end).l,a0		; Load SRAM memory into a0
+		lea 	($200000+sr_header_end).l,a0		; Load SRAM memory into a0
 		lsl.w	#4,d5
 		add.w	d5,a0
 		bra.s	SaveMenu_ChgSave
@@ -410,7 +410,7 @@ SaveMenu_Load:
 		move.l	#5000,(v_scorelife).w	; extra life is awarded at 50000 points
 	
 		subq.w	#1,d0
-		lea		($200001+sr_header_end).l,a1		; base of usable SRAM 
+		lea		($200000+sr_header_end).l,a1		; base of usable SRAM 
 		lsl.w	#4,d0
 		add.w	d0,a1
 		tst.b	sr_save(a1)

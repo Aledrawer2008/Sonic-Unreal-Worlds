@@ -4,8 +4,6 @@
 
 GM_Level:
 		bset	#7,(PreLevel_Flag).w			; add $80 to screen mode (for pre level sequence)
-		tst.b	(PreLevel_Flag).w			; is game mode = 3 (standard level)?
-		bne.s	.noSRAM						; if not, branch
 		; the game doesn't go back here at any moment unless the level resets
 		
 		moveq	#0,d0
@@ -17,7 +15,7 @@ GM_Level:
 		moveq	#0,d0
 		move.b	(v_save),d0
 		subq.b	#1,d0
-		lea		($200001+sr_header_end).l,a1		; base of usable SRAM 
+		lea		($200000+sr_header_end).l,a1		; base of usable SRAM 
 		lsl.w	#4,d0
 		add.w	d0,a1
 		move.b	#1,sr_save(a1)

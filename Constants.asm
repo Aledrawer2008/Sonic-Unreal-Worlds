@@ -29,21 +29,21 @@ sram_port:			equ $A130F1
 security_addr:		equ $A14000
 
 ; SRAM
-sr_suw	= $00 				; text to indicate sonic unreal worlds save
-sr_ver	= $08 				; version number
-sr_header_end = $0B
-; end of header ($0B)
-sr_save	= $00				; flag to check if there is a save present
-sr_zone = $02				; zone & act (2 bytes)
-sr_act 	= $04
-sr_char = $06				; save's character
-sr_life = $08				; lives
-sr_cont = $0A				; continues
-sr_emer = $0C				; emeralds obtained (counter is counted from these)
-sr_bitf = $0E               ; emerald bitfield
-sr_lspe = $10				; last special stage
+sr_suw	= $01 				; text to indicate sonic unreal worlds save
+sr_ver	= $09 				; version number
+sr_header_end = $0C
+; end of header ($0C)
+sr_save	= $01				; flag to check if there is a save present
+sr_zone = $03				; zone & act (2 bytes)
+sr_act 	= $05
+sr_char = $07				; save's character
+sr_life = $09				; lives
+sr_cont = $0B				; continues
+sr_emer = $0D				; emeralds obtained (counter is counted from these)
+sr_bitf = $0F               ; emerald bitfield
+sr_lspe = $11				; last special stage
 
-sr_size = $11				; size of each save
+sr_size = $12				; size of each save
 
 ; VRAM data
 vram_fg:	    equ $C000	; foreground namespace
