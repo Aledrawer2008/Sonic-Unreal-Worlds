@@ -66,7 +66,7 @@ AniArt_GHZ_Bigflower:
 		lea	.size*$20(a1),a1
 
 .isframe0:
-		locVRAM	$6B80
+		locVRAM	$4200
 		move.w	#.size-1,d1
 		bra.w	LoadTiles
 ; ===========================================================================

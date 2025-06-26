@@ -15,7 +15,7 @@ GM_Level:
 		moveq	#0,d0
 		move.b	(v_save),d0
 		subq.b	#1,d0
-		lea		($200000+sr_header_end).l,a1		; base of usable SRAM 
+		lea		($200001+sr_header_end).l,a1		; base of usable SRAM 
 		lsl.w	#4,d0
 		add.w	d0,a1
 		move.b	#1,sr_save(a1)
@@ -269,9 +269,13 @@ Level_MainLoop:
 		bsr.w	OscillateNumDo
 		bsr.w	SynchroAnimate
 		bsr.w	SignpostArtLoad
+		tst.b	(f_specials).w
+		bne.s	.return
 		cmpi.b	#id_Level,(v_gamemode).w
 		beq.w	Level_MainLoop	; if mode is level, branch
-		rts	
+
+.return:
+		rts
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
 ; Subroutine to work with water

@@ -12,7 +12,7 @@ GRing_Index:
 		dc.w GRing_Main-GRing_Index
 		dc.w GRing_Animate-GRing_Index
 		dc.w GRing_Collect-GRing_Index
-		dc.w GRing_Flash-GRing_Index		; Formerly the Ring Flash Object ($7C)
+		dc.w GRing_Flash-GRing_Index
 		dc.w GRing_Delete-GRing_Index
 ; ===========================================================================
 
@@ -59,11 +59,13 @@ GRing_Flash:	; Routine 6
 		move.b	#1,obTimeFrame(a0)
 		addq.b	#1,obFrame(a0)
 		cmpi.b	#$10,obFrame(a0)		; has animation	finished?
-		bhs.s	Flash_End				; if yes, branch
+		bhs.s	GRing_Flash_End				; if yes, branch
 		cmpi.b	#$B,obFrame(a0)			; is 3rd flash frame displayed?
 		bne.s	.skip					; if not, branch
 		cmpi.b	#7,(v_emeralds).w
 		beq.s	.skip
+		tst.b	(f_keycheck).w
+		bne.s	.skip
 		tst.b	(f_specials).w
 		bne.s	.skip
 		clr.b	(v_player).w		; remove Sonic Object
@@ -77,15 +79,17 @@ GRing_Flash:	; Routine 6
 		bra.w	DisplaySprite
 ; ===========================================================================
 
-Flash_End:
+GRing_Flash_End:
 		addq.b	#2,obRoutine(a0)
 		cmpi.w	#$003,(v_zone)
 		beq.w	Flash_Tutorial
 		cmpi.b	#7,(v_emeralds).w
-		beq.s	.GiveRings
+		beq.w	.GiveRings
+		tst.b	(f_keycheck).w
+		beq.w	.return
 		tst.b	(f_specials).w
-		bne.s	.GiveRings
-        move.b	#1,(f_specials).w
+		bne.w	.return
+		move.b	#1,(f_specials).w
         move.b	#id_Special,(v_gamemode).w ; set game mode to Special Stage (10)
 		rts
 

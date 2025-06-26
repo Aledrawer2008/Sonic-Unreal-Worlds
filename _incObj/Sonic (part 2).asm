@@ -115,7 +115,6 @@ Sonic_ResetLevel:; Routine 8
 		beq.s	locret_13914
 		subq.w	#1,$3A(a0)	; subtract 1 from time delay
 		bne.s	locret_13914
-        clr.b   (f_specials).w
 		move.b	#1,(f_restart).w ; restart the level
 
 locret_13914:

@@ -31,9 +31,6 @@ Booster_Init:
 		move.w	Booster_BoosterSpeeds(pc,d0.w),speedbooster_boostspeed(a0)
 
 Booster_Main:
-		move.b	(v_framecount).w,d0
-		andi.b	#2,d0
-		move.b	d0,obFrame(a0)
 		move.w	obX(a0),d0
 		move.w	d0,d1
 		subi.w	#$10,d0

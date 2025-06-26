@@ -270,6 +270,114 @@ zStartupCodeEndLoc:
 		dc.l $40000010		; VSRAM address 0
 
 		dc.b $9F, $BF, $DF, $FF	; values for PSG channel volumes
+		
+; ===========================================================================
+
+GameProgram:
+		lea	(v_crossresetram).w,a6
+		moveq	#0,d7
+		move.w	#(v_ram_end-v_crossresetram)/4-1,d6
+.clearRAM:
+		move.l	d7,(a6)+
+		dbf	d6,.clearRAM	; clear RAM ($FE00-$FFFF)
+
+		move.b	(z80_version).l,d0
+		andi.b	#$C0,d0
+		move.b	d0,(v_megadrive).w ; get region setting
+
+GameInit:
+		lea	($FF0000).l,a6
+		moveq	#0,d7
+		move.w	#$3F7F,d6
+.clearRAM:
+		move.l	d7,(a6)+
+		dbf	d6,.clearRAM	; clear RAM ($0000-$FDFF)
+    	jsr (InitDMAQueue).l
+		jsr	(VDPSetupGame).l
+		jsr	(SoundDriverLoad).l
+		jsr	(JoypadInit).l
+		bsr.w	InitSRAM
+		clr.b	(True_Ending_Flag).w
+		move.b	#id_Sega,(v_gamemode).w ; set Game Mode to Sega Screen
+; ===============================================================================
+
+MainGameLoop:
+		moveq #0,d0
+		move.b (v_gamemode).w,d0
+		lsl.w #2,d0
+		movea.l GameModeArray(pc,d0.w),a4
+		jsr (a4)
+		bra.s MainGameLoop
+; ===============================================================================
+; Game modes
+id_Sega		equ	$0
+id_Title	equ	$1
+id_Level	equ	$2
+id_Special	equ	$3
+id_Continue	equ	$4
+id_Ending	equ	$5
+id_Credits	equ	$6
+id_SaveMenu	equ	$7
+id_Secret	equ	$8
+id_Encore	equ	$9
+
+GameModeArray:
+		dc.l GM_Sega
+		dc.l GM_Title
+		dc.l GM_Level
+		dc.l GM_Special
+		dc.l GM_Continue
+		dc.l GM_Ending
+		dc.l GM_Credits
+		dc.l GM_SaveMenu
+		dc.l GM_Secret
+		dc.l GM_Encore
+; ===========================================================================
+
+Art_Text:	binclude	"artunc/menutext.bin" ; text used in level select and debug mode
+		even
+
+InitSRAM:
+        gotoSRAM
+        lea ($200001).l,a0		; Load SRAM memory into a0
+        movep.l sr_suw(a0),d0	; Get the existing string at the start of SRAM
+        move.l  #"SUWV",d1		; Write the string "SUWV" to d1
+        cmp.l   d0,d1			; Was it already in SRAM?
+        beq.s   .save_is_ok		; If so, skip
+        movep.l d1,sr_suw(a0)	; Write string "SUWV"
+
+		move.l	#SaveTxt_None,d6
+		bsr.w	SaveWarning
+.redo_save:
+        ; SRAM Initialize
+		move.w	#1,d1
+		movep.w d1,sr_ver(a0)	; Write version
+		
+		move.w	#8-1,d0 ; there are 8 saves
+		adda.w	#sr_header_end,a0
+	.clr_saves:
+		move.b	#0,(a0)		; clear save flag
+		adda.w	#sr_size,a0
+		dbf.w	d0,.clr_saves
+		bra.s	.save_is_ok
+.checkver:
+		movep.w	sr_ver(a0),d0
+		move.w	#1,d1
+		cmp.w   d1,d0
+		beq.s	.save_is_ok
+		bgt.s	.uncompatible
+		
+		move.l	#SaveTxt_Old,d6
+		bsr.w	SaveWarning
+		; there are no past version to convert so we kill the save for now
+		bra.s	.redo_save
+.uncompatible:
+		move.l	#SaveTxt_Late,d6
+		bsr.w	SaveWarning
+		bra.s	.redo_save
+.save_is_ok:
+        gotoROM
+		rts
 
 SaveTxt_Late:	dc.b "NEWER VERSION SAVE WILL BE ERASED",0
 	even
@@ -283,6 +391,7 @@ SaveTxt_Press:	dc.b "PRESS ANYTHING TO CONTINUE",0
 	even
 SaveTxt_LOL:	dc.b "EXCEPT FOR THE RESET AND POWER BUTTON",0
 	even
+
 SaveWarning:
 		gotoROM
 		; Configure Palette
@@ -338,7 +447,7 @@ SaveWarning:
 		beq.s	.loop
 		
 		gotoSRAM
-		lea ($200000).l,a0		; Load SRAM memory into a0
+		lea ($200001).l,a0		; Load SRAM memory into a0
 		rts
 TextGenerate:
 		move.b (a5)+,d0
@@ -360,86 +469,6 @@ TextGenerate:
 		tst.b	(a5)
 		bne.s	TextGenerate
 		rts
-		
-; ===========================================================================
-
-GameProgram:
-		lea	(v_crossresetram).w,a6
-		moveq	#0,d7
-		move.w	#(v_ram_end-v_crossresetram)/4-1,d6
-.clearRAM:
-		move.l	d7,(a6)+
-		dbf	d6,.clearRAM	; clear RAM ($FE00-$FFFF)
-
-		move.b	(z80_version).l,d0
-		andi.b	#$C0,d0
-		move.b	d0,(v_megadrive).w ; get region setting
-
-GameInit:
-		lea	($FF0000).l,a6
-		moveq	#0,d7
-		move.w	#$3F7F,d6
-.clearRAM:
-		move.l	d7,(a6)+
-		dbf	d6,.clearRAM	; clear RAM ($0000-$FDFF)
-    	jsr (InitDMAQueue).l
-		bsr.w	VDPSetupGame
-		bsr.w	SoundDriverLoad
-		jsr	JoypadInit
-		clr.b	(True_Ending_Flag).w
-		move.b	#id_Sega,(v_gamemode).w ; set Game Mode to Sega Screen
-		
-InitSRAM:
-        gotoSRAM
-        lea ($200000).l,a0		; Load SRAM memory into a0
-        movep.l sr_suw(a0),d0	; Get the existing string at the start of SRAM
-        move.l  #"SUWV",d1		; Write the string "SUWV" to d1
-        cmp.l   d0,d1			; Was it already in SRAM?
-        beq.s   .save_is_ok		; If so, skip
-        movep.l d1,sr_suw(a0)	; Write string "SUWV"
-
-		move.l	#SaveTxt_None,d6
-		bsr.w	SaveWarning
-
-.save_is_ok:
-        gotoROM
-; ===============================================================================
-
-MainGameLoop:
-		moveq #0,d0
-		move.b (v_gamemode).w,d0
-		lsl.w #2,d0
-		movea.l GameModeArray(pc,d0.w),a4
-		jsr (a4)
-		bra.s MainGameLoop
-; ===============================================================================
-; Game modes
-id_Sega		equ	$0
-id_Title	equ	$1
-id_Level	equ	$2
-id_Special	equ	$3
-id_Continue	equ	$4
-id_Ending	equ	$5
-id_Credits	equ	$6
-id_SaveMenu	equ	$7
-id_Secret	equ	$8
-id_Encore	equ	$9
-
-GameModeArray:
-		dc.l GM_Sega
-		dc.l GM_Title
-		dc.l GM_Level
-		dc.l GM_Special
-		dc.l GM_Continue
-		dc.l GM_Ending
-		dc.l GM_Credits
-		dc.l GM_SaveMenu
-		dc.l GM_Secret
-		dc.l GM_Encore
-; ===========================================================================
-
-Art_Text:	binclude	"artunc/menutext.bin" ; text used in level select and debug mode
-		even
 
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
