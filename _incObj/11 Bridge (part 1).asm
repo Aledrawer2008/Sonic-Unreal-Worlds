@@ -35,7 +35,7 @@ Bri_Main:	; Routine 0
 		bcs.s	Bri_Action	; don't make more if bridge has only 1 log
 
 .buildloop:
-		bsr.w	FindFreeObj
+		jsr	(FindFreeObj).l
 		bne.s	Bri_Action
 		addq.b	#1,obSubtype(a0)
 		cmp.w	obX(a0),d3	; is this log the leftmost one?
@@ -78,7 +78,7 @@ Bri_Action:	; Routine 2
 		bsr.w	Bri_Bend
 
 .display:
-		bsr.w	DisplaySprite
+		jsr	(DisplaySprite).l
 		bra.w	Bri_ChkDel
 
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
@@ -100,5 +100,5 @@ Bri_Solid:
 		bmi.w	Plat_Exit
 		cmp.w	d2,d0
 		bcc.w	Plat_Exit
-		bra.s	Plat_NoXCheck
+		jmp	(Plat_NoXCheck).l
 ; End of function Bri_Solid

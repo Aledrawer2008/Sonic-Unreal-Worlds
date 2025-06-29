@@ -147,9 +147,9 @@ Pow_ChkKey:		; Gives you the Special stage's Key
 	if DefaultSuperForm = 0
 		cmpi.b	#7, (v_emeralds)
 		beq.s	.rings
+        move.b	#1,(f_keycheck).w ; key is earned
 	    tst.b	(f_specials).w    ; did you already enter one to the special stage?
         bne.s	.rings    ; if not, branch
-        move.b	#1,(f_keycheck).w ; key is earned
         move.w 	#sfx_GiantRing,d0
         jmp    	(PlaySound_Special).l    ; play Giant ring sound
 .rings:

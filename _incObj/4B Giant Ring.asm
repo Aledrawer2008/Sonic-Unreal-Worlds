@@ -64,8 +64,8 @@ GRing_Flash:	; Routine 6
 		bne.s	.skip					; if not, branch
 		cmpi.b	#7,(v_emeralds).w
 		beq.s	.skip
-		tst.b	(f_keycheck).w
-		bne.s	.skip
+	;	tst.b	(f_keycheck).w
+	;	beq.s	.skip
 		tst.b	(f_specials).w
 		bne.s	.skip
 		clr.b	(v_player).w		; remove Sonic Object
@@ -85,12 +85,12 @@ GRing_Flash_End:
 		beq.w	Flash_Tutorial
 		cmpi.b	#7,(v_emeralds).w
 		beq.w	.GiveRings
-		tst.b	(f_keycheck).w
-		beq.w	.return
+	;	tst.b	(f_keycheck).w
+	;	beq.w	.return
 		tst.b	(f_specials).w
 		bne.w	.return
 		move.b	#1,(f_specials).w
-        move.b	#id_Special,(v_gamemode).w ; set game mode to Special Stage (10)
+        move.b	#id_Special,(v_gamemode).w ; set game mode to Special Stage (3)
 		rts
 
 .GiveRings:

@@ -269,8 +269,6 @@ Level_MainLoop:
 		bsr.w	OscillateNumDo
 		bsr.w	SynchroAnimate
 		bsr.w	SignpostArtLoad
-		tst.b	(f_specials).w
-		bne.s	.return
 		cmpi.b	#id_Level,(v_gamemode).w
 		beq.w	Level_MainLoop	; if mode is level, branch
 
