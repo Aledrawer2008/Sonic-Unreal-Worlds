@@ -386,7 +386,6 @@ GameInit:
 		jsr	(VDPSetupGame).l
 		jsr	(SoundDriverLoad).l
 		jsr	(JoypadInit).l
-		bsr.w	InitSRAM
 		clr.b	(True_Ending_Flag).w
 		move.b	#id_Sega,(v_gamemode).w ; set Game Mode to Sega Screen
 
