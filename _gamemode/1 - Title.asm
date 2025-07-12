@@ -135,7 +135,6 @@ Tit_LoadText:
 		bsr.w	DeformLayers
 		jsr	(BuildSprites).l
 		clr.w	(v_title_dcount).w
-		clr.w	(v_title_ccount).w
 		move.b	#0,(v_emeralds).w ; clear emeralds
 		move.w	(v_vdp_buffer1).w,d0
 		ori.b	#$40,d0
@@ -168,34 +167,27 @@ Tit_MainLoop:
 		move.w	(v_title_dcount).w,d0
 		adda.w	d0,a0
 		move.b	(v_jpadpress1).w,d0 ; get button press
-		andi.b	#btnDir,d0	; read only UDLR buttons
+		andi.b	#btnDir+btnABC,d0	; read only UDLR buttons
 		cmp.b	(a0),d0		; does button press match the cheat code?
 		bne.s	Tit_ResetCheat	; if not, branch
 		addq.w	#1,(v_title_dcount).w ; next button press
 		tst.b	d0
-		bne.s	Tit_CountC
-		lea	(f_levselcheat).w,a0
-		move.w	(v_title_ccount).w,d1
-		move.b	#1,(a0,d1.w)	; activate cheat
+		bne.s	Tit_MenuLogic
+		move.b	#1,(f_levselcheat).w	; activate cheat
 		move.b	#sfx_Ring,d0	; play ring sound when code is entered
 		bsr.w	PlaySound_Special
-		bra.w	Tit_CountC
+		bra.w	Tit_MenuLogic
 ; ===========================================================================
 
 Tit_ResetCheat:
 		tst.b	d0
-		beq.s	Tit_CountC
+		beq.s	Tit_MenuLogic
 		cmpi.w	#9,(v_title_dcount).w
-		beq.s	Tit_CountC
+		beq.s	Tit_MenuLogic
 		move.w	#0,(v_title_dcount).w ; reset UDLR counter
 
-Tit_CountC:
+Tit_MenuLogic:
 		move.b	(v_jpadpress1).w,d0
-		andi.b	#btnC,d0	; is C button pressed?
-		beq.s	loc_3230	; if not, branch
-		addq.w	#1,(v_title_ccount).w ; increment C counter
-
-loc_3230:
 		andi.b	#btnStart,(v_jpadpress1).w ; check if Start is pressed
 		beq.w	Tit_MainLoop	; if not, branch
 		tst.b	(f_levselcheat).w ; check if level select code is on
@@ -213,7 +205,7 @@ Tit_Index:
 ; Level	select codes
 ; ---------------------------------------------------------------------------
 LevSelect_Code:
-		dc.b btnUp,btnDn,btnL,btnR,0,$FF
+		dc.b btnUp,btnUp,btnDn,btnDn,btnL,btnR,btnL,btnR,btnB,btnA,0,$FF
 		even
 ; ---------------------------------------------------------------------------
 
@@ -222,26 +214,26 @@ GotoTutorial:
 		move.w	#3,(v_zone).w
 		clr.b	(v_save)
 		rts
+
 GoToSaveMenu:
 		move.b	#id_SaveMenu,(v_gamemode).w
 		rts
-
 ; ---------------------------------------------------------------------------
-; Level	Select
+; Level	Select init
 ; ---------------------------------------------------------------------------
 
 LevSelectLoad:
         move.w	#bgm_Fade,d0
-		jsr		(PlaySound_Special).w
-        jsr     PaletteFadeOut
-		   
+		jsr	(PlaySound_Special).w
+        jsr	PaletteFadeOut
+
 		lea	(v_hscrolltablebuffer).w,a1
 		moveq	#0,d0
 		move.w	#$DF,d1
 
-Tit_ClrScroll1:
+LevSel_ClrScroll1:
 		move.l	d0,(a1)+
-		dbf	d1,Tit_ClrScroll1 ; clear scroll data (in RAM)
+		dbf	d1,LevSel_ClrScroll1 ; clear scroll data (in RAM)
 
 		move.l	d0,(v_screenposy_dup).w
 		disable_ints
@@ -249,15 +241,16 @@ Tit_ClrScroll1:
 		locVRAM	$E000
 		move.w	#$3FF,d1
 
-Tit_ClrScroll2:
+LevSel_ClrScroll2:
 		move.l	d0,(a6)
-		dbf	d1,Tit_ClrScroll2 ; clear scroll data (in VRAM)
+		dbf	d1,LevSel_ClrScroll2 ; clear scroll data (in VRAM)
+
         lea    (v_spritetablebuffer).w,a2 ; set address for sprite table
         move.w    #$A0,d5
         
-    Tit_ClrSprites:
+LevSel_ClrSprites:
         move.l    #0,(a2)+
-        dbf.w d5, Tit_ClrSprites
+        dbf.w d5, LevSel_ClrSprites
 
 		moveq	#palid_LevelSel,d0
 		bsr.w	PalLoad1	; load level select palette
@@ -271,7 +264,6 @@ Tit_ClrScroll2:
 
 		copyTilemap    v_256x256&$FFFFFF,$C000,$27,$1B
 
-		
         jsr PaletteFadeIn
 
 		move.b  #bgm_Options,d0
@@ -307,6 +299,7 @@ LevelSelect:
 		beq.s	LevSelBCPress	; if not, branch
 		bra.w	LevelSelect
 ; ===========================================================================
+
 LevSelLevCheckStart:
 		andi.b	#$80,(v_jpadpress1).w ; is Start pressed?
 		beq.s	LevelSelect	; if not, branch
@@ -321,6 +314,7 @@ LevSelStartPress:
 		move.b	#id_Sega,(v_gamemode).w
 		rts
 ; ===========================================================================
+
 LevSel_FreeEmeralds:
 		cmpi.b	#btnStart,(v_jpadpress1).w ; is	Start pressed?
 		bne.w	LevelSelect	; if true, branch
@@ -347,7 +341,6 @@ LevSel_Credits:
 		bsr.w	PlaySound_Special ; play credits music
 		move.w	#0,(v_creditsnum).w
 		rts
-
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
 ; Level	select - level pointers

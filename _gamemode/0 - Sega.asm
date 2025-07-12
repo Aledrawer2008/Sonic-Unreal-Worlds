@@ -46,15 +46,16 @@ GM_Sega:
         bsr.w   EniDec
 		copyTilemap	$FF0000,$C000,$27,$1B
         moveq   #palid_SegaBG,d0
-        bsr.w   PalLoad2
+        bsr.w   PalLoad1
         move.w  #$28,(v_pcyc_num).w
         move.w  #0,(f_echallenge).w
         move.w  #$B4,(v_demolength).w
         move.w  (v_vdp_buffer1).w,d0
         ori.b   #$40,d0
         move.w  d0,(vdp_control_port).l
-		move.b	#dSega,d0   ; play Sega scream
-		jsr	MegaPCM_PlaySample
+        jsr PaletteFadeIn
+		move.b	#dSega,d0
+		jsr	(MegaPCM_PlaySample).l  ; play Sega scream
 
 .mainloop:
 		move.b	#2,(v_vbla_routine).w
@@ -62,10 +63,15 @@ GM_Sega:
         bsr.w   PalCycle_SEGA
         tst.w   (v_demolength).w
         beq.s   .return
-		andi.b	#$80,(v_jpadpress1).w ; is Start button pressed?
+		andi.b	#btnStart,(v_jpadpress1).w ; is Start button pressed?
         beq.s   .mainloop
 
 .return:
+		move.b	#bgm_Stop,d0
+		bsr.w	PlaySound_Special ; stop music
+		bsr.w	ClearPLC
+        bsr.w   PaletteFadeOut
+		jsr	(SHC_RunSplash).l
 		move.b	#id_Encore,(v_gamemode).w	; go to Team Encore Screen
         rts
 

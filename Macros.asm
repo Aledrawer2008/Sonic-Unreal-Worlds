@@ -280,11 +280,11 @@ out_of_range:	macro exit,pos
 ; ---------------------------------------------------------------------------
 
 gotoSRAM:	macro
-		move.b  #1,($A130F1).l
+		move.b  #1,(sram_port).l
 		endm
 
 gotoROM:	macro
-		move.b  #0,($A130F1).l
+		move.b  #0,(sram_port).l
 		endm
 
 ; ---------------------------------------------------------------------------

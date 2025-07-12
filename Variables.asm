@@ -20,9 +20,11 @@ VDP_Command_Buffer_Slot    equ    VDP_Command_Buffer+7*$12*2
 v_tracksonic	= ramaddr ( $FFFFCB00 )	; position tracking data for Sonic ($100 bytes)
 v_hscrolltablebuffer	= ramaddr ( $FFFFCC00 )	; scrolling table data (actually $380 bytes, but $400 is reserved for it)
 v_objspace	= ramaddr ( $FFFFD000 )	; object variable space ($40 bytes per object) ($2000 bytes)
+
 ; Team Encore screen objects
 v_oring		    = v_objspace+object_size*1	; object variable space for "O" ring ($40 bytes)
 v_flame	        = v_objspace+object_size*2	; object variable space for the flame in the monitor ($40 bytes)
+
 ; Title screen objects
 v_sonicteam		= v_objspace+object_size*2	; object variable space for the "SONIC TEAM PRESENTS" text ($40 bytes)
 v_titlesonic	= v_objspace+object_size*1	; object variable space for Sonic in the title screen ($40 bytes)
@@ -346,7 +348,6 @@ f_slomocheat	= ramaddr ( $FFFFFFE1 )	; slow motion & frame advance cheat flag
 f_debugcheat	= ramaddr ( $FFFFFFE2 )	; debug mode cheat flag
 f_creditscheat	= ramaddr ( $FFFFFFE3 )	; hidden credits & press start cheat flag
 v_title_dcount	= ramaddr ( $FFFFFFE4 )	; number of times the d-pad is pressed on title screen (2 bytes)
-v_title_ccount	= ramaddr ( $FFFFFFE6 )	; number of times C is pressed on title screen (2 bytes)
 
 v_demonum	= ramaddr ( $FFFFFFF2 )	; demo level number (not the same as the level number) (2 bytes)
 v_creditsnum	= ramaddr ( $FFFFFFF4 )	; credits index number (2 bytes)
@@ -364,9 +365,9 @@ Palette_timer   = 	f_supersonic+4
 super_framecount =	f_supersonic+5
 Title_screen_option =   $FFFFF5C6
 v_character     =   $FFFFF5C8
-f_specials      = 	$FFFFF601   ; Special Stage flag
-f_keycheck      = 	$FFFFF606   ; special stage key flag
-titleMode =	$FFFFF607
+f_specials      =	$FFFFF601   ; Special Stage flag
+f_keycheck      =	$FFFFF606   ; special stage key flag
+titleMode       =	$FFFFF607
 pal_wateradd    =   $FFFFF608
 pal_watersub    =   $FFFFF60A
 Saved_music     = 	$FFFFF613   ; Variable for the new music system
@@ -382,7 +383,7 @@ v_spindashsfx1	= 	$FFFFFEA0
 v_spindashsfx2	= 	v_spindashsfx1+1
 v_spindashsfx3	= 	v_spindashsfx1+2
 True_Ending_Flag =  $FFFFFFF0	; flag for the True ending
-VBlank_MusicOnly	=	$FFFFF5D9
+VBlank_MusicOnly =	$FFFFF5D9
 
 v_save			=	$FFFFFFFE
 ; reused from level select

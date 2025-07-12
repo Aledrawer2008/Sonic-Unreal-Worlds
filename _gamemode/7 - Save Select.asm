@@ -155,8 +155,15 @@ SaveMenu_DeleteSave:
 		lsl.w	#4,d1
 		add.w	d1,a0
 		tst.b	sr_save(a0)
-		beq.s	.nope
-		move.b	#0,sr_save(a0)
+		beq.w	.nope
+		moveq	#0,d0						; Clear default values
+		move.b	d0,sr_save(a0)
+		movep.w	d0,sr_zone(a0)				; clear saved zone and act
+		move.b	d0,sr_char(a0)				; clear saved character
+		move.b	d0,sr_life(a0)				; clear saved lives count
+		move.b	d0,sr_cont(a0)				; clear saved continues
+		movep.w	d0,sr_emer(a0)				; clear saved emerald count and bitfield
+		move.b	d0,sr_lspe(a0)				; clear saved lives count
 		gotoROM
 		
 		move.w	#sfx_BreakItem,d0
@@ -264,13 +271,14 @@ SaveMenu_RenderSingle:
 		move.w	d3,d0
 		lea SaveMenu_TxtNoSave(pc),a5
 		jmp	(TextGenerate).l ; generate delete save
-SaveMenu_TxtSave: dc.b 'SAVE ',0
+
+SaveMenu_TxtSave:	dc.b 'SAVE ',0
 		even
-SaveMenu_TxtAvailable: dc.b '< EMPTY',0
+SaveMenu_TxtEmpty:	dc.b '< EMPTY',0
 		even
 
 SaveMenu_ChgEmpty:
-		lea SaveMenu_TxtAvailable(pc),a5
+		lea SaveMenu_TxtEmpty(pc),a5
 		jsr	(TextGenerate).l ; generate empty
 		addi.l	#$1000000,d4			; jump 2 lines
 		rts
@@ -338,6 +346,7 @@ SaveMenu_ChgSave:
 		
 		addi.l	#$800000,d4			; jump a line
 		rts
+
 SaveMenu_TxtCont: dc.b ' CONTINUES:',0
 	even
 
@@ -357,6 +366,7 @@ NumeralGenerate:
 		move.w	d2,(a6)
 		move.w	d0,(a6)
 		rts
+
 TextTableGenerate:
 		moveq	#0,d0
 		
@@ -366,6 +376,7 @@ TextTableGenerate:
 		add.w	d0,a5
 		move.w	d3,d0
 		jmp	(TextGenerate).l ; generate zone name
+
 SaveMenu_TxtZones: 
 		dc.b	0
 		dc.b	(.hydropalace-.start)/2

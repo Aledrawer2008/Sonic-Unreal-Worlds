@@ -157,10 +157,7 @@ loc_6EB0:
 
 loc_6ED0:
 		move.w	#bgm_EGG,d0
-		tst.b	(v_character).w
-		beq.s	.skip
-		move.b	#bgm_EGG2,d0
-.skip:
+		add.b	(v_character).w,d0
 		jsr	PlaySound	; play boss music
 		move.b	#1,(f_lockscreen).w ; lock screen
 		addq.b	#2,(v_dle_routine).w
@@ -241,10 +238,7 @@ loc_6F28:
 
 loc_6F4A:
 		move.w	#bgm_EGG,d0
-		tst.b	(v_character).w
-		beq.s	.skip
-		move.b	#bgm_EGG2,d0
-.skip:
+		add.b	(v_character).w,d0
 		jsr	PlaySound	; play boss music
 		move.b	#1,(f_lockscreen).w ; lock screen
 		addq.b	#2,(v_dle_routine).w
@@ -418,10 +412,7 @@ DLE_MZ3:
 
 loc_70D0:
 		move.w	#bgm_EGG,d0
-		tst.b	(v_character).w
-		beq.s	.skip
-		move.b	#bgm_EGG2,d0
-.skip:
+		add.b	(v_character).w,d0
 		jsr	PlaySound	; play boss music
 		move.b	#1,(f_lockscreen).w ; lock screen
 		addq.b	#2,(v_dle_routine).w
@@ -505,10 +496,7 @@ DLE_SLZ3boss:
 
 loc_7144:
 		move.w	#bgm_EGG,d0
-		tst.b	(v_character).w
-		beq.s	.skip
-		move.b	#bgm_EGG2,d0
-.skip:
+		add.b	(v_character).w,d0
 		jsr	PlaySound	; play boss music
 		move.b	#1,(f_lockscreen).w ; lock screen
 		addq.b	#2,(v_dle_routine).w
@@ -595,10 +583,7 @@ DLE_SYZ3boss:
 
 loc_71EC:
 		move.w	#bgm_EGG,d0
-		tst.b	(v_character).w
-		beq.s	.skip
-		move.b	#bgm_EGG2,d0
-.skip:
+		add.b	(v_character).w,d0
 		jsr	PlaySound	; play boss music
 		move.b	#1,(f_lockscreen).w ; lock screen
 		moveq	#plcid_Boss,d0

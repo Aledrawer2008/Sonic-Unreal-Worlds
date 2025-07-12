@@ -22,6 +22,7 @@ Music:
    - "Cinossu"       for the Special Stages song
    - "Dewmer Dewar"  (In youtube) for the BTZ1 and SPZ1 songs
    - "JX"            (In youtube) for the drowning and UBZ songs
+   - "ConiNight"     for the Super Amy Theme
     
     Used Programs
    - SonMapEd by Xenowhirl and ClownMapEd for edit Sprites

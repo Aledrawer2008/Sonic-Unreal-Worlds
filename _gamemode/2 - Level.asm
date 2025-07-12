@@ -70,9 +70,9 @@ Level_ClrObjRam:
 		move.l	d0,(a1)+
 		dbf	d1,Level_ClrObjRam ; clear object RAM
 
-		clr.b    (f_keycheck).w    ; key is redeemed
+		clr.b	(f_keycheck).w    ; key is redeemed
 		clr.b	(f_echallenge)
-		clr.b   (f_victorypose)
+		clr.b	(f_victorypose)
 		lea	(v_pfade_size+1).w,a1
 		moveq	#0,d0
 		move.w	#$15,d1
@@ -216,7 +216,6 @@ Level_SkipClr:
 		move.b	d0,(v_shield).w	; clear shield
 		move.b	d0,(v_invinc).w	; clear invincibility
 		move.b	d0,(v_shoes).w	; clear speed shoes
-		move.b	d0,($FFFFFE2F).w
 		move.w	d0,(v_debuguse).w
 		move.b	d0,(f_restart).w
 		move.w	d0,(v_framecount).w

@@ -39,7 +39,7 @@ loc_134C4:
 		cmpi.b	#id_Shrink,obAnim(a0)
 		beq.s   locret_134D2
 		cmpi.b	#id_Warp,obAnim(a0)
-		bne.s   locret_134D2
+		beq.s   locret_134D2
 		move.b  #id_Surf,obAnim(a0)
 		cmpi.w	#-$FC0,obVelY(a0)
 		bge.s	locret_134D2
@@ -97,6 +97,7 @@ Sonic_CheckGoSuper:
 		cmpi.w	#$502,(v_zone).w
 		beq.s	return_1ABA4
 		move.w	#bgm_SuperTheme,d0
+		add.b	(v_character).w,d0
 		jmp	(PlaySound).l	; load the super theme
 
 ; ---------------------------------------------------------------------------

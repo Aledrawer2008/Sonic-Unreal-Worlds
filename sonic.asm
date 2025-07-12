@@ -89,7 +89,7 @@ Vectors:	dc.l v_systemstack&$FFFFFF	; Initial stack pointer value
 
 		dc.b "SEGA MEGA DRIVE " ; Hardware system ID (Console name)
 Date:
-		dc.b '(C)SEGA 2025.FEB' ; Release date
+		dc.b '(C)SEGA 2025.JUL' ; Release date
 		dc.b 'SONIC X AMY: TWISTED JOURNEY 2.2                ' ; Domestic name
 		dc.b 'SONIC: UNREAL WORLDS VERSION 2.2                ' ; International name
 		dc.b "GM 00004049-01" ; Serial/version number (Rev non-0)
@@ -102,7 +102,7 @@ RomEndLoc:	dc.l EndOfRom-1		; End address of ROM
 		dc.l $FFFFFF		; End address of RAM
 		dc.b $52, $41, $A0+(1<<6)+(3<<3), $20 ; SRAM support
 		dc.l $200001		; SRAM start ($200001)
-		dc.l $200090		; SRAM end ($20xxxx)
+		dc.l $2001FF		; SRAM end ($20xxxx)
 		dc.b "                                                    " ; Notes (unused, anything can be put in this space, but it has to be 52 bytes.)
 		dc.b "JUE             " ; Region (Country code)
 EndOfHeader:
@@ -271,76 +271,6 @@ zStartupCodeEndLoc:
 
 		dc.b $9F, $BF, $DF, $FF	; values for PSG channel volumes
 
-SaveTxt_Late:	dc.b "NEWER VERSION SAVE WILL BE ERASED",0
-	even
-SaveTxt_None:	dc.b "NO SAVE FOUND CREATING NEW ONE",0
-	even
-SaveTxt_Old:	dc.b "UPDATING SAVE TO CURRENT VERSION",0
-	even
-SaveTxt_Warning:	dc.b "WARNING",0
-	even
-SaveTxt_Press:	dc.b "PRESS ANYTHING TO CONTINUE",0
-	even
-SaveTxt_LOL:	dc.b "EXCEPT FOR THE RESET AND POWER BUTTON",0
-	even
-
-SaveWarning:
-		gotoROM
-		; Configure Palette
-		move.w	#$0C00,(v_pal_dry_dup+2).w 		; color 1	palette 1
-		move.l	#$0EEE0CAA,(v_pal_dry_dup+$C).w ; color 5/6	palette 1
-		
-		move.w	#$0046,(v_pal_dry_dup+$22).w 		; color 1	palette 2
-		move.l	#$00EE008A,(v_pal_dry_dup+$2C).w 	; color 5/6 palette 2
-	
-		move.w	#$0200,(v_pal_dry_dup+$42).w 		; color 1	palette 3
-		move.l	#$04000200,(v_pal_dry_dup+$4C).w 	; color 5/6 palette 3
-		
-		lea	(Art_Text).l,a5	; load level select font
-		lea	(vdp_data_port).l,a6
-		move.w	#$8170,4(a6)
-		
-		move.w	#(40*$8)-1,d1
-		locVRAM	$D000,4(a6)
-.font:
-		move.l	(a5)+,(a6)
-		dbf	d1,.font	; load level select font
-		
-		lea SaveTxt_Warning(pc),a5
-		
-		locVRAM	($C000+($80*1)+(2*1)),4(a6) ; y x
-		moveq	#0,d0
-		add.w	#$2600,d0
-		bsr.s	TextGenerate
-		
-		movea.l	d6,a5
-		
-		locVRAM	($C000+($80*3)+(2*2)),4(a6) ; y x
-		move.w	#$600,d0
-		bsr.s	TextGenerate
-		
-		lea SaveTxt_Press(pc),a5
-		
-		locVRAM	($C000+($80*26)+(2*7)),4(a6) ; y x
-		move.w	#$600,d0
-		bsr.s	TextGenerate
-		
-		lea SaveTxt_LOL(pc),a5
-		
-		locVRAM	($C000+($80*27)+(2*2)),4(a6) ; y x
-		move.w	#$C600,d0
-		bsr.s	TextGenerate
-		
-		bsr.w	PaletteFadeIn
-.loop:
-		move.b	#2,(v_vbla_routine).w
-		bsr.w	WaitForVBla
-		tst.b	(v_jpadpress1)
-		beq.s	.loop
-		
-		gotoSRAM
-		lea ($200001).l,a0		; Load SRAM memory into a0
-		rts
 TextGenerate:
 		move.b (a5)+,d0
 		cmpi.b    #$30,d0    ; Check for $40 
@@ -367,6 +297,7 @@ GameProgram:
 		lea	(v_crossresetram).w,a6
 		moveq	#0,d7
 		move.w	#(v_ram_end-v_crossresetram)/4-1,d6
+
 .clearRAM:
 		move.l	d7,(a6)+
 		dbf	d6,.clearRAM	; clear RAM ($FE00-$FFFF)
@@ -379,6 +310,7 @@ GameInit:
 		lea	($FF0000).l,a6
 		moveq	#0,d7
 		move.w	#$3F7F,d6
+
 .clearRAM:
 		move.l	d7,(a6)+
 		dbf	d6,.clearRAM	; clear RAM ($0000-$FDFF)
@@ -390,45 +322,47 @@ GameInit:
 		move.b	#id_Sega,(v_gamemode).w ; set Game Mode to Sega Screen
 
 InitSRAM:
-        gotoSRAM
-        lea ($200001).l,a0		; Load SRAM memory into a0
-        movep.l sr_suw(a0),d0	; Get the existing string at the start of SRAM
-        move.l  #"SUWV",d1		; Write the string "SUWV" to d1
-        cmp.l   d0,d1			; Was it already in SRAM?
-        beq.s   .save_is_ok		; If so, skip
-        movep.l d1,sr_suw(a0)	; Write string "SUWV"
+		gotoSRAM							; Enable SRAM writing
+		lea 	($200001).l,a0				; Load SRAM memory into a0
 
-		move.l	#SaveTxt_None,d6
-		bsr.w	SaveWarning
-.redo_save:
-        ; SRAM Initialize
-		move.w	#1,d1
-		movep.w d1,sr_ver(a0)	; Write version
-		
-		move.w	#8-1,d0 ; there are 8 saves
-		adda.w	#sr_header_end,a0
-	.clr_saves:
-		move.b	#0,(a0)		; clear save flag
+		; Check for SRAM signature
+		movep.l sr_suw(a0),d0				; Get the existing string at the start of SRAM
+		move.l  #"SUWS",d1					; Load "SUWS" signature (it means "Sonic Unreal World's Saves")
+		cmp.l   d0,d1						; Compare with existing data
+		beq.s   .skipInit					; If it matches, skip initialization
+		movep.l d1,sr_suw(a0)				; Write string "SUWS"
+		; Write and verify "SUWS" signature
+		movep.l	d1,sr_suw(a0)				; Write string "SUWS"
+		movep.l	sr_suw(a0),d0				; Read back for verification
+		cmp.l	d0,d1						; Compare written value
+		beq.s	.skipInit					; Branch if verification is correct
+		move.b	#id_SRAMError,(v_gamemode)	; otherwise, set Game Mode to SRAM Error Screen
+
+	.skipInit:
+		; Here is where you initialize values like lives or level.
+		; If you're using word or long values, you can only use every other byte.
+		; Example - 8(a0) => $A(a0)
+		lea	sr_header_end(a0),a0		; Base of usable SRAM
+
+		; Clear SRAM and avoid reading garbage data
+		moveq	#8-1,d1
+
+.clearSRAM:
+		tst.b	sr_save(a0)					; Check initialization flag
+		bne.s	.skipSRAM					; If not initialized, branch to skip
+		moveq	#0,d0						; Clear default values
+		move.b	d0,sr_save(a0)
+		movep.w	d0,sr_zone(a0)				; clear saved zone and act
+		move.b	d0,sr_char(a0)				; clear saved character
+		move.b	d0,sr_life(a0)				; clear saved lives count
+		move.b	d0,sr_cont(a0)				; clear saved continues
+		movep.w	d0,sr_emer(a0)				; clear saved emerald count and bitfield
+		move.b	d0,sr_lspe(a0)				; clear saved lives count
+
+	.skipSRAM:
 		adda.w	#sr_size,a0
-		dbf.w	d0,.clr_saves
-		bra.s	.save_is_ok
-.checkver:
-		movep.w	sr_ver(a0),d0
-		move.w	#1,d1
-		cmp.w   d1,d0
-		beq.s	.save_is_ok
-		bgt.s	.uncompatible
-		
-		move.l	#SaveTxt_Old,d6
-		bsr.w	SaveWarning
-		; there are no past version to convert so we kill the save for now
-		bra.s	.redo_save
-.uncompatible:
-		move.l	#SaveTxt_Late,d6
-		bsr.w	SaveWarning
-		bra.s	.redo_save
-.save_is_ok:
-        gotoROM
+		dbf	d1,.clearSRAM
+        gotoROM								; Disable SRAM writing
 ; ===============================================================================
 
 MainGameLoop:
@@ -440,16 +374,16 @@ MainGameLoop:
 		bra.s MainGameLoop
 ; ===============================================================================
 ; Game modes
-id_Sega		equ	$0
-id_Title	equ	$1
-id_Level	equ	$2
-id_Special	equ	$3
-id_Continue	equ	$4
-id_Ending	equ	$5
-id_Credits	equ	$6
-id_SaveMenu	equ	$7
-id_Secret	equ	$8
-id_Encore	equ	$9
+id_Sega			equ	$0
+id_Title		equ	$1
+id_Level		equ	$2
+id_Special		equ	$3
+id_Continue		equ	$4
+id_Ending		equ	$5
+id_Credits		equ	$6
+id_SaveMenu		equ	$7
+id_SRAMError	equ	$8
+id_Encore		equ	$9
 
 GameModeArray:
 		dc.l GM_Sega
@@ -460,12 +394,12 @@ GameModeArray:
 		dc.l GM_Ending
 		dc.l GM_Credits
 		dc.l GM_SaveMenu
-		dc.l GM_Secret
+		dc.l GM_SRAMError
 		dc.l GM_Encore
 ; ===========================================================================
 
-Art_Text:	binclude	"artunc/menutext.bin" ; text used in level select and debug mode
-		even
+Art_Text:		binclude	"artunc/menutext.bin" ; text used in level select and debug mode
+Art_Text_End:	even
 
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
@@ -1860,7 +1794,6 @@ Pal_Ending:	binclude	"palette/Ending.bin"
 Pal_BZ:		binclude	"palette/Tutorial Zone.bin"
 Pal_UBZ:	binclude	"palette/Unreal Battle Zone.bin"
 Pal_TAZ:	binclude	"palette/Train Assault Zone.bin"
-Pal_Warning:	binclude	"palette/Save Warning.bin"
 
 ; ---------------------------------------------------------------------------
 ; Subroutine to	wait for VBlank routines to complete
@@ -1882,6 +1815,7 @@ WaitForVBla:
 		include	"_incObj/sub CalcSine.asm"
 		include	"_incObj/sub CalcAngle.asm"
 
+		include	"_gamemode/8 - SRAM Error Screen.asm"
 		include	"_gamemode/0 - Sega.asm"
 		include	"_gamemode/9 - Team Encore.asm"
 		include	"_gamemode/1 - Title.asm"
@@ -2101,8 +2035,6 @@ Map_ECha:	include	"_maps/Ending Sequence Emeralds.asm"
 		include "_anim/Try Again & End Eggman.asm"
 		include	"_incObj/8C Try Again Emeralds.asm"
 Map_EEgg:	include	"_maps/Try Again & End Eggman.asm"
-
-		include	"_gamemode/8 - Secret Screen.asm"
 
 		include	"_inc/LevelSizeLoad & BgScrollSpeed (JP1).asm"
 		include	"_inc/DeformLayers (JP1).asm"
@@ -4587,13 +4519,14 @@ ResumeMusic:
 .notinvinc:
 		tst.b	(f_lockscreen).w ; is Sonic at a boss?
 		beq.s	.playselected ; if not, branch
-		move.w	#bgm_EGG2,d0
+		move.w	#bgm_EGG,d0
+		add.b	(v_character).w,d0
 .playselected:
 		jsr	(PlaySound).l
 
 .over12:
 		move.w	#30,(v_air).w	; reset air to 30 seconds
-		clr.b	(v_objspace+$340+$32).w
+		clr.b	(v_sonicbubbles+$32).w
 		rts	
 ; End of function ResumeMusic
 
@@ -5781,10 +5714,10 @@ SS_StartLoc:	include	"_inc/Start Location Array - Special Stages.asm"
 SS_Load:
 		moveq	#0,d0
 		move.b	(v_lastspecial).w,d0 ; load number of last special stage entered
-		cmpi.b	#7,d0
-		bcs.s	SS_ChkEmldNum					; We don't increment here (This will instead be done in Obj09)
-		move.b	#0,d0
-		move.b	d0,(v_lastspecial).w			; reset if higher than 7
+		addq.b	#1,(v_lastspecial).w			; increment, as we are entering a special stage
+		cmpi.b	#7,(v_lastspecial).w
+		blo.s	SS_ChkEmldNum
+		clr.b	(v_lastspecial).w				; reset if higher than 6/7 (emldCount)
 
 SS_ChkEmldNum:
 		cmpi.b	#7,(v_emeralds).w ; do you have all emeralds?
@@ -5793,7 +5726,8 @@ SS_ChkEmldNum:
 		move.b	(v_emeralds).w,d1
 		subq.b	#1,d1
 		blo.s	SS_LoadData
-		lea	(v_emldlist).w,a3 ; check which emeralds you have	
+		lea	(v_emldlist).w,a3 ; check which emeralds you have
+
 		btst	d0,d1							; Did you get this emerald?
 		beq.s	SS_LoadData						; if not, branch
 		bra.s	SS_Load							; infinite loop if emerald is already obtained
@@ -6010,19 +5944,21 @@ SprAmyDynPLC:	include	"_maps/Super Amy - Dynamic Gfx Script.asm"
 ; ---------------------------------------------------------------------------
 ; Uncompressed graphics	- characters
 ; ---------------------------------------------------------------------------
-		align $20000
-Art_Sonic:	binclude	"artunc/Sonic.bin"	; Sonic
+Art_Sonic:
+		binclude	"artunc/Sonic.bin"	; Sonic
 		even
-Art_SuperSonic:	binclude	"artunc/Super Sonic.bin"; Super Sonic
-		align $20000
-Art_Amy:	binclude	"artunc/Amy.bin"	; Amy
+Art_SuperSonic:
+		binclude	"artunc/Super Sonic.bin"; Super Sonic
 		even
-Art_SuperAmy:	binclude	"artunc/Super Amy.bin"	; Super Amy
+Art_Amy:
+		binclude	"artunc/Amy.bin"	; Amy
+		even
+Art_SuperAmy:
+		binclude	"artunc/Super Amy.bin"	; Super Amy
 		even
 ; ---------------------------------------------------------------------------
 ; Uncompressed graphics - various
 ; ---------------------------------------------------------------------------
-		align $20000
 Art_Dust:
 		binclude	"artunc/spindust.bin" ; Spindash dust
 		even

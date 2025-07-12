@@ -1,5 +1,5 @@
 ; ---------------------------------------------------------------------------
-; Object 09 - Sonic (special stage)
+; Object 09 - Player in special stage
 ; ---------------------------------------------------------------------------
 
 SonicSpecial:
@@ -520,7 +520,6 @@ Obj09_GetEmer2:
 		bset	d4,(v_emldlist).w			; set the appropriate bit in the emerald bitfield
 		addq.b	#1,(v_emeralds).w			; add 1 to number of emeralds
 
-		addq.b	#1,(v_lastspecial).w		; increment SS index
 		clr.b	(f_timecount).w	; stop the time counter
         bra.s    Obj09_NoEmer
 ; ===========================================================================
@@ -542,7 +541,6 @@ Obj09_GetEmer:
 		bset	d4,(v_emldlist).w			; set the appropriate bit in the emerald bitfield
 		addq.b	#1,(v_emeralds).w			; add 1 to number of emeralds
 
-		addq.b	#1,(v_lastspecial).w		; increment SS index
 		clr.b	(f_timecount).w	; stop the time counter
 
 Obj09_NoEmer:

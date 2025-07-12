@@ -25,14 +25,12 @@ ym2612_a1:		    equ $A04002
 ym2612_d1:		    equ $A04003
 
 sram_port:			equ $A130F1
-
 security_addr:		equ $A14000
 
 ; SRAM
 sr_suw	= $00 				; text to indicate sonic unreal worlds save
-sr_ver	= $08 				; version number
-sr_header_end = $0C
-; end of header ($0C)
+sr_header_end = $0A
+; end of header ($0A)
 sr_save	= $00				; flag to check if there is a save present
 sr_zone = $02				; zone & act (2 bytes)
 sr_act 	= $04
@@ -48,7 +46,7 @@ sr_size = $12				; size of each save
 ; VRAM data
 vram_fg:	    equ $C000	; foreground namespace
 vram_bg:	    equ $E000	; background namespace
-vram_sonic:	    equ $F000	; Sonic graphics
+vram_sonic:	    equ $F000	; the characters' graphics
 vram_sprites:	equ $F800	; sprite table
 vram_hscroll:	equ $FC00	; horizontal scroll table
 tile_size:		equ 8*8/2
@@ -76,16 +74,16 @@ cAqua:		equ cGreen+cBlue	; colour aqua
 cMagenta:	equ cBlue+cRed		; colour magenta
 
 ; Joypad input
-btnStart:	equ %10000000 ; Start button ($80)
-btnA:		equ %01000000 ; A ($40)
-btnC:		equ %00100000 ; C ($20)
-btnB:		equ %00010000 ; B ($10)
-btnR:		equ %00001000 ; Right ($08)
-btnL:		equ %00000100 ; Left ($04)
-btnDn:		equ %00000010 ; Down ($02)
-btnUp:		equ %00000001 ; Up ($01)
-btnDir:		equ %00001111 ; Any direction ($0F)
-btnABC:		equ %01110000 ; A, B or C ($70)
+btnStart:	equ %10000000 ; Start button    ($80)
+btnA:		equ %01000000 ; A               ($40)
+btnC:		equ %00100000 ; C               ($20)
+btnB:		equ %00010000 ; B               ($10)
+btnR:		equ %00001000 ; Right           ($08)
+btnL:		equ %00000100 ; Left            ($04)
+btnDn:		equ %00000010 ; Down            ($02)
+btnUp:		equ %00000001 ; Up              ($01)
+btnDir:		equ %00001111 ; Any direction   ($0F)
+btnABC:		equ %01110000 ; A, B or C       ($70)
 bitStart:	equ 7
 bitA:		equ 6
 bitC:		equ 5

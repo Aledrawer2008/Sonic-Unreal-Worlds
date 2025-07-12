@@ -108,8 +108,8 @@ FlgID__End			= flg__Last+1
 ; ---MUSIC CONSTANTS---
 MusID_ExtraLife		= bgm_ExtraLife
 ;	| ID of your Extra Life jingle
-MusID_ExtraLifeAlt		= bgm_ExtraLifeAmy
-;	| ID of your Extra Life jingle
+MusID_ExtraLifeAlt		= bgm_ExtraLifeB
+;	| ID of your additional Extra Life jingle
 ;
 
 ; ---SFX CONSTANTS---
