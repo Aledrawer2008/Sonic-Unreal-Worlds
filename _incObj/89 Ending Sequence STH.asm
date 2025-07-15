@@ -55,6 +55,8 @@ TFB_HeadMain:
 		move.b	ob2ndRout(a0),d0
 		move.w	.subindex(pc,d0.w),d1
 		jsr	.subindex(pc,d1.w)
+		move.w	#$100,obVelX(a0) ; move ship down
+		jsr	(BossMove).l
 		lea	(Ani_EggPhantom).l,a1
 		jsr	(AnimateSprite).l
 		jmp	(DisplaySprite).l

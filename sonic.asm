@@ -89,10 +89,10 @@ Vectors:	dc.l v_systemstack&$FFFFFF	; Initial stack pointer value
 
 		dc.b "SEGA MEGA DRIVE " ; Hardware system ID (Console name)
 Date:
-		dc.b '(C)SEGA 2025.JUL' ; Release date
-		dc.b 'SONIC X AMY: TWISTED JOURNEY 2.2                ' ; Domestic name
-		dc.b 'SONIC: UNREAL WORLDS VERSION 2.2                ' ; International name
-		dc.b "GM 00004049-01" ; Serial/version number (Rev non-0)
+		dc.b '(C)SEGA 2025.OCT' ; Release date
+		dc.b 'SONIC X AMY: TWISTED JOURNEY 2.2 (SHC DEMO)     ' ; Domestic name
+		dc.b 'SONIC: UNREAL WORLDS VERSION 2.2 (SHC DEMO)     ' ; International name
+		dc.b "GM 00004049-01" ; Serial/version number
 Checksum:
 		dc.w $AFC7
 		dc.b "J               " ; I/O support
@@ -101,8 +101,8 @@ RomEndLoc:	dc.l EndOfRom-1		; End address of ROM
 		dc.l $FF0000		; Start address of RAM
 		dc.l $FFFFFF		; End address of RAM
 		dc.b $52, $41, $A0+(1<<6)+(3<<3), $20 ; SRAM support
-		dc.l $200001		; SRAM start ($200001)
-		dc.l $2001FF		; SRAM end ($20xxxx)
+		dc.l $200001		; SRAM start	($200001)
+		dc.l $2001FF		; SRAM end		($20xxxx)
 		dc.b "                                                    " ; Notes (unused, anything can be put in this space, but it has to be 52 bytes.)
 		dc.b "JUE             " ; Region (Country code)
 EndOfHeader:
@@ -322,23 +322,24 @@ GameInit:
 		move.b	#id_Sega,(v_gamemode).w ; set Game Mode to Sega Screen
 
 InitSRAM:
-		gotoSRAM							; Enable SRAM writing
-		lea 	($200001).l,a0				; Load SRAM memory into a0
+		SRAMBank	; Enable SRAM writing
+		lea 	($200001).l,a0	; Load SRAM memory into a0
 
 		; Check for SRAM signature
-		movep.l sr_suw(a0),d0				; Get the existing string at the start of SRAM
-		move.l  #"SUWS",d1					; Load "SUWS" signature (it means "Sonic Unreal World's Saves")
-		cmp.l   d0,d1						; Compare with existing data
-		beq.s   .skipInit					; If it matches, skip initialization
-		movep.l d1,sr_suw(a0)				; Write string "SUWS"
+		movep.l sr_suw(a0),d0	; Get the existing string at the start of SRAM
+		move.l  #"SUWS",d1	; Load "SUWS" signature (it means "Sonic Unreal World's Saves")
+		cmp.l   d0,d1	; Compare with existing data
+		beq.s   .skipError	; If it matches, skip initialization
+		movep.l d1,sr_suw(a0)	; Write string "SUWS"
 		; Write and verify "SUWS" signature
-		movep.l	d1,sr_suw(a0)				; Write string "SUWS"
-		movep.l	sr_suw(a0),d0				; Read back for verification
-		cmp.l	d0,d1						; Compare written value
-		beq.s	.skipInit					; Branch if verification is correct
+		movep.l	d1,sr_suw(a0)	; Write string "SUWS"
+		movep.l	sr_suw(a0),d0	; Read back for verification
+		cmp.l	d0,d1	; Compare written value
+		beq.s	.skipError	; Branch if verification is correct
 		move.b	#id_SRAMError,(v_gamemode)	; otherwise, set Game Mode to SRAM Error Screen
+		bra.w	MainGameLoop	; And continue with the Game Loop
 
-	.skipInit:
+	.skipError:
 		; Here is where you initialize values like lives or level.
 		; If you're using word or long values, you can only use every other byte.
 		; Example - 8(a0) => $A(a0)
@@ -348,10 +349,9 @@ InitSRAM:
 		moveq	#8-1,d1
 
 .clearSRAM:
-		tst.b	sr_save(a0)					; Check initialization flag
-		bne.s	.skipSRAM					; If not initialized, branch to skip
+		tst.b	sr_save(a0)					; Check save flag
+		bne.s	.skipSRAM					; If not saved, branch to skip
 		moveq	#0,d0						; Clear default values
-		move.b	d0,sr_save(a0)
 		movep.w	d0,sr_zone(a0)				; clear saved zone and act
 		move.b	d0,sr_char(a0)				; clear saved character
 		move.b	d0,sr_life(a0)				; clear saved lives count
@@ -362,7 +362,7 @@ InitSRAM:
 	.skipSRAM:
 		adda.w	#sr_size,a0
 		dbf	d1,.clearSRAM
-        gotoROM								; Disable SRAM writing
+		ROMBank	; Disable SRAM writing
 ; ===============================================================================
 
 MainGameLoop:
@@ -444,12 +444,12 @@ VBla_Index:	dc.w VBla_00-VBla_Index, VBla_02-VBla_Index
 		dc.w VBla_0C-VBla_Index, VBla_0E-VBla_Index
 		dc.w VBla_10-VBla_Index, VBla_12-VBla_Index
 		dc.w VBla_14-VBla_Index, VBla_16-VBla_Index
-		dc.w VBla_0C-VBla_Index, VBla_1A-VBla_Index
+		dc.w VBla_0C-VBla_Index
 ; ===========================================================================
 
 VBla_00:
-		cmpi.b	#$80+id_Level,(v_gamemode).w
-		beq.s	.islevel
+		btst	#7,(PreLevel_Flag).w
+		bne.s	.islevel
 		cmpi.b	#id_Level,(v_gamemode).w ; is game on a level?
 		bne.w	VBla_Exit	; if not, branch
 
@@ -502,28 +502,6 @@ VBla_04:
 
 .end:
 		rts	
-; ===========================================================================
-
-VBla_1A:
-		bsr.w	ReadJoypads
-		writeCRAM	v_pal_dry,$80,0
-		move.w	(v_hbla_hreg).w,(a5)
-
-		writeVRAM	v_hscrolltablebuffer,$380,vram_hscroll
-		writeVRAM	v_spritetablebuffer,$280,vram_sprites
-		jsr	(ProcessDMAQueue).l
-
-
-.nochg:
-		movem.l	(v_screenposx).w,d0-d7
-		movem.l	d0-d7,(v_screenposx_dup).w
-		movem.l	(v_fg_scroll_flags).w,d0-d1
-		movem.l	d0-d1,(v_fg_scroll_flags_dup).w
-		cmpi.b	#96,(v_hbla_line).w
-		bhs.w	Demo_Time_Alt
-		move.b	#1,($FFFFF64F).w
-		addq.l	#4,sp
-		bra.w	VBla_Exit
 ; ===========================================================================
 
 VBla_06:
@@ -1796,7 +1774,7 @@ Pal_UBZ:	binclude	"palette/Unreal Battle Zone.bin"
 Pal_TAZ:	binclude	"palette/Train Assault Zone.bin"
 
 ; ---------------------------------------------------------------------------
-; Subroutine to	wait for VBlank routines to complete
+; Subroutine to wait for VBlank routines to complete
 ; ---------------------------------------------------------------------------
 
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
@@ -3016,7 +2994,8 @@ TitLoad_Row:
 		rts
 
 		include	"_inc/DynamicLevelEvents.asm"
-		include	"_incObj/11 Bridge (part 1).asm"
+		include	"_incObj/11 Bridge.asm"
+Map_Bri:	include	"_maps/Bridge.asm"
 
 		include "SHC Splash Screen/main.asm"
 
@@ -3156,9 +3135,6 @@ Swing_Solid:
 ; End of function Obj15_Solid
 
 ; ===========================================================================
-
-		include	"_incObj/11 Bridge (part 2).asm"
-
 ; ---------------------------------------------------------------------------
 ; Subroutine allowing Sonic to walk or jump off	a platform
 ; ---------------------------------------------------------------------------
@@ -3190,10 +3166,7 @@ locret_75F2:
 		rts	
 ; End of function ExitPlatform
 
-		include	"_incObj/11 Bridge (part 3).asm"
-Map_Bri:	include	"_maps/Bridge.asm"
-
-		include	"_incObj/15 Swinging Platforms (part 1).asm"
+		include	"_incObj/15 Swinging Platforms.asm"
 
 ; ---------------------------------------------------------------------------
 ; Subroutine to	change Sonic's position with a platform
@@ -3251,7 +3224,7 @@ Map_Plat_SYZ:	include	"_maps/Platforms (SYZ).asm"
 Map_Plat_SLZ:	include	"_maps/Platforms (SLZ).asm"
 		include	"_incObj/19 GHZ Ball.asm"
 Map_GBall:	include	"_maps/GHZ Ball.asm"
-		include	"_incObj/1A Collapsing Ledge (part 1).asm"
+		include	"_incObj/1A Collapsing Ledge.asm"
 		include	"_incObj/53 Collapsing Floors.asm"
 
 ; ===========================================================================
@@ -4490,7 +4463,6 @@ Character_Mappings:
 		include	"_incObj/Sonic JumpAngle.asm"
 		include	"_incObj/Sonic Floor.asm"
 		include	"_incObj/Sonic ResetOnFloor.asm"
-		include	"_incObj/Sonic (part 2).asm"
 		include	"_incObj/Sonic Loops.asm"
         include "_incObj/Sonic Drowns.asm"
 		include	"_incObj/Sonic Animate.asm"
@@ -4551,117 +4523,6 @@ Map_Splash:	include	"_maps/Water Splash.asm"
 		include	"_incObj/sub FindNearestTile.asm"
 		include	"_incObj/sub FindFloor.asm"
 		include	"_incObj/sub FindWall.asm"
-
-; ---------------------------------------------------------------------------
-; This subroutine takes 'raw' bitmap-like collision block data as input and
-; converts it into the proper collision arrays (ColArray and ColArray2).
-; Pointers to said raw data are dummied out.
-; Curiously, an example of the original 'raw' data that this was intended
-; to process can be found in the J2ME version, in a file called 'blkcol.bct'.
-; ---------------------------------------------------------------------------
-
-RawColBlocks		equ CollArray1
-ConvRowColBlocks	equ CollArray1
-
-; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
-
-
-ConvertCollisionArray:
-		rts	
-; ---------------------------------------------------------------------------
-		; The raw format stores the collision data column by column for the normal collision array.
-		; This makes a copy of the data, but stored row by row, for the rotated collision array.
-		lea	(RawColBlocks).l,a1	; Source location of raw collision block data
-		lea	(ConvRowColBlocks).l,a2	; Destinatation location for row-converted collision block data
-
-		move.w	#$100-1,d3		; Number of blocks in collision data
-
-.blockLoop:
-		moveq	#16,d5			; Start on the 16th bit (the leftmost pixel)
-
-		move.w	#16-1,d2		; Width of a block in pixels
-
-.columnLoop:
-		moveq	#0,d4
-
-		move.w	#16-1,d1		; Height of a block in pixels
-
-.rowLoop:
-		move.w	(a1)+,d0		; Get row of collision bits
-		lsr.l	d5,d0			; Push the selected bit of this row into the 'eXtend' flag
-		addx.w	d4,d4			; Shift d4 to the left, and insert the selected bit into bit 0
-		dbf	d1,.rowLoop		; Loop for each row of pixels in a block
-
-		move.w	d4,(a2)+		; Store column of collision bits
-		suba.w	#2*16,a1		; Back to the start of the block
-		subq.w	#1,d5			; Get next bit in the row
-		dbf	d2,.columnLoop		; Loop for each column of pixels in a block
-
-		adda.w	#2*16,a1		; Next block
-		dbf	d3,.blockLoop		; Loop for each block in the raw collision block data
-
-		; This then converts the collision data into the final collision arrays
-		lea	(ConvRowColBlocks).l,a1
-		lea	(CollArray2).l,a2	; Convert the row-converted collision block data into final rotated collision array
-		bsr.s	.convertArray
-		lea	(RawColBlocks).l,a1
-		lea	(CollArray1).l,a2	; Convert the raw collision block data into final normal collision array
-
-
-.convertArray:
-		move.w	#$1000-1,d3		; Size of the collision array
-
-.processLoop:
-		moveq	#0,d2
-		move.w	#$F,d1
-		move.w	(a1)+,d0		; Get current column of collision pixels
-		beq.s	.noCollision		; Branch if there's no collision in this column
-		bmi.s	.topPixelSolid		; Branch if top pixel of collision is solid
-
-	; Here we count, starting from the bottom, how many pixels tall
-	; the collision in this column is.
-.processColumnLoop1:
-		lsr.w	#1,d0
-		bhs.s	.pixelNotSolid1
-		addq.b	#1,d2
-
-.pixelNotSolid1:
-		dbf	d1,.processColumnLoop1
-
-		bra.s	.columnProcessed
-; ===========================================================================
-
-.topPixelSolid:
-		cmpi.w	#$FFFF,d0		; Is entire column solid?
-		beq.s	.entireColumnSolid	; Branch if so
-
-	; Here we count, starting from the top, how many pixels tall
-	; the collision in this column is (the resulting number is negative).
-.processColumnLoop2:
-		lsl.w	#1,d0
-		bhs.s	.pixelNotSolid2
-		subq.b	#1,d2
-
-.pixelNotSolid2:
-		dbf	d1,.processColumnLoop2
-
-		bra.s	.columnProcessed
-; ===========================================================================
-
-.entireColumnSolid:
-		move.w	#$10,d0
-
-.noCollision:
-		move.w	d0,d2
-
-.columnProcessed:
-		move.b	d2,(a2)+		; Store column collision height
-		dbf	d3,.processLoop
-
-		rts	
-
-; End of function ConvertCollisionArray
-
 
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 
@@ -5129,7 +4990,7 @@ Map_Bonus:	include	"_maps/Hidden Bonuses.asm"
 		include	"_incObj/8A Credits.asm"
 Map_Cred:	include	"_maps/Credits.asm"
 
-		include	"_incObj/3D Boss - Green Hill (part 1).asm"
+		include	"_incObj/3D Boss - Green Hill.asm"
 
 ; ---------------------------------------------------------------------------
 ; Defeated boss	subroutine
@@ -5170,13 +5031,13 @@ locret_178A2:
 
 
 BossMove:
-        move.w	obVelX(a0),d0        
+        move.w	obVelX(a0),d0
         ext.l	d0
-        lsl.l	#8,d0                
+        lsl.l	#8,d0
         add.l	d0,$30(a0)  
-        move.w	obVelY(a0),d0          
+        move.w	obVelY(a0),d0
         ext.l	d0
-        lsl.l	#8,d0                
+        lsl.l	#8,d0
         add.l	d0,$38(a0)
         rts  
 ; End of function BossMove
@@ -6353,6 +6214,8 @@ Nem_AltEggman:	binclude	"artnem/Boss - Alt Main.bin"
 Nem_EggPhantom:	binclude	"artnem/Egg Phantom.bin"
 		even
 Nem_EggPhantom_Body:	binclude	"artnem/Egg Phantom Body.bin"
+		even
+Eni_EggPhantom_Body:	binclude	"tilemaps/Egg Phantom Body.bin"
 		even
 Nem_Weapons:	binclude	"artnem/Boss - Weapons.bin"
 		even

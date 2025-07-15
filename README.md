@@ -23,6 +23,7 @@ Music:
    - "Dewmer Dewar"  (In youtube) for the BTZ1 and SPZ1 songs
    - "JX"            (In youtube) for the drowning and UBZ songs
    - "ConiNight"     for the Super Amy Theme
+   - "DarkShamilKhan"for the Remixed Title Screen song
     
     Used Programs
    - SonMapEd by Xenowhirl and ClownMapEd for edit Sprites
@@ -37,3 +38,4 @@ Music:
     Team Encore Members:
    - Red2010: Some Code and fixes
    - Carlos Iagnecz: Programmer
+   - DarkShamilKhan: Composer

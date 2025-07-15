@@ -842,49 +842,37 @@ DLE_UBZ:
 		jmp	.subindex(pc,d0.w)
 ; ===========================================================================
 .subindex:
-		dc.w DLE_UBZmain-.subindex, DLE_UBZboss-.subindex
-		dc.w DLE_UBZend-.subindex, locret_UBZ-.subindex
-		dc.w DLE_UBZend2-.subindex
+		dc.w DLE_UBZmain-.subindex
+		dc.w DLE_UBZend-.subindex
 ; ===========================================================================
 
 DLE_UBZmain:
 		cmpi.w	#$2000,(v_screenposx).w
 		bcs.s	.skip
 		addq.b	#2,(v_dle_routine).w
-		moveq	#plcid_Boss,d0
-		jsr	AddPLC		; load boss patterns
+		locVRAM $9000
+		lea	(Nem_EggPhantom_Body).l,a0 ; load Egg Phantom's body patterns
+		jsr	NemDec
+		lea	($FF1000).l,a1
+		lea	(Eni_EggPhantom_Body).l,a0 ; load mappings for	Japanese credits
+		move.w	#$480,d0
+		jsr	(EniDec).l
+
+		copyTilemap	$FF1000,vram_fg,$14,$1D
+		move.b	#id_TrueFinalBoss,(v_secretboss).w ; load FZ boss object
 
 .skip:
-		bra.w	loc_72C2
-; ===========================================================================
-
-DLE_UBZboss:
-		cmpi.w	#$2300,(v_screenposx).w
-		bcs.s	.skip
-		jsr	FindFreeObj
-		bne.s	.skip
-		move.b	#id_TrueFinalBoss,(a1) ; load FZ boss object
-		addq.b	#2,(v_dle_routine).w
-
-.skip:
-		bra.w	loc_72C2
+		rts
 ; ===========================================================================
 
 DLE_UBZend:
-		cmpi.w	#$2450,(v_screenposx).w
+		cmpi.w	#$3800,(v_screenposx).w
 		bcs.s	.skip
-		addq.b	#2,(v_dle_routine).w
+		subi.b	#$10,(v_screenposx).w
+		subi.b	#$10,(v_player+obX).w
 
 .skip:
-		bra.w	loc_72C2
-; ===========================================================================
-
-locret_UBZ:
-		rts	
-; ===========================================================================
-
-DLE_UBZend2:
-		bra.w	loc_72C2
+		rts
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
 ; Ending sequence dynamic level events (empty)

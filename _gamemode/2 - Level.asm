@@ -11,7 +11,7 @@ GM_Level:
 		subq.b	#1,d0
 		bmi.s	.noSRAM
 
-		gotoSRAM
+		SRAMBank
 		moveq	#0,d0
 		move.b	(v_save),d0
 		subq.b	#1,d0
@@ -31,7 +31,7 @@ GM_Level:
 		movep.w	d0,sr_emer(a1)
 		move.b	(v_lastspecial).w,d0	; ...and the last special stage ID.
 		move.b	d0,sr_lspe(a1)
-		gotoROM
+		ROMBank
 
 	.noSRAM:
 		bsr.w	ClearPLC
@@ -172,7 +172,6 @@ Level_TtlCardLoop:
 		bsr.w	LoadZoneTiles	; load level art
 		bsr.w	LevelDataLoad	; load block mappings and palettes
 		bsr.w	LoadTilesFromStart
-		jsr	(ConvertCollisionArray).l
 		bsr.w	ColIndexLoad
 		bsr.w	LZWaterFeatures
 		move.b	#id_SonicPlayer,(v_player).w ; load Sonic object
@@ -250,10 +249,6 @@ Level_DelayLoop:
 Level_MainLoop:
 		bsr.w	PauseGame
 		move.b	#8,(v_vbla_routine).w
-		cmpi.w	#id_UBZ,(v_zone).w
-		bne.s	.not_UBZ
-		move.b	#$1A,(v_vbla_routine).w
-.not_UBZ:
 		bsr.w	WaitForVBla
 		addq.w	#1,(v_framecount).w ; add 1 to level timer
 		bsr.w	LZWaterFeatures

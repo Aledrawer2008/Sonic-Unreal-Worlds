@@ -376,7 +376,6 @@ PLC_FZBossend:
 ; ---------------------------------------------------------------------------
 PLC_UBZ:	dc.w ((PLC_UBZend-PLC_UBZ-2)/6)-1
 		plcm	Nem_EggPhantom, $8000	; Head, flames and Missiles
-		plcm	Nem_EggPhantom_Body, $9000	; Body
 PLC_UBZend:
 ; ---------------------------------------------------------------------------
 ; Pattern load cues - Eggman at the cutscene of Final Battle Zone

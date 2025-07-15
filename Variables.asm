@@ -8,7 +8,7 @@ v_regbuffer	= ramaddr ( $FFFFFC00 )	; stores registers d0-a7 during an error eve
 v_spbuffer	= ramaddr ( $FFFFFC40 )	; stores most recent sp address (4 bytes)
 v_errortype	= ramaddr ( $FFFFFC44 )	; error type
 
-v_256x256	= ramaddr (   $FF0000 )	; 256x256 tile mappings (8 bytes)
+v_256x256	= ramaddr (   $FF0000 )	; 256x256 and 16x16 tile mappings (8 bytes)
 
 v_lvllayout	= ramaddr ( $FFFFA400 )	; level and background layouts ($400 bytes)
 v_bgscroll_buffer	= ramaddr( $FFFFA800 )	; background scroll buffer ($200 bytes)
@@ -37,12 +37,13 @@ v_ttlsonichide	= v_objspace+object_size*5	; object variable space for hiding par
 v_player		= v_objspace+object_size*0	; ($D000) object variable space for Sonic ($40 bytes)
 v_hud	        = v_objspace+object_size*1	; ($D040) object variable space for the HUD ($40 bytes)
 v_playerdust	= v_objspace+object_size*2	; ($D080) object variable space for effect dust ($40 bytes)
+v_secretboss	= v_playerdust          	; ($D080) object variable space for true final boss ($40 bytes)
 
 v_titlecard		= v_objspace+object_size*3	; ($D0C0) object variable space for the title card ($100 bytes)
-v_ttlcardname	= v_titlecard+object_size*0		; ($D0C0) object variable space for the title card zone name text ($40 bytes)
-v_ttlcardzone	= v_titlecard+object_size*1		; ($D100) object variable space for the title card "ZONE" text ($40 bytes)
-v_ttlcardact	= v_titlecard+object_size*2		; ($D140) object variable space for the title card act text ($40 bytes)
-v_ttlcardoval	= v_titlecard+object_size*3		; ($D180) object variable space for the title card oval ($40 bytes)
+v_ttlcardname	= v_titlecard+object_size*0 ; ($D0C0) object variable space for the title card zone name text ($40 bytes)
+v_ttlcardzone	= v_titlecard+object_size*1	; ($D100) object variable space for the title card "ZONE" text ($40 bytes)
+v_ttlcardact	= v_titlecard+object_size*2	; ($D140) object variable space for the title card act text ($40 bytes)
+v_ttlcardoval	= v_titlecard+object_size*3	; ($D180) object variable space for the title card oval ($40 bytes)
 
 v_gameovertext1	= v_objspace+object_size*3	; ($D0C0) object variable space for the "GAME"/"TIME" in "GAME OVER"/"TIME OVER" text ($40 bytes)
 v_gameovertext2	= v_objspace+object_size*4	; ($D100) object variable space for the "OVER" in "GAME OVER"/"TIME OVER" text ($40 bytes)

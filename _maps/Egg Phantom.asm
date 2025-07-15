@@ -1,31 +1,45 @@
 ; --------------------------------------------------------------------------------
-; Sprite mappings - output from SonMapEd - Sonic 1 format
+; Sprite mappings - output from ClownMapEd - MapMacros format
 ; --------------------------------------------------------------------------------
 
-SME_bXApn:	
-		dc.w SME_bXApn_A-SME_bXApn, SME_bXApn_B-SME_bXApn	
-		dc.w SME_bXApn_3E-SME_bXApn, SME_bXApn_49-SME_bXApn	
-		dc.w SME_bXApn_59-SME_bXApn	
-SME_bXApn_A:	dc.b 0	
-SME_bXApn_B:	dc.b $A	
-		dc.b 0, $C, 0, $C, $D8	
-		dc.b $E0, $F, 0, $10, $F8	
-		dc.b 0, $C, 0, $20, $F8	
-		dc.b $E0, $F, 0, $24, $18	
-		dc.b 0, $C, 0, $34, $18	
-		dc.b $E0, $F, 0, $38, $38	
-		dc.b 0, $C, 0, $48, $38	
-		dc.b $F8, 0, 0, 0, $D8	
-		dc.b $E8, 2, 0, 1, $E0	
-		dc.b $E0, 7, 0, 4, $E8	
-SME_bXApn_3E:	dc.b 2	
-		dc.b $F0, $D, 0, $4C, $F8	
-		dc.b $F0, $D, 0, $54, $18	
-SME_bXApn_49:	dc.b 3	
-		dc.b $F0, $D, 0, $4C, $F8	
-		dc.b $F0, 9, 0, $5C, $30	
-		dc.b $F0, 9, 0, $54, $18	
-SME_bXApn_59:	dc.b 2	
-		dc.b $E8, $F, 0, $62, 8	
-		dc.b $F4, $F, 0, $62, $18	
-		even
+.offsets:	mappingsTable
+	mappingsTableEntry.w	.frame0
+	mappingsTableEntry.w	.frame1
+	mappingsTableEntry.w	.frame2
+	mappingsTableEntry.w	.frame3
+	mappingsTableEntry.w	.frame4
+
+.frame0:	spriteHeader
+.frame0_End
+
+.frame1:	spriteHeader
+	spritePiece -24, -32, 2, 4, 4, 0, 0, 0, 0
+	spritePiece 32, -32, 4, 4, 40, 0, 0, 0, 0
+	spritePiece -32, -8, 1, 1, 3, 0, 0, 0, 0
+	spritePiece 64, -32, 4, 4, 60, 0, 0, 0, 0
+	spritePiece 64, 0, 4, 1, 76, 0, 0, 0, 0
+	spritePiece -32, 0, 4, 1, 16, 0, 0, 0, 0
+	spritePiece -8, -32, 1, 4, 12, 0, 0, 0, 0
+	spritePiece 0, 0, 4, 1, 36, 0, 0, 0, 0
+	spritePiece 32, 0, 4, 1, 56, 0, 0, 0, 0
+	spritePiece 0, -32, 4, 4, 20, 0, 0, 0, 0
+.frame1_End
+
+.frame2:	spriteHeader
+	spritePiece -8, -16, 4, 2, 80, 0, 0, 0, 0
+	spritePiece 24, -16, 3, 2, 88, 0, 0, 0, 0
+	spritePiece 48, -16, 1, 2, 94, 0, 0, 0, 0
+.frame2_End
+
+.frame3:	spriteHeader
+	spritePiece -8, -16, 4, 2, 80, 0, 0, 0, 0
+	spritePiece 24, -16, 3, 2, 88, 0, 0, 0, 0
+	spritePiece 48, -16, 3, 2, 96, 0, 0, 0, 0
+.frame3_End
+
+.frame4:	spriteHeader
+	spritePiece 8, -24, 4, 4, 102, 0, 0, 0, 0
+	spritePiece 24, -12, 4, 4, 102, 0, 0, 0, 0
+.frame4_End
+
+	even

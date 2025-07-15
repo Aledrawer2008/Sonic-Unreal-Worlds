@@ -109,33 +109,8 @@ copyTilemap:	macro source,loc,width,height
 		move.l	#$40000000+((loc&$3FFF)<<16)+((loc&$C000)>>14),d0
 		moveq	#width,d1
 		moveq	#height,d2
-		bsr.w	TilemapToVRAM
+		jsr	(TilemapToVRAM).l
 		endm
-
-; ---------------------------------------------------------------------------
-; Resets pool allocator
-; ---------------------------------------------------------------------------
-; ARGUMENTS:
-;	poolPtrOp - operand representing buffer pool pointer
-; ---------------------------------------------------------------------------
-
-Screen_PoolReset:	macro ptrOp, poolStart, poolEnd
-	__ScreenPoolEnd: = \poolEnd
-	move.w	#\poolStart, \ptrOp
-	endm
-
-SoundTest_FinalizeWriteRequests:	macro	scratchAReg
-	movea.w	SoundTest_VisualizerWriteRequestsPos, \scratchAReg
-	move.w	#-2, (\scratchAReg)
-	endm
-
-; ---------------------------------------------------------------
-; Initialize delete objects queue
-; ---------------------------------------------------------------
-
-DeleteQueue_Init: macro
-	move.w	#DeleteQueue, DeleteQueue_Ptr
-	endm
 
 ; ---------------------------------------------------------------------------
 ; disable interrupts
@@ -279,11 +254,11 @@ out_of_range:	macro exit,pos
 ; (remember to enable SRAM in the header first!)
 ; ---------------------------------------------------------------------------
 
-gotoSRAM:	macro
+SRAMBank:	macro
 		move.b  #1,(sram_port).l
 		endm
 
-gotoROM:	macro
+ROMBank:	macro
 		move.b  #0,(sram_port).l
 		endm
 

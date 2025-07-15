@@ -28,7 +28,7 @@ GM_SaveMenu:
 		move.w	#$C680,d3	; VRAM setting (4th palette, $680th tile)
 		moveq	#1,d0
 		bsr.w	SaveMenu_RenderSingle
-		gotoROM
+		ROMBank
 		
 		locVRAM	0
 		lea	(Nem_Menu).l,a0 ; load Menu BG
@@ -143,13 +143,14 @@ SaveMenuControls:
 		move.w	(v_levselitem).w,d0
 		move.w	#$C680,d3	; VRAM setting (4th palette, $680th tile)
 		bsr.w	SaveMenu_RenderSingle
-		gotoROM
+		ROMBank
 		move.w	#sfx_Switch,d0
 		jsr	(PlaySound_Special).l
 	.return:
 		rts
+
 SaveMenu_DeleteSave:
-		gotoSRAM
+		SRAMBank
 		lea 	($200001+sr_header_end).l,a0		; Load SRAM memory into a0
 		subq.w	#1,d1
 		lsl.w	#4,d1
@@ -164,7 +165,7 @@ SaveMenu_DeleteSave:
 		move.b	d0,sr_cont(a0)				; clear saved continues
 		movep.w	d0,sr_emer(a0)				; clear saved emerald count and bitfield
 		move.b	d0,sr_lspe(a0)				; clear saved lives count
-		gotoROM
+		ROMBank
 		
 		move.w	#sfx_BreakItem,d0
 		jsr	(PlaySound_Special).l
@@ -172,7 +173,7 @@ SaveMenu_DeleteSave:
 		move.w	(v_levselitem).w,d0
 		move.w	#$C680,d3	; VRAM setting (4th palette, $680th tile)
 		bsr.w	SaveMenu_RenderSingle
-		gotoROM
+		ROMBank
 		
 		subi.l	#$1000000-$1A0000,d4			; jump to next line
 		move.l	d4,4(a6)
@@ -194,13 +195,13 @@ SaveMenu_DeleteSave:
 		move.w	#$E680,d0
 		jmp	(TextGenerate).l ; generate delete save
 	.nope:
-		gotoROM
+		ROMBank
 		move.w	#sfx_AB,d0
 		jsr	(PlaySound_Special).l
 		rts
 	
 SaveMenu_Render:
-		gotoSRAM
+		SRAMBank
 		lea 	($200001+sr_header_end).l,a0		; Load SRAM memory into a0
 		lea		(vdp_data_port).l,a6
 		locVRAM	$E090,d4	; text position on screen
@@ -221,7 +222,7 @@ SaveMenu_Render:
 		add.w	#sr_size,a0
 		dbf	d1,.draw_all
 		
-		gotoROM
+		ROMBank
 		move.l	d4,4(a6)
 		move.w	d3,d0
 		lea SaveMenu_TxtDelete(pc),a5
@@ -235,7 +236,7 @@ SaveMenu_TxtNoSave: dc.b 'NO SAVE',0
 	even
 	
 SaveMenu_RenderSingle:
-		gotoSRAM
+		SRAMBank
 		lea		(vdp_data_port).l,a6
 		locVRAM	$E090,d4	; text position on screen
 		move.w	#8,d1
@@ -413,7 +414,7 @@ SaveMenu_TxtChars:
 		even
 	
 SaveMenu_Load:
-		gotoSRAM
+		SRAMBank
 		move.w	(v_levselitem),d0
 		move.b	d0,(v_save).w
 		move.b	#id_Level,(v_gamemode).w ; set screen mode to level
@@ -441,10 +442,10 @@ SaveMenu_Load:
 		move.w	d0,(v_emeralds).w
 		move.b	sr_lspe(a1),d0
 		move.b	d0,(v_lastspecial).w
-		gotoROM
+		ROMBank
 		rts
 .gotonew:
-		gotoROM
+		ROMBank
 		locVRAM	$E090,d4	; text position on screen
 	
 		move.b	#0,(v_character)
